@@ -109,10 +109,10 @@ public class ThirdPersonController : MonoBehaviour
 		
 		target.transform.RotateAround (target.transform.up, rotationAmount);
 		
-		//if (Input.GetButtonDown ("ToggleWalk"))
-		//{
-		//	walking = !walking;
-		//}
+		if (Input.GetButtonDown ("ToggleWalk"))
+		{
+			walking = !walking;
+		}
 	}
 	
 	
