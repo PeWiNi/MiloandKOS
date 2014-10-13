@@ -1,0 +1,190 @@
+fileFormatVersion: 2
+guid: 817b857a716a379439b9374c22e8715c
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: MiloSpritesheetRun0.1_0
+    21300002: MiloSpritesheetRun0.1_1
+    21300004: MiloSpritesheetRun0.1_2
+    21300006: MiloSpritesheetRun0.1_3
+    21300008: MiloSpritesheetRun0.1_4
+    21300010: MiloSpritesheetRun0.1_5
+    21300012: MiloSpritesheetRun0.1_6
+    21300014: MiloSpritesheetRun0.1_7
+    21300016: MiloSpritesheetRun0.1_8
+    21300018: MiloSpritesheetRun0.1_9
+    21300020: MiloSpritesheetRun0.1_10
+    21300022: MiloSpritesheetRun0.1_11
+    21300024: MiloSpritesheetRun0.1_12
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 252
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: MiloSpritesheetRun0.1_0
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 4044
+        width: 397
+        height: 940
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MiloSpritesheetRun0.1_1
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 4147
+        width: 405
+        height: 837
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MiloSpritesheetRun0.1_2
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 4044
+        width: 399
+        height: 936
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MiloSpritesheetRun0.1_3
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 3135
+        width: 351
+        height: 836
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MiloSpritesheetRun0.1_4
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 3155
+        width: 364
+        height: 846
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MiloSpritesheetRun0.1_5
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 3154
+        width: 366
+        height: 836
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MiloSpritesheetRun0.1_6
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 2229
+        width: 428
+        height: 821
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MiloSpritesheetRun0.1_7
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 2226
+        width: 433
+        height: 831
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MiloSpritesheetRun0.1_8
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 2218
+        width: 378
+        height: 834
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MiloSpritesheetRun0.1_9
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1269
+        width: 389
+        height: 814
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MiloSpritesheetRun0.1_10
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 1267
+        width: 320
+        height: 815
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MiloSpritesheetRun0.1_11
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 1218
+        width: 287
+        height: 865
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MiloSpritesheetRun0.1_12
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 291
+        width: 296
+        height: 851
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
