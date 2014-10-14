@@ -74,6 +74,22 @@ public class Flashlight : MonoBehaviour
     }
 
     /// <summary>
+    /// Gets or sets the max capacity.
+    /// </summary>
+    /// <value>The max capacity.</value>
+    public int MaxCapacity
+    {
+        get
+        {
+            return maxCapacity;
+        }
+        set
+        {
+            maxCapacity = value;
+        }
+    }
+
+    /// <summary>
     /// Gets or sets the counter linear.
     /// </summary>
     /// <value>The counter linear.</value>
