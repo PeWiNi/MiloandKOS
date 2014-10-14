@@ -2,7 +2,9 @@ fileFormatVersion: 2
 guid: 8ea0cd85a3d9e0f44a256a7c494eee3d
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - flashlightEmpty: {fileID: 2800000, guid: 22c6fda828798e64c98724a96ade3775, type: 3}
+  - flashlightFilled: {fileID: 2800000, guid: 90cd6495f29263e41830261a7077b0e1, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
