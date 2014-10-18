@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 8ef2d5e78ec9fd74eb40b25cb7241128
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - KOSCollectablePrefab: {fileID: 100000, guid: f6ee87a7c30fd4e40b6dc54303f072ad,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

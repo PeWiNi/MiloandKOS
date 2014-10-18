@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Flashlight : MonoBehaviour
 {
-    bool on = true;
+    private bool on = true;
 
     private Rect box = new Rect(10, 10, 100, 20);
     private Texture2D background;
@@ -42,9 +42,13 @@ public class Flashlight : MonoBehaviour
             light.enabled = false;
         }
         if (capacity < 0)
+        {
             capacity = 0;
+        }
         if (capacity > maxCapacity)
+        {
             capacity = maxCapacity;
+        }
     }
 
     void OnGUI()
@@ -119,5 +123,15 @@ public class Flashlight : MonoBehaviour
         {
             light.intensity -= 0.45f;
         }
+    }
+
+    /// <summary>
+    /// Resets all values.
+    /// </summary>
+    public void ResetValues()
+    {
+        capacity = maxCapacity;
+        counterLinear = 0;
+        light.intensity = 8;
     }
 }
