@@ -6,14 +6,14 @@ public class Move : MonoBehaviour {
 	public float turnSmoothing = 15f;
 	public float speedDampTime = 0.1f;
 
-	private Animator anim; 
-	public int speedFloat;
+	//private Animator anim; 
+	//public int speedFloat;
 
-	void Awake()
-	{
-		anim = GetComponent<Animator> ();
-		speedFloat = Animator.StringToHash("Speed");
-	}
+	//void Awake()
+	//{
+	//	anim = GetComponent<Animator> ();
+	//	speedFloat = Animator.StringToHash("Speed");
+	//}
 
 	void FixedUpdate()
 	{
@@ -30,11 +30,11 @@ public class Move : MonoBehaviour {
 			Rotating (horizontal, vertical);
 			Vector3 movement = new Vector3 (horizontal, 0f, vertical); //Input.GetAxis ("Vertical") * rigidbody.transform.forward + rigidbody.transform.right;
 			rigidbody.velocity = movement * speed;
-			anim.SetFloat (speedFloat, 5.5f, speedDampTime, Time.deltaTime);
+			//anim.SetFloat (speedFloat, 5.5f, speedDampTime, Time.deltaTime);
 		} 
 		else 
 		{
-			anim.SetFloat(speedFloat, 0f);	
+			//anim.SetFloat(speedFloat, 0f);	
 		}
 	}
 
