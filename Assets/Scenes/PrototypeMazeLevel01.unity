@@ -4307,12 +4307,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 965bff6a2bbe1f04ab291c04655756b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 749780409}
-  jumpSpeed: 1
-  groundLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  groundedCheckOffset: .699999988
 --- !u!114 &749780407
 MonoBehaviour:
   m_ObjectHideFlags: 0
