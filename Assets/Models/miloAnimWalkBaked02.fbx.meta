@@ -296,7 +296,266 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: MiloRig03.0001
+      takeName: MiloRig03.0001
+      firstFrame: 1
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: anim_global01
+        weight: 1
+      - path: anim_global01/controls01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_Chest01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_Chest01/anim_Neck01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_Chest01/anim_Neck01/anim_Head01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_Chest01/anim_Neck01/anim_Head01/locDrv_Head01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_Chest01/anim_Neck01/locDrv_Neck01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_Chest01/locDrv_Chest01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_Pelvis01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_Pelvis01/locDrv_Pelvis01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/locDrv_Root01
+        weight: 1
+      - path: anim_global01/controls01/anim_L_Arm01
+        weight: 1
+      - path: anim_global01/controls01/anim_L_Arm01/anim_L_fingers01
+        weight: 1
+      - path: anim_global01/controls01/anim_L_Arm01/anim_L_fingers01/locDrv_L_Wrist01
+          1
+        weight: 1
+      - path: anim_global01/controls01/anim_L_Arm01/anim_L_fingers01/sc_L_arm01 1
+        weight: 1
+      - path: anim_global01/controls01/anim_L_Arm01/locDrv_L_Wrist01
+        weight: 1
+      - path: anim_global01/controls01/anim_L_Arm01/sc_L_arm01
+        weight: 1
+      - path: anim_global01/controls01/anim_L_knee01
+        weight: 1
+      - path: anim_global01/controls01/anim_L_Leg01
+        weight: 1
+      - path: anim_global01/controls01/anim_L_Leg01/grpDrv_L_Heel01
+        weight: 1
+      - path: anim_global01/controls01/anim_L_Leg01/grpDrv_L_Heel01/anim_L_Heel01
+        weight: 1
+      - path: anim_global01/controls01/anim_L_Leg01/grpDrv_L_Heel01/anim_L_Heel01/grpDrv_L_Toe01
+        weight: 1
+      - path: anim_global01/controls01/anim_L_Leg01/grpDrv_L_Heel01/anim_L_Heel01/grpDrv_L_Toe01/anim_L_Toe01
+        weight: 1
+      - path: anim_global01/controls01/anim_L_Leg01/grpDrv_L_Heel01/anim_L_Heel01/grpDrv_L_Toe01/anim_L_Toe01/grpDrv_L_FootBend01
+        weight: 1
+      - path: anim_global01/controls01/anim_L_Leg01/grpDrv_L_Heel01/anim_L_Heel01/grpDrv_L_Toe01/anim_L_Toe01/grpDrv_L_FootBend01/anim_L_FootBend01
+        weight: 1
+      - path: anim_global01/controls01/anim_L_Leg01/grpDrv_L_Heel01/anim_L_Heel01/grpDrv_L_Toe01/anim_L_Toe01/grpDrv_L_FootRoll01
+        weight: 1
+      - path: anim_global01/controls01/anim_L_Leg01/grpDrv_L_Heel01/anim_L_Heel01/grpDrv_L_Toe01/anim_L_Toe01/grpDrv_L_FootRoll01/anim_L_FootRoll01
+        weight: 1
+      - path: anim_global01/controls01/anim_L_Leg01/locDrv_L_Toe01
+        weight: 1
+      - path: anim_global01/controls01/anim_L_Leg01/locDrv_L_Toe01/locDrv_L_Foote01
+        weight: 1
+      - path: anim_global01/controls01/anim_L_Leg01/locDrv_L_Toe01/locDrv_L_Foote01/locDrv_L_Ankle01
+        weight: 1
+      - path: anim_global01/controls01/anim_L_Leg01/sc_L_Leg01
+        weight: 1
+      - path: anim_global01/controls01/anim_R_Arm01
+        weight: 1
+      - path: anim_global01/controls01/anim_R_Arm01/anim_R_fingers01
+        weight: 1
+      - path: anim_global01/controls01/anim_R_Arm01/anim_R_fingers01/locDrv_L_Wrist01
+          2
+        weight: 1
+      - path: anim_global01/controls01/anim_R_Arm01/anim_R_fingers01/sc_L_arm01 2
+        weight: 1
+      - path: anim_global01/controls01/anim_R_Arm01/locDrv_R_Wrist01
+        weight: 1
+      - path: anim_global01/controls01/anim_R_Arm01/sc_R_Arm01
+        weight: 1
+      - path: anim_global01/controls01/anim_R_knee01
+        weight: 1
+      - path: anim_global01/controls01/anim_R_Leg01
+        weight: 1
+      - path: anim_global01/controls01/anim_R_Leg01/grpDrv_R_Heel01
+        weight: 1
+      - path: anim_global01/controls01/anim_R_Leg01/grpDrv_R_Heel01/anim_R_Heel01
+        weight: 1
+      - path: anim_global01/controls01/anim_R_Leg01/grpDrv_R_Heel01/anim_R_Heel01/grpDrv_R_Toe01
+        weight: 1
+      - path: anim_global01/controls01/anim_R_Leg01/grpDrv_R_Heel01/anim_R_Heel01/grpDrv_R_Toe01/anim_R_Toe01
+        weight: 1
+      - path: anim_global01/controls01/anim_R_Leg01/grpDrv_R_Heel01/anim_R_Heel01/grpDrv_R_Toe01/anim_R_Toe01/grpDrv_R_FootBend01
+        weight: 1
+      - path: anim_global01/controls01/anim_R_Leg01/grpDrv_R_Heel01/anim_R_Heel01/grpDrv_R_Toe01/anim_R_Toe01/grpDrv_R_FootBend01/anim_R_FootBend01
+        weight: 1
+      - path: anim_global01/controls01/anim_R_Leg01/grpDrv_R_Heel01/anim_R_Heel01/grpDrv_R_Toe01/anim_R_Toe01/grpDrv_R_FootRoll01
+        weight: 1
+      - path: anim_global01/controls01/anim_R_Leg01/grpDrv_R_Heel01/anim_R_Heel01/grpDrv_R_Toe01/anim_R_Toe01/grpDrv_R_FootRoll01/anim_R_FootRoll01
+        weight: 1
+      - path: anim_global01/controls01/anim_R_Leg01/locDrv_R_Toe01
+        weight: 1
+      - path: anim_global01/controls01/anim_R_Leg01/locDrv_R_Toe01/locDrv_R_Foot01
+        weight: 1
+      - path: anim_global01/controls01/anim_R_Leg01/locDrv_R_Toe01/locDrv_R_Foot01/locDrv_R_Ankle01
+        weight: 1
+      - path: anim_global01/controls01/anim_R_Leg01/sc_R_Leg01
+        weight: 1
+      - path: anim_global01/Skeleton01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Chest01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Chest01/bind_L_Shoulder01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Chest01/bind_L_Shoulder01/bind_L_ForeArm01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Chest01/bind_L_Shoulder01/bind_L_ForeArm01/bind_L_Wrist01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Chest01/bind_L_Shoulder01/bind_L_ForeArm01/bind_L_Wrist01/joint7
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Chest01/bind_L_Shoulder01/bind_L_ForeArm01/bind_L_Wrist01/joint7/bind_L_fingers01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Chest01/bind_L_Shoulder01/bind_L_ForeArm01/bind_L_Wrist01/joint7/bind_L_fingers01/be_L_fingers01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Chest01/bind_L_Shoulder01/bind_L_ForeArm01/bind_L_Wrist01/joint7/bind_L_fingers01/group1
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Chest01/bind_neck01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Chest01/bind_neck01/bind_Head01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Chest01/bind_neck01/bind_Head01/be_Head01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Chest01/bind_R_Shoulder01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Chest01/bind_R_Shoulder01/bind_R_ForeArm01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Chest01/bind_R_Shoulder01/bind_R_ForeArm01/bind_R_Wrist01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Chest01/bind_R_Shoulder01/bind_R_ForeArm01/bind_R_Wrist01/joint7
+          1
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Chest01/bind_R_Shoulder01/bind_R_ForeArm01/bind_R_Wrist01/joint7
+          1/bind_R_fingers01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Chest01/bind_R_Shoulder01/bind_R_ForeArm01/bind_R_Wrist01/joint7
+          1/bind_R_fingers01/be_R_fingers01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Pelvis01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Pelvis01/bind_L_Thigh01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Pelvis01/bind_L_Thigh01/bind_L_Chin01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Pelvis01/bind_L_Thigh01/bind_L_Chin01/bind_L_Ankle01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Pelvis01/bind_L_Thigh01/bind_L_Chin01/bind_L_Ankle01/jDrv_L_Foot01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Pelvis01/bind_L_Thigh01/bind_L_Chin01/bind_L_Ankle01/jDrv_L_Foot01/be_L_Toe01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Pelvis01/bind_L_Thigh01/bind_L_Chin01/bind_L_Ankle01/jDrv_L_Foot01/bind_L_Foot01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Pelvis01/bind_R_Thigh01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Pelvis01/bind_R_Thigh01/bind_R_Chin01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Pelvis01/bind_R_Thigh01/bind_R_Chin01/bind_R_Ankle01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Pelvis01/bind_R_Thigh01/bind_R_Chin01/bind_R_Ankle01/jDrv_R_Foot01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Pelvis01/bind_R_Thigh01/bind_R_Chin01/bind_R_Ankle01/jDrv_R_Foot01/be_R_Toe01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Pelvis01/bind_R_Thigh01/bind_R_Chin01/bind_R_Ankle01/jDrv_R_Foot01/bind_R_Foot01
+        weight: 1
+      - path: anim_global01/Skeleton01/root01/bind_Root01/bind_Pelvis01/joint2
+        weight: 1
+      - path: Geo_Milo
+        weight: 1
+      - path: Geo_Milo/Geo_Butterfly
+        weight: 1
+      - path: Geo_Milo/Geo_Face
+        weight: 1
+      - path: Geo_Milo/Geo_Hair
+        weight: 1
+      - path: Geo_Milo/Geo_Jersey
+        weight: 1
+      - path: Geo_Milo/Geo_LeftArm
+        weight: 1
+      - path: Geo_Milo/Geo_LeftEye
+        weight: 1
+      - path: Geo_Milo/Geo_LeftEye/Geo_EyeMainLeft
+        weight: 1
+      - path: Geo_Milo/Geo_LeftEye/Geo_EyeOuterLeft
+        weight: 1
+      - path: Geo_Milo/Geo_LeftEye/Geo_EyePupilLeft
+        weight: 1
+      - path: Geo_Milo/Geo_LeftEyeBrow
+        weight: 1
+      - path: Geo_Milo/Geo_LeftHand
+        weight: 1
+      - path: Geo_Milo/Geo_LeftLeg
+        weight: 1
+      - path: Geo_Milo/Geo_LeftSlipper
+        weight: 1
+      - path: Geo_Milo/Geo_Pants
+        weight: 1
+      - path: Geo_Milo/Geo_RightArm
+        weight: 1
+      - path: Geo_Milo/Geo_RightEye
+        weight: 1
+      - path: Geo_Milo/Geo_RightEye/Geo_EyeMainRight
+        weight: 1
+      - path: Geo_Milo/Geo_RightEye/Geo_EyeOuterRight
+        weight: 1
+      - path: Geo_Milo/Geo_RightEye/Geo_EyePupilRight
+        weight: 1
+      - path: Geo_Milo/Geo_RightEyeBrow
+        weight: 1
+      - path: Geo_Milo/Geo_RightHand
+        weight: 1
+      - path: Geo_Milo/Geo_RightLeg
+        weight: 1
+      - path: Geo_Milo/Geo_RightSlipper
+        weight: 1
+      - path: Geo_Milo/Geo_ShirtCollar
+        weight: 1
+      - path: Geo_Milo/Geo_Teeth
+        weight: 1
+      - path: Geo_Milo/Geo_Tshirt
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
