@@ -2,9 +2,9 @@
 using System.Collections;
 
 public class Move : MonoBehaviour {
-	public float speed = 5f;
-	public float turnSmoothing = 15f;
-	public float speedDampTime = 0.1f;
+	public float forwardSpeed = 5f;
+	public float backwardSpeed = -2.5f;
+	public float turnSpeed = 5f;
 
 	private Animator anim; 
 	public int speedFloat;
@@ -17,33 +17,49 @@ public class Move : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		float vertical = Input.GetAxis("Vertical");
-		float horizontal = Input.GetAxis("Horizontal");
-	
-		Movement (horizontal, vertical);
-	}
-
-	void Movement(float horizontal, float vertical)
-	{
-		if (horizontal != 0f || vertical != 0f) 
-	    {
-			Rotating (horizontal, vertical);
-			Vector3 movement = new Vector3 (horizontal, 0f, vertical); //Input.GetAxis ("Vertical") * rigidbody.transform.forward + rigidbody.transform.right;
-			rigidbody.velocity = movement * speed;
-			anim.SetFloat (speedFloat, 2.5f, speedDampTime, Time.deltaTime);
+		if (Input.GetKey (KeyCode.W)) 
+		{
+			ForwardMovement ();
+	    } 
+		else if (Input.GetKey (KeyCode.S)) 
+		{
+			BackwardMovement ();
 		} 
+		else if (Input.GetKeyDown (KeyCode.D)) 
+		{
+			RotateRight();
+		} 
+		else if (Input.GetKeyDown (KeyCode.A)) 
+		{
+			RotateLeft();
+		}
 		else 
 		{
 			anim.SetFloat(speedFloat, 0f);	
 		}
 	}
 
-	void Rotating(float horizontal, float vertical)
+
+	void ForwardMovement()
 	{
-		Vector3 targetDirection = new Vector3 (horizontal, 0f, vertical);
-		Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
-		Quaternion newRotation = Quaternion.Lerp (rigidbody.rotation, targetRotation, turnSmoothing * Time.deltaTime);
-	    rigidbody.MoveRotation (newRotation);
+		anim.SetFloat(speedFloat, 2f);
+		anim.transform.Translate(0f, 0f, forwardSpeed*Time.deltaTime);		
+	}
+
+	void BackwardMovement()
+	{
+		anim.SetFloat(speedFloat, 2f);
+		anim.transform.Translate(0f, 0f, backwardSpeed*Time.deltaTime);	
+	}
+
+	void RotateRight()
+	{
+		anim.transform.Rotate (0, 90, 0);
+	}
+
+	void RotateLeft()
+	{
+		anim.transform.Rotate (0, -90, 0);
 	}
 }
   
