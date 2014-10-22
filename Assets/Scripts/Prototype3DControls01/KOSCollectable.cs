@@ -8,7 +8,7 @@ public class KOSCollectable : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-	
+
     }
 	
     // Update is called once per frame
@@ -32,7 +32,7 @@ public class KOSCollectable : MonoBehaviour
     /// </summary>
     void SpawnNewKOSCollectable()
     {
-        KOSCollectable newCollectable = ((GameObject)Instantiate(KOSCollectablePrefab, new Vector3(Random.Range(-50.0f, 50.0f), 2.0f, Random.Range(-50.0f, 50.0f)), Quaternion.identity)).GetComponent<KOSCollectable>();
+        KOSCollectable newCollectable = ((GameObject)Instantiate(KOSCollectablePrefab, new Vector3(Random.Range(-2.0f, 2.0f), transform.position.y, Random.Range(-2.0f, 2.0f)), Quaternion.identity)).GetComponent<KOSCollectable>();
         newCollectable.name = "KOSCollectable";//Only renaming because otherwise if it continues spawning, their names will end with "(Clone)".
     }
 }

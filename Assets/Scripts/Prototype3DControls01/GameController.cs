@@ -20,10 +20,10 @@ public class GameController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        miloFlashlightComponent = GameObject.Find("Flashlight").GetComponent<Flashlight>();
         milo = GameObject.Find("Milo");
         kos = GameObject.Find("KOS");
         kos.gameObject.SetActive(false);
-        miloFlashlightComponent = GameObject.Find("Flashlight").GetComponent<Flashlight>();
     }
 	
     // Update is called once per frame
