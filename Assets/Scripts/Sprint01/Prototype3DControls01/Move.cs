@@ -6,7 +6,7 @@ public class Move : MonoBehaviour
     Animator anim; 
     int movementFloat;
     int jumpingTrigger;
-    float verticalMovement;
+    public static float verticalMovement;
 
     void Awake()
     {
@@ -23,7 +23,7 @@ public class Move : MonoBehaviour
     /// <summary>
     /// Control the movements.; Walk, Run inputs and the appropriate animation states
     /// </summary>
-    void MovementControl()
+   void MovementControl()
     {
         //Left & Right Rotation.
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
