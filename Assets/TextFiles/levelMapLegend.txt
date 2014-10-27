@@ -1,0 +1,8 @@
+
+0 - empty space
+1 - tree
+2 - street lamp
+3 - bench
+4 - trash can
+5 - battery
+6 - lotus

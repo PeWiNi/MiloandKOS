@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: aa2b4167b6eb59f4baabbf473c4524c7
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - treePrefab: {fileID: 100000, guid: 43f413447f9261e4683d2d5c51e598ab, type: 2}
+  - benchPrefab: {fileID: 100000, guid: 6d182cde4974a9b4a8c755e7b127f060, type: 3}
+  - lampPrefab: {fileID: 100000, guid: 8e90dc47845ba2c4a96c1869c489f824, type: 3}
+  - canPrefab: {fileID: 100000, guid: b4fa6531025cff54ea3ceb38989c3588, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
