@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f7471b8c7f7c840419f9a46964557521
+guid: 9ca4fdb915311f54d94bec9b859a5dd8
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -7,7 +7,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Lotus
+    4300000: pCylinder1
     9500000: //RootNode
   materials:
     importMaterials: 1
