@@ -3,9 +3,10 @@ using System.Collections;
 
 public class Move : MonoBehaviour
 {
-    Animator anim; 
+    Animator anim;
     int movementFloat;
     int jumpingTrigger;
+    int groundedBool;
     public static float verticalMovement;
 
     void Awake()
@@ -13,6 +14,7 @@ public class Move : MonoBehaviour
         anim = GetComponent<Animator>();
         movementFloat = Animator.StringToHash("Movement");
         jumpingTrigger = Animator.StringToHash("Jumping");
+        groundedBool = Animator.StringToHash("Grounded");
     }
 
     void FixedUpdate()
@@ -23,7 +25,7 @@ public class Move : MonoBehaviour
     /// <summary>
     /// Control the movements.; Walk, Run inputs and the appropriate animation states
     /// </summary>
-   void MovementControl()
+    void MovementControl()
     {
         //Left & Right Rotation.
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
@@ -52,21 +54,23 @@ public class Move : MonoBehaviour
         {
             anim.SetFloat(movementFloat, 1.0f);
             transform.Translate(0.0f, 0.0f, Input.GetAxis("Vertical") * Time.deltaTime);
-            //            Camera cam = GetComponentInChildren<Camera>();
-            //            cam.transform.localRotation = Quaternion.LookRotation(new Vector3(transform.position.x, 0.0f, transform.position.z) - cam.transform.position);
-            //            transform.rotation = Quaternion.LookRotation(new Vector3(cam.transform.position.x, 0.0f, cam.transform.position.z) - transform.position);
         }
         // Jumping.
         if (Input.GetKeyDown(KeyCode.Space))
         {
             anim.SetFloat(movementFloat, 0.0f);
             anim.SetTrigger(jumpingTrigger);
+            anim.SetBool(groundedBool, false);
             rigidbody.velocity = new Vector3(0.0f, 5.0f, 0.0f);
         }
         //When NO keyboard events are present.
         if (!Input.anyKey)
         {
             anim.SetFloat(movementFloat, 0.0f);
+        }
+        if (transform.position.y <= 0.0f)
+        {
+            anim.SetBool(groundedBool, true);
         }
     }
 }
