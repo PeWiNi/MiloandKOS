@@ -23,9 +23,13 @@ public class Teleport : MonoBehaviour
     {
         forearmCamera = GameObject.Find("ForeArmCamera").camera;
         mainCamera = GameObject.Find("Main Camera").camera;
-        objectToFollow = GameObject.Find("bind_R_Wrist01");
-        foreArm = GameObject.Find("bind_R_ForeArm01");
+        objectToFollow = GameObject.Find("bind_R_Wrist01"); //Using MiloAnimBakedWJR-01 Model.
+        foreArm = GameObject.Find("bind_R_ForeArm01"); //Using MiloAnimBakedWJR-01 Model.
         KOS = GameObject.Find("KOSSprint02");//Should be 'KOS' in FINAL version.
+//        forearmCamera = GameObject.Find("Body Camera").camera;
+//        objectToFollow = GameObject.Find("Bind_Top01");//DogPooTest: Using Minotaur Model.
+//        foreArm = GameObject.Find("Bind_Top01");//DogPooTest: Using Minotaur Model.
+//        KOS = GameObject.Find("KOSMinotaur01");//DogPooTest: Using Minotaur Model.
         anim = KOS.GetComponent<Animator>();
     }
 	

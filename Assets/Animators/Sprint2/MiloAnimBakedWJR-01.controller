@@ -94,10 +94,6 @@ Transition:
     m_ConditionEvent: Grounded
     m_EventTreshold: 0
     m_ExitTime: .727272749
-  - m_ConditionMode: 4
-    m_ConditionEvent: Movement
-    m_EventTreshold: 0
-    m_ExitTime: .727272749
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -142,7 +138,7 @@ Transition:
     m_ConditionEvent: Jumping
     m_EventTreshold: 0
     m_ExitTime: 0
-  - m_ConditionMode: 2
+  - m_ConditionMode: 1
     m_ConditionEvent: Grounded
     m_EventTreshold: 0
     m_ExitTime: 0
@@ -379,14 +375,14 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
+      first: {fileID: 0}
+      second: []
+    data:
       first: {fileID: 110206857}
       second:
       - {fileID: 110163112}
       - {fileID: 110142263}
       - {fileID: 110184141}
-    data:
-      first: {fileID: 0}
-      second: []
     data:
       first: {fileID: 110200000}
       second:

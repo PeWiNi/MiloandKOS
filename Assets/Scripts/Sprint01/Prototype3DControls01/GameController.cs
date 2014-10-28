@@ -8,7 +8,6 @@ public class GameController : MonoBehaviour
     private GameObject kos;
     private Flashlight miloFlashlightComponent;
     private bool isPlayingAsMilo = true;
-
     private float miloAwakeTimer = 15.0f;
 
     // This happens before Start
@@ -21,8 +20,8 @@ public class GameController : MonoBehaviour
     void Start()
     {
         miloFlashlightComponent = GameObject.Find("Flashlight").GetComponent<Flashlight>();
-        milo = GameObject.Find("Milo");
-        kos = GameObject.Find("KOS");
+        milo = GameObject.Find("MiloSprint02");//Find Milo.
+        kos = GameObject.Find("KOSMinotaur01");//Find !Milo.
         kos.gameObject.SetActive(false);
     }
 	

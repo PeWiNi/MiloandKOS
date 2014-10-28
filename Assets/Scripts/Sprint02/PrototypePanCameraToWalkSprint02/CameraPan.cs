@@ -15,7 +15,7 @@ public class CameraPan : MonoBehaviour
         originalCameraPosition = attachedTo.transform.position - transform.position;
         originalCameraRotation = transform.rotation;
     }
-	
+    
     // Update is called once per frame
     void Update()
     {
@@ -23,8 +23,9 @@ public class CameraPan : MonoBehaviour
         {
             isMovingDown = true;
             attachedTo.transform.Rotate(0.0f, attachedTo.transform.rotation.y + 180.0f, 0.0f);
-            transform.position = attachedTo.transform.position - originalCameraPosition;
-            transform.rotation = originalCameraRotation;
+//            transform.Rotate(0.0f, transform.rotation.y + 180.0f, 0.0f);
+//            transform.position = attachedTo.transform.position - originalCameraPosition;
+//            transform.rotation = originalCameraRotation;
         } else if (!Input.GetKey(KeyCode.S) && isMovingDown)
         {
             isMovingDown = false;

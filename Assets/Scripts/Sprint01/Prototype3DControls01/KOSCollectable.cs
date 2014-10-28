@@ -19,10 +19,11 @@ public class KOSCollectable : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.name == "KOS")
+        if (col.gameObject.name == "KOSMinotaur01")
         {
-            Destroy(gameObject);
-            SpawnNewKOSCollectable();
+//            Destroy(gameObject);
+            gameObject.SetActive(false);
+//            SpawnNewKOSCollectable();
             GameController.INSTANCE.ResetMiloAwakeTimer();
         }
     }

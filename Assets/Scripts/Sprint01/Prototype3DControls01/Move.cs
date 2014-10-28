@@ -5,16 +5,12 @@ public class Move : MonoBehaviour
 {
     Animator anim;
     int movementFloat;
-    int jumpingTrigger;
-    int groundedBool;
     public static float verticalMovement;
 
     void Awake()
     {
         anim = GetComponent<Animator>();
         movementFloat = Animator.StringToHash("Movement");
-        jumpingTrigger = Animator.StringToHash("Jumping");
-        groundedBool = Animator.StringToHash("Grounded");
     }
 
     void FixedUpdate()
@@ -55,22 +51,10 @@ public class Move : MonoBehaviour
             anim.SetFloat(movementFloat, 1.0f);
             transform.Translate(0.0f, 0.0f, Input.GetAxis("Vertical") * Time.deltaTime);
         }
-        // Jumping.
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            anim.SetFloat(movementFloat, 0.0f);
-            anim.SetTrigger(jumpingTrigger);
-            anim.SetBool(groundedBool, false);
-            rigidbody.velocity = new Vector3(0.0f, 5.0f, 0.0f);
-        }
         //When NO keyboard events are present.
         if (!Input.anyKey)
         {
             anim.SetFloat(movementFloat, 0.0f);
-        }
-        if (transform.position.y <= 0.0f)
-        {
-            anim.SetBool(groundedBool, true);
         }
     }
 }
