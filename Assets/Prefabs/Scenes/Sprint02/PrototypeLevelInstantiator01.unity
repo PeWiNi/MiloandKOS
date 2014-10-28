@@ -86,6 +86,7 @@ GameObject:
   - 64: {fileID: 290315074}
   - 23: {fileID: 290315073}
   - 114: {fileID: 290315077}
+  - 114: {fileID: 290315078}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -160,6 +161,18 @@ MonoBehaviour:
   benchPrefab: {fileID: 400000, guid: 4539537bc848ba34ba4913b9e8ed7b2d, type: 2}
   lampPrefab: {fileID: 400000, guid: e1d56ea92ff6bcc4d85d36a8f21f0b4c, type: 2}
   canPrefab: {fileID: 400000, guid: 29d2072b515b3354bbe8c1a272ecc456, type: 2}
+--- !u!114 &290315078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 290315072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cd8485774b6fad46ab18e84503d9459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  batteryPrefab: {fileID: 400000, guid: 65639a3e8454c4e459ae893e4401c134, type: 2}
 --- !u!1 &1458113541
 GameObject:
   m_ObjectHideFlags: 0
