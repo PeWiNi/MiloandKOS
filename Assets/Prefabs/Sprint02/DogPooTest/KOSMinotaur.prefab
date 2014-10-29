@@ -88,7 +88,7 @@ GameObject:
   - 136: {fileID: 13600000}
   - 54: {fileID: 5400000}
   m_Layer: 0
-  m_Name: KOSMinotaur01
+  m_Name: KOSMinotaur
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

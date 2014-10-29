@@ -11,10 +11,10 @@ GameObject:
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
   - 95: {fileID: 9500000}
-  - 136: {fileID: 13600000}
+  - 135: {fileID: 13500000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: batteryPrefab
+  m_Name: KOSLotus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,9 +26,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .0500000007, z: 0}
-  m_LocalScale: {x: .5, y: .5, z: .5}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: .400000006, y: .665000021, z: .400000006}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -44,7 +44,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: e005998c0a09c2d44969e057b6298fc7, type: 2}
+  - {fileID: 2100000, guid: 8d06f3555750fa64b96d74dcc24041ce, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -58,7 +58,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Mesh: {fileID: 4300000, guid: 90451221024ac8c45b690f122e14b6e9, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 9ca4fdb915311f54d94bec9b859a5dd8, type: 3}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3
@@ -67,7 +67,7 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 90451221024ac8c45b690f122e14b6e9, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 9ca4fdb915311f54d94bec9b859a5dd8, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -82,11 +82,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7f9dee6f2c53ab478c852fd87455443, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ef2d5e78ec9fd74eb40b25cb7241128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!136 &13600000
-CapsuleCollider:
+  KOSCollectablePrefab: {fileID: 100000, guid: f6ee87a7c30fd4e40b6dc54303f072ad, type: 2}
+--- !u!135 &13500000
+SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -94,10 +95,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: .52077508
-  m_Height: 2.50387812
-  m_Direction: 1
-  m_Center: {x: 0, y: 1.25193906, z: 2.98023224e-08}
+  serializedVersion: 2
+  m_Radius: .430000007
+  m_Center: {x: 0, y: -.193466052, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

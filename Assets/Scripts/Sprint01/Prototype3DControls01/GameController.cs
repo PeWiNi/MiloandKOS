@@ -20,8 +20,8 @@ public class GameController : MonoBehaviour
     void Start()
     {
         miloFlashlightComponent = GameObject.Find("Flashlight").GetComponent<Flashlight>();
-        milo = GameObject.Find("MiloSprint02");//Find Milo.
-        kos = GameObject.Find("KOSMinotaur01");//Find !Milo.
+        milo = GameObject.Find("Milo");//Find Milo.
+        kos = GameObject.Find("KOSMinotaur");//Find !Milo.
         kos.gameObject.SetActive(false);
     }
 	
