@@ -367,7 +367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &186825579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2098,7 +2098,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6e0e3dc0028563a40bacb80afbb0092d, type: 2}
       propertyPath: distanceUpFromGround
-      value: .649999976
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 6e0e3dc0028563a40bacb80afbb0092d, type: 2}
+      propertyPath: m_BackGroundColor.r
+      value: .0820717886
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 6e0e3dc0028563a40bacb80afbb0092d, type: 2}
+      propertyPath: m_BackGroundColor.g
+      value: .115922943
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 6e0e3dc0028563a40bacb80afbb0092d, type: 2}
+      propertyPath: m_BackGroundColor.b
+      value: .16911763
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 6e0e3dc0028563a40bacb80afbb0092d, type: 2}
+      propertyPath: distanceAwayFromCharacter
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6e0e3dc0028563a40bacb80afbb0092d, type: 2}
@@ -2841,6 +2857,14 @@ Prefab:
     - target: {fileID: 400000, guid: 8fabb524e41da7e4bb43a572eca5be21, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8fabb524e41da7e4bb43a572eca5be21, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8fabb524e41da7e4bb43a572eca5be21, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8fabb524e41da7e4bb43a572eca5be21, type: 2}
@@ -3660,7 +3684,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_BackGroundColor: {r: .0820717886, g: .115922943, b: .16911763, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -3695,8 +3719,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60d669b6b0b56424197f52cb7fffa112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceAwayFromCharacter: 2
-  distanceUpFromGround: .649999976
+  distanceAwayFromCharacter: 2.5
+  distanceUpFromGround: .5
   smooth: 2
   cameraSmoothingDampTime: .5
 --- !u!1 &1483377404

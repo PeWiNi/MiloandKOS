@@ -8,9 +8,10 @@ public class Flashlight : MonoBehaviour
     private Rect box = new Rect(10, 10, 100, 20);
     private Texture2D background;
     private Texture2D foreground;
-    private float capacity = 100;
-    private int maxCapacity = 100;
+    private float capacity = 30.0F;
+    private int maxCapacity = 30;
     private int counterLinear = 0;
+    bool pauseCapacity;
 
     // Use this for initialization
     void Start()
@@ -30,17 +31,17 @@ public class Flashlight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            on = !on;
-        }
-        if (on)
-        {
-            light.enabled = true;
-        } else
-        {
-            light.enabled = false;
-        }
+//        if (Input.GetKeyDown(KeyCode.F))
+//        {
+//            on = !on;
+//        }
+//        if (on)
+//        {
+//            light.enabled = true;
+//        } else
+//        {
+//            light.enabled = false;
+//        }
         if (capacity < 0)
         {
             capacity = 0;
@@ -110,19 +111,38 @@ public class Flashlight : MonoBehaviour
     }
 
     /// <summary>
+    /// Gets or sets a value indicating whether this <see cref="Flashlight"/> pause capacity.
+    /// </summary>
+    /// <value><c>true</c> if pause capacity; otherwise, <c>false</c>.</value>
+    public bool PauseCapacity
+    {
+        get
+        {
+            return pauseCapacity;
+        }
+        set
+        {
+            pauseCapacity = value;
+        }
+    }
+
+    /// <summary>
     /// Increases the counterLinear and subtract that amount from the capacity of the flashlight.
     /// </summary>
     void CapacityCounter()
     {
-        counterLinear++;
+//        counterLinear++;
 //        capacity -= counterLinear;
-        capacity -= 1.0f;
-        if (capacity <= 0)
+        if (!pauseCapacity)
         {
-            light.intensity = 0f;
-        } else
-        {
-            light.intensity -= 0.375f;
+            capacity -= 1.0f;
+            if (capacity <= 0)
+            {
+                light.intensity = 0f;
+            } else
+            {
+                light.intensity -= 0.27f;
+            }
         }
     }
 
