@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
     private GameObject kos;
     private Flashlight miloFlashlightComponent;
     private bool isPlayingAsMilo = true;
-    private float miloAwakeTimer = 15.0f;
+    private float miloAwakeTimer = 30.0f;
 
     // This happens before Start
     void Awake()
@@ -50,7 +50,7 @@ public class GameController : MonoBehaviour
     /// </summary>
     public void ResetMiloAwakeTimer()
     {
-        miloAwakeTimer = 15.0f;
+        miloAwakeTimer = 30.0f;
     }
 
     /// <summary>

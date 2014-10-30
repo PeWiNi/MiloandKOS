@@ -115,13 +115,14 @@ public class Flashlight : MonoBehaviour
     void CapacityCounter()
     {
         counterLinear++;
-        capacity -= counterLinear;
+//        capacity -= counterLinear;
+        capacity -= 1.0f;
         if (capacity <= 0)
         {
             light.intensity = 0f;
         } else
         {
-            light.intensity -= 0.45f;
+            light.intensity -= 0.375f;
         }
     }
 

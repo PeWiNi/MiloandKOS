@@ -49,7 +49,7 @@ public class Move : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             anim.SetFloat(movementFloat, 1.0f);
-            transform.Translate(0.0f, 0.0f, Input.GetAxis("Vertical") * Time.deltaTime);
+            transform.Translate(0.0f, 0.0f, -Input.GetAxis("Vertical") * Time.deltaTime);
         }
         //When NO keyboard events are present.
         if (!Input.anyKey)

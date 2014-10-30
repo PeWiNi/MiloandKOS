@@ -19,7 +19,7 @@ public class KOSCollectable : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.name == "KOSMinotaur01")
+        if (col.gameObject.name == "KOSMinotaur")
         {
 //            Destroy(gameObject);
             gameObject.SetActive(false);

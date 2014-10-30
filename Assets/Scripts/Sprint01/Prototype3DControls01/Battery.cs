@@ -23,7 +23,7 @@ public class Battery : MonoBehaviour
     /// <param name="col">Col.</param>
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.name == "MiloSprint02")
+        if (col.gameObject.name == "Milo")
         {
 //            Destroy(gameObject);
             gameObject.SetActive(false);

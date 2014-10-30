@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class CameraPan : MonoBehaviour
 {
     bool isMovingDown;
+    bool isMoving;
     GameObject attachedTo;
 
     [SerializeField]
@@ -33,28 +34,39 @@ public class CameraPan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!attachedTo.activeSelf)
+        {
+            Debug.Log("Not ACTIVE");
+            attachedTo = GameObject.FindWithTag("Player").gameObject;
+        }
         if (Input.GetKey(KeyCode.S) && !isMovingDown && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
         {
             isMovingDown = true;
+            isMoving = true;
+            attachedTo.transform.RotateAround(Vector3.up, Mathf.PI);// Rotate the character in the opposite direction on the Y-axis.
         } else if (!Input.GetKey(KeyCode.S) && isMovingDown)
         {
             isMovingDown = false;
+        } else if (!Input.anyKey)
+        {
+            isMoving = false;
         }
     }
 
-    /* 
-     * Good for Camera positioning, because everything else which takes place in Update, will be executed before.
-     * */
+
+    // Good for Camera positioning, because everything else which takes place in Update, will be executed before.
     void LateUpdate()
     {
         Vector3 characterOffset = attachedTo.transform.position + new Vector3(0.0f, distanceUpFromGround, 0.0f);
-        lookDirection = characterOffset - transform.position;// Calculate direction from Camera to player.
-        lookDirection.y = 0.0f;// Omit the Y position.
-        lookDirection.Normalize();// Generate valid direction with unit magnitude.
-
-//        cameraTargetPosition = attachedTo.transform.position + attachedTo.transform.up * distanceUpFromGround - attachedTo.transform.forward * distanceAwayFromCharacter;// Following the Character from the back.
-//        transform.position = Vector3.Lerp(transform.position, cameraTargetPosition, Time.deltaTime * smooth);// Smooths the camera Current Position, to camera Target Position.
-
+        if (isMoving && isMovingDown)
+        {
+            lookDirection = characterOffset - transform.position;// Calculate direction from Camera to player.
+            lookDirection.y = 0.0f;// Omit the Y position.
+            lookDirection.Normalize();// Generate valid direction with unit magnitude.
+        } else if (!isMoving)
+        {
+            lookDirection = attachedTo.transform.forward;// Set the position and rotation of the camera to look at the back of the character again.
+        }
         cameraTargetPosition = characterOffset + attachedTo.transform.up * distanceUpFromGround - lookDirection * distanceAwayFromCharacter;
         DetectCollisionWithSurroundings(characterOffset, ref cameraTargetPosition);
         SmoothCameraPosition(transform.position, cameraTargetPosition);
