@@ -6,6 +6,7 @@ public class Move : MonoBehaviour
     Animator anim;
     int movementFloat;
     public static float verticalMovement;
+    float shadowSlowDownSpeed = 1;
 
     void Awake()
     {
@@ -16,6 +17,22 @@ public class Move : MonoBehaviour
     void FixedUpdate()
     {
         MovementControl();
+    }
+
+    /// <summary>
+    /// Gets or sets the shadow slow down speed.
+    /// </summary>
+    /// <value>The shadow slow down speed.</value>
+    public float ShadowSlowDownSpeed
+    {
+        get
+        {
+            return shadowSlowDownSpeed;
+        }
+        set
+        {
+            shadowSlowDownSpeed = value;
+        }
     }
 
     /// <summary>
@@ -34,13 +51,7 @@ public class Move : MonoBehaviour
             //When Left Shift key is NOT hold down: Walking.
             if (!Input.GetKey(KeyCode.LeftShift) && Mathf.Abs(Input.GetAxis("Vertical")) > 0.1f)
             {
-                verticalMovement = Input.GetAxis("Vertical");
-                anim.SetFloat(movementFloat, verticalMovement);
-            }
-            //When Left Shift key is hold down: Running.
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                verticalMovement = Input.GetAxis("Vertical") * 2.0f;
+                verticalMovement = Input.GetAxis("Vertical") * 2.0f * shadowSlowDownSpeed;
                 anim.SetFloat(movementFloat, verticalMovement);
             }
             transform.Translate(0.0f, 0.0f, verticalMovement * Time.deltaTime);
@@ -48,8 +59,9 @@ public class Move : MonoBehaviour
         //Backward direction.
         if (Input.GetKey(KeyCode.S))
         {
-            anim.SetFloat(movementFloat, 1.0f);
-            transform.Translate(0.0f, 0.0f, -Input.GetAxis("Vertical") * Time.deltaTime);
+            verticalMovement = Input.GetAxis("Vertical") * 2.0f * shadowSlowDownSpeed;
+            anim.SetFloat(movementFloat, verticalMovement);
+            transform.Translate(0.0f, 0.0f, -verticalMovement * Time.deltaTime);
         }
         //When NO keyboard events are present.
         if (!Input.anyKey)

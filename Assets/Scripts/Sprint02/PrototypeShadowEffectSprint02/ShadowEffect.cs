@@ -3,32 +3,17 @@ using System.Collections;
 
 public class ShadowEffect : MonoBehaviour
 {
-    Animator anim;
-    int movementFloat;
-    int jumpingTrigger;
-    float verticalMovement = 0.2f;
+    Move controller;
 
-    void Awake()
+    void Start()
     {
-        anim = GetComponent<Animator>();
-        movementFloat = Animator.StringToHash("Movement");
-        jumpingTrigger = Animator.StringToHash("Jumping");
-    }
-
-    void start()
-    {
-        Move controller = GameObject.Find("MiloSprint02").GetComponent <Move>();
-        //GameObject go = GameObject.Find ("MiloSprint02");
-        //Move controller = go.GetComponent <Move> ();
-        // float currentSpeed = controller.verticalMovement;
-
+        controller = GameObject.Find("MiloSprint02").GetComponent<Move>();
     }
 
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.name == "Shadow")
         {
-            //InvokeRepeating("ShadowSlowEffect", 3f, 1f);
             ShadowSlowEffect();
             StartCoroutine("speedTime");
             //Destroy(col.gameObject);
@@ -43,18 +28,12 @@ public class ShadowEffect : MonoBehaviour
 
     void revertSpeed()
     {
-        Move.verticalMovement = 1f;
+        controller.ShadowSlowDownSpeed = 1.0f;// Reset to one so we are no longer slowed down.
     }
 
     void ShadowSlowEffect()
     {
-        Move.verticalMovement = 0.2f;
-       
-        //anim.SetFloat(movementFloat, verticalMovement);
-        //anim.SetTrigger(jumpingTrigger);
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("MiloAnim-Run-01"))
-        {
-            anim.Play("MiloAnim-Walk-01");
-        }
+        Debug.Log("Controller: " + controller);
+        controller.ShadowSlowDownSpeed = 0.1f;// Slow down with this amount.
     }
 }
