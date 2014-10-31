@@ -74,8 +74,8 @@ public class textReader : MonoBehaviour
 		for (int i=0; i<map.GetLength(0); i++) { 	
 			for (int j=0; j<map.GetLength(1); j++) 
 			{
-				position.x=(float)i*5.0f;
-				position.z=(float)j*8.0f;
+				position.x=(float)i*2.0f-(2.0f-UnityEngine.Random.Range (0.5f,2.0f));
+				position.z=(float)j*3.0f-(3.0f-UnityEngine.Random.Range (1.5f,3.0f));;
 				Transform x=null;
 				if (prefabsRequired.TryGetValue(map[i,j], out x ))
 				{GameObject temp = Instantiate(prefabsRequired[map[i,j]], position, Quaternion.identity) as GameObject;
