@@ -36,7 +36,6 @@ public class CameraPan : MonoBehaviour
     {
         if (!attachedTo.activeSelf)
         {
-            Debug.Log("Not ACTIVE");
             attachedTo = GameObject.FindWithTag("Player").gameObject;
         }
         if (Input.GetKey(KeyCode.S) && !isMovingDown && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))

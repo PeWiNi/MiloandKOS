@@ -3365,6 +3365,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2114da1fddbc08548aa558a4aefab904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allKOSLotus: []
+  allBatteries: []
 --- !u!4 &1251640894
 Transform:
   m_ObjectHideFlags: 0
