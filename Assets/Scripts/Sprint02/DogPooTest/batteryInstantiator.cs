@@ -42,14 +42,14 @@ public class batteryInstantiator : MonoBehaviour {
 	void drawBatteries()
 	{
 		Vector3 positionB;
-		positionB.y = 0.5f;
+		positionB.y = 0.2f;
 		
 		for (int i=0; i<batteryMap.GetLength(0); i++) {
 			for(int j=0;j<batteryMap.GetLength(1); j++){
 				if (batteryMap[i,j].Equals("5"))
 				    {
-					positionB.x=i*5;
-					positionB.z=j*8;
+					positionB.x=i*2;
+					positionB.z=j*3;
 					Vector3 rotationB = new Vector3();
 					rotationB.x=0.0f;
 					rotationB.y=((float)i%3.0f)*90.0f;

@@ -47,8 +47,8 @@ public class lotusInstantiator : MonoBehaviour {
 			for(int j=0;j<lotusMap.GetLength(1); j++){
 				if (lotusMap[i,j].Equals("6"))
 				{
-					positionB.x=i*5+0.8f;
-					positionB.z=j*8;
+					positionB.x=i*2+0.4f;
+					positionB.z=j*3;
 					GameObject lotusInstance= Instantiate(lotusPrefab, positionB, Quaternion.identity) as GameObject;
 					transform.parent=transform; 
 				}
