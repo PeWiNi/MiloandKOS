@@ -54,7 +54,7 @@ public class batteryInstantiator : MonoBehaviour {
 					rotationB.x=0.0f;
 					rotationB.y=((float)i%3.0f)*90.0f;
 					rotationB.z=90.0f;
-					Debug.Log(rotationB);
+//					Debug.Log(rotationB);
 					GameObject batteryInstance= Instantiate(batteryPrefab, positionB, Quaternion.Euler(rotationB)) as GameObject;
 					transform.parent=transform; 
 				}

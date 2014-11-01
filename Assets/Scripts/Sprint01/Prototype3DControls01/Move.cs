@@ -48,12 +48,8 @@ public class Move : MonoBehaviour
         //Forward direction.
         if (Input.GetKey(KeyCode.W))
         {
-            //When Left Shift key is NOT hold down: Walking.
-            if (!Input.GetKey(KeyCode.LeftShift) && Mathf.Abs(Input.GetAxis("Vertical")) > 0.1f)
-            {
-                verticalMovement = Input.GetAxis("Vertical") * 2.0f * shadowSlowDownSpeed;
-                anim.SetFloat(movementFloat, verticalMovement);
-            }
+            verticalMovement = Input.GetAxis("Vertical") * 2.0f * shadowSlowDownSpeed;
+            anim.SetFloat(movementFloat, verticalMovement);
             transform.Translate(0.0f, 0.0f, verticalMovement * Time.deltaTime);
         }
         //Backward direction.
@@ -61,7 +57,7 @@ public class Move : MonoBehaviour
         {
             verticalMovement = Input.GetAxis("Vertical") * 2.0f * shadowSlowDownSpeed;
             anim.SetFloat(movementFloat, verticalMovement);
-            transform.Translate(0.0f, 0.0f, -verticalMovement * Time.deltaTime);
+            transform.Translate(0.0f, 0.0f, -1 * (verticalMovement * Time.deltaTime));
         }
         //When NO keyboard events are present.
         if (!Input.anyKey)

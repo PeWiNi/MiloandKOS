@@ -17,16 +17,16 @@ public class Jump : MonoBehaviour
     void FixedUpdate()
     {
         // Jumping.
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && anim.GetBool(groundedBool))
         {
             anim.SetTrigger(jumpingTrigger);
             anim.SetBool(groundedBool, false);
-            rigidbody.velocity = new Vector3(0.0f, 5.0f, 0.0f);
+            rigidbody.velocity = new Vector3(0.0f, 3.5f, 0.0f);
         }
-        //If grounded.
-        if (rigidbody.position.y <= 0.0f && !anim.GetBool(groundedBool))
-        {
-            anim.SetBool(groundedBool, true);
-        }
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        anim.SetBool(groundedBool, true);
     }
 }

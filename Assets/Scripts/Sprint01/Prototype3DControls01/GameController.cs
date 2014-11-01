@@ -113,7 +113,7 @@ public class GameController : MonoBehaviour
         {
             allBatteries = GameObject.FindGameObjectsWithTag("Battery");
             allKOSLotus = GameObject.FindGameObjectsWithTag("KOSLotus");
-            Debug.Log("BATS: " + allBatteries.Length + " ,LOTUS: " + allKOSLotus.Length);
+//            Debug.Log("BATS: " + allBatteries.Length + " ,LOTUS: " + allKOSLotus.Length);
         }
         if (milo.activeSelf && !kos.activeSelf)
         {
