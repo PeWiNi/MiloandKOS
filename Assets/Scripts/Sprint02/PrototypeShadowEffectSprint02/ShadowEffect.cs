@@ -15,18 +15,20 @@ public class ShadowEffect : MonoBehaviour
         if (col.gameObject.name == "Shadow")
         {
             ShadowSlowEffect();
-            StartCoroutine("speedTime");
-            //Destroy(col.gameObject);
+            StartCoroutine("SpeedTime");
+            Destroy(GameObject.Find("HumanShadow01"));
         }
     }
     
-    IEnumerator speedTime()
+    IEnumerator SpeedTime()
     {
-        yield return new WaitForSeconds(10);
-        revertSpeed();
+        yield return new WaitForSeconds(5);
+        RevertSpeed();
     }
 
-    void revertSpeed()
+
+
+    void RevertSpeed()
     {
         controller.ShadowSlowDownSpeed = 1.0f;// Reset to one so we are no longer slowed down.
     }
