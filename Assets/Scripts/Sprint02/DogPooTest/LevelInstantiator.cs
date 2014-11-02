@@ -66,12 +66,12 @@ public class LevelInstantiator : MonoBehaviour {
 				for (float i=0; i<levelMap.GetLength(0); i++) { 	
 						for (float j=0; j<levelMap.GetLength(1); j++) {
 
-								position.x=i*2.0f;
-								position.z=j*3.0f;
+								position.x=i*1.5f;
+								position.z=j*2.5f;
 								switch (levelMap [(int)i, (int)j]) {
 								case "1":
-										position.x=i*2.0f-(2.0f-Random.Range (0.5f,2.0f));
-										position.z=j*3.0f-(3.0f-Random.Range (1.5f,3.0f));
+										position.x=i*1.5f-(1.0f-Random.Range (0.5f,1.0f));
+										position.z=j*2.5f-(2.0f-Random.Range (1.5f,2.0f));
 										GameObject tree = Instantiate (treePrefab, position, Quaternion.identity) as GameObject;	
 										transform.parent = transform;
 										break;			
@@ -96,8 +96,8 @@ public class LevelInstantiator : MonoBehaviour {
 								case "4":GameObject can = Instantiate (canPrefab, position, Quaternion.identity) as GameObject;	
 										transform.parent = transform;
 										break;
-								case "#": 	position.x=i*2.0f-(2.0f-Random.Range (0.5f,2.0f));
-									position.z=j*3.0f-(3.0f-Random.Range (1.5f,3.0f));
+				case "#": 	position.x=i*1.5f-(1.0f-Random.Range (0.5f,1.0f));
+					position.z=j*2.5f-(2.0f-Random.Range (1.5f,2.0f));
 										GameObject trees = Instantiate (treePrefab, position, Quaternion.identity) as GameObject; 
 										transform.parent = transform; 
 										break;
