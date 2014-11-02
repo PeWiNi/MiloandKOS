@@ -4,15 +4,17 @@ using System.Collections;
 public class GameController : MonoBehaviour
 {
     public static GameController INSTANCE;
-    private GameObject milo;
-    private GameObject kos;
-    private Flashlight miloFlashlightComponent;
-    private bool isPlayingAsMilo = true;
-    private float miloAwakeTimer = 30.0f;
+    GameObject milo;
+    GameObject kos;
+    Flashlight miloFlashlightComponent;
+    bool isPlayingAsMilo = true;
+    float miloAwakeTimer = 30.0f;
+    int switchCounter = 0;
 
-    public GameObject[] allKOSLotus;
-    public GameObject[] allBatteries;
+    GameObject[] allKOSLotus;
+    GameObject[] allBatteries;
     bool switchHasBeenExecuted = false;
+
     // This happens before Start
     void Awake()
     {
@@ -54,6 +56,22 @@ public class GameController : MonoBehaviour
     }
 
     /// <summary>
+    /// Gets or sets the switch counter.
+    /// </summary>
+    /// <value>The switch counter.</value>
+    public int SwitchCounter
+    {
+        get
+        {
+            return switchCounter;
+        }
+        set
+        {
+            switchCounter = value;
+        }
+    }
+
+    /// <summary>
     /// Resets the milo awake timer.
     /// </summary>
     public void ResetMiloAwakeTimer()
@@ -72,6 +90,7 @@ public class GameController : MonoBehaviour
         kos.transform.rotation = milo.transform.rotation;
         ResetMiloAwakeTimer();
         isPlayingAsMilo = false;
+        SwitchCounter++;
         SwitchActiveValuesForCollectables();
         StartCoroutine(MiloAwakeCountdown());
     }
@@ -87,6 +106,7 @@ public class GameController : MonoBehaviour
         milo.transform.rotation = kos.transform.rotation;
         miloFlashlightComponent.ResetValues();
         isPlayingAsMilo = true;
+        SwitchCounter++;
         SwitchActiveValuesForCollectables();
     }
 
@@ -109,7 +129,7 @@ public class GameController : MonoBehaviour
     /// </summary>
     void SwitchActiveValuesForCollectables()
     {
-        if (allBatteries.Length == 0 && allKOSLotus.Length == 0)
+        if (allBatteries == null && allKOSLotus == null)
         {
             allBatteries = GameObject.FindGameObjectsWithTag("Battery");
             allKOSLotus = GameObject.FindGameObjectsWithTag("KOSLotus");

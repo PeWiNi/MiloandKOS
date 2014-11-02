@@ -12,12 +12,12 @@ public class ShadowFunc : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        milo = GameObject.Find("MiloSprint02");
+        milo = GameObject.Find("Milo");
     }
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.name == "MiloSprint02")
+        if (col.gameObject.name == "Milo")
         {
             InvokeRepeating("ChaseMilo", 0f, 0.03f);
             StartCoroutine("ShadowTimer");

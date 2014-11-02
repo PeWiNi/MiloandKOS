@@ -7,7 +7,7 @@ public class ShadowEffect : MonoBehaviour
 
     void Start()
     {
-        controller = GameObject.Find("MiloSprint02").GetComponent<Move>();
+        controller = GameObject.Find("Milo").GetComponent<Move>();
     }
 
     void OnTriggerEnter(Collider col)
