@@ -6,10 +6,11 @@ public class HandleTextDialogueInGame : MonoBehaviour
 {
     Text switchTexting;
     float letterPause;
-    float printLetterSpeed = 0.1f;
     int currentSwitchCounter;
     string sentenceKOS;
     string sentenceMilo;
+    bool kosTexthasBeenPrinted = false;
+    bool miloTexthasBeenPrinted = false;
 
     // Use this for initialization
     void Start()
@@ -39,10 +40,18 @@ public class HandleTextDialogueInGame : MonoBehaviour
     {
         if (currentSwitchCounter % 2 != 0)// SwitchCounter is Odd, active Character is KOS.
         {
-            StartCoroutine("PrintLetterSequenceKOS");
+            if (!kosTexthasBeenPrinted)
+            {
+                PrintLetterSequenceKOS();
+                kosTexthasBeenPrinted = true;
+            }
         } else// SwitchCounter is Even, active Character is Milo.
         {
-            StartCoroutine("PrintLetterSequenceMilo");
+            if (!miloTexthasBeenPrinted)
+            {
+                PrintLetterSequenceMilo();
+                miloTexthasBeenPrinted = true;
+            }
         }
     }
 
@@ -50,14 +59,10 @@ public class HandleTextDialogueInGame : MonoBehaviour
     /// Prints the letter sequence for KOS.
     /// </summary>
     /// <returns>The letter sequence KO.</returns>
-    IEnumerator PrintLetterSequenceKOS()
+    void PrintLetterSequenceKOS()
     {
-        for (int i = 0; i < sentenceKOS.Length; i++)
-        {
-            switchTexting.text += sentenceKOS [i].ToString();
-            switchTexting.enabled = true;
-            yield return new WaitForSeconds(printLetterSpeed);
-        }
+        switchTexting.text = sentenceKOS;
+        switchTexting.enabled = true;
         StartCoroutine("FadeText");
     }
 
@@ -65,14 +70,10 @@ public class HandleTextDialogueInGame : MonoBehaviour
     /// Prints the letter sequence for Milo.
     /// </summary>
     /// <returns>The letter sequence milo.</returns>
-    IEnumerator PrintLetterSequenceMilo()
+    void PrintLetterSequenceMilo()
     {
-        for (int i = 0; i < sentenceMilo.Length; i++)
-        {
-            switchTexting.text += sentenceMilo [i].ToString();
-            switchTexting.enabled = true;
-            yield return new WaitForSeconds(printLetterSpeed);
-        }
+        switchTexting.text = sentenceMilo;
+        switchTexting.enabled = true;
         StartCoroutine("FadeText");
     }
 
@@ -85,12 +86,12 @@ public class HandleTextDialogueInGame : MonoBehaviour
         Color color;
         while (switchTexting.color.a > 0.0f)
         {
-            color.a = switchTexting.color.a - 0.1f;
+            color.a = switchTexting.color.a - 0.01f;
             color.r = switchTexting.color.r;
             color.g = switchTexting.color.g;
             color.b = switchTexting.color.b;
             switchTexting.color = color;
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.1f);
         }
         color.a = 1.0f;
         color.r = switchTexting.color.r;
