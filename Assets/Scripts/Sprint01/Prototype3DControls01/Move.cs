@@ -40,11 +40,16 @@ public class Move : MonoBehaviour
     /// </summary>
     void MovementControl()
     {
-        //Left & Right Rotation.
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        //Left Rotation.
+        if (Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(new Vector3(0.0f, Input.GetAxis("Horizontal"), 0.0f));
+            transform.Rotate(new Vector3(0.0f, Input.GetAxis("Horizontal")-2.0f, 0.0f));
         }
+		//& Right Rotation
+		if ( Input.GetKey(KeyCode.D))
+		{
+			transform.Rotate(new Vector3(0.0f, Input.GetAxis("Horizontal")+2.0f, 0.0f));
+		}
         //Forward direction.
         if (Input.GetKey(KeyCode.W))
         {
