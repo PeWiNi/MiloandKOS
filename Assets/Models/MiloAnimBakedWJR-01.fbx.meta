@@ -265,7 +265,7 @@ ModelImporter:
     13700024: Geo_RightSlipper
     13700026: geo_UpperBody
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:
