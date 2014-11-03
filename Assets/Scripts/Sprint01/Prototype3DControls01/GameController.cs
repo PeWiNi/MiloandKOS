@@ -123,6 +123,13 @@ public class GameController : MonoBehaviour
         }
     }
 
+	public float AwakeTimer 
+	{
+		get{ 
+			return miloAwakeTimer;
+			}
+	}
+
     /// <summary>
     /// Switchs the active values for the collectables of Milo and KOS.
     /// When playing as Milo, hide KOSLotus. When playing as KOS, hide Batteries.
