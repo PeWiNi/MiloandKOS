@@ -38,6 +38,7 @@ public class CameraPan : MonoBehaviour
         {
             attachedTo = GameObject.FindWithTag("Player").gameObject;
         }
+		//if you change S to any other key not used atm, that key will become a flip direction button. 
         if (Input.GetKey(KeyCode.S) && !isMovingDown && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
         {
             isMovingDown = true;
@@ -60,7 +61,7 @@ public class CameraPan : MonoBehaviour
         if (isMoving && isMovingDown)
         {
             lookDirection = characterOffset - transform.position;// Calculate direction from Camera to player.
-            lookDirection.y = 0.0f;// Omit the Y position.
+            lookDirection.x = 0.0f;// Omit the X position.
             lookDirection.Normalize();// Generate valid direction with unit magnitude.
         } else if (!isMoving)
         {
