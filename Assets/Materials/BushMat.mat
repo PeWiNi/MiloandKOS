@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: bush
+  m_Name: BushMat
   m_Shader: {fileID: 4800000, guid: c1842d40b88ce21408c44d925e0169ac, type: 3}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
