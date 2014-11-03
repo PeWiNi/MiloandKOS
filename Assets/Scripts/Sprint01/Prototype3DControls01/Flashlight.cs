@@ -20,7 +20,7 @@ public class Flashlight : MonoBehaviour
         foreground = new Texture2D(1, 1, TextureFormat.RGB24, false);
         
         background.SetPixel(0, 0, Color.black);
-        foreground.SetPixel(0, 0, Color.white);
+        foreground.SetPixel(0, 0, Color.yellow);
         
         background.Apply();
         foreground.Apply();
