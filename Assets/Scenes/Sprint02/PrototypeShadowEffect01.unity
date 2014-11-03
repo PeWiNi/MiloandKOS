@@ -2140,7 +2140,7 @@ GameObject:
   - 114: {fileID: 1009914797}
   - 114: {fileID: 1009914796}
   m_Layer: 0
-  m_Name: MiloSprint02
+  m_Name: Milo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3537,6 +3537,10 @@ Prefab:
     - target: {fileID: 400164, guid: 030f08f287e3e7248bde9a366773a991, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100164, guid: 030f08f287e3e7248bde9a366773a991, type: 2}
+      propertyPath: m_Name
+      value: Milo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 030f08f287e3e7248bde9a366773a991, type: 2}
