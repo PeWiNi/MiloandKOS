@@ -9,12 +9,17 @@ public class GameController : MonoBehaviour
     Flashlight miloFlashlightComponent;
     bool isPlayingAsMilo = true;
     float miloAwakeTimer = 60.0f;
+    int miloAwakeTimerMax = 60;
     int switchCounter = 0;
 
     GameObject[] allKOSLotus;
     GameObject[] allBatteries;
     bool switchHasBeenExecuted = false;
 
+    Texture2D backgroundKOS;
+    Texture2D foregroundKOS;
+    Rect box = new Rect(10, 10, 100, 20);
+    
     // This happens before Start
     void Awake()
     {
@@ -28,6 +33,7 @@ public class GameController : MonoBehaviour
         milo = GameObject.Find("Milo");//Find Milo.
         kos = GameObject.Find("KOSMinotaur");//Find !Milo.
         kos.gameObject.SetActive(false);
+        SetMiloAwakeBar();
     }
 	
     // Update is called once per frame
@@ -51,7 +57,13 @@ public class GameController : MonoBehaviour
     {
         if (miloFlashlightComponent.Capacity <= 0.0f && miloAwakeTimer > 0.0f)
         {
-            GUI.Label(new Rect(10.0f, 10.0f, 75.0f, 50.0f), "Milo awakes in: " + miloAwakeTimer);
+//            GUI.Label(new Rect(10.0f, 10.0f, 75.0f, 50.0f), "Milo awakes in: " + miloAwakeTimer);
+            GUI.BeginGroup(box);
+            {
+                GUI.DrawTexture(new Rect(0, 0, box.width, box.height), backgroundKOS, ScaleMode.StretchToFill);
+                GUI.DrawTexture(new Rect(0, 0, box.width * miloAwakeTimer / miloAwakeTimerMax, box.height), foregroundKOS, ScaleMode.StretchToFill);
+            }
+            GUI.EndGroup();
         }
     }
 
@@ -133,7 +145,6 @@ public class GameController : MonoBehaviour
         {
             allBatteries = GameObject.FindGameObjectsWithTag("Battery");
             allKOSLotus = GameObject.FindGameObjectsWithTag("KOSLotus");
-//            Debug.Log("BATS: " + allBatteries.Length + " ,LOTUS: " + allKOSLotus.Length);
         }
         if (milo.activeSelf && !kos.activeSelf)
         {
@@ -156,5 +167,19 @@ public class GameController : MonoBehaviour
                 battery.SetActive(false);
             }
         }
+    }
+
+    /// <summary>
+    /// Sets the milo awake bar.
+    /// </summary>
+    void SetMiloAwakeBar()
+    {
+        backgroundKOS = new Texture2D(1, 1, TextureFormat.RGB24, false);
+        foregroundKOS = new Texture2D(1, 1, TextureFormat.RGB24, false);
+        Color darkBlue = new Color(0.04f, 0.16f, 0.35f);
+        backgroundKOS.SetPixel(0, 0, Color.yellow);
+        foregroundKOS.SetPixel(0, 0, darkBlue);
+        backgroundKOS.Apply();
+        foregroundKOS.Apply();
     }
 }

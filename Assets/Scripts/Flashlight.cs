@@ -31,17 +31,6 @@ public class Flashlight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-//        if (Input.GetKeyDown(KeyCode.F))
-//        {
-//            on = !on;
-//        }
-//        if (on)
-//        {
-//            light.enabled = true;
-//        } else
-//        {
-//            light.enabled = false;
-//        }
         if (capacity < 0)
         {
             capacity = 0;
@@ -131,8 +120,6 @@ public class Flashlight : MonoBehaviour
     /// </summary>
     void CapacityCounter()
     {
-//        counterLinear++;
-//        capacity -= counterLinear;
         if (!pauseCapacity)
         {
             capacity -= 1.0f;
