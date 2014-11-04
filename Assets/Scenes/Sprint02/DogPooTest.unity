@@ -3878,6 +3878,7 @@ MonoBehaviour:
   benchPrefab: {fileID: 400000, guid: 4539537bc848ba34ba4913b9e8ed7b2d, type: 2}
   lampPrefab: {fileID: 400000, guid: e1d56ea92ff6bcc4d85d36a8f21f0b4c, type: 2}
   canPrefab: {fileID: 400000, guid: 29d2072b515b3354bbe8c1a272ecc456, type: 2}
+  cornerTreePrefab: {fileID: 400010, guid: 27b12b94719785246bf3c5d1e6d8f0c4, type: 2}
 --- !u!1 &1258839453
 GameObject:
   m_ObjectHideFlags: 0
