@@ -996,11 +996,11 @@ Light:
   m_DrawHalo: 0
   m_ActuallyLightmapped: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 0
   m_ShadowSamples: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -3878,6 +3878,7 @@ MonoBehaviour:
   benchPrefab: {fileID: 400000, guid: 4539537bc848ba34ba4913b9e8ed7b2d, type: 2}
   lampPrefab: {fileID: 400000, guid: e1d56ea92ff6bcc4d85d36a8f21f0b4c, type: 2}
   canPrefab: {fileID: 400000, guid: 29d2072b515b3354bbe8c1a272ecc456, type: 2}
+  cornerTreePrefab: {fileID: 400010, guid: 27b12b94719785246bf3c5d1e6d8f0c4, type: 2}
 --- !u!1 &1258839453
 GameObject:
   m_ObjectHideFlags: 0
@@ -5398,6 +5399,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0248abad8324d064b905c04dab3e24f8, type: 2}
+    - target: {fileID: 10800000, guid: fafa22ba4cf734c498019ccd4c9c389d, type: 2}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10800000, guid: fafa22ba4cf734c498019ccd4c9c389d, type: 2}
+      propertyPath: m_Lightmapping
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fafa22ba4cf734c498019ccd4c9c389d, type: 2}
   m_RootGameObject: {fileID: 784544864}
