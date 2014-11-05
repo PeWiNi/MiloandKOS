@@ -36,7 +36,7 @@ public class ShadowFunc : MonoBehaviour
 
     IEnumerator ShadowTimer()
     {
-        yield return new WaitForSeconds(30);
+        yield return new WaitForSeconds(10);
         RemoveShadow();
     }
 
