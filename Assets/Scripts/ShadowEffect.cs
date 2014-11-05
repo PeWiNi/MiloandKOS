@@ -12,11 +12,18 @@ public class ShadowEffect : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.name == "Shadow")
+        if (col.gameObject.name == "HShadow")
+        {
+            ShadowSlowEffect();
+            StartCoroutine("SpeedTime");  
+            Destroy(GameObject.Find("HumanShadow"));
+        }
+
+        if (col.gameObject.name == "CShadow")
         {
             ShadowSlowEffect();
             StartCoroutine("SpeedTime");
-            Destroy(GameObject.Find("HumanShadow01"));
+            Destroy(GameObject.Find("CatShadow"));
         }
     }
     

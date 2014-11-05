@@ -1,20 +1,20 @@
 fileFormatVersion: 2
-guid: 866266124aea9994382f71f4050f6f42
+guid: 736a51002f923c647897be7e5aa23374
 TextureImporter:
   fileIDToRecycleName:
-    21300000: HumanBlackShadowSprite01_0
-    21300002: HumanBlackShadowSprite01_1
-    21300004: HumanBlackShadowSprite01_2
-    21300006: HumanBlackShadowSprite01_3
-    21300008: HumanBlackShadowSprite01_4
-    21300010: HumanBlackShadowSprite01_5
-    21300012: HumanBlackShadowSprite01_6
-    21300014: HumanBlackShadowSprite01_7
-    21300016: HumanBlackShadowSprite01_8
-    21300018: HumanBlackShadowSprite01_9
-    21300020: HumanBlackShadowSprite01_10
-    21300022: HumanBlackShadowSprite01_11
-    21300024: HumanBlackShadowSprite01_12
+    21300000: CatBlackShadowSprite02_0
+    21300002: CatBlackShadowSprite02_1
+    21300004: CatBlackShadowSprite02_2
+    21300006: CatBlackShadowSprite02_3
+    21300008: CatBlackShadowSprite02_4
+    21300010: CatBlackShadowSprite02_5
+    21300012: CatBlackShadowSprite02_6
+    21300014: CatBlackShadowSprite02_7
+    21300016: CatBlackShadowSprite02_8
+    21300018: CatBlackShadowSprite02_9
+    21300020: CatBlackShadowSprite02_10
+    21300022: CatBlackShadowSprite02_11
+    21300024: CatBlackShadowSprite02_12
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -38,7 +38,7 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -50,139 +50,139 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 350
+  spritePixelsToUnits: 500
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: HumanBlackShadowSprite01_0
+    - name: CatBlackShadowSprite02_0
       rect:
         serializedVersion: 2
-        x: 189
-        y: 2896
-        width: 265
-        height: 587
+        x: 243
+        y: 2561
+        width: 515
+        height: 427
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: HumanBlackShadowSprite01_1
+    - name: CatBlackShadowSprite02_1
       rect:
         serializedVersion: 2
-        x: 703
-        y: 2841
-        width: 279
-        height: 641
+        x: 1245
+        y: 2562
+        width: 594
+        height: 368
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: HumanBlackShadowSprite01_2
+    - name: CatBlackShadowSprite02_2
       rect:
         serializedVersion: 2
-        x: 1251
-        y: 2835
-        width: 283
-        height: 643
+        x: 235
+        y: 2179
+        width: 581
+        height: 353
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: HumanBlackShadowSprite01_3
+    - name: CatBlackShadowSprite02_3
       rect:
         serializedVersion: 2
-        x: 176
-        y: 2178
-        width: 265
-        height: 589
+        x: 1220
+        y: 2187
+        width: 600
+        height: 313
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: HumanBlackShadowSprite01_4
+    - name: CatBlackShadowSprite02_4
       rect:
         serializedVersion: 2
-        x: 683
-        y: 2163
-        width: 259
-        height: 601
+        x: 211
+        y: 1772
+        width: 595
+        height: 350
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: HumanBlackShadowSprite01_5
+    - name: CatBlackShadowSprite02_5
       rect:
         serializedVersion: 2
-        x: 1247
-        y: 2158
-        width: 262
-        height: 598
+        x: 1238
+        y: 1777
+        width: 612
+        height: 357
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: HumanBlackShadowSprite01_6
+    - name: CatBlackShadowSprite02_6
       rect:
         serializedVersion: 2
-        x: 241
-        y: 1466
-        width: 140
-        height: 602
+        x: 233
+        y: 1405
+        width: 601
+        height: 340
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: HumanBlackShadowSprite01_7
+    - name: CatBlackShadowSprite02_7
       rect:
         serializedVersion: 2
-        x: 687
-        y: 1457
-        width: 323
-        height: 594
+        x: 1276
+        y: 1223
+        width: 595
+        height: 368
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: HumanBlackShadowSprite01_8
+    - name: CatBlackShadowSprite02_8
       rect:
         serializedVersion: 2
-        x: 1256
-        y: 1461
-        width: 316
-        height: 590
+        x: 243
+        y: 949
+        width: 579
+        height: 352
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: HumanBlackShadowSprite01_9
+    - name: CatBlackShadowSprite02_9
       rect:
         serializedVersion: 2
-        x: 199
-        y: 746
-        width: 265
-        height: 584
+        x: 1293
+        y: 848
+        width: 600
+        height: 311
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: HumanBlackShadowSprite01_10
+    - name: CatBlackShadowSprite02_10
       rect:
         serializedVersion: 2
-        x: 798
-        y: 741
-        width: 248
-        height: 586
+        x: 251
+        y: 541
+        width: 598
+        height: 350
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: HumanBlackShadowSprite01_11
+    - name: CatBlackShadowSprite02_11
       rect:
         serializedVersion: 2
-        x: 1376
-        y: 749
-        width: 175
-        height: 568
+        x: 1266
+        y: 438
+        width: 612
+        height: 357
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: HumanBlackShadowSprite01_12
+    - name: CatBlackShadowSprite02_12
       rect:
         serializedVersion: 2
-        x: 178
-        y: 53
-        width: 207
-        height: 584
+        x: 224
+        y: 174
+        width: 603
+        height: 339
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
