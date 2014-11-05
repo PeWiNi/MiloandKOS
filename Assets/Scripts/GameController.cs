@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
     GameObject kos;
     Flashlight miloFlashlightComponent;
     bool isPlayingAsMilo = true;
-    float miloAwakeTimer = 60.0f;
+    float miloAwakeTimer = 0.0f;
     int miloAwakeTimerMax = 60;
     int switchCounter = 0;
 
@@ -47,7 +47,7 @@ public class GameController : MonoBehaviour
         if (miloFlashlightComponent.Capacity <= 0.0f && isPlayingAsMilo)//Minimum Capacity for the Flashlight.
         {
             SwitchToKOS();
-        } else if (miloAwakeTimer <= 0.0f && !isPlayingAsMilo)// Milo is awake once again.
+        } else if (miloAwakeTimer >= miloAwakeTimerMax && !isPlayingAsMilo)// Milo is awake once again.
         {
             SwitchToMilo();
         }
@@ -88,7 +88,7 @@ public class GameController : MonoBehaviour
     /// </summary>
     public void ResetMiloAwakeTimer()
     {
-        miloAwakeTimer = 60.0f;
+        miloAwakeTimer = 0.0f;
     }
 
     /// <summary>
@@ -128,10 +128,10 @@ public class GameController : MonoBehaviour
     /// <returns>The awake countdown.</returns>
     IEnumerator MiloAwakeCountdown()
     {
-        while (miloAwakeTimer > 0)
+        while (miloAwakeTimer < 60)
         {
             yield return new WaitForSeconds(1);
-            miloAwakeTimer -= 1.0f;
+            miloAwakeTimer += 1.0f;
         }
     }
 
@@ -177,8 +177,8 @@ public class GameController : MonoBehaviour
         backgroundKOS = new Texture2D(1, 1, TextureFormat.RGB24, false);
         foregroundKOS = new Texture2D(1, 1, TextureFormat.RGB24, false);
         Color darkBlue = new Color(0.04f, 0.16f, 0.35f);
-        backgroundKOS.SetPixel(0, 0, Color.yellow);
         foregroundKOS.SetPixel(0, 0, darkBlue);
+        backgroundKOS.SetPixel(0, 0, Color.yellow);
         backgroundKOS.Apply();
         foregroundKOS.Apply();
     }
