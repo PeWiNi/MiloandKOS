@@ -177,8 +177,8 @@ public class GameController : MonoBehaviour
         backgroundKOS = new Texture2D(1, 1, TextureFormat.RGB24, false);
         foregroundKOS = new Texture2D(1, 1, TextureFormat.RGB24, false);
         Color darkBlue = new Color(0.04f, 0.16f, 0.35f);
-        foregroundKOS.SetPixel(0, 0, darkBlue);
-        backgroundKOS.SetPixel(0, 0, Color.yellow);
+        foregroundKOS.SetPixel(0, 0, Color.yellow);
+        backgroundKOS.SetPixel(0, 0, darkBlue);
         backgroundKOS.Apply();
         foregroundKOS.Apply();
     }
