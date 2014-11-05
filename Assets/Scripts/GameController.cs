@@ -68,6 +68,18 @@ public class GameController : MonoBehaviour
     }
 
     /// <summary>
+    /// Gets the kos.
+    /// </summary>
+    /// <value>The kos.</value>
+    public GameObject Kos
+    {
+        get
+        {
+            return kos;
+        }
+    }
+
+    /// <summary>
     /// Gets or sets the switch counter.
     /// </summary>
     /// <value>The switch counter.</value>
