@@ -1259,7 +1259,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 73c4ab481aaf4a041b288c9b8f0e2cee, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: abaa6ee9fe1927744826abecdc732ac4, type: 2}
+      objectReference: {fileID: 2100000, guid: fcfda99e6e402304882c0ad82bf7a20b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 73c4ab481aaf4a041b288c9b8f0e2cee, type: 3}
   m_RootGameObject: {fileID: 1158021680}
@@ -1536,6 +1536,7 @@ GameObject:
   - 4: {fileID: 468895429}
   - 33: {fileID: 468895428}
   - 23: {fileID: 468895427}
+  - 64: {fileID: 468895430}
   m_Layer: 0
   m_Name: WallMazeX4
   m_TagString: Untagged
@@ -1584,6 +1585,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!64 &468895430
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6400000, guid: 22662f72ff81b1b479c4541ac75ac494,
+    type: 3}
+  m_PrefabInternal: {fileID: 1359078753}
+  m_GameObject: {fileID: 468895426}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 22662f72ff81b1b479c4541ac75ac494, type: 3}
 --- !u!1 &469080550
 GameObject:
   m_ObjectHideFlags: 0
@@ -3143,6 +3158,7 @@ GameObject:
   - 4: {fileID: 974898664}
   - 33: {fileID: 974898663}
   - 23: {fileID: 974898662}
+  - 64: {fileID: 974898665}
   m_Layer: 0
   m_Name: WallMazeX8
   m_TagString: Untagged
@@ -3191,6 +3207,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
+--- !u!64 &974898665
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6400000, guid: 73c4ab481aaf4a041b288c9b8f0e2cee,
+    type: 3}
+  m_PrefabInternal: {fileID: 835255707}
+  m_GameObject: {fileID: 974898661}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 73c4ab481aaf4a041b288c9b8f0e2cee, type: 3}
 --- !u!1 &978836955
 GameObject:
   m_ObjectHideFlags: 0
@@ -3777,6 +3807,7 @@ GameObject:
   - 4: {fileID: 1158021683}
   - 33: {fileID: 1158021682}
   - 23: {fileID: 1158021681}
+  - 64: {fileID: 1158021684}
   m_Layer: 0
   m_Name: WallMazeX8
   m_TagString: Untagged
@@ -3797,7 +3828,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: abaa6ee9fe1927744826abecdc732ac4, type: 2}
+  - {fileID: 2100000, guid: fcfda99e6e402304882c0ad82bf7a20b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -3825,6 +3856,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!64 &1158021684
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6400000, guid: 73c4ab481aaf4a041b288c9b8f0e2cee,
+    type: 3}
+  m_PrefabInternal: {fileID: 411893192}
+  m_GameObject: {fileID: 1158021680}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 73c4ab481aaf4a041b288c9b8f0e2cee, type: 3}
 --- !u!1 &1164099973
 GameObject:
   m_ObjectHideFlags: 0
