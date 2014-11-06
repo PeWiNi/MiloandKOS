@@ -26,23 +26,30 @@ public class ShadowEffect : MonoBehaviour
             Destroy(GameObject.Find("CatShadow"));
         }
     }
-    
+
+    /// <summary>
+    /// Speeds the time.
+    /// </summary>
+    /// <returns>The time.</returns>
     IEnumerator SpeedTime()
     {
         yield return new WaitForSeconds(5);
         RevertSpeed();
     }
 
-
-
+    /// <summary>
+    /// Reverts the speed.
+    /// </summary>
     void RevertSpeed()
     {
         controller.ShadowSlowDownSpeed = 1.0f;// Reset to one so we are no longer slowed down.
     }
 
+    /// <summary>
+    /// Shadows the slow effect.
+    /// </summary>
     void ShadowSlowEffect()
     {
-        Debug.Log("Controller: " + controller);
         controller.ShadowSlowDownSpeed = 0.1f;// Slow down with this amount.
     }
 }

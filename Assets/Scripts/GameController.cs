@@ -68,6 +68,18 @@ public class GameController : MonoBehaviour
     }
 
     /// <summary>
+    /// Gets the milo.
+    /// </summary>
+    /// <value>The milo.</value>
+    public GameObject Milo
+    {
+        get
+        {
+            return milo;
+        }
+    }
+
+    /// <summary>
     /// Gets the kos.
     /// </summary>
     /// <value>The kos.</value>

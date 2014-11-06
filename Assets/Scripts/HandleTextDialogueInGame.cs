@@ -4,28 +4,33 @@ using System.Collections;
 
 public class HandleTextDialogueInGame : MonoBehaviour
 {
-    Text switchTexting;
-    float letterPause;
+    public Text switchTextKOS;
+    public Text switchTextMilo;
+    public Text introTextMOM;
+    public Text introTextKOS;
+
     int currentSwitchCounter;
-    string sentenceKOS;
-    string sentenceMilo;
-    bool kosTexthasBeenPrinted = false;
-    bool miloTexthasBeenPrinted = false;
+    bool switchTextKOSHasBeenPrinted = false;
+    bool switchTextMiloHasBeenPrinted = false;
+    bool introTextMOMHasBeenPrinted = false;
 
     // Use this for initialization
     void Start()
     {
-        switchTexting = GetComponent<Text>();
-        sentenceKOS = switchTexting.text.Substring(0, 63);// Copy the text into the new string.
-        sentenceMilo = switchTexting.text.Substring(sentenceKOS.Length, switchTexting.text.Length - sentenceKOS.Length);
-        switchTexting.text = "";
-        switchTexting.enabled = false;
         currentSwitchCounter = GameController.INSTANCE.SwitchCounter;
     }
 	
     // Update is called once per frame
     void Update()
     {
+        if (GameController.INSTANCE != null && GameController.INSTANCE.Milo.activeSelf)
+        {
+            if (!introTextMOMHasBeenPrinted)
+            {
+                PrintIntroSequencePlayingAsMilo();
+                introTextMOMHasBeenPrinted = true;
+            }
+        }
         if (GameController.INSTANCE.SwitchCounter != currentSwitchCounter)// Check if a Switch Happened in the game.
         {
             currentSwitchCounter = GameController.INSTANCE.SwitchCounter;
@@ -40,64 +45,77 @@ public class HandleTextDialogueInGame : MonoBehaviour
     {
         if (currentSwitchCounter % 2 != 0)// SwitchCounter is Odd, active Character is KOS.
         {
-            if (!kosTexthasBeenPrinted)
+            if (!switchTextKOSHasBeenPrinted)
             {
-                PrintLetterSequenceKOS();
-                kosTexthasBeenPrinted = true;
+                PrintSwitchTextKOS();
+                switchTextKOSHasBeenPrinted = true;
             }
         } else// SwitchCounter is Even, active Character is Milo.
         {
-            if (!miloTexthasBeenPrinted)
+            if (!switchTextMiloHasBeenPrinted)
             {
-                PrintLetterSequenceMilo();
-                miloTexthasBeenPrinted = true;
+                PrintSwitchTextMilo();
+                switchTextMiloHasBeenPrinted = true;
             }
         }
     }
 
     /// <summary>
-    /// Prints the letter sequence for KOS.
+    /// Prints the switch text KOS.
     /// </summary>
-    /// <returns>The letter sequence KO.</returns>
-    void PrintLetterSequenceKOS()
+    void PrintSwitchTextKOS()
     {
-        switchTexting.text = sentenceKOS;
-        switchTexting.enabled = true;
-        StartCoroutine("FadeText");
+        switchTextKOS.enabled = true;
+        StartCoroutine("FadeText", switchTextKOS);
     }
 
     /// <summary>
-    /// Prints the letter sequence for Milo.
+    /// Prints the switch text Milo.
     /// </summary>
-    /// <returns>The letter sequence milo.</returns>
-    void PrintLetterSequenceMilo()
+    void PrintSwitchTextMilo()
     {
-        switchTexting.text = sentenceMilo;
-        switchTexting.enabled = true;
-        StartCoroutine("FadeText");
+        switchTextMilo.enabled = true;
+        StartCoroutine("FadeText", switchTextMilo);
     }
 
     /// <summary>
     /// Fades the text.
     /// </summary>
     /// <returns>The text.</returns>
-    IEnumerator FadeText()
+    IEnumerator FadeText(Text text)
     {
         Color color;
-        while (switchTexting.color.a > 0.0f)
+        while (text.color.a > 0.0f)
         {
-            color.a = switchTexting.color.a - 0.01f;
-            color.r = switchTexting.color.r;
-            color.g = switchTexting.color.g;
-            color.b = switchTexting.color.b;
-            switchTexting.color = color;
+            color.a = text.color.a - 0.01f;
+            color.r = text.color.r;
+            color.g = text.color.g;
+            color.b = text.color.b;
+            text.color = color;
             yield return new WaitForSeconds(0.1f);
         }
         color.a = 1.0f;
-        color.r = switchTexting.color.r;
-        color.g = switchTexting.color.g;
-        color.b = switchTexting.color.b;
-        switchTexting.color = color;
-        switchTexting.text = "";
+        color.r = text.color.r;
+        color.g = text.color.g;
+        color.b = text.color.b;
+        text.color = color;
+        text.enabled = false;
+    }
+
+    /// <summary>
+    /// Prints the intro sequence playing as Milo.
+    /// </summary>
+    void PrintIntroSequencePlayingAsMilo()
+    {
+        introTextMOM.enabled = true;
+        StartCoroutine("FadeText", introTextMOM);
+    }
+
+    /// <summary>
+    /// Prints Milos first contact with a battery.
+    /// </summary>
+    void PrintMiloFirstContactwithBattery()
+    {
+
     }
 }
