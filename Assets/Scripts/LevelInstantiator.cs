@@ -26,21 +26,21 @@ public class LevelInstantiator : MonoBehaviour {
 	{"7","0","7","7","0","g","1","1","1","1","1","a","0","7","#","#","1","1","4","0","0","0","0","0","7","#","#","#","#"},
 	{"7","0","7","2","0","0","0","0","0","0","0","0","0","7","#","#","#","#","a","0","2","4","3","0","7","#","#","#","#"},
 	{"7","0","7","g","3","1","1","3","1","1","1","y","0","2","#","1","1","1","h","0","0","d","7","0","7","#","#","#","#"},
-	{"7","0","g","1","1","1","1","1","1","1","1","h","0","7","#","1","0","0","0","0","0","0","7","0","g","#","#","#","#"},
-	{"2","0","0","d","0","0","0","0","0","0","0","0","0","7","#","1","0","0","0","0","0","0","7","0","0","g","s","1","1"},
+	{"7","0","g","1","1","1","1","1","1","1","1","h","0","7","#","1","0","0","0","0","0","7","7","0","g","#","#","#","#"},
+	{"2","0","0","d","0","0","0","0","0","0","0","0","0","7","#","1","0","0","0","0","0","7","7","0","0","g","s","1","1"},
 	{"1","1","1","4","0","0","2","4","3","1","1","1","4","1","1","1","0","0","t","a","0","t","1","0","0","0","0","0","0"},
 	{"1","1","h","0","0","0","g","1","1","1","1","1","s","4","1","h","0","0","7","7","0","d","g","1","1","3","1","1","1"},
 	{"2","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","7","7","0","4","1","#","#","#","#","#","#"},
 	{"7","0","t","y","0","4","1","1","1","4","3","1","1","1","3","2","1","1","1","7","0","g","1","1","#","#","#","#","#"},
-	{"7","0","7","7","0","7","1","1","1","3","2","1","1","1","1","1","1","4","1","h","0","0","0","7","#","#","#","#","#"},
+	{"7","0","7","7","0","7","1","1","1","s","2","1","1","1","1","1","1","4","1","h","0","0","0","7","#","#","#","#","#"},
 	{"7","0","7","7","0","7","7","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","g","3","2","1","1","1"},
 	{"1","3","4","7","0","7","7","0","t","4","0","t","1","1","1","3","1","1","1","1","4","3","0","0","0","0","0","0","0"},
 	{"#","#","#","7","0","7","7","0","7","7","0","7","1","2","1","1","1","1","1","1","4","1","0","0","0","0","0","0","0"},
-	{"#","#","#","7","0","7","7","3","4","7","0","7","1","0","0","0","0","0","0","0","2","1","1","3","1","1","1","3","4"},
+	{"#","#","#","7","0","7","7","3","4","7","0","7","1","0","0","0","0","0","0","0","2","1","1","3","1","1","1","s","4"},
 	{"#","#","#","4","0","g","1","1","1","h","0","7","1","0","t","1","1","4","0","0","7","1","1","1","1","#","#","#","#"},
 	{"#","#","#","2","0","0","0","0","0","0","0","2","1","0","1","1","1","h","0","0","g","1","1","1","1","#","#","#","#"},
 	{"#","#","#","#","1","1","1","3","1","y","0","d","1","s","1","s","0","0","0","0","0","0","0","0","1","#","#","#","#"},
-	{"#","#","#","#","#","#","#","#","#","7","0","0","0","0","0","0","0","t","1","1","4","3","0","0","4","s","1","1","1"},
+	{"#","#","#","#","#","#","#","#","#","7","0","0","0","0","0","0","0","t","1","1","4","3","0","0","0","s","1","1","1"},
 	{"#","#","#","#","#","#","#","#","#","7","0","0","0","0","0","0","0","d","#","#","#","1","0","0","0","0","0","0","0"},
 	{"#","#","#","#","#","#","#","#","#","1","1","1","4","3","1","1","2","1","#","#","#","1","1","1","1","1","1","1","4"}
 		};
@@ -74,40 +74,44 @@ public class LevelInstantiator : MonoBehaviour {
 								rotation.y = 0.0f;
 								switch (levelMap [(int)i, (int)j]) {
 								case "1":
-										position.x=i*1.5f-(1.0f-Random.Range (0.5f,1.0f));
-										position.z=j*2.5f-(2.0f-Random.Range (1.5f,2.0f));
+										position.x=i*1.5f-(1.0f-Random.Range (0.5f,0.8f));
+										position.z=j*2.5f-(2.0f-Random.Range (1.5f,1.8f));
 										GameObject tree = Instantiate (treePrefab, position, Quaternion.identity) as GameObject;	
 										transform.parent = transform;
 										break;			
 								case "2":GameObject lamp = Instantiate (lampPrefab, position, Quaternion.identity) as GameObject;	
 										transform.parent = transform;						 
 										break;
-								case "3":GameObject bench = Instantiate (benchPrefab, position, Quaternion.identity) as GameObject;	
+								case "3": rotation.y = 90.0f;
+										position.z+=0.5f;
+										GameObject bench = Instantiate (benchPrefab, position, Quaternion.Euler(rotation)) as GameObject;	
 										transform.parent = transform;
 										break;
-								case "d":rotation.y = -90f;
-										GameObject bencha = Instantiate (benchPrefab, position, Quaternion.Euler (rotation)) as GameObject;	
+								case "d": position.z+=0.5f;
+										GameObject bencha = Instantiate (benchPrefab, position, Quaternion.identity) as GameObject;	
 										transform.parent = transform;
 										break;
-								case "a":rotation.y = 90.0f;
+								case "a":rotation.y = 180.0f;
+										position.z+=0.5f;
 										GameObject benchd = Instantiate (benchPrefab, position, Quaternion.Euler (rotation)) as GameObject;	
 										transform.parent = transform;
 										break;
-								case "s":rotation.y = 180.0f;
+								case "s":rotation.y = -90.0f;
+										position.z+=0.5f;
 										GameObject benchs = Instantiate (benchPrefab, position, Quaternion.Euler (rotation)) as GameObject;	
 										transform.parent = transform;
 										break;
 								case "4":GameObject can = Instantiate (canPrefab, position, Quaternion.identity) as GameObject;	
 										transform.parent = transform;
 										break;
-								case "7": position.x=i*1.5f-(1.0f-Random.Range (0.5f,1.0f));
-									position.z=j*2.5f-(2.0f-Random.Range (1.5f,2.0f));
+								case "7": position.x=i*1.5f-(1.0f-Random.Range (0.5f,0.8f));
+									position.z=j*2.5f-(2.0f-Random.Range (1.5f,1.8f));
 									rotation.y=90.0f;
 									GameObject tree2 = Instantiate (treePrefab, position, Quaternion.Euler (rotation)) as GameObject;	
 									transform.parent = transform;
 									break;	
-								case "#": 	position.x=i*1.5f-(1.0f-Random.Range (0.5f,1.0f));
-											position.z=j*2.5f-(2.0f-Random.Range (1.5f,2.0f));
+								case "#": 	position.x=i*1.5f-(1.0f-Random.Range (0.5f,0.8f));
+											position.z=j*2.5f-(2.0f-Random.Range (1.5f,1.8f));
 											if (Random.Range (0.0f, 1.0f) >=0.5) rotation.y=90.0f;
 												else rotation.y=0f;
 														GameObject trees = Instantiate (treePrefab, position, Quaternion.Euler(rotation)) as GameObject; 
