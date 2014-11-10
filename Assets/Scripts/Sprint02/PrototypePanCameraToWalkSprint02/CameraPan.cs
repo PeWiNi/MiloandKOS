@@ -39,12 +39,12 @@ public class CameraPan : MonoBehaviour
             attachedTo = GameObject.FindWithTag("Player").gameObject;
         }
 		//if you change S to any other key not used atm, that key will become a flip direction button. 
-        if (Input.GetKey(KeyCode.S) && !isMovingDown && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.H) && !isMovingDown && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
         {
             isMovingDown = true;
             isMoving = true;
             attachedTo.transform.RotateAround(Vector3.up, Mathf.PI);// Rotate the character in the opposite direction on the Y-axis.
-        } else if (!Input.GetKey(KeyCode.S) && isMovingDown)
+        } else if (!Input.GetKey(KeyCode.H) && isMovingDown)
         {
             isMovingDown = false;
         } else if (!Input.anyKey)
