@@ -43,13 +43,13 @@ public class Move : MonoBehaviour
         //Left Rotation.
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(new Vector3(0.0f, Input.GetAxis("Horizontal")-2.0f, 0.0f));
+            transform.Rotate(new Vector3(0.0f, Input.GetAxis("Horizontal") - 2.0f, 0.0f));
         }
-		//& Right Rotation
-		if ( Input.GetKey(KeyCode.D))
-		{
-			transform.Rotate(new Vector3(0.0f, Input.GetAxis("Horizontal")+2.0f, 0.0f));
-		}
+        //& Right Rotation
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Rotate(new Vector3(0.0f, Input.GetAxis("Horizontal") + 2.0f, 0.0f));
+        }
         //Forward direction.
         if (Input.GetKey(KeyCode.W))
         {
@@ -60,9 +60,9 @@ public class Move : MonoBehaviour
         //Backward direction.
         if (Input.GetKey(KeyCode.S))
         {
-            verticalMovement = Input.GetAxis("Vertical") * 2.0f * shadowSlowDownSpeed;
+            verticalMovement = Input.GetAxis("Vertical") * shadowSlowDownSpeed;
             anim.SetFloat(movementFloat, verticalMovement);
-            transform.Translate(0.0f, 0.0f, -1 * (verticalMovement * Time.deltaTime));
+            transform.Translate(0.0f, 0.0f, -Vector3.back.z * (verticalMovement * Time.deltaTime));
         }
         //When NO keyboard events are present.
         if (!Input.anyKey)
