@@ -1,0 +1,256 @@
+fileFormatVersion: 2
+guid: fd3c8bf07f77d0a428c5f8b326b802a5
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: HumanGreyShadowSprite02_0
+    21300002: HumanGreyShadowSprite02_1
+    21300004: HumanGreyShadowSprite02_2
+    21300006: HumanGreyShadowSprite02_3
+    21300008: HumanGreyShadowSprite02_4
+    21300010: HumanGreyShadowSprite02_5
+    21300012: HumanGreyShadowSprite02_6
+    21300014: HumanGreyShadowSprite02_7
+    21300016: HumanGreyShadowSprite02_8
+    21300018: HumanGreyShadowSprite02_9
+    21300020: HumanGreyShadowSprite02_10
+    21300022: HumanGreyShadowSprite02_11
+    21300024: HumanGreyShadowSprite02_12
+    21300026: HumanGreyShadowSprite02_13
+    21300028: HumanGreyShadowSprite02_14
+    21300030: HumanGreyShadowSprite02_15
+    21300032: HumanGreyShadowSprite02_16
+    21300034: HumanGreyShadowSprite02_17
+    21300036: HumanGreyShadowSprite02_18
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 350
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: HumanGreyShadowSprite02_0
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 4336
+        width: 261
+        height: 585
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanGreyShadowSprite02_1
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 4282
+        width: 274
+        height: 635
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanGreyShadowSprite02_2
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 4278
+        width: 274
+        height: 633
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanGreyShadowSprite02_3
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 3618
+        width: 259
+        height: 585
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanGreyShadowSprite02_4
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 3603
+        width: 254
+        height: 593
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanGreyShadowSprite02_5
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 3598
+        width: 252
+        height: 596
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanGreyShadowSprite02_6
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 2906
+        width: 141
+        height: 598
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanGreyShadowSprite02_7
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 2899
+        width: 314
+        height: 589
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanGreyShadowSprite02_8
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 2904
+        width: 309
+        height: 588
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanGreyShadowSprite02_9
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 2189
+        width: 259
+        height: 576
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanGreyShadowSprite02_10
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 2182
+        width: 240
+        height: 581
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanGreyShadowSprite02_11
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 2192
+        width: 169
+        height: 564
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanGreyShadowSprite02_12
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 1495
+        width: 205
+        height: 580
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanGreyShadowSprite02_13
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 1479
+        width: 313
+        height: 590
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanGreyShadowSprite02_14
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 1469
+        width: 309
+        height: 590
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanGreyShadowSprite02_15
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 746
+        width: 267
+        height: 579
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanGreyShadowSprite02_16
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 741
+        width: 241
+        height: 582
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanGreyShadowSprite02_17
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 742
+        width: 168
+        height: 566
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanGreyShadowSprite02_18
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 69
+        width: 204
+        height: 583
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

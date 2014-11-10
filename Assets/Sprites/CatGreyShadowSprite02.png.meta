@@ -1,0 +1,190 @@
+fileFormatVersion: 2
+guid: 6183241196a564e4188165e5a6777125
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: CatGreyShadowSprite02_0
+    21300002: CatGreyShadowSprite02_3
+    21300004: CatGreyShadowSprite02_6
+    21300006: CatGreyShadowSprite02_9
+    21300008: CatGreyShadowSprite02_12
+    21300010: CatGreyShadowSprite02_10
+    21300012: CatGreyShadowSprite02_11
+    21300014: CatGreyShadowSprite02_7
+    21300016: CatGreyShadowSprite02_8
+    21300018: CatGreyShadowSprite02_9
+    21300020: CatGreyShadowSprite02_10
+    21300022: CatGreyShadowSprite02_11
+    21300024: CatGreyShadowSprite02_12
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 500
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: CatGreyShadowSprite02_0
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 2560
+        width: 521
+        height: 429
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatGreyShadowSprite02_3
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 2178
+        width: 580
+        height: 354
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatGreyShadowSprite02_6
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1769
+        width: 595
+        height: 352
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatGreyShadowSprite02_9
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 1404
+        width: 601
+        height: 341
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatGreyShadowSprite02_12
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 949
+        width: 580
+        height: 353
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatGreyShadowSprite02_10
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 539
+        width: 599
+        height: 350
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatGreyShadowSprite02_11
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 171
+        width: 603
+        height: 342
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatGreyShadowSprite02_7
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 2563
+        width: 601
+        height: 368
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatGreyShadowSprite02_8
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 2187
+        width: 601
+        height: 312
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatGreyShadowSprite02_9
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1777
+        width: 610
+        height: 361
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatGreyShadowSprite02_10
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 1223
+        width: 596
+        height: 373
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatGreyShadowSprite02_11
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 847
+        width: 601
+        height: 313
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatGreyShadowSprite02_12
+      rect:
+        serializedVersion: 2
+        x: 1265
+        y: 437
+        width: 614
+        height: 359
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
