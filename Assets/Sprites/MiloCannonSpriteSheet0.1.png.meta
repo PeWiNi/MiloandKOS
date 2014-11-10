@@ -1,0 +1,113 @@
+fileFormatVersion: 2
+guid: 6b1a195ccf8979e4fb91bf7d621b0a27
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: MiloCannonSpriteSheet0.1_0
+    21300002: MiloCannonSpriteSheet0.1_1
+    21300004: MiloCannonSpriteSheet0.1_2
+    21300006: MiloCannonSpriteSheet0.1_3
+    21300008: MiloCannonSpriteSheet0.1_4
+    21300010: MiloCannonSpriteSheet0.1_5
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: MiloCannonSpriteSheet0.1_0
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 4529
+        width: 1202
+        height: 962
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MiloCannonSpriteSheet0.1_1
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 4550
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MiloCannonSpriteSheet0.1_2
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 3500
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MiloCannonSpriteSheet0.1_3
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 2350
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MiloCannonSpriteSheet0.1_4
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1250
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MiloCannonSpriteSheet0.1_5
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 100
+        width: 1150
+        height: 1000
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
