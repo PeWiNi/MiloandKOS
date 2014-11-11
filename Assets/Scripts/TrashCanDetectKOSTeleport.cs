@@ -64,7 +64,6 @@ public class TrashCanDetectKOSTeleport : MonoBehaviour
                     }
                 }
             }
-            Debug.Log(closest.transform.position);
             kos.rigidbody.MovePosition(closest.transform.position);//This is the actual teleportation.
         }
     }

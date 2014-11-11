@@ -57,7 +57,6 @@ public class GameController : MonoBehaviour
     {
         if (miloFlashlightComponent.Capacity <= 0.0f && miloAwakeTimer > 0.0f)
         {
-//            GUI.Label(new Rect(10.0f, 10.0f, 75.0f, 50.0f), "Milo awakes in: " + miloAwakeTimer);
             GUI.BeginGroup(box);
             {
                 GUI.DrawTexture(new Rect(0, 0, box.width, box.height), backgroundKOS, ScaleMode.StretchToFill);
@@ -145,6 +144,7 @@ public class GameController : MonoBehaviour
         SwitchCounter++;
         SwitchActiveValuesForCollectables();
         StartCoroutine(MiloAwakeCountdown());
+        SwitchFadingInOut.SwitchStarting = true;
     }
 
     /// <summary>
