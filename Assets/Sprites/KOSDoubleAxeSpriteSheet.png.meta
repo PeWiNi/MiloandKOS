@@ -1,11 +1,19 @@
 fileFormatVersion: 2
 guid: 44dc365a49512304d9c1b332518e1791
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: KOSDoubleAxeSpriteSheet_0
+    21300002: KOSDoubleAxeSpriteSheet_1
+    21300004: KOSDoubleAxeSpriteSheet_2
+    21300006: KOSDoubleAxeSpriteSheet_3
+    21300008: KOSDoubleAxeSpriteSheet_4
+    21300010: KOSDoubleAxeSpriteSheet_5
+    21300012: KOSDoubleAxeSpriteSheet_6
+    21300014: KOSDoubleAxeSpriteSheet_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -37,11 +45,91 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 350
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: KOSDoubleAxeSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 4231
+        width: 524
+        height: 1037
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KOSDoubleAxeSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 1847
+        y: 4221
+        width: 719
+        height: 1021
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KOSDoubleAxeSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 2156
+        y: 2674
+        width: 529
+        height: 984
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KOSDoubleAxeSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 2671
+        width: 639
+        height: 973
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KOSDoubleAxeSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 1064
+        width: 792
+        height: 955
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KOSDoubleAxeSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 2179
+        y: 1083
+        width: 943
+        height: 947
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KOSDoubleAxeSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 5788
+        width: 424
+        height: 996
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KOSDoubleAxeSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 2075
+        y: 5711
+        width: 528
+        height: 1103
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
