@@ -6,6 +6,8 @@ TagManager:
   - Battery
   - KOSLotus
   - AwakeBar
+  - TrashCan
+  - KOSCollectable
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

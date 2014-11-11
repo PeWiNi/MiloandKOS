@@ -138,7 +138,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ae8bff9b4a79804cbf3804a8629a286, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5ae8bff9b4a79804cbf3804a8629a286, type: 2}
       propertyPath: m_IsActive
@@ -578,6 +578,7 @@ GameObject:
   - 114: {fileID: 469080553}
   - 136: {fileID: 469080554}
   - 54: {fileID: 469080555}
+  - 114: {fileID: 469080556}
   m_Layer: 0
   m_Name: KOSMinotaur
   m_TagString: Player
@@ -656,6 +657,18 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &469080556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 8784d67cbe5845a4ab03bf5a8a4a8122,
+    type: 2}
+  m_PrefabInternal: {fileID: 991909233}
+  m_GameObject: {fileID: 469080550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e3a731413a41ea47b21a39b7d3148b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &470432803
 GameObject:
   m_ObjectHideFlags: 0
@@ -2090,7 +2103,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6e0e3dc0028563a40bacb80afbb0092d, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6e0e3dc0028563a40bacb80afbb0092d, type: 2}
       propertyPath: distanceUpFromGround
@@ -2707,7 +2720,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 8784d67cbe5845a4ab03bf5a8a4a8122, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: 8784d67cbe5845a4ab03bf5a8a4a8122, type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -2784,7 +2797,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8fabb524e41da7e4bb43a572eca5be21, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 8fabb524e41da7e4bb43a572eca5be21, type: 2}
       propertyPath: m_Enabled
@@ -5216,7 +5229,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400132, guid: fafa22ba4cf734c498019ccd4c9c389d, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fafa22ba4cf734c498019ccd4c9c389d, type: 2}
@@ -5287,7 +5300,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cbac2d92b4f8a3c4b9c3e1486b5bf313, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6500000, guid: cbac2d92b4f8a3c4b9c3e1486b5bf313, type: 2}
       propertyPath: m_Size.x
@@ -5534,7 +5547,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 72e86641452771947ac9a8f70ce53ef3, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 19800002, guid: 72e86641452771947ac9a8f70ce53ef3, type: 2}
       propertyPath: InitialModule.startColor.maxColor.rgba
@@ -6270,7 +6283,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 0aefd12272ebf0249bf0d8dd90db4746, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 21200000, guid: 0aefd12272ebf0249bf0d8dd90db4746, type: 2}
       propertyPath: m_Sprite
