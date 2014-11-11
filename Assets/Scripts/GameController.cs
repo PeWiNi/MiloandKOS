@@ -3,7 +3,7 @@ using System.Collections;
 
 public class GameController : MonoBehaviour
 {
-    public static GameController INSTANCE;
+    static GameController _INSTANCE;
     GameObject milo;
     GameObject kos;
     Flashlight miloFlashlightComponent;
@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour
     // This happens before Start
     void Awake()
     {
-        INSTANCE = this;
+        _INSTANCE = this;
     }
 
     // Use this for initialization
@@ -64,6 +64,22 @@ public class GameController : MonoBehaviour
                 GUI.DrawTexture(new Rect(0, 0, box.width * miloAwakeTimer / miloAwakeTimerMax, box.height), foregroundKOS, ScaleMode.StretchToFill);
             }
             GUI.EndGroup();
+        }
+    }
+
+    /// <summary>
+    /// Gets or sets the _ INSTANC.
+    /// </summary>
+    /// <value>The _ INSTANC.</value>
+    public static GameController INSTANCE
+    {
+        get
+        {
+            return _INSTANCE;
+        }
+        set
+        {
+            _INSTANCE = value;
         }
     }
 
