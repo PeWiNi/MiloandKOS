@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class LoadingScreen46 : MonoBehaviour
@@ -6,13 +6,18 @@ public class LoadingScreen46 : MonoBehaviour
 	//We make a static variable to our LoadingScreen instance
 	static LoadingScreen46 instance;
 	//reference to gameobject with the static image 
-	GameObject loadingScreenImage;
-	
+	public GameObject loadingScreenImage;
+
+	void setImage (GameObject image)
+	{ 
+	}
 	//function which executes on scene awake before the start function
 	void Awake()
 	{
 		//find the ImageLS gameobject from the Hierarchy
-		loadingScreenImage = GameObject.Find("ImageLS");
+//	loadingScreenImage = GameObject.Find("ImageLS");
+
+
 		//destroy the already existing instance, if any
 		if (instance)
 		{
@@ -31,14 +36,16 @@ public class LoadingScreen46 : MonoBehaviour
 		if(!Application.isLoadingLevel)
 			hide();
 	}
+
+
 	//function to enable the loading screen
 	public static void show()
 	{
 		//if instance does not exists return from this function
-		if (!InstanceExists()) 
-		{
-			return;
-		}
+		//if (!InstanceExists()) 
+		//{
+		//	return;
+		//}
 		//enable the loading image object 
 		instance.loadingScreenImage.SetActive(true);
 	}
