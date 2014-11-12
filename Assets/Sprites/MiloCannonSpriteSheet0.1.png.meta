@@ -49,43 +49,33 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: MiloCannonSpriteSheet0.1_0
-      rect:
-        serializedVersion: 2
-        x: 218
-        y: 4529
-        width: 1202
-        height: 962
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: MiloCannonSpriteSheet0.1_1
       rect:
         serializedVersion: 2
-        x: 250
-        y: 4550
-        width: 1000
-        height: 1000
+        x: 329
+        y: 4625
+        width: 831
+        height: 919
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: MiloCannonSpriteSheet0.1_2
       rect:
         serializedVersion: 2
-        x: 250
-        y: 3500
-        width: 1000
-        height: 1000
+        x: 352
+        y: 3540
+        width: 830
+        height: 924
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: MiloCannonSpriteSheet0.1_3
       rect:
         serializedVersion: 2
-        x: 250
-        y: 2350
-        width: 1000
-        height: 1000
+        x: 285
+        y: 2394
+        width: 919
+        height: 946
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -93,19 +83,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 200
-        y: 1250
-        width: 1000
-        height: 1000
+        y: 1309
+        width: 965
+        height: 919
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: MiloCannonSpriteSheet0.1_5
       rect:
         serializedVersion: 2
-        x: 50
-        y: 100
-        width: 1150
-        height: 1000
+        x: 125
+        y: 158
+        width: 1075
+        height: 930
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
