@@ -24,9 +24,7 @@ public class KOSThrowAxe : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-         * Checking for scene as well because otherwise, Milo will shoot when Kos shoots.
-         */
+        // Checking for scene as well because otherwise, Milo will shoot when Kos shoots.
         if (Input.GetKeyDown(KeyCode.C) && Application.loadedLevelName.Equals("OutroCutsceneKOS"))
         {
             anim.SetTrigger(axeThrow);
@@ -38,6 +36,13 @@ public class KOSThrowAxe : MonoBehaviour
     {
         if (col.gameObject.name == "CannonBall01")
         {
+            if (Application.loadedLevelName.Equals("OutroCutsceneKOS"))
+            {
+                StateController.ConsecutiveHitsValue = 0;
+            } else if (Application.loadedLevelName.Equals("OutroCutsceneMilo"))
+            {
+                StateController.ConsecutiveHitsValue += 1;
+            }
             Destroy(col.gameObject);
         }
     }
@@ -50,6 +55,7 @@ public class KOSThrowAxe : MonoBehaviour
     {
         yield return new WaitForSeconds(0.6f);//wait until the animation is done playing, then throw the axe.
         GameObject axe = Instantiate(rotatingAxePrefab, new Vector2(kos.transform.position.x + vMeasures.x, kos.transform.position.y + vMeasures.y), Quaternion.identity) as GameObject;
+        axe.name = "RotatingAxe01";
         axe.rigidbody2D.AddForce(Vector2.up * 300 + Vector2.right * 500, ForceMode2D.Force);
     }
 }

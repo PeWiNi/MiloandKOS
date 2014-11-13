@@ -14,6 +14,7 @@ public class MiloShootCannonBall : MonoBehaviour
         anim = GetComponent<Animator>();
         shootCannonBall = Animator.StringToHash("ShootCannonBall");
     }
+
     // Use this for initialization
     void Start()
     {
@@ -23,9 +24,7 @@ public class MiloShootCannonBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-         * Checking for scene as well because otherwise, KOS will shoot when Milo shoots.
-         */
+        // Checking for scene as well because otherwise, KOS will shoot when Milo shoots.
         if (Input.GetKeyDown(KeyCode.C) && Application.loadedLevelName.Equals("OutroCutsceneMilo"))
         {
             anim.SetTrigger(shootCannonBall);
@@ -37,6 +36,13 @@ public class MiloShootCannonBall : MonoBehaviour
     {
         if (col.gameObject.name == "RotatingAxe01")
         {
+            if (Application.loadedLevelName.Equals("OutroCutsceneKOS"))
+            {
+                StateController.ConsecutiveHitsValue += 1;
+            } else if (Application.loadedLevelName.Equals("OutroCutsceneMilo"))
+            {
+                StateController.ConsecutiveHitsValue = 0;
+            }
             Destroy(col.gameObject);
         }
     }
@@ -49,6 +55,7 @@ public class MiloShootCannonBall : MonoBehaviour
     {
         yield return new WaitForSeconds(0.6f);//wait until the animation is done playing, then throw the axe.
         GameObject cannonBall = Instantiate(rotatingCanonBallPrefab, new Vector2(milo.transform.position.x - vMeasures.x, milo.transform.position.y - vMeasures.y), Quaternion.identity) as GameObject;
+        cannonBall.name = "CannonBall01";
         cannonBall.rigidbody2D.AddForce(Vector2.up * 100 + Vector2.right * -800, ForceMode2D.Force);
 
     }
