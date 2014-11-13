@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d38c989cf43e045b4c7bc2d0544786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotatingAxePrefab: {fileID: 100000, guid: d78c50ee8bf2b034380ba00226c9dc65, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
