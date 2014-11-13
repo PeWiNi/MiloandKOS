@@ -49,8 +49,8 @@ public class menuScript : MonoBehaviour {
 	}
 
 	public void newGame(){
-		//Application.LoadLevel ("IntroCutscene");
-		Application.LoadLevel ("DogPooTest");
+		Application.LoadLevel ("IntroCutscene");
+		//Application.LoadLevel ("DogPooTest");
 	}
 
 	public void exitGame(){

@@ -139,8 +139,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 85536354}
   m_LocalRotation: {x: 1.78813963e-07, y: -.707106829, z: .707106829, w: 1.78813963e-07}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 179, y: 1, z: 179}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -286,7 +286,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 434267965}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -934.340027}
+  m_LocalPosition: {x: 0, y: 0, z: -13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -301,7 +301,7 @@ GameObject:
   - 4: {fileID: 536030729}
   - 114: {fileID: 536030728}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: loader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -323,6 +323,7 @@ MonoBehaviour:
   currentIndex: 0
   returnString: 
   planeCut: {fileID: 0}
+  nextScene: ExitSchoolCutscene
 --- !u!4 &536030729
 Transform:
   m_ObjectHideFlags: 0
