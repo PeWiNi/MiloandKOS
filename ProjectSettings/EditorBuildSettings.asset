@@ -16,7 +16,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sprint02/DogPooTest.unity
   - enabled: 1
+    path: Assets/Scenes/CutScenes/ExitMazeMilo.unity
+  - enabled: 1
     path: Assets/Scenes/CutScenes/ExitMazeKOS.unity
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/EnterShipMilo.unity
   - enabled: 1
     path: Assets/Scenes/CutScenes/EnterShipKOS.unity
   - enabled: 1
