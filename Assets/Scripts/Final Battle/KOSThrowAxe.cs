@@ -25,9 +25,8 @@ public class KOSThrowAxe : MonoBehaviour
     void Update()
     {
         // Checking for scene as well because otherwise, Milo will shoot when Kos shoots.
-        if (Input.GetKeyDown(KeyCode.C) && Application.loadedLevelName.Equals("OutroCutsceneKOS"))
+        if (Input.GetKeyDown(KeyCode.Return) && Application.loadedLevelName.Equals("OutroCutsceneKOS"))
         {
-            anim.SetTrigger(axeThrow);
             StartCoroutine("SpawnAxe");
         }
     }
@@ -53,6 +52,7 @@ public class KOSThrowAxe : MonoBehaviour
     /// <returns>The axe.</returns>
     public IEnumerator SpawnAxe()
     {
+        anim.SetTrigger(axeThrow);
         yield return new WaitForSeconds(0.6f);//wait until the animation is done playing, then throw the axe.
         GameObject axe = Instantiate(rotatingAxePrefab, new Vector2(kos.transform.position.x + vMeasures.x, kos.transform.position.y + vMeasures.y), Quaternion.identity) as GameObject;
         axe.name = "RotatingAxe01";

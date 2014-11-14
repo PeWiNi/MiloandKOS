@@ -9,8 +9,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
-  - 114: {fileID: 11400002}
+  - 114: {fileID: 11400006}
   - 114: {fileID: 11400004}
+  - 114: {fileID: 11400002}
+  - 114: {fileID: 11400008}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -38,22 +40,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2114da1fddbc08548aa558a4aefab904, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a6f9cffa87fbcf48a347580031bff4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cd8485774b6fad46ab18e84503d9459, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  batteryPrefab: {fileID: 400000, guid: 65639a3e8454c4e459ae893e4401c134, type: 2}
---- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -65,6 +55,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lotusPrefab: {fileID: 400000, guid: 72e86641452771947ac9a8f70ce53ef3, type: 2}
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cd8485774b6fad46ab18e84503d9459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  batteryPrefab: {fileID: 400000, guid: 65639a3e8454c4e459ae893e4401c134, type: 2}
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa2b4167b6eb59f4baabbf473c4524c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  treePrefab: {fileID: 400006, guid: 18f3d09a750f79d43bdae8a8aa6e2a45, type: 2}
+  benchPrefab: {fileID: 400000, guid: 41a25f4888c0a0e4eb106505f5d52ee3, type: 2}
+  lampPrefab: {fileID: 400000, guid: e1d56ea92ff6bcc4d85d36a8f21f0b4c, type: 2}
+  canPrefab: {fileID: 400000, guid: 29d2072b515b3354bbe8c1a272ecc456, type: 2}
+  cornerTreePrefab: {fileID: 400010, guid: 27b12b94719785246bf3c5d1e6d8f0c4, type: 2}
+--- !u!114 &11400008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 546feb760814ac046973f8c560742969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchTextKOS: {fileID: 0}
+  switchTextMilo: {fileID: 0}
+  introTextMOM: {fileID: 0}
+  introTextKOS: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

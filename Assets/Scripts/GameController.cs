@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -9,17 +10,18 @@ public class GameController : MonoBehaviour
     Flashlight miloFlashlightComponent;
     bool isPlayingAsMilo = true;
     float miloAwakeTimer = 0.0f;
-    int miloAwakeTimerMax = 60;
+    int miloAwakeTimerMax = 120;
     int switchCounter = 0;
-
+    int maxNeededLotusFlowers = 10;//The maximum number needed to proceed the
+    int currentCollectedLotusFlowers = 0;//The current amount collected.
     GameObject[] allKOSLotus;
     GameObject[] allBatteries;
     bool switchHasBeenExecuted = false;
-
     Texture2D backgroundKOS;
     Texture2D foregroundKOS;
     Rect box = new Rect(10, 10, 100, 20);
-    
+    Text kosCollectableUIText;
+
     // This happens before Start
     void Awake()
     {
@@ -32,6 +34,7 @@ public class GameController : MonoBehaviour
         miloFlashlightComponent = GameObject.Find("Flashlight").GetComponent<Flashlight>();
         milo = GameObject.Find("Milo");//Find Milo.
         kos = GameObject.Find("KOSMinotaur");//Find !Milo.
+        kosCollectableUIText = GameObject.Find("KOSCollectableCount").GetComponent<Text>();
         kos.gameObject.SetActive(false);
         SetMiloAwakeBar();
     }
@@ -55,6 +58,16 @@ public class GameController : MonoBehaviour
 
     void OnGUI()
     {
+        if (kos.activeSelf)
+        {
+            string totalCollectedLotusFlowers = currentCollectedLotusFlowers + "/" + maxNeededLotusFlowers + " Lotus' Collected";
+            kosCollectableUIText.enabled = true;
+            kosCollectableUIText.text = totalCollectedLotusFlowers;
+        } else
+        {
+            kosCollectableUIText.text = "";
+            kosCollectableUIText.enabled = false;
+        }
         if (miloFlashlightComponent.Capacity <= 0.0f && miloAwakeTimer > 0.0f)
         {
             GUI.BeginGroup(box);
@@ -131,6 +144,38 @@ public class GameController : MonoBehaviour
     }
 
     /// <summary>
+    /// Gets or sets the max needed lotus flowers.
+    /// </summary>
+    /// <value>The max needed lotus flowers.</value>
+    public int MaxNeededLotusFlowers
+    {
+        get
+        {
+            return maxNeededLotusFlowers;
+        }
+        set
+        {
+            maxNeededLotusFlowers = value;
+        }
+    }
+
+    /// <summary>
+    /// Gets or sets the current collected lotus flowers.
+    /// </summary>
+    /// <value>The current collected lotus flowers.</value>
+    public int CurrentCollectedLotusFlowers
+    {
+        get
+        {
+            return currentCollectedLotusFlowers;
+        }
+        set
+        {
+            currentCollectedLotusFlowers = value;
+        }
+    }
+
+    /// <summary>
     /// Switches to KOS & resets collectables for KOS.
     /// </summary>
     void SwitchToKOS()
@@ -168,7 +213,7 @@ public class GameController : MonoBehaviour
     /// <returns>The awake countdown.</returns>
     IEnumerator MiloAwakeCountdown()
     {
-        while (miloAwakeTimer < 60)
+        while (miloAwakeTimer < miloAwakeTimerMax)
         {
             yield return new WaitForSeconds(1);
             miloAwakeTimer += 1.0f;

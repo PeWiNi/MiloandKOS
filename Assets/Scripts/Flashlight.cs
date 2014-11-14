@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Flashlight : MonoBehaviour
 {
-    private bool on = true;
+//    private bool on = true;
 
     private Rect box = new Rect(10, 10, 100, 20);
     private Texture2D background;
