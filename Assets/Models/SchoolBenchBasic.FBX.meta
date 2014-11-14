@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 11a5dc5112c1cf9418236d5ec9e127ad
+guid: cdbcd3e6e873f364f92e7fc558ae3d14
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -8,6 +8,7 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: SchoolBenchBasic
+    6400000: //RootNode
     9500000: //RootNode
   materials:
     importMaterials: 0
@@ -30,7 +31,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -46,7 +47,7 @@ ModelImporter:
     splitTangentsAcrossUV: 1
     normalImportMode: 0
     tangentImportMode: 1
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     human: []
