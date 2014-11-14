@@ -106,7 +106,7 @@ MonoBehaviour:
   currentIndex: 0
   returnString: 
   planeCut: {fileID: 0}
-  nextScene: DogPooTest
+  nextScene: MazeLevel
 --- !u!4 &386206421
 Transform:
   m_ObjectHideFlags: 0

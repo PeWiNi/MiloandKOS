@@ -323,7 +323,7 @@ MonoBehaviour:
   currentIndex: 0
   returnString: 
   planeCut: {fileID: 0}
-  nextScene: OutroCutsceneKOS
+  nextScene: FinalBattleAsKOS
 --- !u!4 &1447609286
 Transform:
   m_ObjectHideFlags: 0

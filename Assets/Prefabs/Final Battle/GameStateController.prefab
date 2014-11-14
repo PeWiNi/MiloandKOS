@@ -39,6 +39,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9ebeaf15d5f97f49a307de629130322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextSceneAsMilo: FinalBattleAsMilo
+  nextSceneAsKOS: FinalBattleAsKOS
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

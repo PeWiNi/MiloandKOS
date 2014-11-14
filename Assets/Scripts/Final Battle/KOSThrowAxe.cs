@@ -25,7 +25,7 @@ public class KOSThrowAxe : MonoBehaviour
     void Update()
     {
         // Checking for scene as well because otherwise, Milo will shoot when Kos shoots.
-        if (Input.GetKeyDown(KeyCode.Return) && Application.loadedLevelName.Equals("OutroCutsceneKOS"))
+        if (Input.GetKeyDown(KeyCode.Return) && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
         {
             StartCoroutine("SpawnAxe");
         }
@@ -35,10 +35,10 @@ public class KOSThrowAxe : MonoBehaviour
     {
         if (col.gameObject.name == "CannonBall01")
         {
-            if (Application.loadedLevelName.Equals("OutroCutsceneKOS"))
+            if (Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
             {
                 StateController.ConsecutiveHitsValue = 0;
-            } else if (Application.loadedLevelName.Equals("OutroCutsceneMilo"))
+            } else if (Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
             {
                 StateController.ConsecutiveHitsValue += 1;
             }

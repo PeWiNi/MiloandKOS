@@ -27,3 +27,5 @@ EditorBuildSettings:
     path: Assets/Scenes/FinalBattleAsMilo.unity
   - enabled: 1
     path: Assets/Scenes/FinalBattleAsKOS.unity
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/EndingSceneVsMom.unity

@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class StateController : MonoBehaviour
 {
+    public const string nextSceneAsMilo = "FinalBattleAsMilo";
+    public const string nextSceneAsKOS = "FinalBattleAsKOS";
     bool miloShooting;
     bool kosShooting;
     GameObject milo;
@@ -26,11 +28,11 @@ public class StateController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Application.loadedLevelName.Equals("OutroCutsceneKOS") && !miloShooting && consecutiveHitsValue < consecutiveHitsMax)
+        if (Application.loadedLevelName.Equals(nextSceneAsKOS) && !miloShooting && consecutiveHitsValue < consecutiveHitsMax)
         {
             miloShooting = !miloShooting;
             StartCoroutine("MiloShootAtKOS");
-        } else if (Application.loadedLevelName.Equals("OutroCutsceneMilo") && !kosShooting && consecutiveHitsValue < consecutiveHitsMax)
+        } else if (Application.loadedLevelName.Equals(nextSceneAsMilo) && !kosShooting && consecutiveHitsValue < consecutiveHitsMax)
         {
             kosShooting = !kosShooting;
             StartCoroutine("KOSShootAtMilo");
@@ -40,13 +42,13 @@ public class StateController : MonoBehaviour
     
     void FixedUpdate()
     {
-        if (Application.loadedLevelName.Equals("OutroCutsceneKOS"))
+        if (Application.loadedLevelName.Equals(nextSceneAsKOS))
         {
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
             {
                 kos.transform.Translate(Input.GetAxis("Horizontal") * speed * Time.deltaTime, 0.0f, 0.0f);
             }
-        } else if (Application.loadedLevelName.Equals("OutroCutsceneMilo"))
+        } else if (Application.loadedLevelName.Equals(nextSceneAsMilo))
         {
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
             {
