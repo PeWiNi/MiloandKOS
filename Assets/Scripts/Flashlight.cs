@@ -43,12 +43,15 @@ public class Flashlight : MonoBehaviour
 
     void OnGUI()
     {
-        GUI.BeginGroup(box);
+        if (GameController.INSTANCE.IsPlayingAsMilo)
         {
-            GUI.DrawTexture(new Rect(0, 0, box.width, box.height), background, ScaleMode.StretchToFill);
-            GUI.DrawTexture(new Rect(0, 0, box.width * capacity / maxCapacity, box.height), foreground, ScaleMode.StretchToFill);
+            GUI.BeginGroup(box);
+            {
+                GUI.DrawTexture(new Rect(0, 0, box.width, box.height), background, ScaleMode.StretchToFill);
+                GUI.DrawTexture(new Rect(0, 0, box.width * capacity / maxCapacity, box.height), foreground, ScaleMode.StretchToFill);
+            }
+            GUI.EndGroup();
         }
-        GUI.EndGroup();
     }
 
     /// <summary>

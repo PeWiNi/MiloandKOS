@@ -49,17 +49,28 @@ public class GameController : MonoBehaviour
         }
         if (miloFlashlightComponent.Capacity <= 0.0f && isPlayingAsMilo)//Minimum Capacity for the Flashlight.
         {
-            SwitchToKOS();
+            SwitchFadingInOut.SwitchStarting = true;
+//            SwitchToKOS();
         } else if (miloAwakeTimer >= miloAwakeTimerMax && !isPlayingAsMilo)// Milo is awake once again.
         {
-            SwitchToMilo();
+            SetStateForMiloDragged();
+//            SwitchToMilo();
         }
     }
 
     void OnGUI()
     {
-        if (kos.activeSelf)
+        if (!isPlayingAsMilo)
         {
+            if (miloFlashlightComponent.Capacity <= 0.0f && miloAwakeTimer > 0.0f)
+            {
+                GUI.BeginGroup(box);
+                {
+                    GUI.DrawTexture(new Rect(0, 0, box.width, box.height), backgroundKOS, ScaleMode.StretchToFill);
+                    GUI.DrawTexture(new Rect(0, 0, box.width * miloAwakeTimer / miloAwakeTimerMax, box.height), foregroundKOS, ScaleMode.StretchToFill);
+                }
+                GUI.EndGroup();
+            }
             string totalCollectedLotusFlowers = currentCollectedLotusFlowers + "/" + maxNeededLotusFlowers + " Lotus' Collected";
             kosCollectableUIText.enabled = true;
             kosCollectableUIText.text = totalCollectedLotusFlowers;
@@ -68,14 +79,17 @@ public class GameController : MonoBehaviour
             kosCollectableUIText.text = "";
             kosCollectableUIText.enabled = false;
         }
-        if (miloFlashlightComponent.Capacity <= 0.0f && miloAwakeTimer > 0.0f)
+    }
+
+    /// <summary>
+    /// Gets a value indicating whether this instance is playing as milo.
+    /// </summary>
+    /// <value><c>true</c> if this instance is playing as milo; otherwise, <c>false</c>.</value>
+    public bool IsPlayingAsMilo
+    {
+        get
         {
-            GUI.BeginGroup(box);
-            {
-                GUI.DrawTexture(new Rect(0, 0, box.width, box.height), backgroundKOS, ScaleMode.StretchToFill);
-                GUI.DrawTexture(new Rect(0, 0, box.width * miloAwakeTimer / miloAwakeTimerMax, box.height), foregroundKOS, ScaleMode.StretchToFill);
-            }
-            GUI.EndGroup();
+            return isPlayingAsMilo;
         }
     }
 
@@ -184,12 +198,12 @@ public class GameController : MonoBehaviour
         kos.gameObject.SetActive(true);
         kos.transform.position = milo.transform.position;
         kos.transform.rotation = milo.transform.rotation;
-        ResetMiloAwakeTimer();
         isPlayingAsMilo = false;
+        currentCollectedLotusFlowers = 0;
+        ResetMiloAwakeTimer();
         SwitchCounter++;
         SwitchActiveValuesForCollectables();
         StartCoroutine(MiloAwakeCountdown());
-        SwitchFadingInOut.SwitchStarting = true;
     }
 
     /// <summary>
@@ -201,8 +215,8 @@ public class GameController : MonoBehaviour
         milo.gameObject.SetActive(true);
         milo.transform.position = kos.transform.position;
         milo.transform.rotation = kos.transform.rotation;
-        miloFlashlightComponent.ResetValues();
         isPlayingAsMilo = true;
+        miloFlashlightComponent.ResetValues();
         SwitchCounter++;
         SwitchActiveValuesForCollectables();
     }
@@ -215,7 +229,7 @@ public class GameController : MonoBehaviour
     {
         while (miloAwakeTimer < miloAwakeTimerMax)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(1.0f);
             miloAwakeTimer += 1.0f;
         }
     }
@@ -231,7 +245,7 @@ public class GameController : MonoBehaviour
             allBatteries = GameObject.FindGameObjectsWithTag("Battery");
             allKOSLotus = GameObject.FindGameObjectsWithTag("KOSLotus");
         }
-        if (milo.activeSelf && !kos.activeSelf)
+        if (isPlayingAsMilo)
         {
             foreach (GameObject battery in allBatteries)
             {
@@ -241,7 +255,7 @@ public class GameController : MonoBehaviour
             {
                 lotus.SetActive(false);
             }
-        } else if (kos.activeSelf && !milo.activeSelf)
+        } else if (!isPlayingAsMilo)
         {
             foreach (GameObject lotus in allKOSLotus)
             {
@@ -266,5 +280,31 @@ public class GameController : MonoBehaviour
         backgroundKOS.SetPixel(0, 0, darkBlue);
         backgroundKOS.Apply();
         foregroundKOS.Apply();
+    }
+
+    /// <summary>
+    /// Sets the state for milo dragged.
+    /// </summary>
+    public void SetStateForMiloDragged()
+    {
+        if (isPlayingAsMilo)
+        {
+            GameController.INSTANCE.SwitchToKOS();
+//            milo.transform.position = new Vector3(kos.transform.position.x - 0.2f, 0.5f, kos.transform.position.z);
+//            milo.transform.rotation = Quaternion.Euler(-90.0f, kos.transform.rotation.y, kos.transform.rotation.z);
+//            milo.gameObject.transform.parent = kos.gameObject.transform;
+//            milo.GetComponent<Move>().enabled = false;
+//            milo.GetComponent<Jump>().enabled = false;
+            CameraPan.AttachedTo = kos;
+        } else
+        {
+//            milo.transform.position = kos.transform.position;
+//            milo.transform.rotation = kos.transform.rotation;
+//            milo.gameObject.transform.parent = null;
+//            milo.GetComponent<Move>().enabled = true;
+//            milo.GetComponent<Jump>().enabled = true;
+            CameraPan.AttachedTo = milo;
+            SwitchToMilo();
+        }
     }
 }

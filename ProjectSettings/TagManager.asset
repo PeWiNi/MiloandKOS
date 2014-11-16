@@ -10,7 +10,7 @@ TagManager:
   - KOSCollectable
   - Fading
   - EnemyShadow
-  - 
+  - DraggedPlayer
   - 
   - 
   Builtin Layer 0: Default

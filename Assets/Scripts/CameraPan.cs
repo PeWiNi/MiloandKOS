@@ -6,7 +6,7 @@ public class CameraPan : MonoBehaviour
 {
     bool isMovingDown;
     bool isMoving;
-    GameObject attachedTo;
+    static GameObject attachedTo;
 
     [SerializeField]
     float
@@ -34,10 +34,10 @@ public class CameraPan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!attachedTo.activeSelf)
-        {
-            attachedTo = GameObject.FindWithTag("Player").gameObject;
-        }
+//        if (!attachedTo.activeSelf)
+//        {
+//            attachedTo = GameObject.FindWithTag("Player").gameObject;
+//        }
         //if you change S to any other key not used atm, that key will become a flip direction button. 
         if (Input.GetKey(KeyCode.F) && !isMovingDown && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
         {
@@ -71,6 +71,22 @@ public class CameraPan : MonoBehaviour
         DetectCollisionWithSurroundings(characterOffset, ref cameraTargetPosition);
         SmoothCameraPosition(transform.position, cameraTargetPosition);
         transform.LookAt(attachedTo.transform);// Insures the camera is looking at the correct object.
+    }
+
+    /// <summary>
+    /// Gets or sets the attached to.
+    /// </summary>
+    /// <value>The attached to.</value>
+    public static GameObject AttachedTo
+    {
+        get
+        {
+            return attachedTo;
+        }
+        set
+        {
+            attachedTo = value;
+        }
     }
 
     /// <summary>
