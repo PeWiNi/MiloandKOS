@@ -7,7 +7,8 @@ public class KOSThrowAxe : MonoBehaviour
     Animator anim;
     int axeThrow;
     GameObject kos;
-    Vector2 vMeasures = new Vector2(0.6f, 0.3f);//DON'T MESS WITH THESE NUMBERS!
+    Vector2 vMeasures = new Vector2(1.3f, 0.6f);//DON'T MESS WITH THESE NUMBERS!
+    //Vector2 vMeasures = new Vector2(0.6f, 0.3f);//DON'T MESS WITH THESE NUMBERS!
 
     void Awake()
     {

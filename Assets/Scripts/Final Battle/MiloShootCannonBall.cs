@@ -7,7 +7,8 @@ public class MiloShootCannonBall : MonoBehaviour
     Animator anim;
     int shootCannonBall;
     GameObject milo;
-    Vector2 vMeasures = new Vector2(1.4f, 0.0f);//DON'T MESS WITH THESE NUMBERS!
+    Vector2 vMeasures = new Vector2(2.71f, 0.0f);//DON'T MESS WITH THESE NUMBERS!
+    //Vector2 vMeasures = new Vector2(1.4f, 0.0f);//DON'T MESS WITH THESE NUMBERS!
 
     void Awake()
     {
