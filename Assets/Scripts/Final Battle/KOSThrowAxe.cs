@@ -26,7 +26,7 @@ public class KOSThrowAxe : MonoBehaviour
     void Update()
     {
         // Checking for scene as well because otherwise, Milo will shoot when Kos shoots.
-        if (Input.GetKeyDown(KeyCode.Return) && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
+        if (Input.GetKeyDown(KeyCode.Space) && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
         {
             StartCoroutine("SpawnAxe");
         }
