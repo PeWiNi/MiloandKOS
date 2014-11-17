@@ -37,7 +37,10 @@ public class loadingImages : MonoBehaviour {
 		if (currentIndex < numberOFFrameInCutscene ) 
 		{	
 			//Debug.Log(Time.time);
-		} else
+		} else  
+			if (nextScene.Equals("none"))
+			    Application.Quit();
+			else 
 			Application.LoadLevel (nextScene);
 		if (Input.GetKeyDown(KeyCode.Escape)) Application.LoadLevel (nextScene);
 	}
