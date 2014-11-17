@@ -7,6 +7,7 @@ public class MiloShootCannonBall : MonoBehaviour
     Animator anim;
     int shootCannonBall;
     GameObject milo;
+    bool cooldown = false;
     Vector2 vMeasures = new Vector2(2.71f, 0.0f);//DON'T MESS WITH THESE NUMBERS!
     //Vector2 vMeasures = new Vector2(1.4f, 0.0f);//DON'T MESS WITH THESE NUMBERS!
 
@@ -28,7 +29,12 @@ public class MiloShootCannonBall : MonoBehaviour
         // Checking for scene as well because otherwise, KOS will shoot when Milo shoots.
         if (Input.GetKeyDown(KeyCode.Space) && Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
         {
-            StartCoroutine("SpawnCannonball");
+            if (cooldown == false)
+            {
+                cooldown = true;
+                StartCoroutine("ShootingCooldown");
+                StartCoroutine("SpawnCannonball");
+            }
         }
     }
 
@@ -58,5 +64,15 @@ public class MiloShootCannonBall : MonoBehaviour
         GameObject cannonBall = Instantiate(rotatingCanonBallPrefab, new Vector2(milo.transform.position.x - vMeasures.x, milo.transform.position.y - vMeasures.y), Quaternion.identity) as GameObject;
         cannonBall.name = "CannonBall01";
         cannonBall.rigidbody2D.AddForce(Vector2.up * 100 + Vector2.right * -800, ForceMode2D.Force);
+    }
+
+    /// <summary>
+    /// Shootings the cooldown.
+    /// </summary>
+    /// <returns>The cooldown.</returns>
+    public IEnumerator ShootingCooldown()
+    {
+        yield return new WaitForSeconds(1.0f);
+        cooldown = false;
     }
 }
