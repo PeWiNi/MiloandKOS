@@ -1,5 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 
 public class loadingImages : MonoBehaviour
 {

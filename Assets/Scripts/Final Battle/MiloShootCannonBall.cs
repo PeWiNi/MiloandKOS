@@ -26,7 +26,7 @@ public class MiloShootCannonBall : MonoBehaviour
     void Update()
     {
         // Checking for scene as well because otherwise, KOS will shoot when Milo shoots.
-        if (Input.GetKeyDown(KeyCode.Return) && Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
+        if (Input.GetKeyDown(KeyCode.Space) && Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
         {
             StartCoroutine("SpawnCannonball");
         }
