@@ -37,14 +37,9 @@ public class StateController : MonoBehaviour
         {
             kosShooting = !kosShooting;
             StartCoroutine("KOSShootAtMilo");
-        } else if (Application.loadedLevelName.Equals(nextSceneAsKOS) && !miloShooting && consecutiveHitsValue == consecutiveHitsMax)
-        {
-            Application.LoadLevel(endingCutSecene);
-        } else if (Application.loadedLevelName.Equals(nextSceneAsMilo) && !kosShooting && consecutiveHitsValue == consecutiveHitsMax)
-        {
-            Application.LoadLevel(endingCutSecene);
         }
         consecutiveHitsText.text = actualText + consecutiveHitsValue + "/" + consecutiveHitsMax;
+        ChangeToEndingScene();
     }
     
     void FixedUpdate()
@@ -110,5 +105,19 @@ public class StateController : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         StartCoroutine(kos.GetComponent<KOSThrowAxe>().SpawnAxe());
         kosShooting = !kosShooting;
+    }
+
+    /// <summary>
+    /// Changes to ending scene.
+    /// </summary>
+    void ChangeToEndingScene()
+    {
+        if (Application.loadedLevelName.Equals(nextSceneAsKOS) && !miloShooting && consecutiveHitsValue >= consecutiveHitsMax)
+        {
+            Application.LoadLevel(endingCutSecene);
+        } else if (Application.loadedLevelName.Equals(nextSceneAsMilo) && !kosShooting && consecutiveHitsValue >= consecutiveHitsMax)
+        {
+            Application.LoadLevel(endingCutSecene);
+        }
     }
 }
