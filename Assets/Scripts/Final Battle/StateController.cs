@@ -6,6 +6,7 @@ public class StateController : MonoBehaviour
 {
     public const string nextSceneAsMilo = "FinalBattleAsMilo";
     public const string nextSceneAsKOS = "FinalBattleAsKOS";
+    public const string endingCutSecene = "EndingSceneVsMom";
     bool miloShooting;
     bool kosShooting;
     GameObject milo;
@@ -36,6 +37,12 @@ public class StateController : MonoBehaviour
         {
             kosShooting = !kosShooting;
             StartCoroutine("KOSShootAtMilo");
+        } else if (Application.loadedLevelName.Equals(nextSceneAsKOS) && !miloShooting && consecutiveHitsValue == consecutiveHitsMax)
+        {
+            Application.LoadLevel(endingCutSecene);
+        } else if (Application.loadedLevelName.Equals(nextSceneAsMilo) && !kosShooting && consecutiveHitsValue == consecutiveHitsMax)
+        {
+            Application.LoadLevel(endingCutSecene);
         }
         consecutiveHitsText.text = actualText + consecutiveHitsValue + "/" + consecutiveHitsMax;
     }
