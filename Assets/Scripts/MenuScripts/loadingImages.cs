@@ -1,13 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 
 public class loadingImages : MonoBehaviour
 {
-
     Texture2D[] imageList;
     public string nameOfCutscene;
     public int numberOFFrameInCutscene; 
@@ -19,7 +14,6 @@ public class loadingImages : MonoBehaviour
     Vector3 v3ViewPort;
     Vector3 v3BottomLeft;
     Vector3 v3TopRight;
-	
 
     void Start()
     {
@@ -50,7 +44,6 @@ public class loadingImages : MonoBehaviour
             Application.LoadLevel(nextScene);
     }
 
-
     public string toStringg(int num)
     {	
         returnString = nameOfCutscene + "/" + nameOfCutscene;
@@ -66,10 +59,8 @@ public class loadingImages : MonoBehaviour
             int n = 0;
             returnString += n.ToString();
         }
-		
         returnString += tempNum.ToString();
         return returnString;
-		
     }
 
     IEnumerator loadNextImage()
@@ -82,8 +73,8 @@ public class loadingImages : MonoBehaviour
             planeCut.renderer.material.mainTexture = imageList [currentIndex];	
             currentIndex++;
         }
-		
     }
+
     void updateScreenSize()
     {
         v3ViewPort.Set(0, 0, -1);
@@ -94,5 +85,4 @@ public class loadingImages : MonoBehaviour
         float ratioh = 540 * (v3BottomLeft.y - v3TopRight.y) / 360;
         planeCut.transform.localScale = new Vector3(ratiow, 1, ratioh - 0.5f);
     }
-
 }
