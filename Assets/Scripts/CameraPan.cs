@@ -34,10 +34,6 @@ public class CameraPan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-//        if (!attachedTo.activeSelf)
-//        {
-//            attachedTo = GameObject.FindWithTag("Player").gameObject;
-//        }
         //if you change S to any other key not used atm, that key will become a flip direction button. 
         if (Input.GetKey(KeyCode.F) && !isMovingDown && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
         {
@@ -71,6 +67,7 @@ public class CameraPan : MonoBehaviour
         DetectCollisionWithSurroundings(characterOffset, ref cameraTargetPosition);
         SmoothCameraPosition(transform.position, cameraTargetPosition);
         transform.LookAt(attachedTo.transform);// Insures the camera is looking at the correct object.
+        transform.Rotate(-15f, 0f, 0f);// The angle is now looking more into the distance, than directly at Milos feet.
     }
 
     /// <summary>
