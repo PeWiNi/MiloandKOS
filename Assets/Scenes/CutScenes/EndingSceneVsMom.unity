@@ -332,7 +332,7 @@ MonoBehaviour:
   currentIndex: 0
   returnString: 
   planeCut: {fileID: 0}
-  nextScene: EnterShipMilo
+  nextScene: none
 --- !u!4 &1801808133
 Transform:
   m_ObjectHideFlags: 0
