@@ -39,9 +39,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948791b06cda53948aca8c3b5bcf7944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCanvas: {fileID: 100006, guid: a2e67aa220f7daf4786958045616aadb, type: 2}
-  Introim: {fileID: 100000, guid: 9f11b33c204870a4b8e9a3b446bf0481, type: 2}
-  Menu: {fileID: 100012, guid: f2d26e27c76a32e48836ed2fe0be5026, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
