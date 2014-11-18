@@ -7,7 +7,11 @@ public class MiloShootCannonBall : MonoBehaviour
     Animator anim;
     int shootCannonBall;
     GameObject milo;
+    GameObject cannonBall;
     bool cooldown = false;
+    float angel = 300;
+    float MaxAngel = 500;
+    float MinAngel = 100;
     Vector2 vMeasures = new Vector2(2.71f, 0.0f);//DON'T MESS WITH THESE NUMBERS!
     //Vector2 vMeasures = new Vector2(1.4f, 0.0f);//DON'T MESS WITH THESE NUMBERS!
 
@@ -36,6 +40,15 @@ public class MiloShootCannonBall : MonoBehaviour
                 StartCoroutine("SpawnCannonball");
             }
         }
+        if (Input.GetKey(KeyCode.W) && Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
+        {
+            increaseAngel();
+        }
+        if (Input.GetKey(KeyCode.S) && Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
+        {        
+            decreaseAngel();
+        }
+        
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -54,6 +67,28 @@ public class MiloShootCannonBall : MonoBehaviour
     }
 
     /// <summary>
+    /// Increases the angel.
+    /// </summary>
+    public void increaseAngel()
+    {
+        if (angel < MaxAngel)
+        {
+            this.angel += 2; 
+        }
+    }
+    
+    /// <summary>
+    /// Decreases the angel.
+    /// </summary>
+    public void decreaseAngel()
+    {
+        if (angel > MinAngel)
+        {
+            this.angel -= 2;
+        }
+    } 
+
+    /// <summary>
     /// Spawns the cannonball.
     /// </summary>
     /// <returns>The cannonball.</returns>
@@ -61,9 +96,9 @@ public class MiloShootCannonBall : MonoBehaviour
     {
         anim.SetTrigger(shootCannonBall);
         yield return new WaitForSeconds(0.6f);//wait until the animation is done playing, then throw the axe.
-        GameObject cannonBall = Instantiate(rotatingCanonBallPrefab, new Vector2(milo.transform.position.x - vMeasures.x, milo.transform.position.y - vMeasures.y), Quaternion.identity) as GameObject;
+        cannonBall = Instantiate(rotatingCanonBallPrefab, new Vector2(milo.transform.position.x - vMeasures.x, milo.transform.position.y - vMeasures.y), Quaternion.identity) as GameObject;
         cannonBall.name = "CannonBall01";
-        cannonBall.rigidbody2D.AddForce(Vector2.up * 100 + Vector2.right * -800, ForceMode2D.Force);
+        cannonBall.rigidbody2D.AddForce(Vector2.up * angel + Vector2.right * -800, ForceMode2D.Force);
     }
 
     /// <summary>

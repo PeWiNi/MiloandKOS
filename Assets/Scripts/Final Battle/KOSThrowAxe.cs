@@ -7,7 +7,11 @@ public class KOSThrowAxe : MonoBehaviour
     Animator anim;
     int axeThrow;
     GameObject kos;
-    bool cooldown = false; 
+    GameObject axe;
+    bool cooldown = false;
+    float angel = 300;
+    float MaxAngel = 500;
+    float MinAngel = 100;
     Vector2 vMeasures = new Vector2(1.3f, 0.6f);//DON'T MESS WITH THESE NUMBERS!
     //Vector2 vMeasures = new Vector2(0.6f, 0.3f);//DON'T MESS WITH THESE NUMBERS!
 
@@ -36,6 +40,14 @@ public class KOSThrowAxe : MonoBehaviour
                 StartCoroutine("SpawnAxe");
             }
         }
+        if (Input.GetKey(KeyCode.W) && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
+        {
+            increaseAngel();
+        }
+        if (Input.GetKey(KeyCode.S) && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
+        {        
+            decreaseAngel();
+        }
        
     }
 
@@ -55,6 +67,28 @@ public class KOSThrowAxe : MonoBehaviour
     }
 
     /// <summary>
+    /// Increases the angel.
+    /// </summary>
+    public void increaseAngel()
+    {
+        if (angel < MaxAngel)
+        {
+            this.angel += 2; 
+        }
+    }
+
+    /// <summary>
+    /// Decreases the angel.
+    /// </summary>
+    public void decreaseAngel()
+    {
+        if (angel > MinAngel)
+        {
+            this.angel -= 2;
+        }
+    } 
+
+    /// <summary>
     /// Spawns the axe.
     /// </summary>
     /// <returns>The axe.</returns>
@@ -62,11 +96,11 @@ public class KOSThrowAxe : MonoBehaviour
     {
         anim.SetTrigger(axeThrow);
         yield return new WaitForSeconds(0.6f);//wait until the animation is done playing, then throw the axe.
-        GameObject axe = Instantiate(rotatingAxePrefab, new Vector2(kos.transform.position.x + vMeasures.x, kos.transform.position.y + vMeasures.y), Quaternion.identity) as GameObject;
+        axe = Instantiate(rotatingAxePrefab, new Vector2(kos.transform.position.x + vMeasures.x, kos.transform.position.y + vMeasures.y), Quaternion.identity) as GameObject;
         axe.name = "RotatingAxe01";
-        axe.rigidbody2D.AddForce(Vector2.up * 300 + Vector2.right * 500, ForceMode2D.Force);
+        axe.rigidbody2D.AddForce(Vector2.up * angel + Vector2.right * 500, ForceMode2D.Force);
     }
-
+   
     /// <summary>
     /// Shootings the cooldown.
     /// </summary>
