@@ -1762,7 +1762,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6e0e3dc0028563a40bacb80afbb0092d, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 6e0e3dc0028563a40bacb80afbb0092d, type: 2}
       propertyPath: distanceUpFromGround
@@ -9599,6 +9599,7 @@ GameObject:
   - 4: {fileID: 899781691}
   - 33: {fileID: 899781690}
   - 23: {fileID: 899781689}
+  - 65: {fileID: 899781692}
   m_Layer: 0
   m_Name: School
   m_TagString: Untagged
@@ -9619,7 +9620,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 09da15d694c55aa46ba84311691d024b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -9642,11 +9643,24 @@ Transform:
   m_PrefabInternal: {fileID: 1379378158}
   m_GameObject: {fileID: 899781688}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.0999999, y: 0, z: -7}
+  m_LocalPosition: {x: 4.0999999, y: 5.80000019, z: -7}
   m_LocalScale: {x: 15, y: 11.6911507, z: 15}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!65 &899781692
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: 5ca5d650306405b40b6d8c7d069e8620,
+    type: 2}
+  m_PrefabInternal: {fileID: 1379378158}
+  m_GameObject: {fileID: 899781688}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 2.98023224e-08, y: 0, z: 0}
 --- !u!1 &903713677
 GameObject:
   m_ObjectHideFlags: 0
@@ -14193,7 +14207,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca5d650306405b40b6d8c7d069e8620, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 5.80000019
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca5d650306405b40b6d8c7d069e8620, type: 2}
       propertyPath: m_LocalPosition.z
@@ -14231,6 +14245,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 5ca5d650306405b40b6d8c7d069e8620, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 09da15d694c55aa46ba84311691d024b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ca5d650306405b40b6d8c7d069e8620, type: 2}
   m_RootGameObject: {fileID: 899781688}
@@ -17200,7 +17218,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400132, guid: fafa22ba4cf734c498019ccd4c9c389d, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: fafa22ba4cf734c498019ccd4c9c389d, type: 2}
       propertyPath: m_Enabled
