@@ -194,7 +194,7 @@ public class GameController : MonoBehaviour
     /// </summary>
     void SwitchToKOS()
     {
-        milo.gameObject.SetActive(false);
+//        milo.gameObject.SetActive(false);
         kos.gameObject.SetActive(true);
         kos.transform.position = milo.transform.position;
         kos.transform.rotation = milo.transform.rotation;
@@ -212,7 +212,7 @@ public class GameController : MonoBehaviour
     void SwitchToMilo()
     {
         kos.gameObject.SetActive(false);
-        milo.gameObject.SetActive(true);
+//        milo.gameObject.SetActive(true);
         milo.transform.position = kos.transform.position;
         milo.transform.rotation = kos.transform.rotation;
         isPlayingAsMilo = true;
@@ -290,19 +290,23 @@ public class GameController : MonoBehaviour
         if (isPlayingAsMilo)
         {
             GameController.INSTANCE.SwitchToKOS();
-//            milo.transform.position = new Vector3(kos.transform.position.x - 0.2f, 0.5f, kos.transform.position.z);
-//            milo.transform.rotation = Quaternion.Euler(-90.0f, kos.transform.rotation.y, kos.transform.rotation.z);
-//            milo.gameObject.transform.parent = kos.gameObject.transform;
-//            milo.GetComponent<Move>().enabled = false;
-//            milo.GetComponent<Jump>().enabled = false;
+            milo.transform.rotation = Quaternion.Euler(270.0f, 0.0f, 0.0f);
+            milo.GetComponent<Move>().enabled = false;
+            milo.GetComponent<Jump>().enabled = false;
+            milo.AddComponent<SpringJoint>();
+            milo.GetComponent<SpringJoint>().connectedBody = kos.rigidbody;
+            milo.GetComponent<SpringJoint>().anchor = new Vector3(0.0f, 0.0f, 0.0f);
+            milo.GetComponent<SpringJoint>().spring = 1000.0f;
+            milo.rigidbody.constraints = RigidbodyConstraints.None;
             CameraPan.AttachedTo = kos;
         } else
         {
-//            milo.transform.position = kos.transform.position;
-//            milo.transform.rotation = kos.transform.rotation;
-//            milo.gameObject.transform.parent = null;
-//            milo.GetComponent<Move>().enabled = true;
-//            milo.GetComponent<Jump>().enabled = true;
+            milo.transform.position = kos.transform.position;
+            milo.transform.rotation = kos.transform.rotation;
+            milo.GetComponent<Move>().enabled = true;
+            milo.GetComponent<Jump>().enabled = true;
+            Destroy(milo.GetComponent<SpringJoint>());
+            milo.rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
             CameraPan.AttachedTo = milo;
             SwitchToMilo();
         }
