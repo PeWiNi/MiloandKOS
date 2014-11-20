@@ -18,7 +18,7 @@ public class LevelInstantiator : MonoBehaviour {
 		//32 columns, 24 rows
 		levelMap= new string[,]{
 			// g, 1, 1, 2 
-			{"g","y","1","1","1","1","1","7","1","1","7","1","1","1","1","1","t","1","y","#","#","#","#","#","t","1","y","1","1","#","#","#","#"},
+			/*{"g","y","1","1","1","1","1","7","1","1","7","1","1","1","1","1","t","1","y","#","#","#","#","#","t","1","y","1","1","#","#","#","#"},
 			{"0","g","1","1","2","1","1","1","s","4","1","1","2","1","1","1","h","2","7","#","#","#","#","#","7","2","0","0","0","0","#","#","#"},
 			{"0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","7","#","#","#","t","1","s","0","t","1","1","#","#","#","#"},
 			{"y","0","d","y","0","d","t","1","1","1","1","y","0","4","3","t","y","0","7","#","#","#","7","0","0","0","7","#","#","#","#","#","#"},
@@ -42,7 +42,56 @@ public class LevelInstantiator : MonoBehaviour {
 			{"#","#","#","g","1","1","y","3","t","y","0","d","g","3","h","s","0","0","0","0","0","0","0","0","g","#","#","#","#","#","#","#","#"},
 			{"#","#","#","#","#","#","#","#","#","7","0","0","0","0","0","0","0","t","1","1","4","3","0","0","0","s","1","1","1","#","#","#","#"},
 			{"#","#","#","#","#","#","#","#","#","7","0","0","0","0","0","0","0","d","#","#","#","1","0","0","0","0","0","0","#","#","#","#","#"},
-			{"#","#","#","#","#","#","#","#","#","g","1","1","4","3","1","1","2","1","#","#","#","1","1","1","1","1","1","1","4","#","#","#","#"}
+			{"#","#","#","#","#","#","#","#","#","g","1","1","4","3","1","1","2","1","#","#","#","1","1","1","1","1","1","1","4","#","#","#","#"}*/
+
+			{"g","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","t","-","-","-","y","#","#"},
+			{"0","g","-","-","2","-","-","-","s","4","-","-","2","-","-","-","h","2","y","#","#","#","#","#","|","h","0","0","0","0","|","#","#"},
+			{"0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","|","#","#","#","t","-","s","0","0","t","-","-","h","#","#"},
+			{"y","0","d","y","0","d","t","-","-","-","-","y","0","4","3","t","y","0","|","#","#","#","|","0","0","0","0","|","#","#","#","#","#"},
+			{"|","0","4","|","0","4","#","#","#","#","#","4","0","t","#","#","a","0","g","-","-","-","h","0","2","3","4","h","#","#","#","#","#"},
+			{"|","0","t","h","0","g","-","-","-","-","h","a","0","|","#","#","g","-","4","0","0","0","0","0","t","#","#","#","#","#","#","#","#"},
+			{"|","0","|","2","0","0","0","0","0","0","0","0","0","g","-","#","#","#","a","0","0","2","3","0","|","#","#","#","#","#","#","#","#"},
+			{"|","0","|","y","3","t","y","3","t","-","-","y","0","2","y","t","-","-","h","0","0","d","y","0","|","#","#","#","#","#","#","#","#"},
+			{"|","0","g","-","-","-","-","-","-","-","-","h","0","t","h","|","0","0","0","0","0","t","|","0","g","#","#","#","#","#","#","#","#"},
+			{"|","0","0","d","0","0","0","0","0","0","0","0","0","|","#","|","0","0","0","0","0","|","|","0","0","g","s","-","-","y","#","#","#"},
+			{"g","2","4","t","y","0","2","4","3","t","-","y","4","h","-","|","0","0","t","a","0","t","|","0","0","0","0","0","0","|","#","#","#"},
+			{"t","-","-","-","h","0","g","-","-","-","-","h","s","4","g","h","0","0","|","y","0","d","g","-","-","3","-","-","-","h","#","#","#"},
+			{"2","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","|","|","0","4","-","#","#","#","#","#","#","#","#","#","#"},
+			{"y","0","t","y","0","4","t","-","y","4","3","t","-","y","3","2","t","-","h","|","0","g","-","y","#","#","#","#","#","#","#","#","#"},
+			{"|","0","|","|","0","t","h","-","h","s","2","g","-","-","-","-","h","4","g","h","0","0","0","|","#","#","#","#","#","#","#","#","#"},
+			{"|","0","g","|","0","|","|","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","g","s","2","-","-","y","#","#","#","#"},
+			{"|","3","4","|","0","|","|","0","t","4","0","t","-","-","y","3","t","-","-","y","4","3","0","0","0","0","0","0","|","#","#","#","#"},
+			{"g","-","h","|","0","|","|","0","g","y","0","|","y","2","g","-","h","-","-","g","-","y","0","0","0","0","0","0","g","#","#","#","#"},
+			{"#","#","t","h","0","|","g","3","4","|","0","|","|","0","0","0","0","0","0","0","2","t","y","3","t","-","y","3","4","#","#","#","#"},
+			{"#","#","|","4","0","g","-","-","-","h","0","g","|","0","t","-","y","4","0","0","t","h","g","-","h","#","#","#","#","#","#","#","#"},
+			{"#","#","|","2","0","0","0","0","0","0","0","2","|","0","|","h","g","h","0","0","g","-","-","-","-","#","#","#","#","#","#","#","#"},
+			{"#","#","g","-","-","-","y","3","t","y","0","d","g","3","g","s","0","0","0","0","0","0","0","0","g","#","#","#","#","#","#","#","#"},
+			{"#","#","#","t","-","y","g","-","h","|","0","0","0","0","0","0","0","t","-","y","4","t","y","0","0","s","g","-","y","#","#","#","#"},	
+			{"#","#","#","|","0","|","|","#","|","|","0","t","y","2","g","-","h","-","-","-","-","y","7","0","0","0","0","0","|","#","#","#","#"},
+			{"#","#","#","h","0","|","|","3","4","|","0","|","|","0","0","0","0","0","0","0","2","g","h","3","t","-","-","-","h","#","#","#","#"},
+			{"#","#","#","4","0","g","-","-","-","h","0","g","|","0","t","-","y","4","0","0","t","-","-","-","-","#","#","#","#","#","#","#","#"},
+			{"#","#","#","2","0","0","0","0","0","0","0","2","|","0","|","t","g","h","0","0","g","-","-","-","y","#","#","#","#","#","#","#","#"},
+			{"#","#","#","g","-","-","y","3","t","y","0","t","t","3","y","|","0","0","0","0","0","0","0","0","g","#","#","#","#","#","#","#","#"},
+			{"#","#","#","#","#","#","#","#","#","|","0","g","h","4","g","h","0","t","-","y","4","3","0","0","0","s","-","y","#","#","#","#","#"},
+			{"#","#","#","#","#","#","#","#","#","|","0","0","0","0","0","0","0","d","#","g","-","|","0","0","0","0","0","|","#","#","#","#","#"},
+			{"t","-","-","-","-","g","#","#","#","g","-","y","0","3","t","y","0","g","#","#","#","g","-","-","-","-","-","h","4","#","#","#","#"},
+			{"|","0","0","0","0","d","t","-","-","-","t","h","0","4","3","|","0","0","y","-","g","#","t","-","-","-","y","#","#","#","#","#","#"},
+			{"|","0","4","y","0","4","#","#","#","#","|","4","0","t","#","|","a","0","0","0","y","-","h","0","0","0","4","#","#","#","#","#","#"},
+			{"|","0","t","h","0","g","-","-","-","-","h","a","0","|","#","g","-","y","4","0","0","0","0","0","2","3","h","#","#","#","#","#","#"},
+			{"|","0","|","2","0","0","0","0","0","0","0","0","0","g","y","#","#","#","a","0","2","4","3","0","t","#","#","#","#","#","#","#","#"},
+			{"|","0","|","|","3","t","y","3","t","-","-","y","0","2","|","g","-","-","h","0","0","d","|","0","|","#","#","#","#","#","#","#","#"},
+			{"h","0","g","-","-","-","-","-","-","-","-","h","0","t","h","|","0","0","0","0","0","|","|","0","g","#","#","#","#","#","#","#","#"},
+			{"2","0","|","d","0","0","0","0","0","0","0","0","0","|","#","|","0","0","0","0","0","|","|","0","0","g","s","-","y","#","#","#","#"},
+			{"g","-","h","4","0","0","2","4","3","t","-","-","4","h","-","|","0","0","t","a","0","t","|","0","0","0","0","0","|","#","#","#","#"},
+			{"g","-","h","0","0","0","g","-","-","-","-","-","s","4","-","h","0","0","|","y","0","d","g","-","-","3","-","-","h","#","#","#","#"},
+			{"2","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","|","|","0","4","-","#","#","#","#","#","#","#","#","#","#"},
+			{"y","0","t","y","0","4","-","-","-","4","3","-","-","-","3","2","-","-","h","|","0","g","-","y","#","#","#","#","#","#","#","#","#"},
+			{"|","0","|","|","0","|","t","-","h","s","2","g","-","-","-","-","h","4","g","h","0","0","0","|","#","#","#","#","#","#","#","#","#"},
+			{"|","0","g","|","0","|","|","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","g","s","2","-","-","y","#","#","#","#"},
+			{"|","3","4","|","0","|","|","0","t","4","0","t","-","-","t","3","y","-","-","y","4","3","0","0","0","0","0","0","|","#","#","#","#"},
+			{"g","-","h","g","-","h","g","-","h","g","-","h","-","-","-","-","-","-","-","-","-","-","-","-","-","-","t","-","h","#","#","#","#"},
+			{"-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","_","-","-","-","-","#","#"}
+
 		};
 
 		drawLevel ();
@@ -58,98 +107,130 @@ public class LevelInstantiator : MonoBehaviour {
 		/// 4 - trash can
 		/// 
 		/// </summary>
-		void drawLevel ()
-		{
-				Vector3 position = new Vector3 ();
-				position.y = 0f;
-				Vector3 rotation = new Vector3 ();
-				rotation.z = 0f;
-				rotation.x = 0f;
+			void drawLevel ()
+	{
+		Vector3 position = new Vector3 ();
+		position.y = 0f;
+		Vector3 rotation = new Vector3 ();
+		rotation.z = 0f;
+		rotation.x = 0f;
 
-				for (float i=0; i<levelMap.GetLength(0); i++) { 	
-						for (float j=0; j<levelMap.GetLength(1); j++) {
+		for (float i=0; i<levelMap.GetLength(0); i++) 
+		{ 	
+			for (float j=0; j<levelMap.GetLength(1); j++) 
+			{
 
-								position.x=i*1.5f;
-								position.z=j*2.5f;
-								rotation.y = 0.0f;
-								switch (levelMap [(int)i, (int)j]) {
-								case "1":
-										position.x=i*1.5f-(1.0f-Random.Range (0.5f,0.8f));
-										position.z=j*2.5f-(2.0f-Random.Range (1.5f,1.8f));
-										GameObject tree = Instantiate (treePrefab, position, Quaternion.identity) as GameObject;	
-										transform.parent = transform;
-										break;			
-								case "2":GameObject lamp = Instantiate (lampPrefab, position, Quaternion.identity) as GameObject;	
-										transform.parent = transform;						 
-										break;
-								case "3": rotation.y = 90.0f;
-										position.x+=0.4f;
-										position.z+=0.3f;
-										GameObject bench = Instantiate (benchPrefab, position, Quaternion.Euler(rotation)) as GameObject;	
-										transform.parent = transform;
-										break;
-								case "d": position.z+=0.5f;
-										position.x+=0.5f;
-										GameObject bencha = Instantiate (benchPrefab, position, Quaternion.identity) as GameObject;	
-										transform.parent = transform;
-										break;
-								case "a":rotation.y = 180.0f;
-										position.z+=0.5f;
-										position.x+=0.5f;
-										GameObject benchd = Instantiate (benchPrefab, position, Quaternion.Euler (rotation)) as GameObject;	
-										transform.parent = transform;
-										break;
-								case "s":rotation.y = -90.0f;
-										position.z+=0.5f;
-										position.x-=0.8f;
-										GameObject benchs = Instantiate (benchPrefab, position, Quaternion.Euler (rotation)) as GameObject;	
-										transform.parent = transform;
-										break;
-								case "4": position.x-=0.4f;
-										position.z-=0.4f;
-										GameObject can = Instantiate (canPrefab, position, Quaternion.identity) as GameObject;	
-										transform.parent = transform;
-										break;
-								case "7": position.x=i*1.5f-(1.0f-Random.Range (0.5f,0.8f));
-									position.z=j*2.5f-(2.0f-Random.Range (1.5f,1.8f));
-									rotation.y=90.0f;
-									GameObject tree2 = Instantiate (treePrefab, position, Quaternion.Euler (rotation)) as GameObject;	
-									transform.parent = transform;
-									break;	
-								case "#": 	position.x=i*1.5f-(1.0f-Random.Range (0.5f,0.8f));
-											position.z=j*2.5f-(2.0f-Random.Range (1.5f,1.8f));
-											if (Random.Range (0.0f, 1.0f) >=0.5) rotation.y=90.0f;
-												else rotation.y=0f;
-														GameObject trees = Instantiate (treePrefab, position, Quaternion.Euler(rotation)) as GameObject; 
-														transform.parent = transform; 
-														break;
-				case "g": position.x=i*1.5f-(1.0f-Random.Range (0.5f,1.0f));
-					position.z=j*2.5f-(2.0f-Random.Range (1.5f,2.0f));
-					rotation.y=180.0f;
-					GameObject treet = Instantiate (cornerTreePrefab, position, Quaternion.Euler (rotation)) as GameObject;	
+				position.x = i * 1.5f;
+				position.z = j * 2.5f;
+				rotation.y = 0.0f;
+				switch (levelMap [(int)i, (int)j]) 
+				{
+				case "-":
+					position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 0.8f));
+					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 1.8f));
+					GameObject tree = Instantiate (treePrefab, position, Quaternion.identity) as GameObject;	
 					transform.parent = transform;
+					//tree.tag=ToString(i,j);
+					break;			
+				case "2":
+					GameObject lamp = Instantiate (lampPrefab, position, Quaternion.identity) as GameObject;	
+					transform.parent = transform;
+					//lamp.tag=ToString(i,j);
+					break;
+				/*case "3":
+					rotation.y = 90.0f;
+					position.x += 0.4f;
+					position.z += 0.3f;
+					GameObject bench = Instantiate (benchPrefab, position, Quaternion.Euler (rotation)) as GameObject;	
+					transform.parent = transform;
+					break;
+				case "d":
+					position.z += 0.5f;
+					position.x += 0.5f;
+					GameObject bencha = Instantiate (benchPrefab, position, Quaternion.identity) as GameObject;	
+					transform.parent = transform;
+					break;
+				case "a":
+					rotation.y = 180.0f;
+					position.z += 0.5f;
+					position.x += 0.5f;
+					GameObject benchd = Instantiate (benchPrefab, position, Quaternion.Euler (rotation)) as GameObject;	
+					transform.parent = transform;
+					break;
+				case "s":
+					rotation.y = -90.0f;
+					position.z += 0.5f;
+					position.x -= 0.8f;
+					GameObject benchs = Instantiate (benchPrefab, position, Quaternion.Euler (rotation)) as GameObject;	
+					transform.parent = transform;
+					break; */
+				case "4":
+					//position.x -= 0.4f;
+					//position.z -= 0.4f;
+					GameObject can = Instantiate (canPrefab, position, Quaternion.identity) as GameObject;	
+					transform.parent = transform;
+					//can.tag=ToString(i,j);
+					break;
+				case "|":
+					position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 0.8f));
+					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 1.8f));
+					rotation.y = 90.0f;
+					GameObject tree2 = Instantiate (treePrefab, position, Quaternion.Euler (rotation)) as GameObject;	
+					transform.parent = transform;
+					//tree2.tag=ToString(i,j);
+					break;	
+				case "#":
+					position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 0.8f));
+					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 1.8f));
+					if (Random.Range (0.0f, 1.0f) >= 0.5)
+						rotation.y = 90.0f;
+					else
+						rotation.y = 0f;
+					GameObject trees = Instantiate (treePrefab, position, Quaternion.Euler (rotation)) as GameObject; 
+					transform.parent = transform; 
+					//trees.tag=ToString(i,j);
+					break;
+				case "g":
+					position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 1.0f));
+					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 2.0f));
+					rotation.y = 180.0f;
+					GameObject treeg = Instantiate (cornerTreePrefab, position, Quaternion.Euler (rotation)) as GameObject;	
+					transform.parent = transform;
+					//treeg.tag=ToString(i,j);
 					break;	
 				case "t": 
-					position.x=i*1.5f-(1.0f-Random.Range (0.5f,1.0f));
-					position.z=j*2.5f-(2.0f-Random.Range (1.5f,2.0f));
-					rotation.y=270.0f;
-					GameObject treey = Instantiate (cornerTreePrefab, position, Quaternion.Euler (rotation)) as GameObject;	
-					transform.parent = transform;break;
-				case "h": position.x=i*1.5f-(1.0f-Random.Range (0.5f,1.0f));
-					position.z=j*2.5f-(2.0f-Random.Range (1.5f,2.0f));
-					rotation.y=90.0f;
-					GameObject treeg = Instantiate (cornerTreePrefab, position, Quaternion.Euler (rotation)) as GameObject;	
-					transform.parent = transform;break;
-				case "y": 
-					position.x=i*1.5f-(1.0f-Random.Range (0.5f,1.0f));
-					position.z=j*2.5f-(2.0f-Random.Range (1.5f,2.0f));
-					rotation.y=0.0f;
+					position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 1.0f));
+					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 2.0f));
+					rotation.y = 270.0f;
+					GameObject treet = Instantiate (cornerTreePrefab, position, Quaternion.Euler (rotation)) as GameObject;	
+					transform.parent = transform;
+					//treet.tag=ToString(i,j);
+					break;
+				case "h":
+					position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 1.0f));
+					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 2.0f));
+					rotation.y = 90.0f;
 					GameObject treeh = Instantiate (cornerTreePrefab, position, Quaternion.Euler (rotation)) as GameObject;	
-					transform.parent = transform;break;
-								}
-						}
+					transform.parent = transform;
+					//treeh.tag=ToString(i,j);
+					break;
+				case "y": 
+					position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 1.0f));
+					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 2.0f));
+					rotation.y = 0.0f;
+					GameObject treey = Instantiate (cornerTreePrefab, position, Quaternion.Euler (rotation)) as GameObject;	
+					transform.parent = transform;
+					//treey.tag=ToString(i,j);
+					break;
 				}
+						
+			}
+		}
 		
+		}
+	 string ToString(float x, float y)
+		{
+				return x + " " + y;
 		}
 	
 	
