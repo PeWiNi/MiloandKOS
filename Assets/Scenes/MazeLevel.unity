@@ -2911,6 +2911,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 5ae8bff9b4a79804cbf3804a8629a286, type: 2}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 400000, guid: a7ed5ab97aa7d4843a2bbfdc8c163779, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ae8bff9b4a79804cbf3804a8629a286, type: 2}
   m_RootGameObject: {fileID: 1251640892}
@@ -6115,6 +6119,7 @@ MonoBehaviour:
   lampPrefab: {fileID: 400000, guid: e1d56ea92ff6bcc4d85d36a8f21f0b4c, type: 2}
   canPrefab: {fileID: 400000, guid: 29d2072b515b3354bbe8c1a272ecc456, type: 2}
   cornerTreePrefab: {fileID: 400010, guid: 27b12b94719785246bf3c5d1e6d8f0c4, type: 2}
+  parent: {fileID: 400000, guid: a7ed5ab97aa7d4843a2bbfdc8c163779, type: 2}
 --- !u!114 &1251640898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8676,6 +8681,33 @@ MeshFilter:
   m_PrefabInternal: {fileID: 629283089}
   m_GameObject: {fileID: 1643846528}
   m_Mesh: {fileID: 4300000, guid: cdbcd3e6e873f364f92e7fc558ae3d14, type: 3}
+--- !u!1 &1683483845
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1683483846}
+  m_Layer: 0
+  m_Name: mazeLayoutloader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1683483846
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1683483845}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 66.4000015, y: .262447655, z: 9.60000038}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
 --- !u!1 &1690202900
 GameObject:
   m_ObjectHideFlags: 0

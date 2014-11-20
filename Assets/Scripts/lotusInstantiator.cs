@@ -5,6 +5,7 @@ public class lotusInstantiator : MonoBehaviour {
 
 	public Transform lotusPrefab;
 	public string [,] lotusMap;
+	//public GameObject parent;
 
 	// Use this for initialization
 	void Start () {

@@ -10,6 +10,8 @@ public class LevelInstantiator : MonoBehaviour {
 	public Transform lampPrefab;
 	public Transform canPrefab;
 	public Transform cornerTreePrefab; 
+	public Transform parent; 
+	Transform parentMaze;
 	
 		
 	public string [,] levelMap;
@@ -93,7 +95,7 @@ public class LevelInstantiator : MonoBehaviour {
 			{"-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","_","-","-","-","-","#","#"}
 
 		};
-
+		parentMaze = Instantiate (parent, new Vector3 (0, 0, 0), Quaternion.identity) as Transform;
 		drawLevel ();
 
 	}
@@ -130,6 +132,7 @@ public class LevelInstantiator : MonoBehaviour {
 					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 1.8f));
 					GameObject tree = Instantiate (treePrefab, position, Quaternion.identity) as GameObject;	
 					transform.parent = transform;
+					transform.parent=parentMaze;
 					//tree.tag=ToString(i,j);
 					break;			
 				case "2":
