@@ -58,6 +58,16 @@ public class SwitchFadingInOut : MonoBehaviour
     }
 
     /// <summary>
+    /// Fades to white.
+    /// </summary>
+    void FadeToWhite()
+    {
+        // Lerp the colour of the texture between itself and black.
+//        guiTexture.
+        guiTexture.color = Color.Lerp(guiTexture.color, Color.white, fadeSpeed * Time.deltaTime);
+    }
+
+    /// <summary>
     /// Starts the switch fade.
     /// </summary>
     void StartSwitchFade()
@@ -83,8 +93,15 @@ public class SwitchFadingInOut : MonoBehaviour
     {
         // Make sure the texture is enabled.
         guiTexture.enabled = true;
-        // Start fading towards black.
-        FadeToBlack();
+
+        if (GameController.INSTANCE.IsPlayingAsMilo)
+        {
+            // Start fading towards black.
+            FadeToBlack();
+        } else if (!GameController.INSTANCE.IsPlayingAsMilo)
+        {
+            FadeToWhite();
+        }
         // If the screen is almost black...
         if (guiTexture.color.a >= 0.95f)
         {
@@ -92,7 +109,8 @@ public class SwitchFadingInOut : MonoBehaviour
              * By calling the SetStateForMiloDragged() method here, we ensure that KOS' settings won't be set, 
              * before the screen has faded completely to black.
              */ 
-            GameController.INSTANCE.SetStateForMiloDragged();
+//            GameController.INSTANCE.SetStateForMiloDragged();//Should be removed before RELEASE!
+            GameController.INSTANCE.SetStateForSwitching();
             switchState = 1;
         }
     }

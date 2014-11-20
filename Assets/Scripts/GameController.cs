@@ -53,7 +53,8 @@ public class GameController : MonoBehaviour
 //            SwitchToKOS();
         } else if (miloAwakeTimer >= miloAwakeTimerMax && !isPlayingAsMilo)// Milo is awake once again.
         {
-            SetStateForMiloDragged();
+            SwitchFadingInOut.SwitchStarting = true;
+//            SetStateForSwitching();
 //            SwitchToMilo();
         }
     }
@@ -192,9 +193,8 @@ public class GameController : MonoBehaviour
     /// <summary>
     /// Switches to KOS & resets collectables for KOS.
     /// </summary>
-    void SwitchToKOS()
+    public void SwitchToKOS()
     {
-//        milo.gameObject.SetActive(false);
         kos.gameObject.SetActive(true);
         kos.transform.position = milo.transform.position;
         kos.transform.rotation = milo.transform.rotation;
@@ -204,21 +204,22 @@ public class GameController : MonoBehaviour
         SwitchCounter++;
         SwitchActiveValuesForCollectables();
         StartCoroutine(MiloAwakeCountdown());
+        CameraPan.AttachedTo = kos;
     }
 
     /// <summary>
     /// Switches to Milo & resets collectables for Milo.
     /// </summary>
-    void SwitchToMilo()
+    public void SwitchToMilo()
     {
         kos.gameObject.SetActive(false);
-//        milo.gameObject.SetActive(true);
-        milo.transform.position = kos.transform.position;
+//        milo.transform.position = kos.transform.position;
         milo.transform.rotation = kos.transform.rotation;
         isPlayingAsMilo = true;
         miloFlashlightComponent.ResetValues();
         SwitchCounter++;
         SwitchActiveValuesForCollectables();
+        CameraPan.AttachedTo = milo;
     }
 
     /// <summary>
@@ -285,7 +286,8 @@ public class GameController : MonoBehaviour
     /// <summary>
     /// Sets the state for milo dragged.
     /// </summary>
-    public void SetStateForMiloDragged()
+//    public void SetStateForMiloDragged()
+    public void SetStateForSwitching()
     {
         if (isPlayingAsMilo)
         {
@@ -293,21 +295,21 @@ public class GameController : MonoBehaviour
             milo.transform.rotation = Quaternion.Euler(270.0f, 0.0f, 0.0f);
             milo.GetComponent<Move>().enabled = false;
             milo.GetComponent<Jump>().enabled = false;
-            milo.AddComponent<SpringJoint>();
-            milo.GetComponent<SpringJoint>().connectedBody = kos.rigidbody;
-            milo.GetComponent<SpringJoint>().anchor = new Vector3(0.0f, 0.0f, 0.0f);
-            milo.GetComponent<SpringJoint>().spring = 1000.0f;
-            milo.rigidbody.constraints = RigidbodyConstraints.None;
-            CameraPan.AttachedTo = kos;
+            milo.GetComponent<ShadowEffect>().enabled = false;
+//            milo.AddComponent<SpringJoint>();
+//            milo.GetComponent<SpringJoint>().connectedBody = kos.rigidbody;
+//            milo.GetComponent<SpringJoint>().anchor = new Vector3(0.0f, 0.0f, 0.0f);
+//            milo.GetComponent<SpringJoint>().spring = 1000.0f;
+//            milo.rigidbody.constraints = RigidbodyConstraints.None;
         } else
         {
-            milo.transform.position = kos.transform.position;
-            milo.transform.rotation = kos.transform.rotation;
+//            milo.transform.position = kos.transform.position;
+//            milo.transform.rotation = kos.transform.rotation;
             milo.GetComponent<Move>().enabled = true;
             milo.GetComponent<Jump>().enabled = true;
-            Destroy(milo.GetComponent<SpringJoint>());
-            milo.rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
-            CameraPan.AttachedTo = milo;
+            milo.GetComponent<ShadowEffect>().enabled = true;
+//            Destroy(milo.GetComponent<SpringJoint>());
+//            milo.rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
             SwitchToMilo();
         }
     }

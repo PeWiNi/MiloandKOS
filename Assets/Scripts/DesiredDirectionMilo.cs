@@ -25,7 +25,6 @@ public class DesiredDirectionMilo : MonoBehaviour
         if (GameController.INSTANCE.IsPlayingAsMilo && miloAnimator.GetCurrentAnimatorStateInfo(0).IsName("MiloAnim-Idle-01") 
             && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S))//Detect only when, No movement or rotation.
         {
-            Debug.Log("PØLSE");
             GameObject exit = GameObject.Find("EndOfMazePoint");
             GameController.INSTANCE.Milo.transform.LookAt(exit.transform);
         }
