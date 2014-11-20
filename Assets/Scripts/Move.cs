@@ -5,7 +5,8 @@ public class Move : MonoBehaviour
 {
     Animator anim;
     int movementFloat;
-    public static float verticalMovement;
+//    public static float verticalMovement;
+    float verticalMovement;
     float shadowSlowDownSpeed = 1;
 
     void Awake()
