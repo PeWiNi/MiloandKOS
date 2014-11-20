@@ -3,6 +3,12 @@ using System.Collections;
 
 public class SwitchFadingInOut : MonoBehaviour
 {
+    [SerializeField]
+    Texture
+        black;
+    [SerializeField]
+    Texture
+        white;
     public float fadeSpeed = 1.5f;
     static bool switchStarting = false;
     int switchState = 0;
@@ -54,6 +60,7 @@ public class SwitchFadingInOut : MonoBehaviour
     void FadeToBlack()
     {
         // Lerp the colour of the texture between itself and black.
+        guiTexture.texture = black;
         guiTexture.color = Color.Lerp(guiTexture.color, Color.black, fadeSpeed * Time.deltaTime);
     }
 
@@ -62,8 +69,8 @@ public class SwitchFadingInOut : MonoBehaviour
     /// </summary>
     void FadeToWhite()
     {
-        // Lerp the colour of the texture between itself and black.
-//        guiTexture.
+        // Lerp the colour of the texture between itself and white.
+        guiTexture.texture = white;
         guiTexture.color = Color.Lerp(guiTexture.color, Color.white, fadeSpeed * Time.deltaTime);
     }
 
