@@ -38,6 +38,14 @@ public class LampSafeZone : MonoBehaviour
         } 
     }
 
+    void OnTriggerStay(Collider col)
+    {        
+        if (col.gameObject.name == "Milo")
+        {
+            GameController.INSTANCE.Milo.GetComponent<DesiredDirectionMilo>().SetDirectionTowardsEndOfMazePoint();
+        }
+    }
+
     /// <summary>
     /// Prevents KOS from entering safe zones.
     /// </summary>

@@ -111,7 +111,7 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Minotuar_Idle
+  m_Name: Minotaur_Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
@@ -183,21 +183,21 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110270924}
+      first: {fileID: 110200000}
       second:
-      - {fileID: 110198965}
-    data:
-      first: {fileID: 110231449}
-      second:
-      - {fileID: 110165167}
+      - {fileID: 110100000}
     data:
       first: {fileID: 110272708}
       second:
       - {fileID: 110183815}
     data:
-      first: {fileID: 110200000}
+      first: {fileID: 110231449}
       second:
-      - {fileID: 110100000}
+      - {fileID: 110165167}
+    data:
+      first: {fileID: 110270924}
+      second:
+      - {fileID: 110198965}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: -36, y: 12, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

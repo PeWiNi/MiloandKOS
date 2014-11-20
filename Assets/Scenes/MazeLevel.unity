@@ -429,9 +429,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 469080551}
   - 95: {fileID: 469080552}
-  - 114: {fileID: 469080553}
   - 136: {fileID: 469080554}
   - 54: {fileID: 469080555}
+  - 114: {fileID: 469080553}
+  - 114: {fileID: 469080556}
   m_Layer: 0
   m_Name: KOSMinotaur
   m_TagString: Player
@@ -510,6 +511,18 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &469080556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 8784d67cbe5845a4ab03bf5a8a4a8122,
+    type: 2}
+  m_PrefabInternal: {fileID: 991909233}
+  m_GameObject: {fileID: 469080550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3f89247bede6104c9531d641409a142, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &470432803
 GameObject:
   m_ObjectHideFlags: 0
@@ -1144,6 +1157,7 @@ GameObject:
   - 114: {fileID: 784544867}
   - 114: {fileID: 784544866}
   - 114: {fileID: 784544871}
+  - 114: {fileID: 784544872}
   m_Layer: 0
   m_Name: Milo
   m_TagString: Player
@@ -1244,6 +1258,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e28256433e22214fa61ed463e5fd852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &784544872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400008, guid: fafa22ba4cf734c498019ccd4c9c389d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1475190056}
+  m_GameObject: {fileID: 784544864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd1247c4a9341354abceeaf340c77385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &804247512
@@ -1712,7 +1738,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 8784d67cbe5845a4ab03bf5a8a4a8122, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: 8784d67cbe5845a4ab03bf5a8a4a8122, type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -2997,7 +3023,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400132, guid: fafa22ba4cf734c498019ccd4c9c389d, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fafa22ba4cf734c498019ccd4c9c389d, type: 2}
