@@ -89,8 +89,8 @@ public class loadingImages : MonoBehaviour
         v3TopRight = Camera.main.ViewportToWorldPoint(v3ViewPort);
        // float ratiow = 360 * (v3BottomLeft.x - v3TopRight.x) / 540;
       //  float ratioh = 540 * (v3BottomLeft.y - v3TopRight.y) / 360;
-		float ratiow = 1572 * (v3BottomLeft.x - v3TopRight.x) / 2048;
-		float ratioh = 2048 * (v3BottomLeft.y - v3TopRight.y) / 1572;
+		float ratiow = 786 * (v3BottomLeft.x - v3TopRight.x) / 1024;
+		float ratioh = 1024 * (v3BottomLeft.y - v3TopRight.y) / 786;
         planeCut.transform.localScale = new Vector3(ratiow, 1, ratioh - 0.5f);
     }
 
