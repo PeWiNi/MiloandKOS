@@ -134,6 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
+  m_DragThreshold: 5
 --- !u!4 &2641159
 Transform:
   m_ObjectHideFlags: 0
@@ -328,7 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameOfCutscene: MiloentersEpicBattle
-  numberOFFrameInCutscene: 229
+  numberOFFrameInCutscene: 323
   currentIndex: 0
   returnString: 
   planeCut: {fileID: 0}

@@ -107,10 +107,11 @@ public class LevelInstantiator : MonoBehaviour {
 		/// 0 - empty space, 
 		/// 1 - tree, 
 		/// 2 - street lamp, 	
-		/// a - bench rotated -90 on y, d - bench rotated 90 on y, s - bench rotated 180 on y 
 		/// 4 - trash can
 		/// 
 		/// </summary>
+
+		//  a - bench rotated -90 on y, d - bench rotated 90 on y, s - bench rotated 180 on y - benches no longer instantiated
 			void drawLevel ()
 	{
 		Vector3 position = new Vector3 ();
@@ -135,7 +136,7 @@ public class LevelInstantiator : MonoBehaviour {
 					GameObject tree = Instantiate (treePrefab, position, Quaternion.identity) as GameObject;	
 					transform.parent = parentMaze;
 					//tree.transform.parent = parentMaze.transform;
-					//tree.tag=ToString(i,j);
+					//tree.gameObject.tag=ToString(i,j);
 					break;			
 				case "2":
 					GameObject lamp = Instantiate (lampPrefab, position, Quaternion.identity) as GameObject;	
