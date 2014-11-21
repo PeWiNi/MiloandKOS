@@ -40,7 +40,7 @@ public class LampSafeZone : MonoBehaviour
 
     void OnTriggerStay(Collider col)
     {        
-        if (col.gameObject.name == "Milo")
+        if (col.gameObject.name == "Milo" && Application.loadedLevelName.Equals("MazeLevel"))
         {
             GameController.INSTANCE.Milo.GetComponent<DesiredDirectionMilo>().SetDirectionTowardsEndOfMazePoint();
         }
