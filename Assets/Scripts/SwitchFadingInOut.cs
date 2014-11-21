@@ -116,7 +116,6 @@ public class SwitchFadingInOut : MonoBehaviour
              * By calling the SetStateForMiloDragged() method here, we ensure that KOS' settings won't be set, 
              * before the screen has faded completely to black.
              */ 
-//            GameController.INSTANCE.SetStateForMiloDragged();//Should be removed before RELEASE!
             GameController.INSTANCE.SetStateForSwitching();
             switchState = 1;
         }

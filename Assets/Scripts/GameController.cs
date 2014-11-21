@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
@@ -14,8 +15,8 @@ public class GameController : MonoBehaviour
     int switchCounter = 0;
     int maxNeededLotusFlowers = 10;//The maximum number needed to proceed the
     int currentCollectedLotusFlowers = 0;//The current amount collected.
-    GameObject[] allKOSLotus;
-    GameObject[] allBatteries;
+    List<GameObject> allKOSLotus;
+    List<GameObject> allBatteries;
     bool switchHasBeenExecuted = false;
     Texture2D backgroundKOS;
     Texture2D foregroundKOS;
@@ -50,12 +51,9 @@ public class GameController : MonoBehaviour
         if (miloFlashlightComponent.Capacity <= 0.0f && isPlayingAsMilo)//Minimum Capacity for the Flashlight.
         {
             SwitchFadingInOut.SwitchStarting = true;
-//            SwitchToKOS();
         } else if (miloAwakeTimer >= miloAwakeTimerMax && !isPlayingAsMilo)// Milo is awake once again.
         {
             SwitchFadingInOut.SwitchStarting = true;
-//            SetStateForSwitching();
-//            SwitchToMilo();
         }
     }
 
@@ -151,6 +149,22 @@ public class GameController : MonoBehaviour
     }
 
     /// <summary>
+    /// Gets or sets all KOS lotus.
+    /// </summary>
+    /// <value>All KOS lotus.</value>
+    public List<GameObject> AllKOSLotus
+    {
+        get
+        {
+            return allKOSLotus;
+        }
+        set
+        {
+            allKOSLotus = value;
+        }
+    }
+
+    /// <summary>
     /// Resets the milo awake timer.
     /// </summary>
     public void ResetMiloAwakeTimer()
@@ -199,7 +213,6 @@ public class GameController : MonoBehaviour
         kos.transform.position = milo.transform.position;
         kos.transform.rotation = milo.transform.rotation;
         isPlayingAsMilo = false;
-        currentCollectedLotusFlowers = 0;
         ResetMiloAwakeTimer();
         SwitchCounter++;
         SwitchActiveValuesForCollectables();
@@ -213,7 +226,7 @@ public class GameController : MonoBehaviour
     public void SwitchToMilo()
     {
         kos.gameObject.SetActive(false);
-//        milo.transform.position = kos.transform.position;
+        milo.GetComponent<Animator>().SetFloat(Animator.StringToHash("Movement"), 0.0f);//Set to Idle.
         milo.transform.rotation = kos.transform.rotation;
         isPlayingAsMilo = true;
         miloFlashlightComponent.ResetValues();
@@ -243,9 +256,11 @@ public class GameController : MonoBehaviour
     {
         if (allBatteries == null && allKOSLotus == null)
         {
-            allBatteries = GameObject.FindGameObjectsWithTag("Battery");
-            allKOSLotus = GameObject.FindGameObjectsWithTag("KOSLotus");
-        }
+            GameObject[] batteries = GameObject.FindGameObjectsWithTag("Battery");
+            allBatteries = new List<GameObject>(batteries);
+            GameObject[] lotusFlowers = GameObject.FindGameObjectsWithTag("KOSLotus");
+            allKOSLotus = new List<GameObject>(lotusFlowers);
+        } 
         if (isPlayingAsMilo)
         {
             foreach (GameObject battery in allBatteries)

@@ -40,6 +40,11 @@ public class DesiredDirectionKOS : MonoBehaviour
                 }
             }
             GameController.INSTANCE.Kos.transform.LookAt(nearestLotus.transform);
+        } else if (GameController.INSTANCE.CurrentCollectedLotusFlowers == GameController.INSTANCE.MaxNeededLotusFlowers && !GameController.INSTANCE.IsPlayingAsMilo && kosAnimator.GetCurrentAnimatorStateInfo(0).IsName("Minotaur_Idle") 
+            && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S))
+        {
+            GameObject exit = GameObject.Find("EndOfMazePoint");
+            GameController.INSTANCE.Kos.transform.LookAt(exit.transform);
         }
     }
 }

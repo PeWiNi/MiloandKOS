@@ -21,9 +21,9 @@ public class KOSCollectable : MonoBehaviour
     {
         if (col.gameObject.name == "KOSMinotaur")
         {
+            GameController.INSTANCE.AllKOSLotus.Remove(gameObject);
+            GameController.INSTANCE.CurrentCollectedLotusFlowers += 1;
             gameObject.SetActive(false);
-//            GameController.INSTANCE.ResetMiloAwakeTimer();
-            GameController.INSTANCE.CurrentCollectedLotusFlowers += 1; 
         }
     }
 

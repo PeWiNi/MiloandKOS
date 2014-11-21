@@ -17,7 +17,10 @@ public class Move : MonoBehaviour
 
     void FixedUpdate()
     {
-        MovementControl();
+        if (!SwitchFadingInOut.SwitchStarting)//Prevent movements during switch phases.
+        {
+            MovementControl();
+        }
     }
 
     /// <summary>
