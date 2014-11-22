@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: CatShadowAnim-RunningDown-01
+  m_Name: HumanShadowAnim-RunningFront-01
   serializedVersion: 4
   m_AnimationType: 2
   m_Compressed: 0
@@ -18,12 +18,14 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: -0
-      value: {fileID: 21300000, guid: 6183241196a564e4188165e5a6777125, type: 3}
+      value: {fileID: 21300002, guid: 2fbfa11fe1ea2f246a9d7148d76c890e, type: 3}
+    - time: .200000003
+      value: {fileID: 21300004, guid: 2fbfa11fe1ea2f246a9d7148d76c890e, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 60
+  m_SampleRate: 5
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -37,11 +39,12 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 6183241196a564e4188165e5a6777125, type: 3}
+    - {fileID: 21300002, guid: 2fbfa11fe1ea2f246a9d7148d76c890e, type: 3}
+    - {fileID: 21300004, guid: 2fbfa11fe1ea2f246a9d7148d76c890e, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: .0166666675
+    m_StopTime: .400000006
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

@@ -1,20 +1,19 @@
 fileFormatVersion: 2
-guid: 6183241196a564e4188165e5a6777125
+guid: 4d9123fd9ac30e04ba103adeeecc55e8
 TextureImporter:
   fileIDToRecycleName:
-    21300000: CatGreyShadowSprite02_0
-    21300002: CatGreyShadowSprite02_3
-    21300004: CatGreyShadowSprite02_6
-    21300006: CatGreyShadowSprite02_9
-    21300008: CatGreyShadowSprite02_12
-    21300010: CatGreyShadowSprite02_10
-    21300012: CatGreyShadowSprite02_11
-    21300014: CatGreyShadowSprite02_7
-    21300016: CatGreyShadowSprite02_8
-    21300018: CatGreyShadowSprite02_9
-    21300020: CatGreyShadowSprite02_10
-    21300022: CatGreyShadowSprite02_11
-    21300024: CatGreyShadowSprite02_12
+    21300000: CatGreyShadowSidewaySprite03_0
+    21300002: CatGreyShadowSidewaySprite03_1
+    21300004: CatGreyShadowSidewaySprite03_2
+    21300006: CatGreyShadowSidewaySprite03_3
+    21300008: CatGreyShadowSidewaySprite03_4
+    21300010: CatGreyShadowSidewaySprite03_5
+    21300012: CatGreyShadowSidewaySprite03_6
+    21300014: CatGreyShadowSidewaySprite03_7
+    21300016: CatGreyShadowSidewaySprite03_8
+    21300018: CatGreyShadowSidewaySprite03_9
+    21300020: CatGreyShadowSidewaySprite03_10
+    21300022: CatGreyShadowSidewaySprite03_11
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -50,139 +49,129 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 500
+  spritePixelsToUnits: 450
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: CatGreyShadowSprite02_0
+    - name: CatGreyShadowSidewaySprite03_0
       rect:
         serializedVersion: 2
-        x: 240
-        y: 2560
-        width: 521
-        height: 429
+        x: 216
+        y: 2613
+        width: 579
+        height: 356
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CatGreyShadowSprite02_3
+    - name: CatGreyShadowSidewaySprite03_1
       rect:
         serializedVersion: 2
-        x: 235
-        y: 2178
-        width: 580
-        height: 354
+        x: 198
+        y: 2158
+        width: 597
+        height: 349
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CatGreyShadowSprite02_6
+    - name: CatGreyShadowSidewaySprite03_2
       rect:
         serializedVersion: 2
-        x: 209
-        y: 1769
-        width: 595
-        height: 352
+        x: 204
+        y: 1757
+        width: 600
+        height: 340
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CatGreyShadowSprite02_9
+    - name: CatGreyShadowSidewaySprite03_3
       rect:
         serializedVersion: 2
-        x: 233
-        y: 1404
-        width: 601
-        height: 341
+        x: 285
+        y: 1280
+        width: 579
+        height: 356
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CatGreyShadowSprite02_12
+    - name: CatGreyShadowSidewaySprite03_4
       rect:
         serializedVersion: 2
-        x: 241
-        y: 949
-        width: 580
-        height: 353
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CatGreyShadowSprite02_10
-      rect:
-        serializedVersion: 2
-        x: 249
-        y: 539
-        width: 599
+        x: 273
+        y: 813
+        width: 597
         height: 350
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CatGreyShadowSprite02_11
+    - name: CatGreyShadowSidewaySprite03_5
       rect:
         serializedVersion: 2
-        x: 221
-        y: 171
+        x: 255
+        y: 430
         width: 603
-        height: 342
+        height: 340
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CatGreyShadowSprite02_7
+    - name: CatGreyShadowSidewaySprite03_6
       rect:
         serializedVersion: 2
-        x: 1240
-        y: 2563
-        width: 601
+        x: 1247
+        y: 2562
+        width: 591
         height: 368
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CatGreyShadowSprite02_8
+    - name: CatGreyShadowSidewaySprite03_7
       rect:
         serializedVersion: 2
         x: 1220
-        y: 2187
-        width: 601
-        height: 312
+        y: 2188
+        width: 600
+        height: 307
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CatGreyShadowSprite02_9
+    - name: CatGreyShadowSidewaySprite03_8
       rect:
         serializedVersion: 2
-        x: 1240
-        y: 1777
-        width: 610
+        x: 1238
+        y: 1773
+        width: 612
         height: 361
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CatGreyShadowSprite02_10
+    - name: CatGreyShadowSidewaySprite03_9
       rect:
         serializedVersion: 2
         x: 1274
         y: 1223
-        width: 596
-        height: 373
+        width: 594
+        height: 368
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CatGreyShadowSprite02_11
+    - name: CatGreyShadowSidewaySprite03_10
       rect:
         serializedVersion: 2
-        x: 1293
-        y: 847
-        width: 601
-        height: 313
+        x: 1292
+        y: 849
+        width: 603
+        height: 310
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CatGreyShadowSprite02_12
+    - name: CatGreyShadowSidewaySprite03_11
       rect:
         serializedVersion: 2
         x: 1265
-        y: 437
-        width: 614
-        height: 359
+        y: 439
+        width: 612
+        height: 356
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

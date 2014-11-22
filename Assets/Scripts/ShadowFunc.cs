@@ -63,21 +63,21 @@ public class ShadowFunc : MonoBehaviour
             if (horizontal == 1)
             {
                 animator.SetBool("ShadowIdle", false);
-                animator.SetBool("ShadowRunningDown", false);
+                animator.SetBool("ShadowRunningFront", false);
                 animator.SetBool("ShadowRunningSidewayRight", true);
                 animator.SetBool("ShadowRunningSidewayLeft", false);
 
             } else if (horizontal == -1)
             {
                 animator.SetBool("ShadowIdle", false);
-                animator.SetBool("ShadowRunningDown", false);
+                animator.SetBool("ShadowRunningFront", false);
                 animator.SetBool("ShadowRunningSidewayRight", false);
                 animator.SetBool("ShadowRunningSidewayLeft", true);
             } 
         } else if (vertical != 0 && horizontal == 0)
         {
             animator.SetBool("ShadowIdle", false);
-            animator.SetBool("ShadowRunningDown", true);
+            animator.SetBool("ShadowRunningFront", true);
             animator.SetBool("ShadowRunningSidewayRight", false);
             animator.SetBool("ShadowRunningSidewayLeft", false);
         }

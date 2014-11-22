@@ -15,7 +15,7 @@ public class ShadowEffect : MonoBehaviour
         if (col.gameObject.name == "HShadow")
         {
             ShadowSlowEffect();
-            StartCoroutine("SpeedTime");  
+            StartCoroutine("SpeedTime");
             Destroy(GameObject.Find("HumanShadow"));
         }
 

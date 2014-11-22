@@ -14,7 +14,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 1
     m_Controller: {fileID: 9100000}
-  - m_Name: ShadowRunningDown
+  - m_Name: ShadowRunningFront
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -77,7 +77,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: ShadowRunningDown
+    m_ConditionEvent: ShadowRunningFront
     m_EventTreshold: 0
     m_ExitTime: .899999976
   m_Atomic: 1
@@ -117,7 +117,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: ShadowRunningDown
+    m_ConditionEvent: ShadowRunningFront
     m_EventTreshold: 0
     m_ExitTime: 1
   m_Atomic: 1
@@ -297,7 +297,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: ShadowRunningDown
+    m_ConditionEvent: ShadowRunningFront
     m_EventTreshold: 0
     m_ExitTime: .75
   m_Atomic: 1
@@ -424,7 +424,7 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: HumanShadowAnim-RunningDown-01
+  m_Name: HumanShadowAnim-RunningFront-01
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
@@ -451,15 +451,8 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110293633}
-      second:
-      - {fileID: 110172875}
-      - {fileID: 110137291}
-    data:
-      first: {fileID: 110276826}
-      second:
-      - {fileID: 110117130}
-      - {fileID: 110179974}
+      first: {fileID: 0}
+      second: []
     data:
       first: {fileID: 110200000}
       second:
@@ -467,16 +460,20 @@ StateMachine:
       - {fileID: 110196359}
       - {fileID: 110170585}
     data:
-      first: {fileID: 0}
-      second: []
-    data:
-      first: {fileID: 0}
-      second: []
-    data:
       first: {fileID: 110293795}
       second:
       - {fileID: 110151291}
       - {fileID: 110143353}
+    data:
+      first: {fileID: 110276826}
+      second:
+      - {fileID: 110117130}
+      - {fileID: 110179974}
+    data:
+      first: {fileID: 110293633}
+      second:
+      - {fileID: 110172875}
+      - {fileID: 110137291}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: -60, y: 72, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
