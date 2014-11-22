@@ -204,6 +204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
+  m_DragThreshold: 5
 --- !u!4 &603514300
 Transform:
   m_ObjectHideFlags: 0
@@ -395,7 +396,7 @@ MonoBehaviour:
   currentIndex: 0
   returnString: 
   planeCut: {fileID: 0}
-  nextScene: EnterShipMilo
+  nextScene: FinalBattleAsMilo
 --- !u!4 &936168379
 Transform:
   m_ObjectHideFlags: 0
