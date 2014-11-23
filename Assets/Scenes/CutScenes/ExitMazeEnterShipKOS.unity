@@ -351,7 +351,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
-  m_DragThreshold: 5
 --- !u!4 &1755637123
 Transform:
   m_ObjectHideFlags: 0
@@ -392,7 +391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameOfCutscene: ExitMazeKOS
-  numberOFFrameInCutscene: 589
+  numberOFFrameInCutscene: 737
   currentIndex: 0
   returnString: 
   planeCut: {fileID: 0}
