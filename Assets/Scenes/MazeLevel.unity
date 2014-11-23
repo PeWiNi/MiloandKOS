@@ -3588,7 +3588,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
       minMaxState: 0
-    gravityModifier: .0700000003
+    gravityModifier: .0199999996
     inheritVelocity: 4
     maxNumParticles: 1000
   ShapeModule:
@@ -5639,7 +5639,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
       minMaxState: 0
-    gravityModifier: .0700000003
+    gravityModifier: .0199999996
     inheritVelocity: 4
     maxNumParticles: 1000
   ShapeModule:
@@ -7443,7 +7443,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
       minMaxState: 0
-    gravityModifier: .0700000003
+    gravityModifier: .0199999996
     inheritVelocity: 4
     maxNumParticles: 1000
   ShapeModule:
@@ -10037,7 +10037,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
       minMaxState: 0
-    gravityModifier: .0700000003
+    gravityModifier: .0199999996
     inheritVelocity: 4
     maxNumParticles: 1000
   ShapeModule:
