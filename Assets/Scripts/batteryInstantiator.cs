@@ -6,7 +6,7 @@ public class batteryInstantiator : MonoBehaviour {
 	public Transform batteryPrefab;
 
 	public int [,] batteryCoord;
-	
+	[SerializeField] GameObject batteries;
 	// Use this for initialization
 	void Start () {
 
@@ -15,6 +15,7 @@ public class batteryInstantiator : MonoBehaviour {
 			{3,7}, {3,16},{4,24},{7,7},{9,2},{9,18},{12,6},{15,20},{18,16},
 			{20,10},{21,20},{28,23},{30,11},{34,24},{35,5},{37,17},{40,4},{45,11}
 		};
+		batteries = GameObject.Find ("Batteries");
 		drawBatteries();
 		
 	}
@@ -32,8 +33,8 @@ public class batteryInstantiator : MonoBehaviour {
 			rotationB.x=0.0f;
 			rotationB.y=((float)i%3.0f)*90.0f;
 			rotationB.z=90.0f;
-			GameObject batteryInstance= Instantiate(batteryPrefab, positionB, Quaternion.Euler(rotationB)) as GameObject;
-			transform.parent=transform; 
+			Transform batteryInstance= Instantiate(batteryPrefab, positionB, Quaternion.Euler(rotationB)) as Transform;
+			batteryInstance.transform.parent=batteries.transform; 
 		}
 				
 	}

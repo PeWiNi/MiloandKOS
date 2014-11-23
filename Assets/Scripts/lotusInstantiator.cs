@@ -5,6 +5,7 @@ public class lotusInstantiator : MonoBehaviour {
 
 	public Transform lotusPrefab;
 	public int [,] lotusMap;
+	[SerializeField] GameObject lotusFlowers;
 
 	void Start () {
 
@@ -14,6 +15,7 @@ public class lotusInstantiator : MonoBehaviour {
 			{15,2},{18,11},{18,28},{22,22},{25,5},
 			{25,20},{32,2},{35,12},{38,21},{45,5}
 		};
+		lotusFlowers = GameObject.Find ("LotusFlowers");
 		drawLotus ();
 	
 	}
@@ -27,8 +29,8 @@ public class lotusInstantiator : MonoBehaviour {
 
 			positionB.x=(float)(lotusMap[i,0]-1)*1.5f+0.4f;
 			positionB.z=(float)(lotusMap[i,1]-1)*2.5f-0.4f;
-			GameObject lotusInstance= Instantiate(lotusPrefab, positionB, Quaternion.identity) as GameObject;
-			transform.parent=transform; 
+			Transform lotusInstance= Instantiate(lotusPrefab, positionB, Quaternion.identity) as Transform;
+			lotusInstance.transform.parent=lotusFlowers.transform; 
 
 		}
 		
