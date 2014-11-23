@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameOfCutscene: FinalCutscene
-  numberOFFrameInCutscene: 1372
+  numberOFFrameInCutscene: 810
   currentIndex: 0
   returnString: 
   planeCut: {fileID: 0}
