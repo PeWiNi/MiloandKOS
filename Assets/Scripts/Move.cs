@@ -45,24 +45,24 @@ public class Move : MonoBehaviour
     void MovementControl()
     {
         //Left Rotation.
-        if (Input.GetKey(KeyCode.A))
+		if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) )
         {
             transform.Rotate(new Vector3(0.0f, Input.GetAxis("Horizontal") - 2.0f, 0.0f));
         }
         //& Right Rotation
-        if (Input.GetKey(KeyCode.D))
+		if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             transform.Rotate(new Vector3(0.0f, Input.GetAxis("Horizontal") + 2.0f, 0.0f));
         }
         //Forward direction.
-        if (Input.GetKey(KeyCode.W))
+		if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
-            verticalMovement = Input.GetAxis("Vertical") * 2.0f * shadowSlowDownSpeed;
+            verticalMovement = Input.GetAxis("Vertical") * 2.5f * shadowSlowDownSpeed;
             anim.SetFloat(movementFloat, verticalMovement);
             transform.Translate(0.0f, 0.0f, verticalMovement * Time.deltaTime);
         }
         //Backward direction.
-        if (Input.GetKey(KeyCode.S))
+		if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             verticalMovement = Input.GetAxis("Vertical") * shadowSlowDownSpeed;
             anim.SetFloat(movementFloat, verticalMovement);

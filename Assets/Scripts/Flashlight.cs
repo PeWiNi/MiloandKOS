@@ -8,8 +8,8 @@ public class Flashlight : MonoBehaviour
     private Rect box = new Rect(10, 10, 100, 20);
     private Texture2D background;
     private Texture2D foreground;
-    private float capacity = 30.0F;
-    private int maxCapacity = 30;
+    private float capacity = 15.0F;
+    private int maxCapacity = 15;
     private int counterLinear = 0;
     bool pauseCapacity;
 

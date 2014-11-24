@@ -11,7 +11,11 @@ public class GameController : MonoBehaviour
     Flashlight miloFlashlightComponent;
     bool isPlayingAsMilo = true;
     float miloAwakeTimer = 0.0f;
+<<<<<<< HEAD
     int miloAwakeTimerMax = 180;//3mins.
+=======
+    int miloAwakeTimerMax = 360;
+>>>>>>> origin/master
     int switchCounter = 0;
     int maxNeededLotusFlowers = 10;//The maximum number needed to proceed the
     int currentCollectedLotusFlowers = 0;//The current amount collected.

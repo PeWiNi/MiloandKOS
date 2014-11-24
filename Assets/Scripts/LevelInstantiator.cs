@@ -4,47 +4,24 @@ using System.IO;
 using System.Collections.Generic;
 
 public class LevelInstantiator : MonoBehaviour {
-
+	
 	public Transform treePrefab;
 	public Transform benchPrefab;
 	public Transform lampPrefab;
 	public Transform canPrefab;
 	public Transform cornerTreePrefab; 
 	[SerializeField] GameObject parentMaze;
-	
-		
+	GameObject player;
+	public Transform[,] maze;
+	float pastPlayerPosX;
+	float pastPlayerPosZ;
+	int [] limits = new int[4];
+
 	public string [,] levelMap;
-
+	
 	void Start (){
-		//32 columns, 24 rows
+		
 		levelMap= new string[,]{
-			// g, 1, 1, 2 
-			/*{"g","y","1","1","1","1","1","7","1","1","7","1","1","1","1","1","t","1","y","#","#","#","#","#","t","1","y","1","1","#","#","#","#"},
-			{"0","g","1","1","2","1","1","1","s","4","1","1","2","1","1","1","h","2","7","#","#","#","#","#","7","2","0","0","0","0","#","#","#"},
-			{"0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","7","#","#","#","t","1","s","0","t","1","1","#","#","#","#"},
-			{"y","0","d","y","0","d","t","1","1","1","1","y","0","4","3","t","y","0","7","#","#","#","7","0","0","0","7","#","#","#","#","#","#"},
-			{"7","0","4","7","0","4","#","#","#","#","#","4","0","t","#","#","a","0","g","1","1","1","h","0","2","3","4","#","#","#","#","#","#"},
-			{"7","0","t","h","0","g","1","1","1","1","h","a","0","7","#","#","g","1","4","0","0","0","0","0","t","#","#","#","#","#","#","#","#"},
-			{"7","0","7","2","0","0","0","0","0","0","0","0","0","g","y","#","#","#","a","0","2","4","3","0","7","#","#","#","#","#","#","#","#"},
-			{"7","0","7","7","3","t","y","3","t","1","1","y","0","2","7","1","1","1","h","0","0","d","7","0","7","#","#","#","#","#","#","#","#"},
-			{"7","0","g","1","1","1","1","1","1","1","1","h","0","t","h","7","0","0","0","0","0","7","7","0","g","#","#","#","#","#","#","#","#"},
-			{"2","0","0","d","0","0","0","0","0","0","0","0","0","7","#","7","0","0","0","0","0","7","7","0","0","g","s","1","1","#","#","#","#"},
-			{"1","1","1","4","0","0","2","4","3","t","1","1","4","h","1","7","0","0","t","a","0","t","7","0","0","0","0","0","0","0","#","#","#"},
-			{"g","1","h","0","0","0","g","1","1","1","1","1","s","4","1","h","0","0","7","y","0","d","g","1","1","3","1","1","1","#","#","#","#"},
-			{"2","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","7","7","0","4","1","#","#","#","#","#","#","#","#","#","#"},
-			{"y","0","t","y","0","4","1","1","1","4","3","1","1","1","3","2","1","1","h","7","0","g","1","y","#","#","#","#","#","#","#","#","#"},
-			{"7","0","7","7","0","7","t","1","1","s","2","1","1","1","1","1","1","4","1","h","0","0","0","7","#","#","#","#","#","#","#","#","#"},
-			{"7","0","g","7","0","7","7","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","g","s","2","1","1","1","#","#","#","#"},
-			{"7","3","4","7","0","7","7","0","t","4","0","t","1","1","t","3","y","1","1","y","4","3","0","0","0","0","0","0","0","#","#","#","#"},
-			{"g","1","h","7","0","7","7","0","7","7","0","7","t","2","g","1","h","1","1","1","1","y","0","0","0","0","0","0","0","0","#","#","#"},
-			{"#","#","#","7","0","7","7","3","4","7","0","7","7","0","0","0","0","0","0","0","2","g","h","3","t","1","1","3","4","#","#","#","#"},
-			{"#","#","#","4","0","g","1","1","1","h","0","7","7","0","t","1","y","4","0","0","7","1","1","1","1","#","#","#","#","#","#","#","#"},
-			{"#","#","#","2","0","0","0","0","0","0","0","2","7","0","7","1","g","h","0","0","g","1","1","1","1","#","#","#","#","#","#","#","#"},
-			{"#","#","#","g","1","1","y","3","t","y","0","d","g","3","h","s","0","0","0","0","0","0","0","0","g","#","#","#","#","#","#","#","#"},
-			{"#","#","#","#","#","#","#","#","#","7","0","0","0","0","0","0","0","t","1","1","4","3","0","0","0","s","1","1","1","#","#","#","#"},
-			{"#","#","#","#","#","#","#","#","#","7","0","0","0","0","0","0","0","d","#","#","#","1","0","0","0","0","0","0","#","#","#","#","#"},
-			{"#","#","#","#","#","#","#","#","#","g","1","1","4","3","1","1","2","1","#","#","#","1","1","1","1","1","1","1","4","#","#","#","#"}*/
-
 			{"g","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","t","-","-","-","y","#","#"},
 			{"0","g","-","-","2","-","-","-","s","4","-","-","-","-","-","-","h","2","y","#","#","#","#","#","|","h","0","0","0","0","|","#","#"},
 			{"0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","|","#","#","#","t","-","s","0","0","t","-","-","h","#","#"},
@@ -91,159 +68,175 @@ public class LevelInstantiator : MonoBehaviour {
 			{"|","0","g","|","0","|","|","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","g","s","2","-","-","y","#","#","#","#"},
 			{"|","3","4","|","0","|","|","0","t","4","0","t","-","-","t","3","y","-","-","y","4","3","0","0","0","0","0","0","|","#","#","#","#"},
 			{"g","-","h","g","-","h","g","-","h","g","-","h","-","-","-","-","-","-","-","-","-","-","-","-","-","-","t","-","h","#","#","#","#"},
-			{"-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","_","-","-","-","-","#","#"}
-
+			{"-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","#","#"}
+			
 		};
 		parentMaze = GameObject.Find ("mazeLayoutloader");
+		maze = new Transform[levelMap.GetLength (0), levelMap.GetLength (1)];
+		//Debug.Log (maze);
 
-		//parentMaze = (Transform)test;
-		//parent.transform = parentMaze.transform;
-		drawLevel ();
+		drawLevel (0,levelMap.GetLength(0),0,levelMap.GetLength(1));
+
+		if (GameController.INSTANCE.IsPlayingAsMilo) 
+			player = GameObject.Find ("Milo");
+		else
+			player = GameObject.Find ("KOSMinotaur");
+		pastPlayerPosX = player.transform.position.x;
+		pastPlayerPosZ = player.transform.position.z;
 
 	}
+	
+	// Update is called once per frame
 
-		/// <summary>
-		/// Draws the level, using a numerical map : 
-		/// 0 - empty space, 
-		/// 1 - tree, 
-		/// 2 - street lamp, 	
-		/// 4 - trash can
-		/// 
-		/// </summary>
+		 void Update ()
+		{	
+		if (GameController.INSTANCE.IsPlayingAsMilo) 
+						player = GameObject.Find ("Milo");
+				else
+						player = GameObject.Find ("KOSMinotaur");
+				
+			//mazeHider ((int)pastPlayerPosX, (int)pastPlayerPosZ);
+			//mazeShower((int)player.transform.position.x,(int)player.transform.position.z);
 
-		//  a - bench rotated -90 on y, d - bench rotated 90 on y, s - bench rotated 180 on y - benches no longer instantiated
-			void drawLevel ()
-	{
+				pastPlayerPosX = player.transform.position.x;
+				pastPlayerPosZ = player.transform.position.z;
+				
+		}
+
+	void mazeHider(int oldX, int oldZ)
+	{	setBoundaries (oldX,oldZ);
+		for (int i=limits[0]; i<limits[1]; i++)
+			for (int j=limits[2]; j<limits[3]; j++)
+				if (maze [i,j]!=null)
+					maze [i,j].gameObject.renderer.enabled = false;
+	}
+	
+	void mazeShower(int x, int z){
+
+		setBoundaries (x,z);
+		for (int i=limits[0]; i<limits[1]; i++)
+			for (int j=limits[2]; j<limits[3]; j++)
+				if (maze [i,j]!=null)
+				maze [i, j].renderer.enabled = true;
+		}
+
+	void setBoundaries(int x, int z)
+	{	
+
+		if (x - 4 < 0)
+			limits[0] = 0;
+		else
+			limits[0] = x - 4;
+		if (x + 4 > levelMap.GetLength (0))
+			limits[1]= levelMap.GetLength (0);
+		else
+				limits[1] = x + 4;
+		if (z - 4 < 0) 
+				limits[2] = 0+z;
+		else
+				limits[2] = z - 4;
+		if (z + 4 > levelMap.GetLength (1))
+				limits[3] = levelMap.GetLength (1);
+		else
+				limits[3] = z + 4;
+		
+	}
+	
+	/// <summary>
+	/// Draws the level, using a character map : 
+	/// 0 - empty space, 
+	/// 1 - tree, 
+	/// 2 - street lamp, 	
+	/// 4 - trash can
+	/// g,h,t,y - corner trees
+	/// a,s,d,3 - benches are no longer instantiated 
+	/// </summary>
+	void drawLevel (int xmin, int xmax, int zmin, int zmax)
+	{	
 		Vector3 position = new Vector3 ();
 		position.y = 0f;
 		Vector3 rotation = new Vector3 ();
 		rotation.z = 0f;
 		rotation.x = 0f;
-
-		for (float i=0; i<levelMap.GetLength(0); i++) 
-		{ 	
-			for (float j=0; j<levelMap.GetLength(1); j++) 
-			{
-
-				position.x = i * 1.5f;
-				position.z = j * 2.5f;
+		
+		int countMazeI = 0;
+		int countMazeJ = 0;
+		for (int i=xmin; i<xmax; i++) { 	
+			for (int j=zmin; j<zmax; j++) {
+				position.x = (float)i * 1.5f;
+				position.z = (float)j * 2.5f;
 				rotation.y = 0.0f;
-				switch (levelMap [(int)i, (int)j]) 
-				{
+				switch (levelMap [i, j]) {
 				case "-":
-					position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 0.8f));
-					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 1.8f));
-					Transform tree = Instantiate (treePrefab, position, Quaternion.identity) as Transform;	
-					tree.name="htree "+ToString(i,j);
-					tree.transform.parent = parentMaze.transform;
-					//tree.transform.parent = parentMaze.transform;
-
+					position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 1.0f));
+					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 2.0f));
+					maze[(int)i-countMazeI,(int)j-countMazeJ]= Instantiate (treePrefab, position, Quaternion.identity) as Transform;	
+					maze[(int)i-countMazeI,(int)j-countMazeJ].name = "htree " + ToString (i, j);
 					break;			
 				case "2":
-					Transform lamp = Instantiate (lampPrefab, position, Quaternion.identity) as Transform;	
-					lamp.name="lamp "+ToString(i,j);
-					lamp.transform.parent = parentMaze.transform;
+					maze[(int)i-countMazeI,(int)j-countMazeJ] = Instantiate (lampPrefab, position, Quaternion.identity) as Transform;	
+					maze[(int)i-countMazeI,(int)j-countMazeJ].name = "lamp " + ToString (i, j);
 					break;
-				/*case "3":
-					rotation.y = 90.0f;
-					position.x += 0.4f;
-					position.z += 0.3f;
-					GameObject bench = Instantiate (benchPrefab, position, Quaternion.Euler (rotation)) as GameObject;	
-					transform.parent = transform;
-					break;
-				case "d":
-					position.z += 0.5f;
-					position.x += 0.5f;
-					GameObject bencha = Instantiate (benchPrefab, position, Quaternion.identity) as GameObject;	
-					transform.parent = transform;
-					break;
-				case "a":
-					rotation.y = 180.0f;
-					position.z += 0.5f;
-					position.x += 0.5f;
-					GameObject benchd = Instantiate (benchPrefab, position, Quaternion.Euler (rotation)) as GameObject;	
-					transform.parent = transform;
-					break;
-				case "s":
-					rotation.y = -90.0f;
-					position.z += 0.5f;
-					position.x -= 0.8f;
-					GameObject benchs = Instantiate (benchPrefab, position, Quaternion.Euler (rotation)) as GameObject;	
-					transform.parent = transform;
-					break; */
 				case "4":
-					//position.x -= 0.4f;
-					//position.z -= 0.4f;
-					Transform can = Instantiate (canPrefab, position, Quaternion.identity) as Transform;	
-					can.transform.parent = parentMaze.transform;
-					can.name="can "+ToString(i,j);
+					maze[(int)i-countMazeI,(int)j-countMazeJ] = Instantiate (canPrefab, position, Quaternion.identity) as Transform;	
+					maze[(int)i-countMazeI,(int)j-countMazeJ].name = "can " + ToString (i, j);
 					break;
 				case "|":
-					position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 0.8f));
-					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 1.8f));
+					position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 1.0f));
+					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 2.0f));
 					rotation.y = 90.0f;
-					Transform tree2 = Instantiate (treePrefab, position, Quaternion.Euler (rotation)) as Transform;	
-					tree2.name="vtree "+ToString(i,j);
-					tree2.transform.parent = parentMaze.transform;
+					maze[(int)i-countMazeI,(int)j-countMazeJ] = Instantiate (treePrefab, position, Quaternion.Euler (rotation)) as Transform;	
+					maze[(int)i-countMazeI,(int)j-countMazeJ].name = "vtree " + ToString (i, j);
 					break;	
 				case "#":
-					position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 0.8f));
-					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 1.8f));
 					if (Random.Range (0.0f, 1.0f) >= 0.5)
 						rotation.y = 90.0f;
 					else
 						rotation.y = 0f;
-					Transform trees = Instantiate (treePrefab, position, Quaternion.Euler (rotation)) as Transform; 
-					trees.transform.parent = parentMaze.transform; 
-					trees.name="unreachableTree "+ToString(i,j);
+					maze[(int)i-countMazeI,(int)j-countMazeJ] = Instantiate (treePrefab, position, Quaternion.Euler (rotation)) as Transform; 
+					maze[(int)i-countMazeI,(int)j-countMazeJ].name= "unreachableTree " + ToString (i, j);
 					break;
 				case "g":
 					position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 1.0f));
 					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 2.0f));
 					rotation.y = 180.0f;
-					Transform treeg = Instantiate (cornerTreePrefab, position, Quaternion.Euler (rotation)) as Transform;	
-					treeg.transform.parent = parentMaze.transform;
-					treeg.name="tree |_ "+ToString(i,j);
+					maze[(int)i-countMazeI,(int)j-countMazeJ] = Instantiate (cornerTreePrefab, position, Quaternion.Euler (rotation)) as Transform;	
+					maze[(int)i-countMazeI,(int)j-countMazeJ].name = "tree |_ " + ToString (i, j);
 					break;	
 				case "t": 
 					position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 1.0f));
 					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 2.0f));
 					rotation.y = 270.0f;
-					Transform treet = Instantiate (cornerTreePrefab, position, Quaternion.Euler (rotation)) as Transform;	
-					treet.transform.parent = parentMaze.transform;
-					treet.name="tree |¯ "+ToString(i,j);
+					maze[(int)i-countMazeI,(int)j-countMazeJ] = Instantiate (cornerTreePrefab, position, Quaternion.Euler (rotation)) as Transform;	
+					maze[(int)i-countMazeI,(int)j-countMazeJ].name = "tree |¯ " + ToString (i, j);
 					break;
 				case "h":
 					position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 1.0f));
 					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 2.0f));
 					rotation.y = 90.0f;
-					Transform treeh = Instantiate (cornerTreePrefab, position, Quaternion.Euler (rotation)) as Transform;	
-					treeh.transform.parent = parentMaze.transform;
-					treeh.name="tree _| "+ToString(i,j);
+					maze[(int)i-countMazeI,(int)j-countMazeJ] = Instantiate (cornerTreePrefab, position, Quaternion.Euler (rotation)) as Transform;	
+					maze[(int)i-countMazeI,(int)j-countMazeJ].name = "tree _| " + ToString (i, j);
 					break;
 				case "y": 
 					position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 1.0f));
 					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 2.0f));
 					rotation.y = 0.0f;
-					Transform treey = Instantiate (cornerTreePrefab, position, Quaternion.Euler (rotation)) as Transform;	
-					treey.transform.parent = parentMaze.transform;
-					treey.name="tree ¯| "+ToString(i,j);
+					maze[(int)i-countMazeI,(int)j-countMazeJ]= Instantiate (cornerTreePrefab, position, Quaternion.Euler (rotation)) as Transform;	
+					maze[(int)i-countMazeI,(int)j-countMazeJ].name = "tree ¯| " + ToString (i, j);
 					break;
 				}
-						
+				if (maze[(int)i-countMazeI,(int)j-countMazeJ]) 
+				{maze[(int)i-countMazeI,(int)j-countMazeJ].transform.parent = parentMaze.transform;
+					//maze[(int)i-countMazeI,(int)j-countMazeJ].renderer.enabled=false; 
+				}
 			}
 		}
-		
-		}
-	 string ToString(float x, float y)
-		{
-				return x + " " + y;
-		}
+	}
+	string ToString (float x, float y)
+	{
+		return x + " " + y;
+	}
 	
 	
-		// Update is called once per frame
-		void Update ()
-		{
 	
-		}
 }

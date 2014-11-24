@@ -325,11 +325,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1801808131}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c34c49908a965e468850438bed08273, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c0f252edda5af745b506c1e8aee221f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nameOfCutscene: FinalCutscene
-  numberOFFrameInCutscene: 1372
+  numberOFFrameInCutscene: 810
   currentIndex: 0
   returnString: 
   planeCut: {fileID: 0}
