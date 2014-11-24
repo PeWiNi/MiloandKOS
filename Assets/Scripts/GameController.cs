@@ -11,15 +11,7 @@ public class GameController : MonoBehaviour
     Flashlight miloFlashlightComponent;
     bool isPlayingAsMilo = true;
     float miloAwakeTimer = 0.0f;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    int miloAwakeTimerMax = 180;//3mins.
-=======
     int miloAwakeTimerMax = 360;
->>>>>>> origin/master
-=======
-    int miloAwakeTimerMax = 360;
->>>>>>> origin/master
     int switchCounter = 0;
     int maxNeededLotusFlowers = 10;//The maximum number needed to proceed the
     int currentCollectedLotusFlowers = 0;//The current amount collected.
@@ -56,11 +48,11 @@ public class GameController : MonoBehaviour
             SwitchActiveValuesForCollectables();// Start by hiding all Lotus flowers within in the maze.
             switchHasBeenExecuted = true;
         }
-        if (miloFlashlightComponent.Capacity <= 0.0f && isPlayingAsMilo)//Minimum Capacity for the Flashlight.
-        {
+        if (miloFlashlightComponent.Capacity <= 0.0f && isPlayingAsMilo)
+        {//Minimum Capacity for the Flashlight.
             SwitchFadingInOut.SwitchStarting = true;
-        } else if (miloAwakeTimer >= miloAwakeTimerMax && !isPlayingAsMilo)// Milo is awake once again.
-        {
+        } else if (miloAwakeTimer >= miloAwakeTimerMax && !isPlayingAsMilo)
+        {// Milo is awake once again.
             SwitchFadingInOut.SwitchStarting = true;
         }
     }
