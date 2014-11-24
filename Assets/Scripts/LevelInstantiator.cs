@@ -105,10 +105,12 @@ public class LevelInstantiator : MonoBehaviour {
 		setBoundaries (oldX,oldZ);
 		for (int i=limits[0]; i<limits[1]; i++)
 						for (int j=limits[2]; j<limits[3]; j++)
+				if (maze [i,j]!=null)
 								maze [i,j].gameObject.renderer.enabled = false;
 		setBoundaries (x,z);
 		for (int i=limits[0]; i<limits[1]; i++)
 			for (int j=limits[2]; j<limits[3]; j++)
+				if (maze [i,j]!=null)
 				maze [i, j].renderer.enabled = true;
 		}
 

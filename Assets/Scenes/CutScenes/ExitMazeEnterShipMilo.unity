@@ -391,8 +391,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c34c49908a965e468850438bed08273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameOfCutscene: ExitMazeMilo
-  numberOFFrameInCutscene: 776
+  nameOfCutscene: MiloentersEpicBattle
+  numberOFFrameInCutscene: 789
   currentIndex: 0
   returnString: 
   planeCut: {fileID: 0}
