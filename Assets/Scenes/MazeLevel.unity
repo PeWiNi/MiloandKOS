@@ -1439,6 +1439,68 @@ Transform:
   - {fileID: 466149584}
   m_Father: {fileID: 1215875120}
   m_RootOrder: 1
+--- !u!1 &406352651
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 406352652}
+  - 222: {fileID: 406352654}
+  - 114: {fileID: 406352653}
+  m_Layer: 5
+  m_Name: MiloAwakeHUD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &406352652
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 406352651}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1743646497}
+  m_RootOrder: 5
+  m_AnchorMin: {x: .200000003, y: 0}
+  m_AnchorMax: {x: .319999993, y: .0900000036}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &406352653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 406352651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300006, guid: c7415667accd5394ca5629f717bcd2ea, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &406352654
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 406352651}
+  m_HideIfInvisible: 0
 --- !u!1 &411133800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2371,10 +2433,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1743646497}
   m_RootOrder: 1
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: -140}
-  m_SizeDelta: {x: 349, y: 32}
+  m_AnchorMin: {x: .200000003, y: .0700000003}
+  m_AnchorMax: {x: .800000012, y: .200000003}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &525268014
 MonoBehaviour:
@@ -2393,13 +2455,13 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 6b8c658814afbb94897e1c82d3738cc7, type: 3}
     m_FontSize: 14
     m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
+    m_BestFit: 1
+    m_MinSize: 5
+    m_MaxSize: 30
+    m_Alignment: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 1
+    m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Huh.. what happened? I must have fallen asleep again. Time to head home
     I guess.
@@ -2409,6 +2471,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 525268012}
+  m_HideIfInvisible: 0
 --- !u!1 &535177378
 GameObject:
   m_ObjectHideFlags: 0
@@ -11481,7 +11544,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
-  m_DragThreshold: 5
 --- !u!4 &1264414009
 Transform:
   m_ObjectHideFlags: 0
@@ -11665,10 +11727,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1743646497}
   m_RootOrder: 3
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: -140}
-  m_SizeDelta: {x: 208, y: 32}
+  m_AnchorMin: {x: .200000003, y: .0700000003}
+  m_AnchorMax: {x: .800000012, y: .200000003}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1343751828
 MonoBehaviour:
@@ -11702,6 +11764,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1343751826}
+  m_HideIfInvisible: 0
 --- !u!1 &1364134405
 GameObject:
   m_ObjectHideFlags: 0
@@ -13123,10 +13186,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1743646497}
   m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -62.651825, y: -176.056061}
-  m_SizeDelta: {x: 231, y: 32}
+  m_AnchorMin: {x: .200000003, y: .0700000003}
+  m_AnchorMax: {x: .800000012, y: .200000003}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1513049244
 MonoBehaviour:
@@ -13134,7 +13197,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1513049242}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
@@ -13145,13 +13208,13 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 6b8c658814afbb94897e1c82d3738cc7, type: 3}
     m_FontSize: 14
     m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
+    m_BestFit: 1
+    m_MinSize: 5
+    m_MaxSize: 30
+    m_Alignment: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 1
+    m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Time to sleep LightWalker, the shadows shall lead the way now.
 --- !u!222 &1513049245
@@ -13160,6 +13223,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1513049242}
+  m_HideIfInvisible: 0
 --- !u!1 &1515405554
 GameObject:
   m_ObjectHideFlags: 0
@@ -14614,6 +14678,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1738464669}
+  m_HideIfInvisible: 0
 --- !u!1 &1743646494
 GameObject:
   m_ObjectHideFlags: 0
@@ -14664,7 +14729,6 @@ Canvas:
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!224 &1743646497
@@ -14682,6 +14746,7 @@ RectTransform:
   - {fileID: 1906738465}
   - {fileID: 1343751827}
   - {fileID: 1738464670}
+  - {fileID: 406352652}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
@@ -14721,6 +14786,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1743646494}
+  m_HideIfInvisible: 0
 --- !u!1 &1759797708
 GameObject:
   m_ObjectHideFlags: 0
@@ -16496,10 +16562,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1743646497}
   m_RootOrder: 2
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: -140}
-  m_SizeDelta: {x: 273, y: 48}
+  m_AnchorMin: {x: .200000003, y: .0700000003}
+  m_AnchorMax: {x: .800000012, y: .200000003}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1906738466
 MonoBehaviour:
@@ -16534,6 +16600,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1906738464}
+  m_HideIfInvisible: 0
 --- !u!1 &1916816825
 GameObject:
   m_ObjectHideFlags: 0
