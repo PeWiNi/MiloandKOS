@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour
     Flashlight miloFlashlightComponent;
     bool isPlayingAsMilo = true;
     float miloAwakeTimer = 0.0f;
-    int miloAwakeTimerMax = 120;
+    int miloAwakeTimerMax = 180;//3mins.
     int switchCounter = 0;
     int maxNeededLotusFlowers = 10;//The maximum number needed to proceed the
     int currentCollectedLotusFlowers = 0;//The current amount collected.
@@ -311,6 +311,7 @@ public class GameController : MonoBehaviour
             milo.GetComponent<Move>().enabled = false;
             milo.GetComponent<Jump>().enabled = false;
             milo.GetComponent<ShadowEffect>().enabled = false;
+            milo.GetComponent<Animator>().enabled = false;
 //            milo.AddComponent<SpringJoint>();
 //            milo.GetComponent<SpringJoint>().connectedBody = kos.rigidbody;
 //            milo.GetComponent<SpringJoint>().anchor = new Vector3(0.0f, 0.0f, 0.0f);
@@ -323,6 +324,7 @@ public class GameController : MonoBehaviour
             milo.GetComponent<Move>().enabled = true;
             milo.GetComponent<Jump>().enabled = true;
             milo.GetComponent<ShadowEffect>().enabled = true;
+            milo.GetComponent<Animator>().enabled = true;
 //            Destroy(milo.GetComponent<SpringJoint>());
 //            milo.rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
             SwitchToMilo();
