@@ -12,7 +12,11 @@ public class GameController : MonoBehaviour
     bool isPlayingAsMilo = true;
     float miloAwakeTimer = 0.0f;
 <<<<<<< HEAD
+<<<<<<< HEAD
     int miloAwakeTimerMax = 180;//3mins.
+=======
+    int miloAwakeTimerMax = 360;
+>>>>>>> origin/master
 =======
     int miloAwakeTimerMax = 360;
 >>>>>>> origin/master
