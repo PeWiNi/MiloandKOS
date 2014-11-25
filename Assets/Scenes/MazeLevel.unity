@@ -2724,7 +2724,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 525268012}
-  m_HideIfInvisible: 0
 --- !u!1 &535177378
 GameObject:
   m_ObjectHideFlags: 0
@@ -12056,6 +12055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
+  m_DragThreshold: 5
 --- !u!4 &1264414009
 Transform:
   m_ObjectHideFlags: 0
@@ -12276,7 +12276,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1343751826}
-  m_HideIfInvisible: 0
 --- !u!1 &1364134405
 GameObject:
   m_ObjectHideFlags: 0
@@ -13748,9 +13747,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1513049242}
-<<<<<<< HEAD
-  m_HideIfInvisible: 0
-=======
 --- !u!1 &1514761016
 GameObject:
   m_ObjectHideFlags: 0
@@ -13832,7 +13828,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1514761016}
->>>>>>> 87588eb9ac715d4c51fa9ceeaf98917bacf035e2
 --- !u!1 &1515405554
 GameObject:
   m_ObjectHideFlags: 0
@@ -15353,7 +15348,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1738464669}
-  m_HideIfInvisible: 0
 --- !u!1 &1743646494
 GameObject:
   m_ObjectHideFlags: 0
@@ -15404,6 +15398,7 @@ Canvas:
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!224 &1743646497
@@ -15462,7 +15457,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1743646494}
-  m_HideIfInvisible: 0
 --- !u!1 &1759797708
 GameObject:
   m_ObjectHideFlags: 0
@@ -17276,7 +17270,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1906738464}
-  m_HideIfInvisible: 0
 --- !u!1 &1916816825
 GameObject:
   m_ObjectHideFlags: 0
@@ -17486,14 +17479,6 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 6183241196a564e4188165e5a6777125,
         type: 3}
-    - target: {fileID: 13500000, guid: 0aefd12272ebf0249bf0d8dd90db4746, type: 2}
-      propertyPath: m_Radius
-      value: .550000012
-      objectReference: {fileID: 0}
-    - target: {fileID: 13500000, guid: 0aefd12272ebf0249bf0d8dd90db4746, type: 2}
-      propertyPath: m_Center.y
-      value: .100000001
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0aefd12272ebf0249bf0d8dd90db4746, type: 2}
   m_RootGameObject: {fileID: 1120724571}
