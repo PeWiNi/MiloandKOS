@@ -42,7 +42,13 @@ public class LampSafeZone : MonoBehaviour
     {        
         if (col.gameObject.name == "Milo" && Application.loadedLevelName.Equals("MazeLevel"))
         {
-            GameController.INSTANCE.Milo.GetComponent<DesiredDirectionMilo>().SetDirectionTowardsEndOfMazePoint();
+            if (!Input.anyKey && !Input.anyKeyDown && !GameController.INSTANCE.Milo.GetComponent<DesiredDirectionMilo>().HasBeenStarted)
+            {
+                GameController.INSTANCE.Milo.GetComponent<DesiredDirectionMilo>().StartAwayState();
+            } else if (Input.anyKey || Input.anyKeyDown && !GameController.INSTANCE.Milo.GetComponent<DesiredDirectionMilo>().HasBeenStarted)
+            {
+                GameController.INSTANCE.Milo.GetComponent<DesiredDirectionMilo>().CancelAwayState();
+            }
         }
     }
 

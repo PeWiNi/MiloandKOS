@@ -68,13 +68,15 @@ public class LevelInstantiator : MonoBehaviour {
 			{"|","0","g","|","0","|","|","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","g","s","2","-","-","y","#","#","#","#"},
 			{"|","3","4","|","0","|","|","0","t","4","0","t","-","-","t","3","y","-","-","y","4","3","0","0","0","0","0","0","|","#","#","#","#"},
 			{"g","-","h","g","-","h","g","-","h","g","-","h","-","-","-","-","-","-","-","-","-","-","-","-","-","-","t","-","h","#","#","#","#"},
-			{"-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","_","-","-","-","-","#","#"}
+			{"-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","#","#"}
 			
 		};
 		parentMaze = GameObject.Find ("mazeLayoutloader");
 		maze = new Transform[levelMap.GetLength (0), levelMap.GetLength (1)];
-		Debug.Log (maze);
+		//Debug.Log (maze);
+
 		drawLevel (0,levelMap.GetLength(0),0,levelMap.GetLength(1));
+
 		if (GameController.INSTANCE.IsPlayingAsMilo) 
 			player = GameObject.Find ("Milo");
 		else
@@ -87,26 +89,30 @@ public class LevelInstantiator : MonoBehaviour {
 	// Update is called once per frame
 
 		 void Update ()
-		{	//maze = new Transform[levelMap.GetLength (0), levelMap.GetLength (1)];
+		{	
 		if (GameController.INSTANCE.IsPlayingAsMilo) 
 						player = GameObject.Find ("Milo");
 				else
 						player = GameObject.Find ("KOSMinotaur");
 				
-				
-			//mazeShower((int)pastPlayerPosX, (int) pastPlayerPosZ,(int)player.transform.position.x,(int)player.transform.position.z);
+			//mazeHider ((int)pastPlayerPosX, (int)pastPlayerPosZ);
+			//mazeShower((int)player.transform.position.x,(int)player.transform.position.z);
 
 				pastPlayerPosX = player.transform.position.x;
 				pastPlayerPosZ = player.transform.position.z;
 				
 		}
-	
-	void mazeShower(int oldX, int oldZ,int x, int z){
-		setBoundaries (oldX,oldZ);
+
+	void mazeHider(int oldX, int oldZ)
+	{	setBoundaries (oldX,oldZ);
 		for (int i=limits[0]; i<limits[1]; i++)
-						for (int j=limits[2]; j<limits[3]; j++)
+			for (int j=limits[2]; j<limits[3]; j++)
 				if (maze [i,j]!=null)
-								maze [i,j].gameObject.renderer.enabled = false;
+					maze [i,j].gameObject.renderer.enabled = false;
+	}
+	
+	void mazeShower(int x, int z){
+
 		setBoundaries (x,z);
 		for (int i=limits[0]; i<limits[1]; i++)
 			for (int j=limits[2]; j<limits[3]; j++)
@@ -146,10 +152,7 @@ public class LevelInstantiator : MonoBehaviour {
 	/// a,s,d,3 - benches are no longer instantiated 
 	/// </summary>
 	void drawLevel (int xmin, int xmax, int zmin, int zmax)
-	{		
-		
-		
-		//maze=new Transform[15,15];
+	{	
 		Vector3 position = new Vector3 ();
 		position.y = 0f;
 		Vector3 rotation = new Vector3 ();
@@ -165,29 +168,25 @@ public class LevelInstantiator : MonoBehaviour {
 				rotation.y = 0.0f;
 				switch (levelMap [i, j]) {
 				case "-":
+					position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 1.0f));
+					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 2.0f));
 					maze[(int)i-countMazeI,(int)j-countMazeJ]= Instantiate (treePrefab, position, Quaternion.identity) as Transform;	
 					maze[(int)i-countMazeI,(int)j-countMazeJ].name = "htree " + ToString (i, j);
-					maze[(int)i-countMazeI,(int)j-countMazeJ].transform.parent = parentMaze.transform;
-					maze[(int)i-countMazeI,(int)j-countMazeJ].renderer.enabled=true;
 					break;			
 				case "2":
 					maze[(int)i-countMazeI,(int)j-countMazeJ] = Instantiate (lampPrefab, position, Quaternion.identity) as Transform;	
 					maze[(int)i-countMazeI,(int)j-countMazeJ].name = "lamp " + ToString (i, j);
-					maze[(int)i-countMazeI,(int)j-countMazeJ].transform.parent = parentMaze.transform;
-					maze[(int)i-countMazeI,(int)j-countMazeJ].renderer.enabled=true;
 					break;
 				case "4":
 					maze[(int)i-countMazeI,(int)j-countMazeJ] = Instantiate (canPrefab, position, Quaternion.identity) as Transform;	
 					maze[(int)i-countMazeI,(int)j-countMazeJ].name = "can " + ToString (i, j);
-					maze[(int)i-countMazeI,(int)j-countMazeJ].transform.parent = parentMaze.transform;
-					maze[(int)i-countMazeI,(int)j-countMazeJ].renderer.enabled=true;
 					break;
 				case "|":
+					position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 1.0f));
+					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 2.0f));
 					rotation.y = 90.0f;
 					maze[(int)i-countMazeI,(int)j-countMazeJ] = Instantiate (treePrefab, position, Quaternion.Euler (rotation)) as Transform;	
 					maze[(int)i-countMazeI,(int)j-countMazeJ].name = "vtree " + ToString (i, j);
-					maze[(int)i-countMazeI,(int)j-countMazeJ].transform.parent = parentMaze.transform;
-					maze[(int)i-countMazeI,(int)j-countMazeJ].renderer.enabled=true;
 					break;	
 				case "#":
 					if (Random.Range (0.0f, 1.0f) >= 0.5)
@@ -196,42 +195,40 @@ public class LevelInstantiator : MonoBehaviour {
 						rotation.y = 0f;
 					maze[(int)i-countMazeI,(int)j-countMazeJ] = Instantiate (treePrefab, position, Quaternion.Euler (rotation)) as Transform; 
 					maze[(int)i-countMazeI,(int)j-countMazeJ].name= "unreachableTree " + ToString (i, j);
-					maze[(int)i-countMazeI,(int)j-countMazeJ].transform.parent = parentMaze.transform;
-					maze[(int)i-countMazeI,(int)j-countMazeJ].renderer.enabled=true;
 					break;
 				case "g":
-					//position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 1.0f));
-					//position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 2.0f));
+					position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 1.0f));
+					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 2.0f));
 					rotation.y = 180.0f;
 					maze[(int)i-countMazeI,(int)j-countMazeJ] = Instantiate (cornerTreePrefab, position, Quaternion.Euler (rotation)) as Transform;	
 					maze[(int)i-countMazeI,(int)j-countMazeJ].name = "tree |_ " + ToString (i, j);
-					maze[(int)i-countMazeI,(int)j-countMazeJ].transform.parent = parentMaze.transform;
-					maze[(int)i-countMazeI,(int)j-countMazeJ].renderer.enabled=true;
 					break;	
 				case "t": 
+					position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 1.0f));
+					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 2.0f));
 					rotation.y = 270.0f;
 					maze[(int)i-countMazeI,(int)j-countMazeJ] = Instantiate (cornerTreePrefab, position, Quaternion.Euler (rotation)) as Transform;	
 					maze[(int)i-countMazeI,(int)j-countMazeJ].name = "tree |¯ " + ToString (i, j);
-					maze[(int)i-countMazeI,(int)j-countMazeJ].transform.parent = parentMaze.transform;
-					maze[(int)i-countMazeI,(int)j-countMazeJ].renderer.enabled=true;
 					break;
 				case "h":
+					position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 1.0f));
+					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 2.0f));
 					rotation.y = 90.0f;
 					maze[(int)i-countMazeI,(int)j-countMazeJ] = Instantiate (cornerTreePrefab, position, Quaternion.Euler (rotation)) as Transform;	
 					maze[(int)i-countMazeI,(int)j-countMazeJ].name = "tree _| " + ToString (i, j);
-					maze[(int)i-countMazeI,(int)j-countMazeJ].transform.parent = parentMaze.transform;
-					maze[(int)i-countMazeI,(int)j-countMazeJ].renderer.enabled=true;
 					break;
 				case "y": 
+					position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 1.0f));
+					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 2.0f));
 					rotation.y = 0.0f;
 					maze[(int)i-countMazeI,(int)j-countMazeJ]= Instantiate (cornerTreePrefab, position, Quaternion.Euler (rotation)) as Transform;	
 					maze[(int)i-countMazeI,(int)j-countMazeJ].name = "tree ¯| " + ToString (i, j);
-					maze[(int)i-countMazeI,(int)j-countMazeJ].transform.parent = parentMaze.transform;
-					maze[(int)i-countMazeI,(int)j-countMazeJ].renderer.enabled=true;
 					break;
 				}
-				//maze[(int)i-countMazeI,(int)j-countMazeJ].transform.parent = parentMaze.transform;
-				//maze[(int)i-countMazeI,(int)j-countMazeJ].renderer.enabled=true;
+				if (maze[(int)i-countMazeI,(int)j-countMazeJ]) 
+				{maze[(int)i-countMazeI,(int)j-countMazeJ].transform.parent = parentMaze.transform;
+					//maze[(int)i-countMazeI,(int)j-countMazeJ].renderer.enabled=false; 
+				}
 			}
 		}
 	}

@@ -35,16 +35,20 @@ public class loadingImages : MonoBehaviour
     void Update()
     {
         updateScreenSize();
-        if (currentIndex < numberOFFrameInCutscene)
-        {	
-            //Debug.Log(Time.time);
-        } else  
-			if (nextScene.Equals("none"))
-            Application.Quit();
-        else 
-            Application.LoadLevel(nextScene);
+        if (currentIndex < numberOFFrameInCutscene) {	
+						//Debug.Log(Time.time);
+				} else  
+			if (nextScene.Equals ("none"))
+						Application.Quit ();
+				else {
+						LoadingScreen46.show();
+						Application.LoadLevel (nextScene);
+					}
         if (Input.GetKeyDown(KeyCode.Escape))
-            Application.LoadLevel(nextScene);
+		{
+			LoadingScreen46.show();
+			Application.LoadLevel (nextScene);
+		}
     }
 
 
