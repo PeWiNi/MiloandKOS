@@ -12,15 +12,33 @@ public class SwitchFadingInOut : MonoBehaviour
     public float fadeSpeed = 1.5f;
     static bool switchStarting = false;
     int switchState = 0;
+	int panelWidth;
+	int panelHeight;
+	bool changed;
         
     void Awake()
     {
-        guiTexture.pixelInset = new Rect(0f, 0f, Screen.width, Screen.height);
+		panelWidth = Screen.width;
+		panelHeight = Screen.height;
+        guiTexture.pixelInset = new Rect(0f, 0f, panelWidth, panelHeight);
     }
         
     void Update()
     {
-        if (switchStarting && switchState == 0)
+		if (panelWidth != Screen.width) {
+						panelWidth = Screen.width;
+						changed = true;
+				}
+		if (panelHeight != Screen.height) {
+						panelHeight = Screen.height;
+						changed = true;
+				}
+		if (changed) {
+						guiTexture.pixelInset = new Rect (0f, 0f, panelWidth, panelHeight);
+						changed = false;
+				}
+
+		if (switchStarting && switchState == 0)
         {
             EndSwitchFade();
         } else if (switchStarting && switchState == 1)
