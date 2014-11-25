@@ -16,14 +16,14 @@ public class ShadowEffect : MonoBehaviour
         {
             ShadowSlowEffect();
             StartCoroutine("SpeedTime");
-            Destroy(GameObject.Find("HumanShadow"));
+            Destroy(col.gameObject.transform.parent.gameObject);
         }
 
         if (col.gameObject.name == "CShadow")
         {
             ShadowSlowEffect();
             StartCoroutine("SpeedTime");
-            Destroy(GameObject.Find("CatShadow"));
+            Destroy(col.gameObject.transform.parent.gameObject);
         }
     }
 
