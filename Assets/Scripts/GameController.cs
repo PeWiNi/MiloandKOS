@@ -311,6 +311,7 @@ public class GameController : MonoBehaviour
             milo.GetComponent<Move>().enabled = false;
             milo.GetComponent<Jump>().enabled = false;
             milo.GetComponent<ShadowEffect>().enabled = false;
+            milo.GetComponent<DesiredDirectionMilo>().enabled = false;
             milo.GetComponent<Animator>().enabled = false;
 //            milo.AddComponent<SpringJoint>();
 //            milo.GetComponent<SpringJoint>().connectedBody = kos.rigidbody;
@@ -325,6 +326,7 @@ public class GameController : MonoBehaviour
             milo.GetComponent<Jump>().enabled = true;
             milo.GetComponent<ShadowEffect>().enabled = true;
             milo.GetComponent<Animator>().enabled = true;
+            milo.GetComponent<DesiredDirectionMilo>().enabled = true;
 //            Destroy(milo.GetComponent<SpringJoint>());
 //            milo.rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
             SwitchToMilo();

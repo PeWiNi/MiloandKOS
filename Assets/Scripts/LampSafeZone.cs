@@ -44,8 +44,9 @@ public class LampSafeZone : MonoBehaviour
         {
             if (!Input.anyKey && !Input.anyKeyDown && !GameController.INSTANCE.Milo.GetComponent<DesiredDirectionMilo>().HasBeenStarted)
             {
+                GameController.INSTANCE.Milo.GetComponent<DesiredDirectionMilo>().HasBeenStarted = true;
                 GameController.INSTANCE.Milo.GetComponent<DesiredDirectionMilo>().StartAwayState();
-            } else if (Input.anyKey || Input.anyKeyDown && !GameController.INSTANCE.Milo.GetComponent<DesiredDirectionMilo>().HasBeenStarted)
+            } else if (Input.anyKey || Input.anyKeyDown)
             {
                 GameController.INSTANCE.Milo.GetComponent<DesiredDirectionMilo>().CancelAwayState();
             }

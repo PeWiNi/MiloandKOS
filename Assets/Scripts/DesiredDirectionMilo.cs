@@ -20,11 +20,15 @@ public class DesiredDirectionMilo : MonoBehaviour
     }
 
     /// <summary>
-    /// Gets a value indicating whether this instance has been started.
+    /// Gets or sets a value indicating whether this instance has been started.
     /// </summary>
     /// <value><c>true</c> if this instance has been started; otherwise, <c>false</c>.</value>
     public bool HasBeenStarted
     {
+        set
+        {
+            hasBeenStarted = value;
+        }
         get
         {
             return hasBeenStarted;
@@ -45,6 +49,7 @@ public class DesiredDirectionMilo : MonoBehaviour
     /// <returns><c>true</c> if this instance cancel away state; otherwise, <c>false</c>.</returns>
     public void CancelAwayState()
     {
+        hasBeenStarted = false;
         StopCoroutine("SetDirectionTowardsEndOfMazePoint");
     }
 
@@ -54,11 +59,11 @@ public class DesiredDirectionMilo : MonoBehaviour
     /// <returns>The direction towards end of maze point.</returns>
     IEnumerator SetDirectionTowardsEndOfMazePoint()
     {
-        Debug.Log("hasBeenStarted Before Yield: " + hasBeenStarted);
+        Debug.Log("Buu " + hasBeenStarted);
         yield return new WaitForSeconds(waitForSeconds);
         GameObject exit = GameObject.Find("EndOfMazePoint");
         GameController.INSTANCE.Milo.transform.LookAt(exit.transform);
         hasBeenStarted = false;
-        Debug.Log("hasBeenStarted After Yield: " + hasBeenStarted);
+        Debug.Log("PØLSE " + hasBeenStarted);
     }
 }
