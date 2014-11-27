@@ -7891,7 +7891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dad50fe8d9623d46a1d5fae2ac1dbf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoPic: {fileID: 2800000, guid: 6304e91993dfa734eaee403a9e832488, type: 3}
+  infoPic: {fileID: 2800000, guid: 7af49bb7f401119428b880985d956d4c, type: 3}
   message: wasd
 --- !u!1 &524258825
 GameObject:

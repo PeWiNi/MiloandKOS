@@ -7,7 +7,10 @@ public class triggerPointTutorial : MonoBehaviour
 		Texture2D frame;
 		public string message;
 		bool showPic = false;
+		bool picShowed = false;
 		//Texture2D background ;
+
+		float width, height;
 
 
 		// Use this for initialization
@@ -23,15 +26,20 @@ public class triggerPointTutorial : MonoBehaviour
 		}
 
 		void OnGUI ()
-		{
-				if (showPic) {
-						GUI.DrawTexture (new Rect (Screen.width /2-131.25f, Screen.height - Screen.height / 3, 262.5f, 165f), frame);
-						GUI.DrawTexture (new Rect (Screen.width /2-131.25f, Screen.height - Screen.height / 3, 262.5f, 165f), infoPic);
-				}
+		{		
+				width = infoPic.width / 3;
+				height = infoPic.height / 3;
+				
+				if (showPic && !picShowed) {
+						GUI.DrawTexture (new Rect (Screen.width /2-width/2, Screen.height - Screen.height / 3, width, height), frame);
+						GUI.DrawTexture (new Rect (Screen.width /2-width/2, Screen.height - Screen.height / 3, width, height), infoPic);
+						
+						}
 		}
 
 		void OnTriggerEnter (Collider col)
 		{	
+			
 				showPic = true;
 				//Debug.Log (message);
 		}
@@ -39,6 +47,7 @@ public class triggerPointTutorial : MonoBehaviour
 		void OnTriggerExit (Collider col)
 		{
 				showPic = false;
+				picShowed = true;
 				//Debug.Log (message);
 		}
 }
