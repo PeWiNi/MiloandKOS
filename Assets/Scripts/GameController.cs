@@ -21,7 +21,6 @@ public class GameController : MonoBehaviour
     Texture2D backgroundKOS;
     Texture2D foregroundKOS;
     Rect box = new Rect(10, 10, 100, 20);
-    Text kosCollectableUIText;
     Animator miloAnim;
 
     // This happens before Start
@@ -36,7 +35,6 @@ public class GameController : MonoBehaviour
         miloFlashlightComponent = GameObject.Find("Flashlight").GetComponent<Flashlight>();
         milo = GameObject.Find("Milo");//Find Milo.
         kos = GameObject.Find("KOSMinotaur");//Find !Milo.
-        kosCollectableUIText = GameObject.Find("KOSCollectableCount").GetComponent<Text>();
         kos.gameObject.SetActive(false);
         miloAnim = milo.GetComponent<Animator>();
         SetMiloAwakeBar();
@@ -73,12 +71,6 @@ public class GameController : MonoBehaviour
                 GUI.EndGroup();
             }
             string totalCollectedLotusFlowers = currentCollectedLotusFlowers + "/" + maxNeededLotusFlowers + " Lotus' Collected";
-            kosCollectableUIText.enabled = true;
-            kosCollectableUIText.text = totalCollectedLotusFlowers;
-        } else
-        {
-            kosCollectableUIText.text = "";
-            kosCollectableUIText.enabled = false;
         }
     }
 
