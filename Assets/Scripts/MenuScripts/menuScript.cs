@@ -49,7 +49,7 @@ public class menuScript : MonoBehaviour {
 	}
 
 	public void newGame(){
-		Application.LoadLevel (2);
+		Application.LoadLevel ("tutorialLevel");
 		//Application.LoadLevel ("DogPooTest");
 	}
 

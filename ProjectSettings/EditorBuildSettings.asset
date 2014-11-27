@@ -6,19 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/CutScenes/IntroCutscene.unity
+    path: Assets/Scenes/CutScenes/IntrocutsceneVideo.unity
   - enabled: 1
     path: Assets/Scenes/menuPages/IntroMenuScene.unity
   - enabled: 1
     path: Assets/Scenes/tutorialLevel.unity
   - enabled: 1
-    path: Assets/Scenes/CutScenes/EnterMaze.unity
+    path: Assets/Scenes/CutScenes/EnterMazeVideo.unity
   - enabled: 1
     path: Assets/Scenes/MazeLevel.unity
   - enabled: 1
-    path: Assets/Scenes/CutScenes/ExitMazeEnterShipMilo.unity
+    path: Assets/Scenes/CutScenes/ExitMazeEnterShipMiloVideo.unity
   - enabled: 1
-    path: Assets/Scenes/CutScenes/ExitMazeEnterShipKOS.unity
+    path: Assets/Scenes/CutScenes/ExitMazeEnterShipKOSVideo.unity
   - enabled: 1
     path: Assets/Scenes/FinalBattleAsMilo.unity
   - enabled: 1
@@ -27,3 +27,5 @@ EditorBuildSettings:
     path: Assets/Scenes/CutScenes/EndingSceneVsMom.unity
   - enabled: 1
     path: Assets/Scenes/menuPages/optionMenuPage.unity
+  - enabled: 1
+    path: Assets/Scenes/menuPages/endPage.unity

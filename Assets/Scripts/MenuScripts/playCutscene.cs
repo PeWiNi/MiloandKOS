@@ -19,27 +19,20 @@ public class playCutscene : MonoBehaviour {
 		updateScreenSize();
 		renderer.material.mainTexture = movie;
 		movie.Play ();
-		StartCoroutine (onMovieEnd (movie.duration));
-
-
-	}
-	IEnumerator onMovieEnd(float duration)
-	{
-		yield return new WaitForSeconds (duration);
-	//	if (movie.isPlaying && Input.GetKeyDown (KeyCode.Escape)) {
-	//		StopCoroutine (onMovieEnd(movie.duration));
-	//		Application.LoadLevel (nextScene);
-	//	}
-
-	
-		Application.LoadLevel (nextScene);
 	}
 	
-	void update ()
+	void Update ()
 	{
 		updateScreenSize();
-
-
+		if (movie.isPlaying & Input.GetKeyDown (KeyCode.Escape)) {
+						Debug.Log("pressed escape");
+						movie.Stop();	
+						Application.LoadLevel (nextScene);
+				}
+	 	if (!movie.isPlaying) 
+		{		Debug.Log("no playing anymore");
+						Application.LoadLevel (nextScene);
+				}
 	}
 
 	void updateScreenSize()
