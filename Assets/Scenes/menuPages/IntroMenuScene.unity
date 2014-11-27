@@ -128,16 +128,17 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: .501960814, g: .501960814, b: .501960814, a: .501960814}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: .501960814}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: .698039234}
-    m_PressedColor: {r: .345098048, g: .345098048, b: .345098048, a: .698039234}
-    m_DisabledColor: {r: .250980407, g: .250980407, b: .250980407, a: .501960814}
+    m_PressedColor: {r: .411764681, g: .411764681, b: .411764681, a: .698039234}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: .501960814}
     m_ColorMultiplier: 2
     m_FadeDuration: .100000001
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 1ba005777275c4e4ca8e99ae8dccbd54,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 1ba005777275c4e4ca8e99ae8dccbd54, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: 1ba005777275c4e4ca8e99ae8dccbd54, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -175,9 +176,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: a24fbd085d91a0b4ba69c2cab7132b9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1ba005777275c4e4ca8e99ae8dccbd54, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -412,10 +413,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 6678c6d6513d001438588e42edcc2dab, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: b02ea58ee782d4e42bc6726e93a323b6, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -497,7 +498,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &467277469
 RectTransform:
   m_ObjectHideFlags: 0
@@ -512,10 +513,10 @@ RectTransform:
   - {fileID: 168239772}
   m_Father: {fileID: 821779931}
   m_RootOrder: 3
-  m_AnchorMin: {x: .5, y: 1}
-  m_AnchorMax: {x: .5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -120}
-  m_SizeDelta: {x: 100, y: 40}
+  m_AnchorMin: {x: .300000012, y: .5}
+  m_AnchorMax: {x: .600000024, y: .5}
+  m_AnchoredPosition: {x: 14.5, y: 18}
+  m_SizeDelta: {x: 20, y: 40}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &467277470
 MonoBehaviour:
@@ -556,7 +557,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 467277471}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1646523196}
+        m_MethodName: optionsMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &467277471
@@ -1218,7 +1231,7 @@ RectTransform:
   m_AnchorMin: {x: .300000012, y: .5}
   m_AnchorMax: {x: .600000024, y: .5}
   m_AnchoredPosition: {x: 14.5, y: -62}
-  m_SizeDelta: {x: 13, y: 40}
+  m_SizeDelta: {x: 20, y: 40}
   m_Pivot: {x: .5, y: .5}
 --- !u!1 &1646523195
 GameObject:

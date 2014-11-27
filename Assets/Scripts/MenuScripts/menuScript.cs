@@ -58,7 +58,7 @@ public class menuScript : MonoBehaviour {
 	}
 
 	public void optionsMenu()
-	{ //will follow 
+	{ Application.LoadLevel ("optionMenuPage");
 	}
 	public void loadGame()
 	{ //will follow

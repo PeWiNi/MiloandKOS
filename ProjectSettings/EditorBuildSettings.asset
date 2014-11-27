@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CutScenes/IntroCutscene.unity
   - enabled: 1
-    path: Assets/Scenes/IntroMenuScene.unity
+    path: Assets/Scenes/menuPages/IntroMenuScene.unity
   - enabled: 1
     path: Assets/Scenes/tutorialLevel.unity
   - enabled: 1
@@ -19,15 +19,11 @@ EditorBuildSettings:
     path: Assets/Scenes/CutScenes/ExitMazeEnterShipMilo.unity
   - enabled: 1
     path: Assets/Scenes/CutScenes/ExitMazeEnterShipKOS.unity
-  - enabled: 0
-    path: Assets/Scenes/CutScenes/unused atm/EnterShipMilo.unity
-  - enabled: 0
-    path: Assets/Scenes/CutScenes/unused atm/EnterShipKOS.unity
   - enabled: 1
     path: Assets/Scenes/FinalBattleAsMilo.unity
   - enabled: 1
     path: Assets/Scenes/FinalBattleAsKOS.unity
   - enabled: 1
     path: Assets/Scenes/CutScenes/EndingSceneVsMom.unity
-  - enabled: 0
-    path: Assets/Scenes/CutScenes/ExitSchoolCutscene.unity
+  - enabled: 1
+    path: Assets/Scenes/menuPages/optionMenuPage.unity
