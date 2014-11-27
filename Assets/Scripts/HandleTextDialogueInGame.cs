@@ -9,7 +9,6 @@ public class HandleTextDialogueInGame : MonoBehaviour
     public Text introTextMOM;
     public Text introTextKOS;
 
-    int currentSwitchCounter;
     bool switchTextKOSHasBeenPrinted = false;
     bool switchTextMiloHasBeenPrinted = false;
     bool introTextMOMHasBeenPrinted = false;
@@ -17,25 +16,13 @@ public class HandleTextDialogueInGame : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        currentSwitchCounter = GameController.INSTANCE.SwitchCounter;
+
     }
 	
     // Update is called once per frame
     void Update()
     {
-        if (GameController.INSTANCE != null && GameController.INSTANCE.Milo.activeSelf)
-        {
-            if (!introTextMOMHasBeenPrinted)
-            {
-                PrintIntroSequencePlayingAsMilo();
-                introTextMOMHasBeenPrinted = true;
-            }
-        }
-        if (GameController.INSTANCE.SwitchCounter != currentSwitchCounter)// Check if a Switch Happened in the game.
-        {
-            currentSwitchCounter = GameController.INSTANCE.SwitchCounter;
-            ShowTextInOrder();
-        }
+        ShowTextInOrder();
     }
 
     /// <summary>
@@ -43,17 +30,24 @@ public class HandleTextDialogueInGame : MonoBehaviour
     /// </summary>
     void ShowTextInOrder()
     {
-        if (currentSwitchCounter % 2 != 0)// SwitchCounter is Odd, active Character is KOS.
+        if (GameController.INSTANCE.SwitchTurnCounter % 2 != 0)// SwitchTurnCounter is Odd, active Character is KOS.
         {
             if (!switchTextKOSHasBeenPrinted)
             {
+                Debug.Log("RICE!");
                 PrintSwitchTextKOS();
                 switchTextKOSHasBeenPrinted = true;
             }
-        } else// SwitchCounter is Even, active Character is Milo.
+        } else// SwitchTurnCounter is Even, active Character is Milo.
         {
-            if (!switchTextMiloHasBeenPrinted)
+            if (!introTextMOMHasBeenPrinted && GameController.INSTANCE.SwitchTurnCounter == 0)//Start by displaying the advice from Milos Mother.
             {
+                Debug.Log("mommy, it hurts in my tummy!");
+                PrintIntroSequencePlayingAsMilo();
+                introTextMOMHasBeenPrinted = true;
+            } else if (!switchTextMiloHasBeenPrinted && GameController.INSTANCE.SwitchTurnCounter > 1)//We have played as KOS one time.
+            {
+                Debug.Log("PRICELESS!");
                 PrintSwitchTextMilo();
                 switchTextMiloHasBeenPrinted = true;
             }

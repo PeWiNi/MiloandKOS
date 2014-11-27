@@ -87,7 +87,6 @@ public class DesiredDirectionKOS : MonoBehaviour
     /// <returns>The direction towards nearest lotus flower.</returns>
     IEnumerator SetDirectionTowardsNearestLotusFlower()
     {
-        Debug.Log("Bold! " + hasBeenStarted);
         yield return new WaitForSeconds(waitForSeconds);
         float distance = Mathf.Infinity;
         Vector3 position = transform.position;
@@ -105,7 +104,6 @@ public class DesiredDirectionKOS : MonoBehaviour
         }
         GameController.INSTANCE.Kos.transform.LookAt(nearestLotus.transform);
         hasBeenStarted = false;
-        Debug.Log("huh? " + hasBeenStarted);
     }
 
     /// <summary>
@@ -114,11 +112,9 @@ public class DesiredDirectionKOS : MonoBehaviour
     /// <returns>The direction towards end of maze point.</returns>
     IEnumerator SetDirectionTowardsEndOfMazePoint()
     {
-        Debug.Log("Flobber " + hasBeenStarted);
         yield return new WaitForSeconds(waitForSeconds);
         GameObject exit = GameObject.Find("EndOfMazePoint");
         GameController.INSTANCE.Kos.transform.LookAt(exit.transform);
         hasBeenStarted = false;
-        Debug.Log("Missekat! " + hasBeenStarted);
     }
 }

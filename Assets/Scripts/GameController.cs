@@ -22,6 +22,7 @@ public class GameController : MonoBehaviour
     Texture2D foregroundKOS;
     Rect box = new Rect(10, 10, 100, 20);
     Text kosCollectableUIText;
+    Animator miloAnim;
 
     // This happens before Start
     void Awake()
@@ -37,6 +38,7 @@ public class GameController : MonoBehaviour
         kos = GameObject.Find("KOSMinotaur");//Find !Milo.
         kosCollectableUIText = GameObject.Find("KOSCollectableCount").GetComponent<Text>();
         kos.gameObject.SetActive(false);
+        miloAnim = milo.GetComponent<Animator>();
         SetMiloAwakeBar();
     }
 	
@@ -133,10 +135,10 @@ public class GameController : MonoBehaviour
     }
 
     /// <summary>
-    /// Gets or sets the switch counter.
+    /// Gets or sets the switch turn counter.
     /// </summary>
-    /// <value>The switch counter.</value>
-    public int SwitchCounter
+    /// <value>The switch turn counter.</value>
+    public int SwitchTurnCounter
     {
         get
         {
@@ -214,7 +216,7 @@ public class GameController : MonoBehaviour
         kos.transform.rotation = milo.transform.rotation;
         isPlayingAsMilo = false;
         ResetMiloAwakeTimer();
-        SwitchCounter++;
+        SwitchTurnCounter++;
         SwitchActiveValuesForCollectables();
         StartCoroutine(MiloAwakeCountdown());
         CameraPan.AttachedTo = kos;
@@ -226,11 +228,11 @@ public class GameController : MonoBehaviour
     public void SwitchToMilo()
     {
         kos.gameObject.SetActive(false);
-        milo.GetComponent<Animator>().SetFloat(Animator.StringToHash("Movement"), 0.0f);//Set to Idle.
+        miloAnim.SetFloat(Animator.StringToHash("Movement"), 0.0f);//Set to Idle.
         milo.transform.rotation = kos.transform.rotation;
         isPlayingAsMilo = true;
         miloFlashlightComponent.ResetValues();
-        SwitchCounter++;
+        SwitchTurnCounter++;
         SwitchActiveValuesForCollectables();
         CameraPan.AttachedTo = milo;
     }
@@ -312,7 +314,7 @@ public class GameController : MonoBehaviour
             milo.GetComponent<Jump>().enabled = false;
             milo.GetComponent<ShadowEffect>().enabled = false;
             milo.GetComponent<DesiredDirectionMilo>().enabled = false;
-            milo.GetComponent<Animator>().enabled = false;
+            miloAnim.enabled = false;
 //            milo.AddComponent<SpringJoint>();
 //            milo.GetComponent<SpringJoint>().connectedBody = kos.rigidbody;
 //            milo.GetComponent<SpringJoint>().anchor = new Vector3(0.0f, 0.0f, 0.0f);
@@ -325,7 +327,7 @@ public class GameController : MonoBehaviour
             milo.GetComponent<Move>().enabled = true;
             milo.GetComponent<Jump>().enabled = true;
             milo.GetComponent<ShadowEffect>().enabled = true;
-            milo.GetComponent<Animator>().enabled = true;
+            miloAnim.enabled = true;
             milo.GetComponent<DesiredDirectionMilo>().enabled = true;
 //            Destroy(milo.GetComponent<SpringJoint>());
 //            milo.rigidbody.constraints = RigidbodyConstraints.FreezeRotation;

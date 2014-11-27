@@ -20,7 +20,7 @@ public class ShadowFunc : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.name == "Milo")
+        if (col.gameObject.name == "Milo" && GameController.INSTANCE.IsPlayingAsMilo)//Only chase Milo when he is playing.
         {
             InvokeRepeating("ChaseMilo", 0f, 0.03f);
             StartCoroutine("ShadowTimer");

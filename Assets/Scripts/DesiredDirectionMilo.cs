@@ -59,11 +59,9 @@ public class DesiredDirectionMilo : MonoBehaviour
     /// <returns>The direction towards end of maze point.</returns>
     IEnumerator SetDirectionTowardsEndOfMazePoint()
     {
-        Debug.Log("Buu " + hasBeenStarted);
         yield return new WaitForSeconds(waitForSeconds);
         GameObject exit = GameObject.Find("EndOfMazePoint");
         GameController.INSTANCE.Milo.transform.LookAt(exit.transform);
         hasBeenStarted = false;
-        Debug.Log("PØLSE " + hasBeenStarted);
     }
 }
