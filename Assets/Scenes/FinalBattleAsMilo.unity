@@ -724,6 +724,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1052517223}
+<<<<<<< HEAD
   m_HideIfInvisible: 0
 --- !u!1 &1186827231
 GameObject:
@@ -880,6 +881,8 @@ Prefab:
   m_RootGameObject: {fileID: 1423184381}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+=======
+>>>>>>> origin/master
 --- !u!1 &1394629021
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,6 +943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
+  m_DragThreshold: 5
 --- !u!4 &1394629025
 Transform:
   m_ObjectHideFlags: 0
@@ -1110,6 +1114,7 @@ Canvas:
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!224 &1690440474
