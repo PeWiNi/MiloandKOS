@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: GameStateController
   m_TagString: Untagged
@@ -39,8 +40,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9ebeaf15d5f97f49a307de629130322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneAsMilo: FinalBattleAsMilo
-  nextSceneAsKOS: FinalBattleAsKOS
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf76a32f2c105e74f8b7a729a004f45b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kosPreBattleIfMilo: {fileID: 0}
+  miloPreBattleIfMilo: {fileID: 0}
+  kosPreBattleIfKOS: {fileID: 0}
+  miloPreBattleIfKOS: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

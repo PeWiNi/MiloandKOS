@@ -34,7 +34,6 @@ public class HandleTextDialogueInGame : MonoBehaviour
         {
             if (!switchTextKOSHasBeenPrinted)
             {
-                Debug.Log("RICE!");
                 PrintSwitchTextKOS();
                 switchTextKOSHasBeenPrinted = true;
             }
@@ -42,12 +41,10 @@ public class HandleTextDialogueInGame : MonoBehaviour
         {
             if (!introTextMOMHasBeenPrinted && GameController.INSTANCE.SwitchTurnCounter == 0)//Start by displaying the advice from Milos Mother.
             {
-                Debug.Log("mommy, it hurts in my tummy!");
                 PrintIntroSequencePlayingAsMilo();
                 introTextMOMHasBeenPrinted = true;
             } else if (!switchTextMiloHasBeenPrinted && GameController.INSTANCE.SwitchTurnCounter > 1)//We have played as KOS one time.
             {
-                Debug.Log("PRICELESS!");
                 PrintSwitchTextMilo();
                 switchTextMiloHasBeenPrinted = true;
             }
