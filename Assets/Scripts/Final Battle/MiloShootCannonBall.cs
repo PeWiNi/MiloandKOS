@@ -30,25 +30,27 @@ public class MiloShootCannonBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Checking for scene as well because otherwise, KOS will shoot when Milo shoots.
-        if (Input.GetKeyDown(KeyCode.Space) && Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
+        if (StateController.INSTANCE.HasDialoguesBeenStarted)//Ensures we can't attack before both dialogues are done.
         {
-            if (cooldown == false)
+            // Checking for scene as well because otherwise, KOS will shoot when Milo shoots.
+            if (Input.GetKeyDown(KeyCode.Space) && Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
             {
-                cooldown = true;
-                StartCoroutine("ShootingCooldown");
-                StartCoroutine("SpawnCannonball");
+                if (cooldown == false)
+                {
+                    cooldown = true;
+                    StartCoroutine("ShootingCooldown");
+                    StartCoroutine("SpawnCannonball");
+                }
+            }
+            if (Input.GetKey(KeyCode.W) && Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
+            {
+                increaseAngel();
+            }
+            if (Input.GetKey(KeyCode.S) && Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
+            {        
+                decreaseAngel();
             }
         }
-        if (Input.GetKey(KeyCode.W) && Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
-        {
-            increaseAngel();
-        }
-        if (Input.GetKey(KeyCode.S) && Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
-        {        
-            decreaseAngel();
-        }
-        
     }
 
     void OnTriggerEnter2D(Collider2D col)

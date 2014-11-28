@@ -60,8 +60,26 @@ public class DesiredDirectionMilo : MonoBehaviour
     IEnumerator SetDirectionTowardsEndOfMazePoint()
     {
         yield return new WaitForSeconds(waitForSeconds);
-        GameObject exit = GameObject.Find("EndOfMazePoint");
-        GameController.INSTANCE.Milo.transform.LookAt(exit.transform);
+//        GameObject exit = GameObject.Find("EndOfMazePoint");
+//        GameController.INSTANCE.Milo.transform.LookAt(exit.transform);
+        float distance = Mathf.Infinity;
+        Vector3 position = transform.position;
+        GameObject nearestExit = null;
+        GameObject[] exits = GameObject.FindGameObjectsWithTag("Exit");
+        foreach (GameObject currentExit in exits)
+        {
+            Vector3 diff = (gameObject.transform.position - currentExit.transform.position);
+            float curDistance = diff.sqrMagnitude;
+            if (curDistance < distance)
+            {
+                nearestExit = currentExit;
+                distance = curDistance;
+            }
+        }
+        Quaternion newRotation = Quaternion.LookRotation(transform.position - nearestExit.transform.position, Vector3.up);
+        newRotation.x = 0;
+        newRotation.z = 0;
+        GameController.INSTANCE.Milo.transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * 8);
         hasBeenStarted = false;
     }
 }
