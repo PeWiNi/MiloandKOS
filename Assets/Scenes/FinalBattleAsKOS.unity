@@ -982,8 +982,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kosPreBattleIfMilo: {fileID: 0}
   miloPreBattleIfMilo: {fileID: 0}
-  kosPreBattleIfKOS: {fileID: 0}
-  miloPreBattleIfKOS: {fileID: 0}
+  kosPreBattleIfKOS: {fileID: 857356114}
+  miloPreBattleIfKOS: {fileID: 373397347}
 --- !u!1 &838409262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,6 +1250,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 99eec97991773a842b30e7fb44a37af8, type: 2}
+      propertyPath: miloPreBattleIfKOS
+      value: 
+      objectReference: {fileID: 373397347}
+    - target: {fileID: 11400002, guid: 99eec97991773a842b30e7fb44a37af8, type: 2}
+      propertyPath: kosPreBattleIfKOS
+      value: 
+      objectReference: {fileID: 857356114}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99eec97991773a842b30e7fb44a37af8, type: 2}
   m_RootGameObject: {fileID: 781273877}
@@ -1504,6 +1512,10 @@ Prefab:
     - target: {fileID: 22400000, guid: 6aae7c0b20455784094a4c9c79163499, type: 2}
       propertyPath: m_Pivot.y
       value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 6aae7c0b20455784094a4c9c79163499, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6aae7c0b20455784094a4c9c79163499, type: 2}

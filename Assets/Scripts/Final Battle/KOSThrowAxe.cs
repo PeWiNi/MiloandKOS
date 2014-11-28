@@ -30,25 +30,27 @@ public class KOSThrowAxe : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Checking for scene as well because otherwise, Milo will shoot when Kos shoots.
-        if (Input.GetKeyDown(KeyCode.Space) && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
+        if (StateController.INSTANCE.HasDialoguesBeenStarted)//Ensures we can't attack before both dialogues are done.
         {
-            if (cooldown == false)
+            // Checking for scene as well because otherwise, Milo will shoot when Kos shoots.
+            if (Input.GetKeyDown(KeyCode.Space) && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
             {
-                cooldown = true;
-                StartCoroutine("ShootingCooldown");
-                StartCoroutine("SpawnAxe");
+                if (cooldown == false)
+                {
+                    cooldown = true;
+                    StartCoroutine("ShootingCooldown");
+                    StartCoroutine("SpawnAxe");
+                }
+            }
+            if (Input.GetKey(KeyCode.W) && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
+            {
+                increaseAngel();
+            }
+            if (Input.GetKey(KeyCode.S) && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
+            {        
+                decreaseAngel();
             }
         }
-        if (Input.GetKey(KeyCode.W) && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
-        {
-            increaseAngel();
-        }
-        if (Input.GetKey(KeyCode.S) && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
-        {        
-            decreaseAngel();
-        }
-       
     }
 
     void OnTriggerEnter2D(Collider2D col)
