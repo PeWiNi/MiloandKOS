@@ -102,8 +102,7 @@ public class DesiredDirectionKOS : MonoBehaviour
                 distance = curDistance;
             }
         }
-//        GameController.INSTANCE.Kos.transform.LookAt(nearestLotus.transform);
-        GameController.INSTANCE.Kos.transform.rotation = Quaternion.Slerp(nearestLotus.transform.rotation, transform.rotation, Time.deltaTime * 8);
+        GameController.INSTANCE.Kos.transform.LookAt(nearestLotus.transform);
         hasBeenStarted = false;
     }
 
@@ -114,23 +113,8 @@ public class DesiredDirectionKOS : MonoBehaviour
     IEnumerator SetDirectionTowardsEndOfMazePoint()
     {
         yield return new WaitForSeconds(waitForSeconds);
-//        GameObject exit = GameObject.Find("EndOfMazePoint");
-//        GameController.INSTANCE.Kos.transform.LookAt(exit.transform);
-        float distance = Mathf.Infinity;
-        Vector3 position = transform.position;
-        GameObject nearestExit = null;
-        GameObject[] exits = GameObject.FindGameObjectsWithTag("Exit");
-        foreach (GameObject currentExit in exits)
-        {
-            Vector3 diff = (gameObject.transform.position - currentExit.transform.position);
-            float curDistance = diff.sqrMagnitude;
-            if (curDistance < distance)
-            {
-                nearestExit = currentExit;
-                distance = curDistance;
-            }
-        }
-        GameController.INSTANCE.Kos.transform.rotation = Quaternion.Slerp(nearestExit.transform.rotation, transform.rotation, Time.deltaTime * 8);
+        GameObject exit = GameObject.Find("EndOfMazePoint");
+        GameController.INSTANCE.Kos.transform.LookAt(exit.transform);
         hasBeenStarted = false;
     }
 }

@@ -724,7 +724,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1052517223}
-  m_HideIfInvisible: 0
 --- !u!1 &1186827231
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,7 +776,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1738193630}
   m_GameObject: {fileID: 1186827231}
-  m_HideIfInvisible: 0
 --- !u!224 &1186827234
 RectTransform:
   m_ObjectHideFlags: 0
@@ -940,6 +938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
+  m_DragThreshold: 5
 --- !u!4 &1394629025
 Transform:
   m_ObjectHideFlags: 0
@@ -1061,7 +1060,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1387740412}
   m_GameObject: {fileID: 1423184381}
-  m_HideIfInvisible: 0
 --- !u!1 &1690440471
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,6 +1108,7 @@ Canvas:
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!224 &1690440474
@@ -1424,10 +1423,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: .5
       objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: b8e410a1959dd49468b7660c0bf7cba6, type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b8e410a1959dd49468b7660c0bf7cba6, type: 2}
   m_RootGameObject: {fileID: 1186827231}
@@ -1530,8 +1525,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf76a32f2c105e74f8b7a729a004f45b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kosPreBattleIfMilo: {fileID: 1186827232}
-  miloPreBattleIfMilo: {fileID: 1423184383}
+  kosPreBattleIfMilo: {fileID: 0}
+  miloPreBattleIfMilo: {fileID: 0}
   kosPreBattleIfKOS: {fileID: 0}
   miloPreBattleIfKOS: {fileID: 0}
 --- !u!1001 &2095034644
@@ -1577,14 +1572,6 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11400002, guid: 99eec97991773a842b30e7fb44a37af8, type: 2}
-      propertyPath: kosPreBattleIfMilo
-      value: 
-      objectReference: {fileID: 1186827232}
-    - target: {fileID: 11400002, guid: 99eec97991773a842b30e7fb44a37af8, type: 2}
-      propertyPath: miloPreBattleIfMilo
-      value: 
-      objectReference: {fileID: 1423184383}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99eec97991773a842b30e7fb44a37af8, type: 2}
   m_RootGameObject: {fileID: 2074243004}

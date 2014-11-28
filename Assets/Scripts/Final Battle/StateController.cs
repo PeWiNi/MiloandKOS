@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class StateController : MonoBehaviour
 {
-    static StateController _INSTANCE;
     public const string nextSceneAsMilo = "FinalBattleAsMilo";
     public const string nextSceneAsKOS = "FinalBattleAsKOS";
     public const string endingCutSecene = "EndingSceneVsMom";
@@ -17,12 +16,6 @@ public class StateController : MonoBehaviour
     static int consecutiveHitsMax = 3;
     static int consecutiveHitsValue = 0;
     const float speed = 2.0f;
-    bool hasDialoguesBeenStarted = false;
-
-    void Awake()
-    {
-        _INSTANCE = this;
-    }
 
     // Use this for initialization
     void Start()
@@ -36,20 +29,17 @@ public class StateController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hasDialoguesBeenStarted)//Ensures we need to hear the whole conversation before the AI starts shooting.
+        if (Application.loadedLevelName.Equals(nextSceneAsKOS) && !miloShooting && consecutiveHitsValue < consecutiveHitsMax)
         {
-            if (Application.loadedLevelName.Equals(nextSceneAsKOS) && !miloShooting && consecutiveHitsValue < consecutiveHitsMax)
-            {
-                miloShooting = !miloShooting;
-                StartCoroutine("MiloShootAtKOS");
-            } else if (Application.loadedLevelName.Equals(nextSceneAsMilo) && !kosShooting && consecutiveHitsValue < consecutiveHitsMax)
-            {
-                kosShooting = !kosShooting;
-                StartCoroutine("KOSShootAtMilo");
-            }
-            consecutiveHitsText.text = actualText + consecutiveHitsValue + "/" + consecutiveHitsMax;
-            ChangeToEndingScene();
+            miloShooting = !miloShooting;
+            StartCoroutine("MiloShootAtKOS");
+        } else if (Application.loadedLevelName.Equals(nextSceneAsMilo) && !kosShooting && consecutiveHitsValue < consecutiveHitsMax)
+        {
+            kosShooting = !kosShooting;
+            StartCoroutine("KOSShootAtMilo");
         }
+        consecutiveHitsText.text = actualText + consecutiveHitsValue + "/" + consecutiveHitsMax;
+        ChangeToEndingScene();
     }
     
     void FixedUpdate()
@@ -66,18 +56,6 @@ public class StateController : MonoBehaviour
             {
                 milo.transform.Translate(Input.GetAxis("Horizontal") * speed * Time.deltaTime, 0.0f, 0.0f);
             }
-        }
-    }
-
-    /// <summary>
-    /// Gets the _ INSTANC.
-    /// </summary>
-    /// <value>The _ INSTANC.</value>
-    public static StateController INSTANCE
-    {
-        get
-        {
-            return _INSTANCE;
         }
     }
 
@@ -106,22 +84,6 @@ public class StateController : MonoBehaviour
         set
         {
             consecutiveHitsValue = value;
-        }
-    }
-
-    /// <summary>
-    /// Gets or sets a value indicating whether this instance has dialogues been started.
-    /// </summary>
-    /// <value><c>true</c> if this instance has dialogues been started; otherwise, <c>false</c>.</value>
-    public bool HasDialoguesBeenStarted
-    {
-        get
-        {
-            return hasDialoguesBeenStarted;
-        }
-        set
-        {
-            hasDialoguesBeenStarted = value;
         }
     }
 
