@@ -7,15 +7,12 @@ public class ShadowFunc : MonoBehaviour
     private Animator animator;
     private float chaseValue = 1.5f;
     GameObject milo; 
-    //GameObject catChildObj;
-    float minDistance = 1.0f;
 
     // Use this for initialization
     void Start()
     {
         animator = GetComponent<Animator>();
         milo = GameObject.Find("Milo");
-        // catChildObj = GameObject.Find("CShadow");
     }
 
     void OnTriggerEnter(Collider col)
@@ -25,10 +22,6 @@ public class ShadowFunc : MonoBehaviour
             InvokeRepeating("ChaseMilo", 0f, 0.03f);
             StartCoroutine("ShadowTimer");
             InvokeRepeating("ShadowMovement", 0f, 0.1f);
-//            if (Vector3.Distance(milo.transform.position, transform.position) <= minDistance)
-//            {
-//                Destroy(gameObject); 
-//            }
         }
     }
 	
@@ -36,7 +29,10 @@ public class ShadowFunc : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // transform.LookAt(Camera.main.transform.position);
+        Quaternion newRotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position, Vector3.up);
+        newRotation.x = 0;
+        newRotation.z = 0; 
+        transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * 8); 
     }
 
 
@@ -61,24 +57,24 @@ public class ShadowFunc : MonoBehaviour
         {
             if (horizontal == 1)
             {
-                animator.SetBool("ShadowIdle", false);
-                animator.SetBool("ShadowRunningFront", false);
-                animator.SetBool("ShadowRunningSidewayRight", true);
-                animator.SetBool("ShadowRunningSidewayLeft", false);
+                // animator.SetBool("ShadowIdle", false);
+                animator.SetBool("ShadowRunningFront", true);
+                // animator.SetBool("ShadowRunningSidewayRight", false);
+                // animator.SetBool("ShadowRunningSidewayLeft", false);
 
             } else if (horizontal == -1)
             {
-                animator.SetBool("ShadowIdle", false);
-                animator.SetBool("ShadowRunningFront", false);
-                animator.SetBool("ShadowRunningSidewayRight", false);
-                animator.SetBool("ShadowRunningSidewayLeft", true);
+                // animator.SetBool("ShadowIdle", false);
+                animator.SetBool("ShadowRunningFront", true);
+                // animator.SetBool("ShadowRunningSidewayRight", false);
+                // animator.SetBool("ShadowRunningSidewayLeft", false);
             } 
         } else if (vertical != 0 && horizontal == 0)
         {
-            animator.SetBool("ShadowIdle", false);
+            // animator.SetBool("ShadowIdle", false);
             animator.SetBool("ShadowRunningFront", true);
-            animator.SetBool("ShadowRunningSidewayRight", false);
-            animator.SetBool("ShadowRunningSidewayLeft", false);
+            // animator.SetBool("ShadowRunningSidewayRight", false);
+            // animator.SetBool("ShadowRunningSidewayLeft", false);
         }
     }
 

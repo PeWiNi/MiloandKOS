@@ -100,7 +100,7 @@ GameObject:
   - 193: {fileID: 19300000}
   - 33: {fileID: 3300008}
   - 23: {fileID: 2300008}
-  - 64: {fileID: 6400008}
+  - 65: {fileID: 6500004}
   m_Layer: 0
   m_Name: cornerTree
   m_TagString: Untagged
@@ -373,19 +373,6 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!64 &6400008
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100010}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: 43f413447f9261e4683d2d5c51e598ab, type: 2}
 --- !u!65 &6500000
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -410,6 +397,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.12319326, y: 1, z: 12.2122545}
   m_Center: {x: 2.06159353, y: 0, z: -.890898287}
+--- !u!65 &6500004
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 12.5719604, z: 1.5}
+  m_Center: {x: 0, y: 6.28597689, z: 0}
 --- !u!193 &19300000
 Tree:
   m_ObjectHideFlags: 1

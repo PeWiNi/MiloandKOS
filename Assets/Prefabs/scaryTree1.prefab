@@ -63,7 +63,6 @@ GameObject:
   - 193: {fileID: 19300000}
   - 33: {fileID: 3300004}
   - 23: {fileID: 2300004}
-  - 64: {fileID: 6400004}
   - 65: {fileID: 6500002}
   m_Layer: 0
   m_Name: scaryTree1
@@ -231,19 +230,6 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!64 &6400004
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100006}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: 43f413447f9261e4683d2d5c51e598ab, type: 2}
 --- !u!65 &6500000
 BoxCollider:
   m_ObjectHideFlags: 1
