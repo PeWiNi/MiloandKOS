@@ -4,10 +4,18 @@ using System.Collections;
 
 public class HandleTextDialogueInGame : MonoBehaviour
 {
-    public Text switchTextKOS;
-    public Text switchTextMilo;
-    public Text introTextMOM;
-    public Text introTextKOS;
+    [SerializeField]
+    Text
+        switchTextKOS;
+    [SerializeField]
+    Text
+        switchTextMilo;
+    [SerializeField]
+    Text
+        introTextMOM;
+    [SerializeField]
+    Text
+        introTextKOS;
 
     bool switchTextKOSHasBeenPrinted = false;
     bool switchTextMiloHasBeenPrinted = false;
@@ -69,6 +77,24 @@ public class HandleTextDialogueInGame : MonoBehaviour
         StartCoroutine("FadeText", switchTextMilo);
     }
 
+
+    /// <summary>
+    /// Prints the intro sequence playing as Milo.
+    /// </summary>
+    void PrintIntroSequencePlayingAsMilo()
+    {
+        introTextMOM.enabled = true;
+        StartCoroutine("FadeText", introTextMOM);
+    }
+
+    /// <summary>
+    /// Prints Milos first contact with a battery.
+    /// </summary>
+    void PrintMiloFirstContactwithBattery()
+    {
+
+    }
+
     /// <summary>
     /// Fades the text.
     /// </summary>
@@ -91,22 +117,5 @@ public class HandleTextDialogueInGame : MonoBehaviour
         color.b = text.color.b;
         text.color = color;
         text.enabled = false;
-    }
-
-    /// <summary>
-    /// Prints the intro sequence playing as Milo.
-    /// </summary>
-    void PrintIntroSequencePlayingAsMilo()
-    {
-        introTextMOM.enabled = true;
-        StartCoroutine("FadeText", introTextMOM);
-    }
-
-    /// <summary>
-    /// Prints Milos first contact with a battery.
-    /// </summary>
-    void PrintMiloFirstContactwithBattery()
-    {
-
     }
 }
