@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.UI;
 
 public class playCutscene : MonoBehaviour {
 
@@ -11,50 +10,11 @@ public class playCutscene : MonoBehaviour {
 	Vector3 v3ViewPort;
 	Vector3 v3BottomLeft;
 	Vector3 v3TopRight;
-	Text loadingPercentage;
-	
-
-	private AsyncOperation async = null; // When assigned, load is in progress.
-
-	/*IEnumerator Loading (string level)
-	{
-		asyncL = Application.LoadLevelAsync (level);
-		while (!asyncL.isDone)
-		{
-			
-			loadingPercentage.text = (((int)(asyncL.progress * 100)).ToString()) + " %";
-			Debug.Log(((int)(asyncL.progress * 100)));
-			yield return null ;
-			//StartCoroutine(Loading(levelName));
-		} 
-		yield return asyncL;
-	}
-*/
-	IEnumerator Loading()
-	{
-
-		async = Application.LoadLevelAsync(SceneName);
-		async.allowSceneActivation = false;
-		while (!async.isDone)
-		{
-			loadingPercentage.text = (((int)(asyncL.progress * 100)).ToString()) + " %";
-			if (async.progress >= 0.9f && !async.allowSceneActivation)
-				async.allowSceneActivation = true;
-			Debug.Log("I'm yielding at progress: " + async.progress);
-			yield return null;
-		}
-		
-		if (async.isDone)
-		{
-			loadingPercentage.text ="100%";
-		}
-	}
 
 
 	// Use this for initialization
 	void Start () {
-		GameObject textDisplay = GameObject.Find ("Text");
-		loadingPercentage = textDisplay.GetComponent<Text>();
+
 		planeCut = GameObject.Find ("Plane");
 		updateScreenSize();
 		renderer.material.mainTexture = movie;
@@ -64,16 +24,15 @@ public class playCutscene : MonoBehaviour {
 	void Update ()
 	{
 		updateScreenSize();
-		if (movie.isPlaying & Input.GetKeyDown (KeyCode.Escape)) 
-						{
-						movie.Stop();
-						StartCoroutine(Loading(nextScene));
-		}
-
+		if (movie.isPlaying & Input.GetKeyDown (KeyCode.Escape)) {
+						Debug.Log("pressed escape");
+						movie.Stop();	
+						Application.LoadLevel (nextScene);
+				}
 	 	if (!movie.isPlaying) 
-		{		
-			StartCoroutine(Loading(nextScene));
-		}
+		{		Debug.Log("no playing anymore");
+						Application.LoadLevel (nextScene);
+				}
 	}
 
 	void updateScreenSize()
