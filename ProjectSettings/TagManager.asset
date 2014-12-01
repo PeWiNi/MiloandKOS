@@ -13,6 +13,8 @@ TagManager:
   - DraggedPlayer
   - 
   - 
+  - Exit
+  - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
   Builtin Layer 2: Ignore Raycast
@@ -21,7 +23,7 @@ TagManager:
   Builtin Layer 5: UI
   Builtin Layer 6: 
   Builtin Layer 7: 
-  User Layer 8: 
+  User Layer 8: particleLayer
   User Layer 9: 
   User Layer 10: 
   User Layer 11: 
