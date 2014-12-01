@@ -6,38 +6,23 @@ public class menuScript : MonoBehaviour {
 	//public GameObject MainCanvas;
 	//public GameObject Introim;
 	//public GameObject Menu;
-	bool menuShowed=false;
 	bool chosenMilo;
 
 
 	// Use this for initialization
 	void Start () {	
 		chosenMilo = true;
-		StartCoroutine (delayMenu ());
 	}
 
-	IEnumerator delayMenu()
-	{
-		while (!menuShowed) 
-		{
-			yield return new WaitForSeconds (5);
-			//wait a few second , then show the menu
-			showMenu ();
-		}
-	}
-	
-	public void showMenu()
-	{
-		menuShowed = true;
-		// Remove the intro pic
-		// Show the menu
-	}
 
 	public void pickedMilo ()
-	{ chosenMilo = true;
+	{ 
+		chosenMilo = true;
 	}
 	public void pickedKOS()
-	{ chosenMilo = false;
+	{ 
+		if (endPageScript.reachedEnd)
+			chosenMilo = false;
 	}
 
 	public bool ChosenCharacter
@@ -49,7 +34,10 @@ public class menuScript : MonoBehaviour {
 	}
 
 	public void newGame(){
-		Application.LoadLevel ("tutorialLevel");
+		if (!chosenMilo)
+						Application.LoadLevel ("MazeLevel");
+				else
+						Application.LoadLevel ("tutorialLevel");
 		//Application.LoadLevel ("DogPooTest");
 	}
 

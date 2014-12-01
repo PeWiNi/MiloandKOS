@@ -3,9 +3,11 @@ using System.Collections;
 
 public class endPageScript : MonoBehaviour {
 
+	public static bool reachedEnd;
+
 	// Use this for initialization
 	void Start () {
-	
+		reachedEnd = true;
 	}
 	
 	// Update is called once per frame
