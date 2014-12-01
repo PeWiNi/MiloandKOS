@@ -12,6 +12,11 @@ public class menuScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {	
 		chosenMilo = true;
+		if (endPageScript.reachedEnd) {
+			GameObject findQPic=GameObject.Find("Image");
+			Image QPic=findQPic.GetComponent<Image>();
+			QPic.enabled=false;
+				}
 	}
 
 
@@ -38,6 +43,7 @@ public class menuScript : MonoBehaviour {
 						Application.LoadLevel ("MazeLevel");
 				else
 						Application.LoadLevel ("tutorialLevel");
+
 		//Application.LoadLevel ("DogPooTest");
 	}
 
