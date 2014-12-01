@@ -4,11 +4,12 @@ using System.Collections;
 public class KOSCollectable : MonoBehaviour
 {
     public GameObject KOSCollectablePrefab;
+    KOSPlaySounds kosSounds;
 
     // Use this for initialization
     void Start()
     {
-
+        kosSounds = GameController.INSTANCE.Kos.GetComponent<KOSPlaySounds>();
     }
 	
     // Update is called once per frame
@@ -21,6 +22,7 @@ public class KOSCollectable : MonoBehaviour
     {
         if (col.gameObject.name == "KOSMinotaur")
         {
+            kosSounds.PlayLotusFlowerPickUp();
             GameController.INSTANCE.AllKOSLotus.Remove(gameObject);
             GameController.INSTANCE.CurrentCollectedLotusFlowers += 1;
             gameObject.SetActive(false);

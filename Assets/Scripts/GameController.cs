@@ -22,6 +22,7 @@ public class GameController : MonoBehaviour
     Texture2D foregroundKOS;
     Rect box = new Rect(10, 10, 100, 20);
     Animator miloAnim;
+    AudioSource[] mainCameraSounds;
 
     // This happens before Start
     void Awake()
@@ -38,6 +39,7 @@ public class GameController : MonoBehaviour
         kos.gameObject.SetActive(false);
         miloAnim = milo.GetComponent<Animator>();
         SetMiloAwakeBar();
+        mainCameraSounds = Camera.main.GetComponents<AudioSource>();
     }
 	
     // Update is called once per frame
@@ -227,6 +229,7 @@ public class GameController : MonoBehaviour
         SwitchActiveValuesForCollectables();
         StartCoroutine(MiloAwakeCountdown());
         CameraPan.AttachedTo = kos;
+        mainCameraSounds [4].Play();
     }
 
     /// <summary>
@@ -242,6 +245,7 @@ public class GameController : MonoBehaviour
         SwitchTurnCounter++;
         SwitchActiveValuesForCollectables();
         CameraPan.AttachedTo = milo;
+        mainCameraSounds [3].Play();
     }
 
     /// <summary>
@@ -340,5 +344,10 @@ public class GameController : MonoBehaviour
 //            milo.rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
             SwitchToMilo();
         }
+    }
+
+    void PlaySounds()
+    {
+        
     }
 }

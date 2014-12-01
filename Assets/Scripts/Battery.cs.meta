@@ -2,7 +2,8 @@ fileFormatVersion: 2
 guid: e7f9dee6f2c53ab478c852fd87455443
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - batteryPickUp: {fileID: 8300000, guid: 5ac9d2f26f9ee044fb7db7573225128b, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
