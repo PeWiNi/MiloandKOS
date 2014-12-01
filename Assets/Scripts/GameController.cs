@@ -85,6 +85,21 @@ public class GameController : MonoBehaviour
             return isPlayingAsMilo;
         }
     }
+    /// <summary>
+    /// Gets or sets the milo awake timer.
+    /// </summary>
+    /// <value>The milo awake timer.</value>
+    public float MiloAwakeTimer
+    {
+        get
+        {
+            return miloAwakeTimer;
+        }
+        set
+        {
+            miloAwakeTimer = value;
+        }
+    }
 
     /// <summary>
     /// Gets or sets the _ INSTANC.
