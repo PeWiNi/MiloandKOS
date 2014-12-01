@@ -792,11 +792,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "BatBirds Production\n\nMira Dorth\xE9;\nMarc Wennervaldt Gross J\xF8rgensen;\r\nCristina
-    Alexandra Niculescu;\r\nHenrik Otto Pedersen;\r\nJesper Pedersen;\n\n\n\nSpecial
-    thanks to:\n\nSarah Tarby Christensen - out assigned TA for great feedback and
-    guidance; \n\n& \n\nTroels Nygaard - for helping with the Sound Design and advice
-    regarding audio matters;"
+  m_Text: "BatBirds Production\n\nConcept Artist, Writer, 2D Animator -> Mira Dorth\xE9;\nProgrammer,
+    \"part-time\" 2D Animator, \"part-time\" Concept Artist  -> Marc Wennervaldt Gross
+    J\xF8rgensen;\r\nCristina Alexandra Niculescu;\r\nProgrammer, 2D Animator, Voice-Overs
+    -> Henrik Otto Pedersen;\r\nJesper Pedersen;\n\n\n\nSpecial thanks to:\n\nSarah
+    Tarby Christensen - out assigned TA for great feedback and guidance; \n\n& \n\nTroels
+    Nygaard - for helping with the Sound Design and advice regarding audio matters;"
 --- !u!222 &2014187829
 CanvasRenderer:
   m_ObjectHideFlags: 0
