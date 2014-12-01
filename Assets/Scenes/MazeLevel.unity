@@ -1073,7 +1073,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -1123,6 +1123,10 @@ Prefab:
     - target: {fileID: 100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_Name
       value: LotusHUD06
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
+      propertyPath: m_TagString
+      value: KOSLotus
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
@@ -1426,7 +1430,7 @@ GameObject:
   - 114: {fileID: 276444784}
   m_Layer: 5
   m_Name: LotusHUD07
-  m_TagString: Untagged
+  m_TagString: KOSLotus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1443,7 +1447,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1743646497}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_AnchorMin: {x: .660000026, y: .879999995}
   m_AnchorMax: {x: .74000001, y: .930000007}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -1801,6 +1805,71 @@ Transform:
   - {fileID: 1372410881}
   m_Father: {fileID: 466149584}
   m_RootOrder: 0
+--- !u!1 &330783978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
+  m_PrefabInternal: {fileID: 1923729841}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 330783979}
+  - 222: {fileID: 330783981}
+  - 114: {fileID: 330783980}
+  m_Layer: 5
+  m_Name: BatteryHUD
+  m_TagString: Battery
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &330783979
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22400000, guid: ec67ded0a264fbc449cada2425e1857c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1923729841}
+  m_GameObject: {fileID: 330783978}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1743646497}
+  m_RootOrder: 5
+  m_AnchorMin: {x: .410000026, y: .860000014}
+  m_AnchorMax: {x: .569999993, y: .99000001}
+  m_AnchoredPosition: {x: -.499938965, y: -.5}
+  m_SizeDelta: {x: -1, y: -1}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &330783980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: ec67ded0a264fbc449cada2425e1857c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1923729841}
+  m_GameObject: {fileID: 330783978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300004, guid: c7415667accd5394ca5629f717bcd2ea, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &330783981
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22200000, guid: ec67ded0a264fbc449cada2425e1857c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1923729841}
+  m_GameObject: {fileID: 330783978}
+  m_HideIfInvisible: 0
 --- !u!1 &356070866
 GameObject:
   m_ObjectHideFlags: 0
@@ -2013,7 +2082,7 @@ GameObject:
   - 114: {fileID: 406352653}
   m_Layer: 5
   m_Name: MiloAwakeHUD
-  m_TagString: Untagged
+  m_TagString: KOSLotus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2030,7 +2099,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1743646497}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_AnchorMin: {x: .410000026, y: .860000014}
   m_AnchorMax: {x: .569999993, y: .99000001}
   m_AnchoredPosition: {x: -.5, y: -.5}
@@ -2253,7 +2322,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -2298,6 +2367,10 @@ Prefab:
     - target: {fileID: 100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_Name
       value: LotusHUD08
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
+      propertyPath: m_TagString
+      value: KOSLotus
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
@@ -2991,7 +3064,7 @@ GameObject:
   - 114: {fileID: 488639487}
   m_Layer: 5
   m_Name: LotusHUD09
-  m_TagString: Untagged
+  m_TagString: KOSLotus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3008,7 +3081,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1743646497}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_AnchorMin: {x: .819999993, y: .879999995}
   m_AnchorMax: {x: .899999976, y: .930000007}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -5292,7 +5365,7 @@ RectTransform:
   - {fileID: 1407975849}
   - {fileID: 1717222351}
   m_Father: {fileID: 1743646497}
-  m_RootOrder: 17
+  m_RootOrder: 19
   m_AnchorMin: {x: .200000003, y: .0700000003}
   m_AnchorMax: {x: .800000012, y: .200000003}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -6232,7 +6305,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -6277,6 +6350,10 @@ Prefab:
     - target: {fileID: 100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_Name
       value: LotusHUD09
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
+      propertyPath: m_TagString
+      value: KOSLotus
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
@@ -7858,7 +7935,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -7904,6 +7981,10 @@ Prefab:
       propertyPath: m_Name
       value: LotusHUD10
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
+      propertyPath: m_TagString
+      value: KOSLotus
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
   m_RootGameObject: {fileID: 2098080003}
@@ -7946,7 +8027,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -7991,6 +8072,10 @@ Prefab:
     - target: {fileID: 100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_Name
       value: LotusHUD02
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
+      propertyPath: m_TagString
+      value: KOSLotus
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
@@ -9952,7 +10037,7 @@ GameObject:
   - 114: {fileID: 993023116}
   m_Layer: 5
   m_Name: LotusHUD03
-  m_TagString: Untagged
+  m_TagString: KOSLotus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9969,7 +10054,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1743646497}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_AnchorMin: {x: .74000001, y: .930000007}
   m_AnchorMax: {x: .819999993, y: .980000019}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -11049,7 +11134,7 @@ GameObject:
   - 114: {fileID: 1143191086}
   m_Layer: 5
   m_Name: LotusHUD04
-  m_TagString: Untagged
+  m_TagString: KOSLotus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11066,7 +11151,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1743646497}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_AnchorMin: {x: .819999993, y: .930000007}
   m_AnchorMax: {x: .899999976, y: .980000019}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -13085,7 +13170,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -13131,6 +13216,10 @@ Prefab:
       propertyPath: m_Name
       value: LotusHUD07
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
+      propertyPath: m_TagString
+      value: KOSLotus
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
   m_RootGameObject: {fileID: 276444782}
@@ -13173,7 +13262,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -13223,6 +13312,10 @@ Prefab:
     - target: {fileID: 100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_Name
       value: LotusHUD01
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
+      propertyPath: m_TagString
+      value: KOSLotus
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
@@ -14534,7 +14627,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -14576,6 +14669,14 @@ Prefab:
       propertyPath: m_Pivot.y
       value: .5
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
+      propertyPath: m_TagString
+      value: KOSLotus
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
   m_RootGameObject: {fileID: 406352651}
@@ -14593,7 +14694,7 @@ GameObject:
   - 114: {fileID: 1441791425}
   m_Layer: 5
   m_Name: LotusHUD02
-  m_TagString: Untagged
+  m_TagString: KOSLotus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14610,7 +14711,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1743646497}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_AnchorMin: {x: .660000026, y: .930000007}
   m_AnchorMax: {x: .74000001, y: .980000019}
   m_AnchoredPosition: {x: -.31993103, y: 0}
@@ -15767,7 +15868,7 @@ GameObject:
   - 114: {fileID: 1554550594}
   m_Layer: 5
   m_Name: LotusHUD08
-  m_TagString: Untagged
+  m_TagString: KOSLotus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15784,7 +15885,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1743646497}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_AnchorMin: {x: .74000001, y: .879999995}
   m_AnchorMax: {x: .819999993, y: .930000007}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -16010,7 +16111,7 @@ GameObject:
   - 114: {fileID: 1584908087}
   m_Layer: 5
   m_Name: LotusHUD06
-  m_TagString: Untagged
+  m_TagString: KOSLotus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16027,7 +16128,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1743646497}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_AnchorMin: {x: .579999983, y: .879999995}
   m_AnchorMax: {x: .660000026, y: .930000007}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -16693,7 +16794,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -16738,6 +16839,10 @@ Prefab:
     - target: {fileID: 100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_Name
       value: LotusHUD03
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
+      propertyPath: m_TagString
+      value: KOSLotus
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
@@ -16988,7 +17093,7 @@ RectTransform:
   - {fileID: 1043733360}
   - {fileID: 975155833}
   m_Father: {fileID: 1743646497}
-  m_RootOrder: 16
+  m_RootOrder: 18
   m_AnchorMin: {x: .200000003, y: .0700000003}
   m_AnchorMax: {x: .800000012, y: .200000003}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -17230,7 +17335,7 @@ RectTransform:
   - {fileID: 1083482148}
   - {fileID: 48299007}
   m_Father: {fileID: 1743646497}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 800}
@@ -17377,6 +17482,110 @@ MeshFilter:
   m_PrefabInternal: {fileID: 629283089}
   m_GameObject: {fileID: 1731109786}
   m_Mesh: {fileID: 4300000, guid: cdbcd3e6e873f364f92e7fc558ae3d14, type: 3}
+--- !u!1 &1733152390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1733152391}
+  - 222: {fileID: 1733152394}
+  - 114: {fileID: 1733152393}
+  - 114: {fileID: 1733152392}
+  m_Layer: 5
+  m_Name: BatteryIndicator
+  m_TagString: BatteryIndicatorHUD
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1733152391
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1733152390}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1743646497}
+  m_RootOrder: 4
+  m_AnchorMin: {x: .414000034, y: .862000048}
+  m_AnchorMax: {x: .550356746, y: .982000053}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: .5}
+--- !u!114 &1733152392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1733152390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 0
+  m_Colors:
+    m_NormalColor: {r: .250980407, g: .250980407, b: .250980407, a: .501960814}
+    m_HighlightedColor: {r: .250980407, g: .250980407, b: .250980407, a: .501960814}
+    m_PressedColor: {r: .250980407, g: .250980407, b: .250980407, a: .501960814}
+    m_DisabledColor: {r: .250980407, g: .250980407, b: .250980407, a: .501960814}
+    m_ColorMultiplier: 2
+    m_FadeDuration: .100000001
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1733152393}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1733152393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1733152390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: .964705884, b: 0, a: 1}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1733152394
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1733152390}
+  m_HideIfInvisible: 0
 --- !u!1 &1735186601
 GameObject:
   m_ObjectHideFlags: 0
@@ -17471,6 +17680,8 @@ RectTransform:
   - {fileID: 525268013}
   - {fileID: 1906738465}
   - {fileID: 1343751827}
+  - {fileID: 1733152391}
+  - {fileID: 330783979}
   - {fileID: 406352652}
   - {fileID: 1929181425}
   - {fileID: 1441791424}
@@ -19048,7 +19259,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -19093,6 +19304,10 @@ Prefab:
     - target: {fileID: 100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_Name
       value: LotusHUD04
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
+      propertyPath: m_TagString
+      value: KOSLotus
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
@@ -19295,7 +19510,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -19340,6 +19555,10 @@ Prefab:
     - target: {fileID: 100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
       propertyPath: m_Name
       value: LotusHUD05
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
+      propertyPath: m_TagString
+      value: KOSLotus
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c9fbbeb15e98d894899b94ac0a93836e, type: 2}
@@ -19732,6 +19951,103 @@ MeshFilter:
   m_PrefabInternal: {fileID: 629283089}
   m_GameObject: {fileID: 1917542039}
   m_Mesh: {fileID: 4300000, guid: cdbcd3e6e873f364f92e7fc558ae3d14, type: 3}
+--- !u!1001 &1923729841
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1743646497}
+    m_Modifications:
+    - target: {fileID: 22400000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -.499938965
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
+      propertyPath: m_AnchorMin.x
+      value: .410000026
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
+      propertyPath: m_AnchorMin.y
+      value: .860000014
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: .569999993
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: .99000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
+      propertyPath: m_Pivot.x
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
+      propertyPath: m_Pivot.y
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
+      propertyPath: m_TagString
+      value: Battery
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
+      propertyPath: m_Name
+      value: BatteryHUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300004, guid: c7415667accd5394ca5629f717bcd2ea,
+        type: 3}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ec67ded0a264fbc449cada2425e1857c, type: 2}
+  m_RootGameObject: {fileID: 330783978}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1929181424
 GameObject:
   m_ObjectHideFlags: 0
@@ -19745,7 +20061,7 @@ GameObject:
   - 114: {fileID: 1929181426}
   m_Layer: 5
   m_Name: LotusHUD01
-  m_TagString: Untagged
+  m_TagString: KOSLotus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19762,7 +20078,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1743646497}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_AnchorMin: {x: .579999983, y: .930000007}
   m_AnchorMax: {x: .660000026, y: .980000019}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -19944,7 +20260,7 @@ RectTransform:
   - {fileID: 1711102635}
   - {fileID: 1713929327}
   m_Father: {fileID: 1743646497}
-  m_RootOrder: 18
+  m_RootOrder: 20
   m_AnchorMin: {x: .200000003, y: .0700000003}
   m_AnchorMax: {x: .800000012, y: .200000003}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -20237,7 +20553,7 @@ GameObject:
   - 114: {fileID: 2098080005}
   m_Layer: 5
   m_Name: LotusHUD10
-  m_TagString: Untagged
+  m_TagString: KOSLotus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20254,7 +20570,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1743646497}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_AnchorMin: {x: .899999976, y: .879999995}
   m_AnchorMax: {x: .980000019, y: .930000007}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -20302,7 +20618,7 @@ GameObject:
   - 114: {fileID: 2099469201}
   m_Layer: 5
   m_Name: LotusHUD05
-  m_TagString: Untagged
+  m_TagString: KOSLotus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20319,7 +20635,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1743646497}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_AnchorMin: {x: .899999976, y: .930000007}
   m_AnchorMax: {x: .980000019, y: .980000019}
   m_AnchoredPosition: {x: 0, y: 0}

@@ -5,25 +5,27 @@ public class Flashlight : MonoBehaviour
 {
 //    private bool on = true;
 
-    private Rect box = new Rect(10, 10, 100, 20);
-    private Texture2D background;
-    private Texture2D foreground;
+//    private Rect box = new Rect(10, 10, 100, 20);
+//    private Texture2D background;
+//    private Texture2D foreground;
     private float capacity = 15.0F;
     private int maxCapacity = 15;
     private int counterLinear = 0;
     bool pauseCapacity;
+    GameObject batteryIndicatorHUD;
 
     // Use this for initialization
     void Start()
     {
-        background = new Texture2D(1, 1, TextureFormat.RGB24, false);
-        foreground = new Texture2D(1, 1, TextureFormat.RGB24, false);
-        
-        background.SetPixel(0, 0, Color.blue);
-        foreground.SetPixel(0, 0, Color.yellow);
-        
-        background.Apply();
-        foreground.Apply();
+        batteryIndicatorHUD = GameObject.FindGameObjectWithTag("BatteryIndicatorHUD");
+//        background = new Texture2D(1, 1, TextureFormat.RGB24, false);
+//        foreground = new Texture2D(1, 1, TextureFormat.RGB24, false);
+//        
+//        background.SetPixel(0, 0, Color.blue);
+//        foreground.SetPixel(0, 0, Color.yellow);
+//        
+//        background.Apply();
+//        foreground.Apply();
 
         InvokeRepeating("CapacityCounter", 1f, 1f);//Invokes the method every second.
     }
@@ -39,19 +41,8 @@ public class Flashlight : MonoBehaviour
         {
             capacity = maxCapacity;
         }
-    }
-
-    void OnGUI()
-    {
         if (GameController.INSTANCE.IsPlayingAsMilo)
-        {
-            GUI.BeginGroup(box);
-            {
-                GUI.DrawTexture(new Rect(0, 0, box.width, box.height), background, ScaleMode.StretchToFill);
-                GUI.DrawTexture(new Rect(0, 0, box.width * capacity / maxCapacity, box.height), foreground, ScaleMode.StretchToFill);
-            }
-            GUI.EndGroup();
-        }
+            batteryIndicatorHUD.transform.localScale = new Vector3(capacity / maxCapacity, 1, 1); 
     }
 
     /// <summary>

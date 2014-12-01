@@ -20,7 +20,7 @@ public class GameController : MonoBehaviour
     bool switchHasBeenExecuted = false;
     Texture2D backgroundKOS;
     Texture2D foregroundKOS;
-    Rect box = new Rect(10, 10, 100, 20);
+    Rect box = new Rect(50, 10, 100, 20);
     Animator miloAnim;
 
     // This happens before Start
@@ -57,22 +57,22 @@ public class GameController : MonoBehaviour
         }
     }
 
-    void OnGUI()
-    {
-        if (!isPlayingAsMilo)
-        {
-            if (miloFlashlightComponent.Capacity <= 0.0f && miloAwakeTimer > 0.0f)
-            {
-                GUI.BeginGroup(box);
-                {
-                    GUI.DrawTexture(new Rect(0, 0, box.width, box.height), backgroundKOS, ScaleMode.StretchToFill);
-                    GUI.DrawTexture(new Rect(0, 0, box.width * miloAwakeTimer / miloAwakeTimerMax, box.height), foregroundKOS, ScaleMode.StretchToFill);
-                }
-                GUI.EndGroup();
-            }
-            string totalCollectedLotusFlowers = currentCollectedLotusFlowers + "/" + maxNeededLotusFlowers + " Lotus' Collected";
-        }
-    }
+//    void OnGUI()
+//    {
+//        if (!isPlayingAsMilo)
+//        {
+//            if (miloFlashlightComponent.Capacity <= 0.0f && miloAwakeTimer > 0.0f)
+//            {
+//                GUI.BeginGroup(box);
+//                {
+//                    GUI.DrawTexture(new Rect(0, 0, box.width, box.height), backgroundKOS, ScaleMode.StretchToFill);
+//                    GUI.DrawTexture(new Rect(0, 0, box.width * miloAwakeTimer / miloAwakeTimerMax, box.height), foregroundKOS, ScaleMode.StretchToFill);
+//                }
+//                GUI.EndGroup();
+//            }
+//            string totalCollectedLotusFlowers = currentCollectedLotusFlowers + "/" + maxNeededLotusFlowers + " Lotus' Collected";
+//        }
+//    }
 
     /// <summary>
     /// Gets a value indicating whether this instance is playing as milo.
