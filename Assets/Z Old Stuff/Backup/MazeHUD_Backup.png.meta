@@ -1,0 +1,146 @@
+fileFormatVersion: 2
+guid: 3708323a803e21a40ab9f5c24d5c273d
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: LotusPickedUp
+    21300002: LotusEmpthy
+    21300004: FlashlightBattery
+    21300006: MiloAwake0%
+    21300008: MiloAwake20%
+    21300010: MiloAwake40%
+    21300012: MiloAwake60%
+    21300014: MiloAwake80%
+    21300016: MiloAwake100%
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 512
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: LotusPickedUp
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 170
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LotusEmpthy
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 176
+        width: 170
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FlashlightBattery
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 177
+        width: 147
+        height: 63
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MiloAwake0%
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 88
+        width: 165
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MiloAwake20%
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 88
+        width: 165
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MiloAwake40%
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 88
+        width: 165
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MiloAwake60%
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 3
+        width: 165
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MiloAwake80%
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 3
+        width: 165
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MiloAwake100%
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 1
+        width: 167
+        height: 85
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
