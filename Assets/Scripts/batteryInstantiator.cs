@@ -11,7 +11,7 @@ public class batteryInstantiator : MonoBehaviour {
 	void Start () {
 
 		batteryCoord = new int[,]
-		{
+		{	{3,2},
 			{3,7}, {3,13},{4,24},{5,18},{7,7},{7,13},
 			{8,20},{9,2},{10,10},{11,26},{12,6},{13,11},
 			{13,17},{14,2},{15,21},{16,10},{16,16},
