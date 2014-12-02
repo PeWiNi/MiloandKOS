@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
     GameObject milo;
     GameObject kos;
     Flashlight miloFlashlightComponent;
-    bool isPlayingAsMilo = true;
+    bool isPlayingAsMilo;
     float miloAwakeTimer = 0.0f;
     int miloAwakeTimerMax = 360;
     int switchCounter = 0;
@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
     int currentCollectedLotusFlowers = 0;//The current amount collected.
     List<GameObject> allKOSLotus;
     List<GameObject> allBatteries;
-    bool switchHasBeenExecuted = false;
+    bool hasCheckedWhoPlays;
     Texture2D backgroundKOS;
     Texture2D foregroundKOS;
     Rect box = new Rect(10, 10, 100, 20);
@@ -35,8 +35,7 @@ public class GameController : MonoBehaviour
     {
         miloFlashlightComponent = GameObject.Find("Flashlight").GetComponent<Flashlight>();
         milo = GameObject.Find("Milo");//Find Milo.
-        kos = GameObject.Find("KOSMinotaur");//Find !Milo.
-        kos.gameObject.SetActive(false);
+        kos = GameObject.Find("KOSMinotaur");//Find KOS.
         miloAnim = milo.GetComponent<Animator>();
         SetMiloAwakeBar();
         mainCameraSounds = Camera.main.GetComponents<AudioSource>();
@@ -45,10 +44,25 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!kos.activeSelf && !switchHasBeenExecuted)
+        if (!hasCheckedWhoPlays)
         {
-            SwitchActiveValuesForCollectables();// Start by hiding all Lotus flowers within in the maze.
-            switchHasBeenExecuted = true;
+            if (endPageScript.reachedEnd)//If the player has played through it once.
+            {
+                isPlayingAsMilo = menuScript.chosenMilo;
+                if (!isPlayingAsMilo)
+                {
+                    isPlayingAsMilo = true;//reverse!
+                    SetStateForSwitching();
+                    isPlayingAsMilo = false;//reverse!
+                } else
+                {
+                    
+                }
+            } else
+            {
+                SwitchToMilo();
+            }
+            hasCheckedWhoPlays = true;
         }
         if (miloFlashlightComponent.Capacity <= 0.0f && isPlayingAsMilo)
         {//Minimum Capacity for the Flashlight.
@@ -319,13 +333,14 @@ public class GameController : MonoBehaviour
     {
         if (isPlayingAsMilo)
         {
-            GameController.INSTANCE.SwitchToKOS();
+            SwitchToKOS();
             milo.transform.rotation = Quaternion.Euler(270.0f, 0.0f, 0.0f);
             milo.GetComponent<Move>().enabled = false;
             milo.GetComponent<Jump>().enabled = false;
             milo.GetComponent<ShadowEffect>().enabled = false;
             milo.GetComponent<DesiredDirectionMilo>().enabled = false;
             miloAnim.enabled = false;
+            milo.GetComponent<Rigidbody>().mass = 1000.0f;
 //            milo.AddComponent<SpringJoint>();
 //            milo.GetComponent<SpringJoint>().connectedBody = kos.rigidbody;
 //            milo.GetComponent<SpringJoint>().anchor = new Vector3(0.0f, 0.0f, 0.0f);
@@ -338,16 +353,13 @@ public class GameController : MonoBehaviour
             milo.GetComponent<Move>().enabled = true;
             milo.GetComponent<Jump>().enabled = true;
             milo.GetComponent<ShadowEffect>().enabled = true;
+            miloAnim.SetFloat("Movement", 0.0f);
             miloAnim.enabled = true;
             milo.GetComponent<DesiredDirectionMilo>().enabled = true;
+            milo.GetComponent<Rigidbody>().mass = 1.0f;
 //            Destroy(milo.GetComponent<SpringJoint>());
 //            milo.rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
             SwitchToMilo();
         }
-    }
-
-    void PlaySounds()
-    {
-        
     }
 }

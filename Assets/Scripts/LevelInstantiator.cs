@@ -77,12 +77,12 @@ public class LevelInstantiator : MonoBehaviour {
 
 		drawLevel (0,levelMap.GetLength(0),0,levelMap.GetLength(1));
 
-		if (GameController.INSTANCE.IsPlayingAsMilo) 
-			player = GameObject.Find ("Milo");
-		else
-			player = GameObject.Find ("KOSMinotaur");
-		pastPlayerPosX = player.transform.position.x;
-		pastPlayerPosZ = player.transform.position.z;
+//		if (GameController.INSTANCE.IsPlayingAsMilo) 
+//			player = GameObject.Find ("Milo");
+//		else
+//			player = GameObject.Find ("KOSMinotaur");
+//		pastPlayerPosX = player.transform.position.x;
+//		pastPlayerPosZ = player.transform.position.z;
 
 	}
 	
@@ -90,16 +90,16 @@ public class LevelInstantiator : MonoBehaviour {
 
 		 void Update ()
 		{	
-		if (GameController.INSTANCE.IsPlayingAsMilo) 
-						player = GameObject.Find ("Milo");
-				else
-						player = GameObject.Find ("KOSMinotaur");
+//		if (GameController.INSTANCE.IsPlayingAsMilo) 
+//						player = GameObject.Find ("Milo");
+//				else
+//						player = GameObject.Find ("KOSMinotaur");
 				
 			//mazeHider ((int)pastPlayerPosX, (int)pastPlayerPosZ);
 			//mazeShower((int)player.transform.position.x,(int)player.transform.position.z);
 
-				pastPlayerPosX = player.transform.position.x;
-				pastPlayerPosZ = player.transform.position.z;
+//				pastPlayerPosX = player.transform.position.x;
+//				pastPlayerPosZ = player.transform.position.z;
 				
 		}
 

@@ -76,10 +76,10 @@ public class DesiredDirectionMilo : MonoBehaviour
                 distance = curDistance;
             }
         }
-        Quaternion newRotation = Quaternion.LookRotation(transform.position - nearestExit.transform.position, Vector3.up);
+        Quaternion newRotation = Quaternion.LookRotation(nearestExit.transform.position - transform.position);
         newRotation.x = 0;
         newRotation.z = 0;
-        GameController.INSTANCE.Milo.transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * 8);
+        GameController.INSTANCE.Milo.transform.rotation = Quaternion.Slerp(newRotation, transform.rotation, Time.deltaTime * 8);
         hasBeenStarted = false;
     }
 }
