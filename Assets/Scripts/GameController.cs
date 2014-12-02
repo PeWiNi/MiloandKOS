@@ -36,6 +36,7 @@ public class GameController : MonoBehaviour
         miloFlashlightComponent = GameObject.Find("Flashlight").GetComponent<Flashlight>();
         milo = GameObject.Find("Milo");//Find Milo.
         kos = GameObject.Find("KOSMinotaur");//Find KOS.
+        kos.SetActive(false);
         miloAnim = milo.GetComponent<Animator>();
         SetMiloAwakeBar();
         mainCameraSounds = Camera.main.GetComponents<AudioSource>();
@@ -48,19 +49,22 @@ public class GameController : MonoBehaviour
         {
             if (endPageScript.reachedEnd)//If the player has played through it once.
             {
-                isPlayingAsMilo = menuScript.chosenMilo;
+                isPlayingAsMilo = menuScript.ChosenCharacter;
                 if (!isPlayingAsMilo)
                 {
-                    isPlayingAsMilo = true;//reverse!
+                    isPlayingAsMilo = true;//Reverse this variable to set the appropriate state in the SetStateForSwitching Method.
                     SetStateForSwitching();
-                    isPlayingAsMilo = false;//reverse!
+                    Debug.Log("Øf");
                 } else
                 {
-                    
+                    SwitchToMilo();
+                    Debug.Log("Bøh");
                 }
+                SwitchActiveValuesForCollectables();
             } else
             {
-                SwitchToMilo();
+                isPlayingAsMilo = true;
+                SwitchActiveValuesForCollectables();
             }
             hasCheckedWhoPlays = true;
         }
@@ -243,7 +247,6 @@ public class GameController : MonoBehaviour
         SwitchActiveValuesForCollectables();
         StartCoroutine(MiloAwakeCountdown());
         CameraPan.AttachedTo = kos;
-        mainCameraSounds [4].Play();
     }
 
     /// <summary>
@@ -259,7 +262,6 @@ public class GameController : MonoBehaviour
         SwitchTurnCounter++;
         SwitchActiveValuesForCollectables();
         CameraPan.AttachedTo = milo;
-        mainCameraSounds [3].Play();
     }
 
     /// <summary>
@@ -341,6 +343,7 @@ public class GameController : MonoBehaviour
             milo.GetComponent<DesiredDirectionMilo>().enabled = false;
             miloAnim.enabled = false;
             milo.GetComponent<Rigidbody>().mass = 1000.0f;
+            mainCameraSounds [3].Play();
 //            milo.AddComponent<SpringJoint>();
 //            milo.GetComponent<SpringJoint>().connectedBody = kos.rigidbody;
 //            milo.GetComponent<SpringJoint>().anchor = new Vector3(0.0f, 0.0f, 0.0f);
@@ -360,6 +363,7 @@ public class GameController : MonoBehaviour
 //            Destroy(milo.GetComponent<SpringJoint>());
 //            milo.rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
             SwitchToMilo();
+            mainCameraSounds [4].Play();
         }
     }
 }

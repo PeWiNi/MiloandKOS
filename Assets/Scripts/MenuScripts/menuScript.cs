@@ -32,7 +32,7 @@ public class menuScript : MonoBehaviour
             chosenMilo = false;
     }
 
-    public bool ChosenCharacter
+    public static bool ChosenCharacter
     {
         get
         {

@@ -11,13 +11,12 @@ public class LampSafeZone : MonoBehaviour
     {
         miloFlashLight = GameObject.Find("Flashlight").GetComponent<Flashlight>();
         capsuleCollider = GetComponent<CapsuleCollider>();
-        PreventKOSFromEnteringSafeZones();
     }
 	
     // Update is called once per frame
     void Update()
     {
-
+        PreventKOSFromEnteringSafeZones();
     }
 
     void OnTriggerEnter(Collider col)
