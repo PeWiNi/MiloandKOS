@@ -47,7 +47,7 @@ public class triggerPointTutorial : MonoBehaviour
 		void OnTriggerExit (Collider col)
 		{
 				showPic = false;
-				picShowed = true;
+				//picShowed = true;
 				//Debug.Log (message);
 		}
 }
