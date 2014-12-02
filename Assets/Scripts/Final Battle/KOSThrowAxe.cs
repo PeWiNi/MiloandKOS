@@ -13,10 +13,12 @@ public class KOSThrowAxe : MonoBehaviour
     float angel = 300;
     Vector3 curRot;
     float maxAim = 20.0f;
-    // float minAim = -20.0f;
-    float aimSpeed = 3.0f;
+    float minAim = -20.0f;
+    float aimSpeed = 2.0f;
     float maxZ;
     float minZ;
+    float decreaseMaxZ;
+    float decreaseMinZ;
     float MaxAngel = 500;
     float MinAngel = 100;
     Vector3 armAngel = new Vector3(0f, 0f, 1f); 
@@ -36,7 +38,9 @@ public class KOSThrowAxe : MonoBehaviour
         aimingArm = GameObject.Find("KOSAimingArm");
         curRot = aimingArm.transform.eulerAngles;
         maxZ = curRot.z + maxAim;
-        minZ = curRot.z - maxAim;
+        minZ = curRot.z + minAim;
+        //decreaseMaxZ = curRot.z + 
+
     }
 
     // Update is called once per frame
@@ -62,6 +66,7 @@ public class KOSThrowAxe : MonoBehaviour
             if (Input.GetKey(KeyCode.S) && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
             {        
                 decreaseAngel();
+                decreaseAimAngel();
             }
         }
     }
@@ -83,9 +88,23 @@ public class KOSThrowAxe : MonoBehaviour
 
     public void increaseAimAngel()
     {
-        curRot.z += Input.GetAxis("Horizontal") * Time.deltaTime * aimSpeed;
-        curRot.z = Mathf.Clamp(curRot.z, minZ, maxZ);
-        aimingArm.transform.eulerAngles = curRot;
+        if (curRot.z < maxAim)
+        {
+            curRot.z += Input.GetAxis("Vertical") * Time.deltaTime * aimSpeed;
+            curRot.z = Mathf.Clamp(curRot.z, minZ, maxZ);
+            aimingArm.transform.eulerAngles = curRot;
+        }
+    }
+
+    public void decreaseAimAngel()
+    {
+        if (curRot.z > minAim)
+        {
+            curRot.z -= Input.GetAxis("Vertical") * Time.deltaTime * aimSpeed;
+            Debug.Log(curRot.z);
+            curRot.z = Mathf.Clamp(curRot.z, minZ, maxZ);
+            aimingArm.transform.eulerAngles = curRot;
+        }
     }
 
     /// <summary>
