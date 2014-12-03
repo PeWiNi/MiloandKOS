@@ -41,7 +41,7 @@ public class GameController : MonoBehaviour
         SetMiloAwakeBar();
         mainCameraSounds = Camera.main.GetComponents<AudioSource>();
     }
-	
+    
     // Update is called once per frame
     void Update()
     {
@@ -262,6 +262,7 @@ public class GameController : MonoBehaviour
         SwitchTurnCounter++;
         SwitchActiveValuesForCollectables();
         CameraPan.AttachedTo = milo;
+
     }
 
     /// <summary>

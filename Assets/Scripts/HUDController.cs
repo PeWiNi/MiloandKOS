@@ -5,7 +5,9 @@ using UnityEngine.UI;
 public class HUDController : MonoBehaviour
 {
     public int compareCurrentAmountOfCollectedFlowers = 0;
-    
+    GameObject lotusHUDS;
+    GameObject potionJar;
+
     int miloAwakeStatus;
     [SerializeField]
     Sprite
@@ -65,6 +67,9 @@ public class HUDController : MonoBehaviour
     void Start()
     {
         compareCurrentAmountOfCollectedFlowers = GameController.INSTANCE.CurrentCollectedLotusFlowers;
+        lotusHUDS = GameObject.FindGameObjectWithTag("LotusHUDS");
+        potionJar = GameObject.FindGameObjectWithTag("PotionJar");
+        potionJar.SetActive(false);
     }
     
     // Update is called once per frame
@@ -111,7 +116,7 @@ public class HUDController : MonoBehaviour
                     img09.sprite = collectedLotus;
                     break;
                 case 10:
-                    img10.sprite = collectedLotus;
+                    PotionCreatedHUD();
                     break;
                 default:
                     break;
@@ -148,4 +153,24 @@ public class HUDController : MonoBehaviour
         }
         UpdateHUDCollectedLotusFlowers();
     }
+
+    //Supposed to handle the potion HUD when it is created. Hiding the Lotus flower HUD and switch the potion off if your no longer playing as KOS
+    void PotionCreatedHUD()
+    {
+              
+        if (GameController.INSTANCE.IsPlayingAsMilo)
+        {
+            potionJar.SetActive(false);
+        } else
+        {
+            potionJar.SetActive(true);
+            lotusHUDS.SetActive(false);
+        }
+
+
+            
+
+    }
+
+
 }
