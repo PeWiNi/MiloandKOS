@@ -2699,7 +2699,6 @@ GameObject:
   - 136: {fileID: 469080554}
   - 54: {fileID: 469080555}
   - 114: {fileID: 469080553}
-  - 114: {fileID: 469080556}
   - 114: {fileID: 469080558}
   - 82: {fileID: 469080557}
   m_Layer: 0
@@ -2780,18 +2779,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!114 &469080556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400002, guid: 8784d67cbe5845a4ab03bf5a8a4a8122,
-    type: 2}
-  m_PrefabInternal: {fileID: 991909233}
-  m_GameObject: {fileID: 469080550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3f89247bede6104c9531d641409a142, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &469080557
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5934,7 +5921,6 @@ GameObject:
   - 114: {fileID: 784544867}
   - 114: {fileID: 784544866}
   - 114: {fileID: 784544871}
-  - 114: {fileID: 784544872}
   - 114: {fileID: 784544874}
   - 82: {fileID: 784544873}
   m_Layer: 0
@@ -6037,18 +6023,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e28256433e22214fa61ed463e5fd852, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &784544872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400008, guid: fafa22ba4cf734c498019ccd4c9c389d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1475190056}
-  m_GameObject: {fileID: 784544864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd1247c4a9341354abceeaf340c77385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!82 &784544873
@@ -14061,6 +14035,80 @@ Transform:
   - {fileID: 804247513}
   m_Father: {fileID: 1207472915}
   m_RootOrder: 2
+--- !u!1 &1334581654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1334581655}
+  - 222: {fileID: 1334581657}
+  - 114: {fileID: 1334581656}
+  - 114: {fileID: 1334581658}
+  m_Layer: 5
+  m_Name: Compass
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1334581655
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1334581654}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1743646497}
+  m_RootOrder: 13
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1334581656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1334581654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: d13687814d3f6ba44b62a9624005b3e3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1334581657
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1334581654}
+  m_HideIfInvisible: 0
+--- !u!114 &1334581658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1334581654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fac9d8f7b01a1244c90159fab878aeac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1343751826
 GameObject:
   m_ObjectHideFlags: 0
@@ -18285,6 +18333,7 @@ RectTransform:
   - {fileID: 1703793700}
   - {fileID: 724442103}
   - {fileID: 2035667460}
+  - {fileID: 1334581655}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}

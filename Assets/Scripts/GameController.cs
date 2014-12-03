@@ -54,16 +54,16 @@ public class GameController : MonoBehaviour
                 {
                     isPlayingAsMilo = true;//Reverse this variable to set the appropriate state in the SetStateForSwitching Method.
                     SetStateForSwitching();
-                    Debug.Log("Øf");
+                    Debug.Log("SetStateForSwitching, isPlayingAsMilo = " + isPlayingAsMilo);
                 } else
                 {
                     SwitchToMilo();
-                    Debug.Log("Bøh");
+                    Debug.Log("SwitchToMilo, isPlayingAsMilo = " + isPlayingAsMilo);
                 }
                 SwitchActiveValuesForCollectables();
             } else
             {
-                isPlayingAsMilo = true;
+                SwitchToMilo();
                 SwitchActiveValuesForCollectables();
             }
             hasCheckedWhoPlays = true;
@@ -341,7 +341,6 @@ public class GameController : MonoBehaviour
             milo.GetComponent<Move>().enabled = false;
             milo.GetComponent<Jump>().enabled = false;
             milo.GetComponent<ShadowEffect>().enabled = false;
-            milo.GetComponent<DesiredDirectionMilo>().enabled = false;
             miloAnim.enabled = false;
             milo.GetComponent<Rigidbody>().mass = 1000.0f;
             mainCameraSounds [3].Play();
@@ -359,7 +358,6 @@ public class GameController : MonoBehaviour
             milo.GetComponent<ShadowEffect>().enabled = true;
             miloAnim.SetFloat("Movement", 0.0f);
             miloAnim.enabled = true;
-            milo.GetComponent<DesiredDirectionMilo>().enabled = true;
             milo.GetComponent<Rigidbody>().mass = 1.0f;
 //            Destroy(milo.GetComponent<SpringJoint>());
 //            milo.rigidbody.constraints = RigidbodyConstraints.FreezeRotation;

@@ -38,20 +38,20 @@ public class LampSafeZone : MonoBehaviour
         } 
     }
 
-    void OnTriggerStay(Collider col)
-    {        
-        if (col.gameObject.name == "Milo" && Application.loadedLevelName.Equals("MazeLevel"))
-        {
-            if (!Input.anyKey && !Input.anyKeyDown && !GameController.INSTANCE.Milo.GetComponent<DesiredDirectionMilo>().HasBeenStarted)
-            {
-                GameController.INSTANCE.Milo.GetComponent<DesiredDirectionMilo>().HasBeenStarted = true;
-                GameController.INSTANCE.Milo.GetComponent<DesiredDirectionMilo>().StartAwayState();
-            } else if (Input.anyKey || Input.anyKeyDown)
-            {
-                GameController.INSTANCE.Milo.GetComponent<DesiredDirectionMilo>().CancelAwayState();
-            }
-        }
-    }
+//    void OnTriggerStay(Collider col)
+//    {        
+//        if (col.gameObject.name == "Milo" && Application.loadedLevelName.Equals("MazeLevel"))
+//        {
+//            if (!Input.anyKey && !Input.anyKeyDown && !GameController.INSTANCE.Milo.GetComponent<DesiredDirectionMilo>().HasBeenStarted)
+//            {
+//                GameController.INSTANCE.Milo.GetComponent<DesiredDirectionMilo>().HasBeenStarted = true;
+//                GameController.INSTANCE.Milo.GetComponent<DesiredDirectionMilo>().StartAwayState();
+//            } else if (Input.anyKey || Input.anyKeyDown)
+//            {
+//                GameController.INSTANCE.Milo.GetComponent<DesiredDirectionMilo>().CancelAwayState();
+//            }
+//        }
+//    }
 
     /// <summary>
     /// Prevents KOS from entering safe zones.
