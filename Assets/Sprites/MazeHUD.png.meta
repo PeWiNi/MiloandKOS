@@ -11,10 +11,12 @@ TextureImporter:
     21300012: MiloAwake60%
     21300014: MiloAwake80%
     21300016: MiloAwake100%
+    21300018: FlashLightHUD
+    21300020: LotusPotionHUD
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -34,7 +36,7 @@ TextureImporter:
   maxTextureSize: 512
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -139,6 +141,26 @@ TextureImporter:
         y: 1
         width: 167
         height: 85
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: FlashLightHUD
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 413
+        width: 206
+        height: 91
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LotusPotionHUD
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 301
+        width: 137
+        height: 210
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
