@@ -3,12 +3,12 @@ using System.Collections;
 
 public class CompassDirection : MonoBehaviour
 {
-    float normRot;
-
+    GameObject[] exits;
+    
     // Use this for initialization
     void Start()
     {
-	
+        exits = GameObject.FindGameObjectsWithTag("Exit");
     }
 	
     // Update is called once per frame
@@ -38,7 +38,8 @@ public class CompassDirection : MonoBehaviour
         GameObject[] lotusFlowers = GameController.INSTANCE.AllKOSLotus.ToArray();
         foreach (GameObject currentLotusFlower in lotusFlowers)
         {
-            Vector3 diff = (gameObject.transform.position - currentLotusFlower.transform.position);
+            Vector3 diff = (currentLotusFlower.transform.position - GameController.INSTANCE.Kos.transform.position);
+            diff.y = 0f;
             float curDistance = diff.sqrMagnitude;
             if (curDistance < distance)
             {
@@ -46,36 +47,35 @@ public class CompassDirection : MonoBehaviour
                 distance = curDistance;
             }
         }
-        Vector3 targetDir = nearestLotus.transform.position - Camera.main.transform.position;
-        targetDir.y = 0f;
-        Vector3 forward = Camera.main.transform.forward;
-        forward.y = 0f;
-        float angle = Vector3.Angle(forward, targetDir);
-        //        float angle2 = Mathf.Atan2(targetDir.z, targetDir.x);
-        transform.localRotation = Quaternion.Euler(0f, 0f, angle);
-        
-        //If the angle exceeds 90deg inverse the rotation to point correctly
-//        if (angle > 180f)
-//        {
-//            transform.localRotation = Quaternion.Euler(0f, 0f, angle);
-//        } else
-//        {
-//            transform.localRotation = Quaternion.Euler(0f, 0f, -angle);
-//        }
+        Vector3 referenceForward = GameController.INSTANCE.Kos.transform.forward;
+        Vector3 referenceRight = GameController.INSTANCE.Kos.transform.right;
+        Vector3 newDirection = nearestLotus.transform.position - GameController.INSTANCE.Kos.transform.position;
+        newDirection.y = 0f;
+        float newAngle = Vector3.Angle(newDirection, referenceForward);
+        float sign = Mathf.Sign(Vector3.Dot(-newDirection, referenceRight));
+        float finalAngle = sign * newAngle;
+        transform.rotation = Quaternion.Euler(0f, 0f, finalAngle);
     }
 
     /// <summary>
-    /// Sets the direction towards end of maze point.
+    /// Sets the direction towards the closest end of maze point.
     /// </summary>
     void SetDirectionTowardsEndOfMazePoint()
     {
         float distance = Mathf.Infinity;
         Vector3 position = transform.position;
         GameObject nearestExit = null;
-        GameObject[] exits = GameObject.FindGameObjectsWithTag("Exit");
         foreach (GameObject currentExit in exits)
         {
-            Vector3 diff = (gameObject.transform.position - currentExit.transform.position);
+            Vector3 diff;
+            if (GameController.INSTANCE.Milo.activeSelf)
+            {
+                diff = (currentExit.transform.position - GameController.INSTANCE.Milo.transform.position);
+            } else
+            {
+                diff = (currentExit.transform.position - GameController.INSTANCE.Kos.transform.position);
+            }
+            diff.y = 0f;
             float curDistance = diff.sqrMagnitude;
             if (curDistance < distance)
             {
@@ -83,22 +83,24 @@ public class CompassDirection : MonoBehaviour
                 distance = curDistance;
             }
         }
-        Vector3 targetDir = nearestExit.transform.position - Camera.main.transform.position;
-//        targetDir.y = 0f;
-//        targetDir.x = 0f;
-//        targetDir.z = 0f;
-        Vector3 camForward = Camera.main.transform.forward;
-        float angle = Vector3.Angle(targetDir, camForward);
-//        float angle2 = Mathf.Atan2(targetDir.z, targetDir.x) * Mathf.Rad2Deg;
-        
-        //If the angle exceeds 90deg inverse the rotation to point correctly
-//        if (angle >= 0 || angle < 90f || angle > 180f)
-        if (angle >= 0 && angle <= 180f)
+        Vector3 referenceForward;
+        Vector3 referenceRight;
+        Vector3 newDirection;
+        if (GameController.INSTANCE.Milo.activeSelf)
         {
-            transform.localRotation = Quaternion.Euler(0f, 0f, angle);
+            referenceForward = GameController.INSTANCE.Milo.transform.forward;
+            referenceRight = GameController.INSTANCE.Milo.transform.right;
+            newDirection = nearestExit.transform.position - GameController.INSTANCE.Milo.transform.position;
         } else
         {
-            transform.localRotation = Quaternion.Euler(0f, 0f, -angle);
+            referenceForward = GameController.INSTANCE.Milo.transform.forward;
+            referenceRight = GameController.INSTANCE.Milo.transform.right;
+            newDirection = nearestExit.transform.position - GameController.INSTANCE.Milo.transform.position;
         }
+        newDirection.y = 0f;
+        float newAngle = Vector3.Angle(newDirection, referenceForward);
+        float sign = Mathf.Sign(Vector3.Dot(-newDirection, referenceRight));
+        float finalAngle = sign * newAngle;
+        transform.rotation = Quaternion.Euler(0f, 0f, finalAngle);
     }
 }
