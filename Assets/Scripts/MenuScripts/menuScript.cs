@@ -23,13 +23,20 @@ public class menuScript : MonoBehaviour
 
     public void pickedMilo()
     { 
+		GameObject seeIfKostoggled = GameObject.Find ("kos");
+		Toggle turnKos = seeIfKostoggled.GetComponent<Toggle> ();
+		turnKos.isOn = false;
         chosenMilo = true;
     }
 
     public void pickedKOS()
     { 
-        if (endPageScript.reachedEnd)
-            chosenMilo = false;
+        if (endPageScript.reachedEnd) 
+		{ 	GameObject seeIfMilotoggled = GameObject.Find ("milo");
+			Toggle turnMilo = seeIfMilotoggled.GetComponent<Toggle> ();
+			turnMilo.isOn = false;
+			chosenMilo = false;
+		}
     }
 
     public static bool ChosenCharacter

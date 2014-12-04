@@ -13449,7 +13449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .872404814, g: 1, b: .132352948, a: 1}
+  m_Color: {r: 1, g: .964705884, b: 0, a: 1}
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -14311,10 +14311,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1743646497}
   m_RootOrder: 13
-  m_AnchorMin: {x: 1, y: .5}
-  m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: -240, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: .723740816, y: .5}
+  m_AnchorMax: {x: .763000011, y: .5}
+  m_AnchoredPosition: {x: 2.5, y: 0}
+  m_SizeDelta: {x: 83, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1334581656
 MonoBehaviour:
