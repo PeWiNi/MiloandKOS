@@ -61,4 +61,14 @@ public class PauseMenuScript : MonoBehaviour {
 	{
 		Application.Quit ();
 	}
+
+	public void settings()
+	{
+
+	}
+
+	public void restart()
+	{
+		Application.LoadLevel (Application.loadedLevel);
+	}
 }

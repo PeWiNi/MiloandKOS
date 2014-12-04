@@ -17,6 +17,8 @@ public class GameController : MonoBehaviour
     int currentCollectedLotusFlowers = 0;//The current amount collected.
     List<GameObject> allKOSLotus;
     List<GameObject> allBatteries;
+	List <GameObject> allLids;
+	List <GameObject> allParticles;
     bool hasCheckedWhoPlays;
     Texture2D backgroundKOS;
     Texture2D foregroundKOS;
@@ -290,7 +292,15 @@ public class GameController : MonoBehaviour
             allBatteries = new List<GameObject>(batteries);
             GameObject[] lotusFlowers = GameObject.FindGameObjectsWithTag("KOSLotus");
             allKOSLotus = new List<GameObject>(lotusFlowers);
+
+			GameObject[] lids=GameObject.FindGameObjectsWithTag("Lid");
+			allLids=new List<GameObject>(lids);
+
+			GameObject[] particles=GameObject.FindGameObjectsWithTag("Particle");
+			allParticles=new List<GameObject>(particles);
         } 
+
+
         if (isPlayingAsMilo)
         {
             foreach (GameObject battery in allBatteries)
@@ -301,6 +311,12 @@ public class GameController : MonoBehaviour
             {
                 lotus.SetActive(false);
             }
+			foreach(GameObject lid in allLids)
+				lid.SetActive(true);
+			foreach (GameObject particle in allParticles)
+				particle.SetActive(false);
+
+
         } else if (!isPlayingAsMilo)
         {
             foreach (GameObject lotus in allKOSLotus)
@@ -311,6 +327,11 @@ public class GameController : MonoBehaviour
             {
                 battery.SetActive(false);
             }
+
+			foreach(GameObject lid in allLids)
+				lid.SetActive(false);
+			foreach (GameObject particle in allParticles)
+				particle.SetActive(true);
         }
     }
 

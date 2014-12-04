@@ -35,8 +35,8 @@ GameObject:
   - 12: {fileID: 1200000}
   - 15: {fileID: 1500000}
   m_Layer: 0
-  m_Name: Particle System
-  m_TagString: Untagged
+  m_Name: Particles
+  m_TagString: Particle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
