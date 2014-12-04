@@ -56,6 +56,7 @@ public class KOSThrowAxe : MonoBehaviour
                     cooldown = true;
                     StartCoroutine("ShootingCooldown");
                     StartCoroutine("SpawnAxe");
+					aimingArm.renderer.enabled=false;
                 }
             }
             if (Input.GetKey(KeyCode.W) && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
@@ -134,12 +135,13 @@ public class KOSThrowAxe : MonoBehaviour
     /// </summary>
     /// <returns>The axe.</returns>
     public IEnumerator SpawnAxe()
-    {
+	{	
         anim.SetTrigger(axeThrow);
         yield return new WaitForSeconds(0.6f);//wait until the animation is done playing, then throw the axe.
         axe = Instantiate(rotatingAxePrefab, new Vector2(kos.transform.position.x + vMeasures.x, kos.transform.position.y + vMeasures.y), Quaternion.identity) as GameObject;
         axe.name = "RotatingAxe01";
         axe.rigidbody2D.AddForce(Vector2.up * angel + Vector2.right * 500, ForceMode2D.Force);
+		aimingArm.renderer.enabled = true;
     }
    
     /// <summary>
