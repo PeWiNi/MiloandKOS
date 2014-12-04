@@ -10,6 +10,7 @@ public class KOSThrowAxe : MonoBehaviour
     GameObject axe;
     GameObject aimingArm;
     bool cooldown = false;
+    bool isShooting = false;
     float angel = 300;
     Vector3 curRot;
     float maxAim = 20.0f;
@@ -37,6 +38,8 @@ public class KOSThrowAxe : MonoBehaviour
         curRot = aimingArm.transform.eulerAngles;
         maxZ = curRot.z + maxAim;
         minZ = curRot.z - maxAim;
+        aimingArm.SetActive(false);
+        // aimingArm.renderer.enabled = false;
     }
 
     // Update is called once per frame
@@ -55,15 +58,19 @@ public class KOSThrowAxe : MonoBehaviour
                     aimingArm.renderer.enabled = false;
                 }
             }
-            if (Input.GetKey(KeyCode.W) && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
+            if (Input.GetKey(KeyCode.W) && !isShooting && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
             {
+                aimingArm.SetActive(true);
                 increaseAngel();
                 increaseAimAngel();
-            }
-            if (Input.GetKey(KeyCode.S) && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
+            } else if (Input.GetKey(KeyCode.S) && !isShooting && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
             {        
+                aimingArm.SetActive(true);
                 decreaseAngel();
                 decreaseAimAngel();
+            } else if (!Input.GetKey(KeyCode.W) || !Input.GetKey(KeyCode.S))
+            {
+                aimingArm.SetActive(false);
             }
         }
     }
