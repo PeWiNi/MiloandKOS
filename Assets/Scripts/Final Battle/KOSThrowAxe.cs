@@ -13,15 +13,13 @@ public class KOSThrowAxe : MonoBehaviour
     float angel = 300;
     Vector3 curRot;
     float maxAim = 20.0f;
-    float minAim = -20.0f;
-    float aimSpeed = 2.0f;
+    float aimSpeed = 5.0f;
     float maxZ;
     float minZ;
     float decreaseMaxZ;
     float decreaseMinZ;
     float MaxAngel = 500;
     float MinAngel = 100;
-    Vector3 armAngel = new Vector3(0f, 0f, 1f); 
     Vector2 vMeasures = new Vector2(1.3f, 0.6f);//DON'T MESS WITH THESE NUMBERS!
     //Vector2 vMeasures = new Vector2(0.6f, 0.3f);//DON'T MESS WITH THESE NUMBERS!
 
@@ -38,9 +36,7 @@ public class KOSThrowAxe : MonoBehaviour
         aimingArm = GameObject.Find("KOSAimingArm");
         curRot = aimingArm.transform.eulerAngles;
         maxZ = curRot.z + maxAim;
-        minZ = curRot.z + minAim;
-        //decreaseMaxZ = curRot.z + 
-
+        minZ = curRot.z - maxAim;
     }
 
     // Update is called once per frame
@@ -56,7 +52,7 @@ public class KOSThrowAxe : MonoBehaviour
                     cooldown = true;
                     StartCoroutine("ShootingCooldown");
                     StartCoroutine("SpawnAxe");
-					aimingArm.renderer.enabled=false;
+                    aimingArm.renderer.enabled = false;
                 }
             }
             if (Input.GetKey(KeyCode.W) && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
@@ -89,7 +85,7 @@ public class KOSThrowAxe : MonoBehaviour
 
     public void increaseAimAngel()
     {
-        if (curRot.z < maxAim)
+        if (curRot.z < maxZ)
         {
             curRot.z += Input.GetAxis("Vertical") * Time.deltaTime * aimSpeed;
             curRot.z = Mathf.Clamp(curRot.z, minZ, maxZ);
@@ -99,10 +95,9 @@ public class KOSThrowAxe : MonoBehaviour
 
     public void decreaseAimAngel()
     {
-        if (curRot.z > minAim)
+        if (curRot.z > minZ)
         {
-            curRot.z -= Input.GetAxis("Vertical") * Time.deltaTime * aimSpeed;
-            Debug.Log(curRot.z);
+            curRot.z -= Input.GetAxis("Vertical") * Time.deltaTime * -aimSpeed;
             curRot.z = Mathf.Clamp(curRot.z, minZ, maxZ);
             aimingArm.transform.eulerAngles = curRot;
         }
@@ -135,13 +130,13 @@ public class KOSThrowAxe : MonoBehaviour
     /// </summary>
     /// <returns>The axe.</returns>
     public IEnumerator SpawnAxe()
-	{	
+    {	
         anim.SetTrigger(axeThrow);
         yield return new WaitForSeconds(0.6f);//wait until the animation is done playing, then throw the axe.
         axe = Instantiate(rotatingAxePrefab, new Vector2(kos.transform.position.x + vMeasures.x, kos.transform.position.y + vMeasures.y), Quaternion.identity) as GameObject;
         axe.name = "RotatingAxe01";
         axe.rigidbody2D.AddForce(Vector2.up * angel + Vector2.right * 500, ForceMode2D.Force);
-		aimingArm.renderer.enabled = true;
+        aimingArm.renderer.enabled = true;
     }
    
     /// <summary>
