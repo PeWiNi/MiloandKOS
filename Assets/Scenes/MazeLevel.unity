@@ -4036,9 +4036,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 647654487}
   - 135: {fileID: 647654486}
+  - 54: {fileID: 647654488}
   m_Layer: 0
   m_Name: CShadow
-  m_TagString: Untagged
+  m_TagString: EnemyShadow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4068,6 +4069,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1120724572}
   m_RootOrder: 0
+--- !u!54 &647654488
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: 0aefd12272ebf0249bf0d8dd90db4746,
+    type: 2}
+  m_PrefabInternal: {fileID: 1949446124}
+  m_GameObject: {fileID: 647654485}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &659942013
 GameObject:
   m_ObjectHideFlags: 0
@@ -4106,9 +4123,10 @@ GameObject:
   - 4: {fileID: 668855491}
   - 33: {fileID: 668855493}
   - 136: {fileID: 668855492}
+  - 54: {fileID: 668855494}
   m_Layer: 0
   m_Name: HShadow
-  m_TagString: Untagged
+  m_TagString: EnemyShadow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4147,6 +4165,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 564391952}
   m_GameObject: {fileID: 668855490}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &668855494
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: cbac2d92b4f8a3c4b9c3e1486b5bf313,
+    type: 2}
+  m_PrefabInternal: {fileID: 564391952}
+  m_GameObject: {fileID: 668855490}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &671353304
 Prefab:
   m_ObjectHideFlags: 0
@@ -5485,7 +5519,7 @@ GameObject:
   - 114: {fileID: 761135679}
   m_Layer: 0
   m_Name: HumanShadow
-  m_TagString: EnemyShadow
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5581,7 +5615,7 @@ GameObject:
   - 114: {fileID: 772369586}
   m_Layer: 0
   m_Name: CatShadow
-  m_TagString: EnemyShadow
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7924,7 +7958,7 @@ GameObject:
   - 114: {fileID: 871981449}
   m_Layer: 0
   m_Name: HumanShadow
-  m_TagString: EnemyShadow
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11283,7 +11317,7 @@ GameObject:
   - 114: {fileID: 1120724575}
   m_Layer: 0
   m_Name: CatShadow
-  m_TagString: EnemyShadow
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12954,9 +12988,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 1178706703}
   - 135: {fileID: 1178706704}
+  - 54: {fileID: 1178706705}
   m_Layer: 0
   m_Name: CShadow
-  m_TagString: Untagged
+  m_TagString: EnemyShadow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12986,6 +13021,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: .550000012
   m_Center: {x: 0, y: .100000001, z: 0}
+--- !u!54 &1178706705
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: 0aefd12272ebf0249bf0d8dd90db4746,
+    type: 2}
+  m_PrefabInternal: {fileID: 1609994312}
+  m_GameObject: {fileID: 1178706702}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1180737940
 GameObject:
   m_ObjectHideFlags: 0
@@ -14549,9 +14600,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 1392349015}
   - 135: {fileID: 1392349016}
+  - 54: {fileID: 1392349017}
   m_Layer: 0
   m_Name: CShadow
-  m_TagString: Untagged
+  m_TagString: EnemyShadow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14581,6 +14633,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: .550000012
   m_Center: {x: 0, y: .100000001, z: 0}
+--- !u!54 &1392349017
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: 0aefd12272ebf0249bf0d8dd90db4746,
+    type: 2}
+  m_PrefabInternal: {fileID: 1178592337}
+  m_GameObject: {fileID: 1392349014}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1397430403
 GameObject:
   m_ObjectHideFlags: 0
@@ -15226,7 +15294,7 @@ GameObject:
   - 114: {fileID: 1430563377}
   m_Layer: 0
   m_Name: HumanShadow
-  m_TagString: EnemyShadow
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16283,9 +16351,10 @@ GameObject:
   - 4: {fileID: 1518518202}
   - 33: {fileID: 1518518204}
   - 136: {fileID: 1518518203}
+  - 54: {fileID: 1518518205}
   m_Layer: 0
   m_Name: HShadow
-  m_TagString: Untagged
+  m_TagString: EnemyShadow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16324,6 +16393,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1497212391}
   m_GameObject: {fileID: 1518518201}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1518518205
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: cbac2d92b4f8a3c4b9c3e1486b5bf313,
+    type: 2}
+  m_PrefabInternal: {fileID: 1497212391}
+  m_GameObject: {fileID: 1518518201}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1520073498
 GameObject:
   m_ObjectHideFlags: 0
@@ -19733,7 +19818,7 @@ GameObject:
   - 114: {fileID: 1818284476}
   m_Layer: 0
   m_Name: CatShadow
-  m_TagString: EnemyShadow
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21337,9 +21422,10 @@ GameObject:
   - 4: {fileID: 2130261268}
   - 33: {fileID: 2130261267}
   - 136: {fileID: 2130261266}
+  - 54: {fileID: 2130261269}
   m_Layer: 0
   m_Name: HShadow
-  m_TagString: Untagged
+  m_TagString: EnemyShadow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21378,6 +21464,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 761135678}
   m_RootOrder: 0
+--- !u!54 &2130261269
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: cbac2d92b4f8a3c4b9c3e1486b5bf313,
+    type: 2}
+  m_PrefabInternal: {fileID: 1052522926}
+  m_GameObject: {fileID: 2130261265}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2134023452
 GameObject:
   m_ObjectHideFlags: 0

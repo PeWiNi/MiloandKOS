@@ -24,9 +24,10 @@ public class LampSafeZone : MonoBehaviour
         if (col.gameObject.name == "Milo")
         {
             miloFlashLight.PauseCapacity = true;
-        } else if (col.gameObject.tag == "EnemyShadow")
+        }
+        if (col.gameObject.tag == "EnemyShadow")
         {
-            Destroy(col.gameObject);
+            Destroy(col.gameObject.transform.parent.gameObject);
         }
     }
 
