@@ -63,6 +63,8 @@ public class HUDController : MonoBehaviour
     [SerializeField]
     Image
         miloAwakeHUD;
+    bool isAllFlowersSetToInactive;
+
     // Use this for initialization
     void Start()
     {
@@ -76,6 +78,7 @@ public class HUDController : MonoBehaviour
     void Update()
     {
         UpdateMiloAwakeStatusHUD();
+        PotionCreatedHUD();
     }
     
     /// <summary>
@@ -157,20 +160,24 @@ public class HUDController : MonoBehaviour
     //Supposed to handle the potion HUD when it is created. Hiding the Lotus flower HUD and switch the potion off if your no longer playing as KOS
     void PotionCreatedHUD()
     {
-              
         if (GameController.INSTANCE.IsPlayingAsMilo)
         {
             potionJar.SetActive(false);
         } else
         {
-            potionJar.SetActive(true);
-            lotusHUDS.SetActive(false);
+            if (GameController.INSTANCE.CurrentCollectedLotusFlowers == GameController.INSTANCE.MaxNeededLotusFlowers)
+            {
+                if (!isAllFlowersSetToInactive)
+                {
+                    foreach (GameObject lotusFlower in GameController.INSTANCE.AllKOSLotus)
+                    {
+                        lotusFlower.SetActive(false);
+                    }
+                    isAllFlowersSetToInactive = true;
+                }
+                potionJar.SetActive(true);
+                lotusHUDS.SetActive(false);
+            }
         }
-
-
-            
-
     }
-
-
 }

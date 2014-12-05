@@ -24,7 +24,13 @@ public class KOSCollectable : MonoBehaviour
         {
             kosSounds.PlayLotusFlowerPickUp();
             GameController.INSTANCE.AllKOSLotus.Remove(gameObject);
-            GameController.INSTANCE.CurrentCollectedLotusFlowers += 1;
+            if (GameController.INSTANCE.CurrentCollectedLotusFlowers == GameController.INSTANCE.MaxNeededLotusFlowers)
+            {
+
+            } else
+            {
+                GameController.INSTANCE.CurrentCollectedLotusFlowers += 1;
+            }
             gameObject.SetActive(false);
         }
     }

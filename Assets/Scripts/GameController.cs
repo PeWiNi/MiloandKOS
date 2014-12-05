@@ -8,23 +8,25 @@ public class GameController : MonoBehaviour
     static GameController _INSTANCE;
     GameObject milo;
     GameObject kos;
+    GameObject miloEyes;
     Flashlight miloFlashlightComponent;
     bool isPlayingAsMilo;
-    float miloAwakeTimer = 0.0f;
+    public float miloAwakeTimer = 0.0f;
     int miloAwakeTimerMax = 360;
     int switchCounter = 0;
     int maxNeededLotusFlowers = 10;//The maximum number needed to proceed the
-    int currentCollectedLotusFlowers = 0;//The current amount collected.
+    public int currentCollectedLotusFlowers = 0;//The current amount collected.
     List<GameObject> allKOSLotus;
     List<GameObject> allBatteries;
-	List <GameObject> allLids;
-	List <GameObject> allParticles;
+    List <GameObject> allLids;
+    List <GameObject> allParticles;
     bool hasCheckedWhoPlays;
     Texture2D backgroundKOS;
     Texture2D foregroundKOS;
     Rect box = new Rect(10, 10, 100, 20);
     Animator miloAnim;
     AudioSource[] mainCameraSounds;
+
 
     // This happens before Start
     void Awake()
@@ -35,6 +37,7 @@ public class GameController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        miloEyes = GameObject.FindGameObjectWithTag("MiloEyes");
         miloFlashlightComponent = GameObject.Find("Flashlight").GetComponent<Flashlight>();
         milo = GameObject.Find("Milo");//Find Milo.
         kos = GameObject.Find("KOSMinotaur");//Find KOS.
@@ -249,6 +252,7 @@ public class GameController : MonoBehaviour
         SwitchActiveValuesForCollectables();
         StartCoroutine(MiloAwakeCountdown());
         CameraPan.AttachedTo = kos;
+        miloEyes.SetActive(true);
     }
 
     /// <summary>
@@ -264,7 +268,7 @@ public class GameController : MonoBehaviour
         SwitchTurnCounter++;
         SwitchActiveValuesForCollectables();
         CameraPan.AttachedTo = milo;
-
+        miloEyes.SetActive(false);
     }
 
     /// <summary>
@@ -292,15 +296,11 @@ public class GameController : MonoBehaviour
             allBatteries = new List<GameObject>(batteries);
             GameObject[] lotusFlowers = GameObject.FindGameObjectsWithTag("KOSLotus");
             allKOSLotus = new List<GameObject>(lotusFlowers);
-
-			GameObject[] lids=GameObject.FindGameObjectsWithTag("Lid");
-			allLids=new List<GameObject>(lids);
-
-			GameObject[] particles=GameObject.FindGameObjectsWithTag("Particle");
-			allParticles=new List<GameObject>(particles);
+            GameObject[] lids = GameObject.FindGameObjectsWithTag("Lid");
+            allLids = new List<GameObject>(lids);
+            GameObject[] particles = GameObject.FindGameObjectsWithTag("Particle");
+            allParticles = new List<GameObject>(particles);
         } 
-
-
         if (isPlayingAsMilo)
         {
             foreach (GameObject battery in allBatteries)
@@ -311,12 +311,10 @@ public class GameController : MonoBehaviour
             {
                 lotus.SetActive(false);
             }
-			foreach(GameObject lid in allLids)
-				lid.SetActive(true);
-			foreach (GameObject particle in allParticles)
-				particle.SetActive(false);
-
-
+            foreach (GameObject lid in allLids)
+                lid.SetActive(true);
+            foreach (GameObject particle in allParticles)
+                particle.SetActive(false);
         } else if (!isPlayingAsMilo)
         {
             foreach (GameObject lotus in allKOSLotus)
@@ -327,11 +325,10 @@ public class GameController : MonoBehaviour
             {
                 battery.SetActive(false);
             }
-
-			foreach(GameObject lid in allLids)
-				lid.SetActive(false);
-			foreach (GameObject particle in allParticles)
-				particle.SetActive(true);
+            foreach (GameObject lid in allLids)
+                lid.SetActive(false);
+            foreach (GameObject particle in allParticles)
+                particle.SetActive(true);
         }
     }
 

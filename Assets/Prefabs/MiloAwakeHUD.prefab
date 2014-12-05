@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11400000}
   m_Layer: 5
   m_Name: MiloAwakeHUD
-  m_TagString: Untagged
+  m_TagString: MiloEyes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,10 +57,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_AnchorMin: {x: .200000003, y: 0}
-  m_AnchorMax: {x: .319999993, y: .0900000036}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: .410000026, y: .860000014}
+  m_AnchorMax: {x: .569999993, y: .99000001}
+  m_AnchoredPosition: {x: -.5, y: -.5}
+  m_SizeDelta: {x: -1, y: -1}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &100100000
 Prefab:
