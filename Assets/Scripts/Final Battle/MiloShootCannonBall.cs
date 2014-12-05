@@ -55,17 +55,17 @@ public class MiloShootCannonBall : MonoBehaviour
                     aimingArrow.renderer.enabled = false;
                 }
             }
-            if (Input.GetKey(KeyCode.W) && !isShooting && Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) && !isShooting && Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
             {
                 aimingArrow.SetActive(true);
                 increaseAngel();
                 increaseAimAngel();
-            } else if (Input.GetKey(KeyCode.S) && !isShooting && Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
+            } else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) && !isShooting && Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
             {    
                 aimingArrow.SetActive(true);
                 decreaseAngel();
                 decreaseAimAngel();
-            } else if (!Input.GetKey(KeyCode.W) || !Input.GetKey(KeyCode.S))
+            } else if (!Input.GetKey(KeyCode.W) || !Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow))
             {
                 aimingArrow.SetActive(false);
             }

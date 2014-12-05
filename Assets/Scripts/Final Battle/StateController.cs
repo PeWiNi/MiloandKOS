@@ -53,9 +53,6 @@ public class StateController : MonoBehaviour
             }
             consecutiveHitsText.text = actualText + consecutiveHitsValue + "/" + consecutiveHitsMax;
             ChangeToEndingScene();
-            Debug.Log("hitsTakenValue:" + "" + kosHitsTakenValue.ToString());
-            Debug.Log("hitsTakenValue:" + "" + miloHitsTakenValue.ToString());
-            Debug.Log("consecutiveHitsValue:" + "" + consecutiveHitsValue.ToString());
         }
     }
     
@@ -63,13 +60,14 @@ public class StateController : MonoBehaviour
     {
         if (Application.loadedLevelName.Equals(nextSceneAsKOS))
         {
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) 
+                || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
             {
                 kos.transform.Translate(Input.GetAxis("Horizontal") * speed * Time.deltaTime, 0.0f, 0.0f);
             }
         } else if (Application.loadedLevelName.Equals(nextSceneAsMilo))
         {
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
             {
                 milo.transform.Translate(Input.GetAxis("Horizontal") * speed * Time.deltaTime, 0.0f, 0.0f);
             }

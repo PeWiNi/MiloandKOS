@@ -58,17 +58,17 @@ public class KOSThrowAxe : MonoBehaviour
                     aimingArm.renderer.enabled = false;
                 }
             }
-            if (Input.GetKey(KeyCode.W) && !isShooting && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) && !isShooting && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
             {
                 aimingArm.SetActive(true);
                 increaseAngel();
                 increaseAimAngel();
-            } else if (Input.GetKey(KeyCode.S) && !isShooting && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
+            } else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) && !isShooting && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
             {        
                 aimingArm.SetActive(true);
                 decreaseAngel();
                 decreaseAimAngel();
-            } else if (!Input.GetKey(KeyCode.W) || !Input.GetKey(KeyCode.S))
+            } else if (!Input.GetKey(KeyCode.W) || !Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow))
             {
                 aimingArm.SetActive(false);
             }
