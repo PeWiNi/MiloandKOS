@@ -17,6 +17,7 @@ public class ShadowEffect : MonoBehaviour
             ShadowSlowEffect();
             StartCoroutine("SpeedTime");
             Destroy(col.gameObject.transform.parent.gameObject);
+            MazeLevelDialogues.MiloHasBeenStruckedByShadow = true;
         }
 
         if (col.gameObject.name == "CShadow")
@@ -24,6 +25,7 @@ public class ShadowEffect : MonoBehaviour
             ShadowSlowEffect();
             StartCoroutine("SpeedTime");
             Destroy(col.gameObject.transform.parent.gameObject);
+            MazeLevelDialogues.MiloHasBeenStruckedByShadow = true;
         }
     }
 

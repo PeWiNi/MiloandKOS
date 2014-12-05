@@ -21,9 +21,9 @@ public class CompassDirection : MonoBehaviour
             && GameController.INSTANCE.Kos.activeSelf)
         {
             SetDirectionTowardsNearestLotusFlower();
-        } else if (GameController.INSTANCE.IsPlayingAsMilo && GameController.INSTANCE.CurrentCollectedLotusFlowers == GameController.INSTANCE.MaxNeededLotusFlowers)
+        } else if (!GameController.INSTANCE.IsPlayingAsMilo && GameController.INSTANCE.CurrentCollectedLotusFlowers == GameController.INSTANCE.MaxNeededLotusFlowers)
         {
-            SetDirectionTowardsEndOfMazePoint();
+            SetDirectionTowardsMilo();
         }
     }
 
@@ -97,6 +97,21 @@ public class CompassDirection : MonoBehaviour
             referenceRight = GameController.INSTANCE.Milo.transform.right;
             newDirection = nearestExit.transform.position - GameController.INSTANCE.Milo.transform.position;
         }
+        newDirection.y = 0f;
+        float newAngle = Vector3.Angle(newDirection, referenceForward);
+        float sign = Mathf.Sign(Vector3.Dot(-newDirection, referenceRight));
+        float finalAngle = sign * newAngle;
+        transform.rotation = Quaternion.Euler(0f, 0f, finalAngle);
+    }
+
+    /// <summary>
+    /// Sets the direction towards milo.
+    /// </summary>
+    void SetDirectionTowardsMilo()
+    {
+        Vector3 referenceForward = GameController.INSTANCE.Kos.transform.forward;
+        Vector3 referenceRight = GameController.INSTANCE.Kos.transform.right;
+        Vector3 newDirection = GameController.INSTANCE.Milo.transform.position - GameController.INSTANCE.Kos.transform.position;
         newDirection.y = 0f;
         float newAngle = Vector3.Angle(newDirection, referenceForward);
         float sign = Mathf.Sign(Vector3.Dot(-newDirection, referenceRight));

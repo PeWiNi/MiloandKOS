@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour
     int miloAwakeTimerMax = 360;
     int switchCounter = 0;
     int maxNeededLotusFlowers = 10;//The maximum number needed to proceed the
-    public int currentCollectedLotusFlowers = 0;//The current amount collected.
+    int currentCollectedLotusFlowers = 0;//The current amount collected.
     List<GameObject> allKOSLotus;
     List<GameObject> allBatteries;
     List <GameObject> allLids;
@@ -355,13 +355,15 @@ public class GameController : MonoBehaviour
         if (isPlayingAsMilo)
         {
             SwitchToKOS();
-            milo.transform.rotation = Quaternion.Euler(270.0f, 0.0f, 0.0f);
+            milo.transform.rotation = Quaternion.Euler(280.0f, 0.0f, 0.0f);
+            milo.transform.position = new Vector3(milo.transform.position.x, 0.02f, milo.transform.position.z);
             milo.GetComponent<Move>().enabled = false;
             milo.GetComponent<Jump>().enabled = false;
             milo.GetComponent<ShadowEffect>().enabled = false;
             miloAnim.enabled = false;
-            milo.GetComponent<Rigidbody>().mass = 1000.0f;
-            mainCameraSounds [3].Play();
+            Destroy(milo.GetComponent<Rigidbody>());
+            milo.GetComponent<CapsuleCollider>().isTrigger = true;
+            mainCameraSounds [4].Play();
 //            milo.AddComponent<SpringJoint>();
 //            milo.GetComponent<SpringJoint>().connectedBody = kos.rigidbody;
 //            milo.GetComponent<SpringJoint>().anchor = new Vector3(0.0f, 0.0f, 0.0f);
@@ -376,11 +378,13 @@ public class GameController : MonoBehaviour
             milo.GetComponent<ShadowEffect>().enabled = true;
             miloAnim.SetFloat("Movement", 0.0f);
             miloAnim.enabled = true;
-            milo.GetComponent<Rigidbody>().mass = 1.0f;
+            milo.GetComponent<CapsuleCollider>().isTrigger = false;
+            milo.AddComponent<Rigidbody>();
+            milo.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
 //            Destroy(milo.GetComponent<SpringJoint>());
 //            milo.rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
+            mainCameraSounds [3].Play();
             SwitchToMilo();
-            mainCameraSounds [4].Play();
         }
     }
 }
