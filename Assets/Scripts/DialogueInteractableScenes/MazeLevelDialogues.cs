@@ -59,12 +59,11 @@ public class MazeLevelDialogues : MonoBehaviour
     
     void Sequence()
     {
-        if (GameController.INSTANCE.SwitchTurnCounter % 2 != 0)// SwitchTurnCounter is Odd, active Character is KOS.
+        if (GameController.INSTANCE.SwitchTurnCounter % 2 == 0)// SwitchTurnCounter is Odd, active Character is KOS.
         {
-
         } else// SwitchTurnCounter is Even, active Character is Milo.
         {
-            if (GameController.INSTANCE.IsPlayingAsMilo && !hasPlayedMomMiloPicksUpBattery)
+            if (GameController.INSTANCE.IsPlayingAsMilo && GameController.INSTANCE.Milo.activeSelf && !hasPlayedMomMiloPicksUpBattery)
             {
                 hasPlayedMomMiloPicksUpBattery = true;
                 Mom_MiloPicksUpBattery();
