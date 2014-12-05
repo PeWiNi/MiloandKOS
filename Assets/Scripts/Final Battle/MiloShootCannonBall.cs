@@ -8,8 +8,15 @@ public class MiloShootCannonBall : MonoBehaviour
     int shootCannonBall;
     GameObject milo;
     GameObject cannonBall;
+    GameObject aimingArrow;
     bool cooldown = false;
+    bool isShooting = false;
     float angel = 300;
+    Vector3 curRot;
+    float maxAim = 20.0f;
+    float aimSpeed = 15.0f;
+    float maxZ;
+    float minZ;
     float MaxAngel = 500;
     float MinAngel = 100;
     Vector2 vMeasures = new Vector2(2.71f, 0.0f);//DON'T MESS WITH THESE NUMBERS!
@@ -25,6 +32,11 @@ public class MiloShootCannonBall : MonoBehaviour
     void Start()
     {
         milo = GameObject.Find("MiloCannon01");
+        aimingArrow = GameObject.Find("MiloAimingArrow");
+        curRot = aimingArrow.transform.eulerAngles;
+        maxZ = curRot.z + maxAim;
+        minZ = curRot.z - maxAim;
+        aimingArrow.SetActive(false);
     }
     
     // Update is called once per frame
@@ -40,15 +52,22 @@ public class MiloShootCannonBall : MonoBehaviour
                     cooldown = true;
                     StartCoroutine("ShootingCooldown");
                     StartCoroutine("SpawnCannonball");
+                    aimingArrow.renderer.enabled = false;
                 }
             }
-            if (Input.GetKey(KeyCode.W) && Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
+            if (Input.GetKey(KeyCode.W) && !isShooting && Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
             {
+                aimingArrow.SetActive(true);
                 increaseAngel();
-            }
-            if (Input.GetKey(KeyCode.S) && Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
-            {        
+                increaseAimAngel();
+            } else if (Input.GetKey(KeyCode.S) && !isShooting && Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
+            {    
+                aimingArrow.SetActive(true);
                 decreaseAngel();
+                decreaseAimAngel();
+            } else if (!Input.GetKey(KeyCode.W) || !Input.GetKey(KeyCode.S))
+            {
+                aimingArrow.SetActive(false);
             }
         }
     }
@@ -91,6 +110,32 @@ public class MiloShootCannonBall : MonoBehaviour
     } 
 
     /// <summary>
+    /// Increases the aim angel.
+    /// </summary>
+    public void increaseAimAngel()
+    {
+        if (curRot.z > minZ)
+        {
+            curRot.z += -Input.GetAxis("Vertical") * Time.deltaTime * aimSpeed;
+            curRot.z = Mathf.Clamp(curRot.z, minZ, maxZ);
+            aimingArrow.transform.eulerAngles = curRot;
+        }
+    }
+    
+    /// <summary>
+    /// Decreases the aim angel.
+    /// </summary>
+    public void decreaseAimAngel()
+    {
+        if (curRot.z < maxZ)
+        {
+            curRot.z -= -Input.GetAxis("Vertical") * Time.deltaTime * -aimSpeed;
+            curRot.z = Mathf.Clamp(curRot.z, minZ, maxZ);
+            aimingArrow.transform.eulerAngles = curRot;
+        }
+    }
+
+    /// <summary>
     /// Spawns the cannonball.
     /// </summary>
     /// <returns>The cannonball.</returns>
@@ -101,6 +146,7 @@ public class MiloShootCannonBall : MonoBehaviour
         cannonBall = Instantiate(rotatingCanonBallPrefab, new Vector2(milo.transform.position.x - vMeasures.x, milo.transform.position.y - vMeasures.y), Quaternion.identity) as GameObject;
         cannonBall.name = "CannonBall01";
         cannonBall.rigidbody2D.AddForce(Vector2.up * angel + Vector2.right * -800, ForceMode2D.Force);
+        aimingArrow.renderer.enabled = true;
     }
 
     /// <summary>

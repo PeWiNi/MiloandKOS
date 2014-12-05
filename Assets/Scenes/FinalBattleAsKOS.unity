@@ -83,11 +83,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: d7fb7b28a6d9ea245b073d90ea209d94, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 6.92199993
+      value: -2.75519991
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7fb7b28a6d9ea245b073d90ea209d94, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.68219995
+      value: .144840002
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7fb7b28a6d9ea245b073d90ea209d94, type: 2}
       propertyPath: m_LocalPosition.z
@@ -115,7 +115,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7fb7b28a6d9ea245b073d90ea209d94, type: 2}
-  m_RootGameObject: {fileID: 349677695}
+  m_RootGameObject: {fileID: 1430834951}
   m_IsPrefabParent: 0
   m_IsExploded: 1
 --- !u!1 &164113433
@@ -365,14 +365,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 349677700}
   - 212: {fileID: 349677699}
-  - 95: {fileID: 349677698}
-  - 114: {fileID: 349677697}
-  - 50: {fileID: 349677703}
-  - 60: {fileID: 349677696}
-  - 61: {fileID: 349677702}
-  - 61: {fileID: 349677701}
   m_Layer: 0
-  m_Name: MiloCannon01
+  m_Name: MiloAimingArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -384,7 +378,7 @@ PolygonCollider2D:
   m_PrefabParentObject: {fileID: 6000000, guid: d7fb7b28a6d9ea245b073d90ea209d94,
     type: 2}
   m_PrefabInternal: {fileID: 87429510}
-  m_GameObject: {fileID: 349677695}
+  m_GameObject: {fileID: 1430834951}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -470,7 +464,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 11400000, guid: d7fb7b28a6d9ea245b073d90ea209d94,
     type: 2}
   m_PrefabInternal: {fileID: 87429510}
-  m_GameObject: {fileID: 349677695}
+  m_GameObject: {fileID: 1430834951}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7758cf0343513014fa9a8fc4fbd1df25, type: 3}
@@ -485,7 +479,7 @@ Animator:
   m_PrefabParentObject: {fileID: 9500000, guid: d7fb7b28a6d9ea245b073d90ea209d94,
     type: 2}
   m_PrefabInternal: {fileID: 87429510}
-  m_GameObject: {fileID: 349677695}
+  m_GameObject: {fileID: 1430834951}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 399875fa47d94f44d8d4e84cd6d16c2b, type: 2}
@@ -515,7 +509,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: 6b1a195ccf8979e4fb91bf7d621b0a27, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a60cdc5f85c8b5147b4ad7f95190d9c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &349677700
 Transform:
@@ -524,10 +518,10 @@ Transform:
   m_PrefabInternal: {fileID: 87429510}
   m_GameObject: {fileID: 349677695}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.92199993, y: -1.68219995, z: 0}
+  m_LocalPosition: {x: -2.75519991, y: .144840002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1430834953}
   m_RootOrder: 0
 --- !u!61 &349677701
 BoxCollider2D:
@@ -535,31 +529,31 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 6100000, guid: d7fb7b28a6d9ea245b073d90ea209d94,
     type: 2}
   m_PrefabInternal: {fileID: 87429510}
-  m_GameObject: {fileID: 349677695}
+  m_GameObject: {fileID: 1430834951}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 5, y: .100000001}
-  m_Center: {x: 0, y: -2.5999999}
+  m_Size: {x: .100000001, y: 5}
+  m_Center: {x: 2.5, y: 0}
 --- !u!61 &349677702
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6100002, guid: d7fb7b28a6d9ea245b073d90ea209d94,
     type: 2}
   m_PrefabInternal: {fileID: 87429510}
-  m_GameObject: {fileID: 349677695}
+  m_GameObject: {fileID: 1430834951}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .100000001, y: 5}
-  m_Center: {x: 2.5, y: 0}
+  m_Size: {x: 5, y: .100000001}
+  m_Center: {x: 0, y: -2.5999999}
 --- !u!50 &349677703
 Rigidbody2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 5000000, guid: d7fb7b28a6d9ea245b073d90ea209d94,
     type: 2}
   m_PrefabInternal: {fileID: 87429510}
-  m_GameObject: {fileID: 349677695}
+  m_GameObject: {fileID: 1430834951}
   m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
@@ -1391,6 +1385,64 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!1 &1430834951
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100002, guid: d7fb7b28a6d9ea245b073d90ea209d94, type: 2}
+  m_PrefabInternal: {fileID: 87429510}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1430834953}
+  - 212: {fileID: 1430834952}
+  - 95: {fileID: 349677698}
+  - 114: {fileID: 349677697}
+  - 50: {fileID: 349677703}
+  - 60: {fileID: 349677696}
+  - 61: {fileID: 349677701}
+  - 61: {fileID: 349677702}
+  m_Layer: 0
+  m_Name: MiloCannon01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1430834952
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200002, guid: d7fb7b28a6d9ea245b073d90ea209d94,
+    type: 2}
+  m_PrefabInternal: {fileID: 87429510}
+  m_GameObject: {fileID: 1430834951}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300002, guid: 6b1a195ccf8979e4fb91bf7d621b0a27, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &1430834953
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400002, guid: d7fb7b28a6d9ea245b073d90ea209d94, type: 2}
+  m_PrefabInternal: {fileID: 87429510}
+  m_GameObject: {fileID: 1430834951}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.92199993, y: -1.68219995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 349677700}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!1001 &1515915565
 Prefab:
   m_ObjectHideFlags: 0

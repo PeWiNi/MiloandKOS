@@ -130,7 +130,7 @@ public class StateController : MonoBehaviour
     /// </summary>
     IEnumerator MiloShootAtKOS()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2f);
         StartCoroutine(milo.GetComponent<MiloShootCannonBall>().SpawnCannonball());
         miloShooting = !miloShooting;
     }

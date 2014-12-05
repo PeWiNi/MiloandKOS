@@ -14,7 +14,7 @@ public class KOSThrowAxe : MonoBehaviour
     float angel = 300;
     Vector3 curRot;
     float maxAim = 20.0f;
-    float aimSpeed = 5.0f;
+    float aimSpeed = 15.0f;
     float maxZ;
     float minZ;
     float decreaseMaxZ;
