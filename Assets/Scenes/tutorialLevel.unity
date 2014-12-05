@@ -6774,7 +6774,6 @@ GameObject:
   - 114: {fileID: 474574078}
   - 114: {fileID: 474574077}
   - 114: {fileID: 474574076}
-  - 114: {fileID: 474574082}
   - 114: {fileID: 474574085}
   - 82: {fileID: 474574084}
   - 65: {fileID: 474574083}
@@ -6881,18 +6880,6 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &474574082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400008, guid: fafa22ba4cf734c498019ccd4c9c389d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1755128617}
-  m_GameObject: {fileID: 474574074}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd1247c4a9341354abceeaf340c77385, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &474574083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24676,7 +24663,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Hurry home before it gets too dark Milo.\nJust run through the park, be
-    carefull though, \nyou will never know what lurks in the corners"
+    careful though, \nyou will never know what lurks in the corners."
 --- !u!222 &1817121018
 CanvasRenderer:
   m_ObjectHideFlags: 0
