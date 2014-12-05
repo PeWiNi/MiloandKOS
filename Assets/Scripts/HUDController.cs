@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class HUDController : MonoBehaviour
 {
+    public AudioClip potionSound;
     public int compareCurrentAmountOfCollectedFlowers = 0;
     GameObject lotusHUDS;
     GameObject potionJar;
@@ -120,6 +121,7 @@ public class HUDController : MonoBehaviour
                     break;
                 case 10:
                     PotionCreatedHUD();
+                    potionJar.GetComponent<AudioSource>().PlayOneShot(potionSound, 1);
                     break;
                 default:
                     break;
@@ -177,6 +179,7 @@ public class HUDController : MonoBehaviour
                 }
                 potionJar.SetActive(true);
                 lotusHUDS.SetActive(false);
+
             }
         }
     }

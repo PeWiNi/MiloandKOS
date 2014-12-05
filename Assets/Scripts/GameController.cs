@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour
     int miloAwakeTimerMax = 360;
     int switchCounter = 0;
     int maxNeededLotusFlowers = 10;//The maximum number needed to proceed the
-    int currentCollectedLotusFlowers = 0;//The current amount collected.
+    public int currentCollectedLotusFlowers = 0;//The current amount collected.
     List<GameObject> allKOSLotus;
     List<GameObject> allBatteries;
     List <GameObject> allLids;
