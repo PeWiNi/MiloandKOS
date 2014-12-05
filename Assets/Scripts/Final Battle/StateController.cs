@@ -14,6 +14,10 @@ public class StateController : MonoBehaviour
     GameObject kos;
     Text consecutiveHitsText;
     string actualText;
+    static int kosHitsTakenMax = 10;
+    static int kosHitsTakenValue = 0;
+    static int miloHitsTakenMax = 10;
+    static int miloHitsTakenValue = 0;
     static int consecutiveHitsMax = 3;
     static int consecutiveHitsValue = 0;
     const float speed = 2.0f;
@@ -49,6 +53,9 @@ public class StateController : MonoBehaviour
             }
             consecutiveHitsText.text = actualText + consecutiveHitsValue + "/" + consecutiveHitsMax;
             ChangeToEndingScene();
+            Debug.Log("hitsTakenValue:" + "" + kosHitsTakenValue.ToString());
+            Debug.Log("hitsTakenValue:" + "" + miloHitsTakenValue.ToString());
+            Debug.Log("consecutiveHitsValue:" + "" + consecutiveHitsValue.ToString());
         }
     }
     
@@ -110,6 +117,62 @@ public class StateController : MonoBehaviour
     }
 
     /// <summary>
+    /// Gets the KOS hits taken max.
+    /// </summary>
+    /// <value>The KOS hits taken max.</value>
+    public static int KOSHitsTakenMax
+    {
+        get
+        {
+            return kosHitsTakenMax;
+        }
+    }
+
+    /// <summary>
+    /// Gets or sets the KOS hits taken value.
+    /// </summary>
+    /// <value>The KOS hits taken value.</value>
+    public static int KOSHitsTakenValue
+    {
+        get
+        {
+            return kosHitsTakenValue;
+        }
+        set
+        {
+            kosHitsTakenValue = value;
+        }
+    }
+
+    /// <summary>
+    /// Gets the milo hits taken max.
+    /// </summary>
+    /// <value>The milo hits taken max.</value>
+    public static int MiloHitsTakenMax
+    {
+        get
+        {
+            return miloHitsTakenMax;
+        }
+    }
+
+    /// <summary>
+    /// Gets or sets the milo hits taken value.
+    /// </summary>
+    /// <value>The milo hits taken value.</value>
+    public static int MiloHitsTakenValue
+    {
+        get
+        {
+            return miloHitsTakenValue;
+        }
+        set
+        {
+            miloHitsTakenValue = value;
+        }
+    }
+
+    /// <summary>
     /// Gets or sets a value indicating whether this instance has dialogues been started.
     /// </summary>
     /// <value><c>true</c> if this instance has dialogues been started; otherwise, <c>false</c>.</value>
@@ -156,6 +219,15 @@ public class StateController : MonoBehaviour
         } else if (Application.loadedLevelName.Equals(nextSceneAsMilo) && !kosShooting && consecutiveHitsValue >= consecutiveHitsMax)
         {
             Application.LoadLevel(endingCutSecene);
+        } 
+        if (kosHitsTakenValue >= kosHitsTakenMax)
+        {
+            Application.LoadLevel(endingCutSecene);
+        }
+        if (miloHitsTakenValue >= miloHitsTakenMax)
+        {
+            Application.LoadLevel(endingCutSecene);
         }
     }
+   
 }
