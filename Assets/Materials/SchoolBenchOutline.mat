@@ -24,7 +24,7 @@ Material:
         first:
           name: _DiffMap3
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: efb3536d1c0a8d94aa8e420ad57b2de7, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:

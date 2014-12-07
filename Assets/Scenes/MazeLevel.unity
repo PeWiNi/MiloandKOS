@@ -18,7 +18,7 @@ RenderSettings:
   m_FogDensity: .200000003
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientLight: {r: .0980392173, g: .0980392173, b: .0980392173, a: 1}
+  m_AmbientLight: {r: .647058845, g: .647058845, b: .647058845, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: .5
   m_FlareStrength: 1
@@ -144,7 +144,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -230,7 +230,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -389,7 +389,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 48299006}
-  m_HideIfInvisible: 0
 --- !u!1 &82322797
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,7 +617,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -704,7 +703,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -813,7 +812,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 170369742}
-  m_HideIfInvisible: 0
 --- !u!1 &183275674
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,7 +909,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -997,7 +995,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1176,7 +1174,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 231385704}
-  m_HideIfInvisible: 0
 --- !u!1 &237463043
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,7 +1244,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1333,7 +1330,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1415,7 +1412,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 272814087}
-  m_HideIfInvisible: 0
 --- !u!1 &276444782
 GameObject:
   m_ObjectHideFlags: 0
@@ -1480,7 +1476,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1231183775}
   m_GameObject: {fileID: 276444782}
-  m_HideIfInvisible: 0
 --- !u!1 &284265140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1551,7 +1546,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1873,7 +1868,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1959,7 +1954,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -2095,7 +2090,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1894054168}
   m_GameObject: {fileID: 406352651}
-  m_HideIfInvisible: 0
 --- !u!1 &411133800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2470,7 +2464,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -2556,7 +2550,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -2668,7 +2662,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 467678166}
-  m_HideIfInvisible: 0
 --- !u!1 &468895426
 GameObject:
   m_ObjectHideFlags: 0
@@ -3027,7 +3020,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -3138,7 +3131,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 809994208}
   m_GameObject: {fileID: 488639485}
-  m_HideIfInvisible: 0
 --- !u!1001 &495078270
 Prefab:
   m_ObjectHideFlags: 0
@@ -3182,6 +3174,258 @@ Prefab:
       propertyPath: m_Name
       value: benchLayout
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300002, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300004, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300006, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300008, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300010, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300012, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300014, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300016, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300018, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300020, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300022, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300024, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300026, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300028, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300030, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300032, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300034, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300036, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300038, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300040, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300042, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300044, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300046, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300048, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300050, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300052, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300054, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300056, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300058, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300060, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300062, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300064, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300066, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300068, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300070, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300072, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300074, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300076, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300078, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300080, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300082, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300084, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300086, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300088, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300090, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300092, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300094, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300096, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300098, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300100, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300102, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300104, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300106, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300108, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300110, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300112, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300114, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300116, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300118, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300120, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300122, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
+    - target: {fileID: 2300124, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54d8868d6cc0cc84f93252ddeefb0665, type: 2}
   m_RootGameObject: {fileID: 1376420572}
@@ -3489,7 +3733,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -3575,7 +3819,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -3857,7 +4101,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -3943,7 +4187,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -5771,7 +6015,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -5857,7 +6101,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -6187,7 +6431,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -6273,7 +6517,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -6359,7 +6603,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -6437,7 +6681,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 809213975}
-  m_HideIfInvisible: 0
 --- !u!82 &809213979
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6680,7 +6923,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 133975780}
   m_GameObject: {fileID: 814521778}
-  m_HideIfInvisible: 0
 --- !u!224 &814521781
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7889,7 +8131,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -8128,7 +8370,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -8426,7 +8668,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -8512,7 +8754,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -8598,7 +8840,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -8708,7 +8950,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 943623304}
-  m_HideIfInvisible: 0
 --- !u!1 &954157946
 GameObject:
   m_ObjectHideFlags: 0
@@ -9954,7 +10195,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -10166,7 +10407,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -10298,7 +10539,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1647374939}
   m_GameObject: {fileID: 993023114}
-  m_HideIfInvisible: 0
 --- !u!1001 &1031424376
 Prefab:
   m_ObjectHideFlags: 0
@@ -10514,7 +10754,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -10596,7 +10836,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1070704985}
-  m_HideIfInvisible: 0
 --- !u!1 &1083482147
 GameObject:
   m_ObjectHideFlags: 0
@@ -10713,7 +10952,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1083482147}
-  m_HideIfInvisible: 0
 --- !u!1001 &1084134227
 Prefab:
   m_ObjectHideFlags: 0
@@ -10836,7 +11074,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -10922,7 +11160,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -11002,7 +11240,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 733819603}
   m_GameObject: {fileID: 1107115799}
-  m_HideIfInvisible: 0
 --- !u!1 &1107511902
 GameObject:
   m_ObjectHideFlags: 0
@@ -11182,7 +11419,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1111306314}
-  m_HideIfInvisible: 0
 --- !u!1 &1112053927
 GameObject:
   m_ObjectHideFlags: 0
@@ -11326,7 +11562,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -11546,7 +11782,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1849950452}
   m_GameObject: {fileID: 1143191084}
-  m_HideIfInvisible: 0
 --- !u!1 &1157464560
 GameObject:
   m_ObjectHideFlags: 0
@@ -13146,7 +13381,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -13232,7 +13467,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -13309,7 +13544,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1203226339}
-  m_HideIfInvisible: 0
 --- !u!1 &1203654578
 GameObject:
   m_ObjectHideFlags: 0
@@ -13426,7 +13660,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1203654578}
-  m_HideIfInvisible: 0
 --- !u!1 &1207472914
 GameObject:
   m_ObjectHideFlags: 0
@@ -13527,7 +13760,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -14002,6 +14235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
+  m_DragThreshold: 5
 --- !u!4 &1264414009
 Transform:
   m_ObjectHideFlags: 0
@@ -14084,7 +14318,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -14218,7 +14452,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1334581654}
-  m_HideIfInvisible: 0
 --- !u!114 &1334581658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14300,7 +14533,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -14719,7 +14952,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1407975848}
-  m_HideIfInvisible: 0
 --- !u!1001 &1416067083
 Prefab:
   m_ObjectHideFlags: 0
@@ -14838,7 +15070,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -15456,7 +15688,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 884916610}
   m_GameObject: {fileID: 1441791423}
-  m_HideIfInvisible: 0
 --- !u!1 &1455457520
 GameObject:
   m_ObjectHideFlags: 0
@@ -15527,7 +15758,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -15613,7 +15844,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -15699,7 +15930,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -15785,7 +16016,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -16003,7 +16234,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -16140,7 +16371,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -16334,7 +16565,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1531951794}
-  m_HideIfInvisible: 0
 --- !u!1 &1533300694
 GameObject:
   m_ObjectHideFlags: 0
@@ -16405,7 +16635,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -16470,7 +16700,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1537464076}
-  m_HideIfInvisible: 0
 --- !u!224 &1537464079
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16552,7 +16781,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 435363529}
   m_GameObject: {fileID: 1554550592}
-  m_HideIfInvisible: 0
 --- !u!1 &1558521398
 GameObject:
   m_ObjectHideFlags: 0
@@ -16651,7 +16879,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -16731,7 +16959,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 204545765}
   m_GameObject: {fileID: 1584908085}
-  m_HideIfInvisible: 0
 --- !u!1001 &1596127166
 Prefab:
   m_ObjectHideFlags: 0
@@ -16881,7 +17108,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -17016,7 +17243,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -17102,7 +17329,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -17298,7 +17525,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -17604,7 +17831,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -17686,7 +17913,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1699546380}
-  m_HideIfInvisible: 0
 --- !u!1 &1713929326
 GameObject:
   m_ObjectHideFlags: 0
@@ -17754,7 +17980,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1713929326}
-  m_HideIfInvisible: 0
 --- !u!1 &1717222350
 GameObject:
   m_ObjectHideFlags: 0
@@ -17821,7 +18046,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1717222350}
-  m_HideIfInvisible: 0
 --- !u!1 &1727876057
 GameObject:
   m_ObjectHideFlags: 0
@@ -17934,7 +18158,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1729152569}
-  m_HideIfInvisible: 0
 --- !u!114 &1729152574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18017,7 +18240,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -18111,6 +18334,7 @@ Canvas:
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!224 &1743646497
@@ -18170,7 +18394,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1743646494}
-  m_HideIfInvisible: 0
 --- !u!114 &1743646500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19388,7 +19611,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1774274672}
-  m_HideIfInvisible: 0
 --- !u!1 &1797275905
 GameObject:
   m_ObjectHideFlags: 0
@@ -19459,7 +19681,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -19545,7 +19767,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -19819,7 +20041,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -20387,7 +20609,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -20467,7 +20689,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1234032447}
   m_GameObject: {fileID: 1929181424}
-  m_HideIfInvisible: 0
 --- !u!1 &1942263559
 GameObject:
   m_ObjectHideFlags: 0
@@ -20725,7 +20946,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -20838,7 +21059,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -20967,7 +21188,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 881160507}
   m_GameObject: {fileID: 2098080003}
-  m_HideIfInvisible: 0
 --- !u!1 &2099469199
 GameObject:
   m_ObjectHideFlags: 0
@@ -21032,7 +21252,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1874874003}
   m_GameObject: {fileID: 2099469199}
-  m_HideIfInvisible: 0
 --- !u!1 &2111152865
 GameObject:
   m_ObjectHideFlags: 0
@@ -21103,7 +21322,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -21235,7 +21454,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2120550891}
-  m_HideIfInvisible: 0
 --- !u!1 &2121338049
 GameObject:
   m_ObjectHideFlags: 0
@@ -21306,7 +21524,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -21460,7 +21678,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0ac754c394c721c4a98d8567159e9270, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
