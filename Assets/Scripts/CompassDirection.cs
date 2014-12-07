@@ -117,5 +117,6 @@ public class CompassDirection : MonoBehaviour
         float sign = Mathf.Sign(Vector3.Dot(-newDirection, referenceRight));
         float finalAngle = sign * newAngle;
         transform.rotation = Quaternion.Euler(0f, 0f, finalAngle);
+        GameController.INSTANCE.Milo.transform.FindChild("MiloGatePortalParticle").gameObject.SetActive(true);//Enable the particles.
     }
 }

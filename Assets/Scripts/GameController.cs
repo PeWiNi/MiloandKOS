@@ -364,6 +364,14 @@ public class GameController : MonoBehaviour
             Destroy(milo.GetComponent<Rigidbody>());
             milo.GetComponent<CapsuleCollider>().isTrigger = true;
             mainCameraSounds [4].Play();
+            GameObject[] exits = GameObject.FindGameObjectsWithTag("Exit");
+            foreach (GameObject mazeExit in exits)
+            {
+                for (int i = 0; i < mazeExit.transform.childCount; i++)
+                {
+                    mazeExit.transform.FindChild("MazeExitGatePortalParticle").gameObject.SetActive(false);//Disable maze exit particles.
+                }
+            }
 //            milo.AddComponent<SpringJoint>();
 //            milo.GetComponent<SpringJoint>().connectedBody = kos.rigidbody;
 //            milo.GetComponent<SpringJoint>().anchor = new Vector3(0.0f, 0.0f, 0.0f);
@@ -384,6 +392,11 @@ public class GameController : MonoBehaviour
 //            Destroy(milo.GetComponent<SpringJoint>());
 //            milo.rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
             mainCameraSounds [3].Play();
+            GameObject[] exits = GameObject.FindGameObjectsWithTag("Exit");
+            foreach (GameObject mazeExit in exits)
+            {
+                mazeExit.transform.FindChild("MazeExitGatePortalParticle").gameObject.SetActive(true);//Enable maze exit particles.
+            }
             SwitchToMilo();
         }
     }
