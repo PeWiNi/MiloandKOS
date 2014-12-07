@@ -85,7 +85,7 @@ GameObject:
   - 222: {fileID: 168239774}
   - 114: {fileID: 168239773}
   m_Layer: 5
-  m_Name: Text
+  m_Name: TextButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -139,6 +139,7 @@ RectTransform:
   - {fileID: 821779931}
   - {fileID: 1041545517}
   - {fileID: 362553599}
+  - {fileID: 949646713}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
@@ -191,7 +192,7 @@ GameObject:
   - 222: {fileID: 612797711}
   - 114: {fileID: 608032953}
   m_Layer: 5
-  m_Name: Text
+  m_Name: TextButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -566,7 +567,7 @@ GameObject:
   - 222: {fileID: 865832036}
   - 114: {fileID: 612797710}
   m_Layer: 5
-  m_Name: Text
+  m_Name: TextButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -753,6 +754,72 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 612797708}
+--- !u!1 &949646712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 949646713}
+  - 222: {fileID: 949646715}
+  - 114: {fileID: 949646714}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &949646713
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 949646712}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 120371791}
+  m_RootOrder: 3
+  m_AnchorMin: {x: .899000049, y: .0678877309}
+  m_AnchorMax: {x: .952604473, y: .0678877309}
+  m_AnchoredPosition: {x: 3, y: 0}
+  m_SizeDelta: {x: 6, y: 30}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &949646714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 949646712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &949646715
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 949646712}
 --- !u!1 &955084239
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,6 +1536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948791b06cda53948aca8c3b5bcf7944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  txt: {fileID: 0}
 --- !u!4 &1646523198
 Transform:
   m_ObjectHideFlags: 0
@@ -1615,7 +1683,7 @@ GameObject:
   - 222: {fileID: 1838545568}
   - 114: {fileID: 1838545567}
   m_Layer: 5
-  m_Name: Text
+  m_Name: TextButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

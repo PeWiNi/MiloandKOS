@@ -1,16 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class playCutscene : MonoBehaviour {
 
 	public MovieTexture movie;
 	public string nextScene;
 	GameObject planeCut;
+	bool coroutineStarted=false;
 
 	Vector3 v3ViewPort;
 	Vector3 v3BottomLeft;
 	Vector3 v3TopRight;
 
+	public Text txt;
+	private AsyncOperation async = null;
 
 	// Use this for initialization
 	void Start () {
@@ -19,19 +23,42 @@ public class playCutscene : MonoBehaviour {
 		updateScreenSize();
 		renderer.material.mainTexture = movie;
 		movie.Play ();
+
+		GameObject temp = GameObject.Find ("Text");
+		txt = temp.GetComponent<Text> ();
 	}
-	
+
+	IEnumerator loadAsync(string sceneName)
+	{
+		async = Application.LoadLevelAsync(sceneName);
+		async.allowSceneActivation = false;
+		coroutineStarted = true;
+		while (!async.isDone)
+		{
+			txt.text = (((int)(async.progress * 100)).ToString()) + " %";
+			if (async.progress >= 0.9f && !async.allowSceneActivation)
+				async.allowSceneActivation = true;
+			Debug.Log("I'm yielding at progress: " + async.progress);
+			yield return null;
+		}
+		
+		if (async.isDone)
+		{
+			txt.text ="100%";
+		}
+	}
+
 	void Update ()
 	{
 		updateScreenSize();
 		if (movie.isPlaying & Input.GetKeyDown (KeyCode.Escape)) {
 					//	Debug.Log("pressed escape");
 						movie.Stop();	
-						Application.LoadLevel (nextScene);
+						StartCoroutine (loadAsync (nextScene));
 				}
-	 	if (!movie.isPlaying) 
-		{		//Debug.Log("no playing anymore");
-						Application.LoadLevel (nextScene);
+		else if (!movie.isPlaying & !coroutineStarted) 
+				{		//Debug.Log("no playing anymore");
+						StartCoroutine (loadAsync (nextScene));
 				}
 	}
 
