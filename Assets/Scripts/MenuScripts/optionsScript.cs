@@ -26,13 +26,13 @@ public class optionsScript : MonoBehaviour {
 
 	public void controls ()
 	{
-		textDisplay.text = 
-						" Forwards\t: 'W' or the up arrow \n" +
-						" Backwards\t: 'S' or the down arrow \n" +
-						" Left\t: 'A' or the left arrow \n" +
-						" Right\t: 'D' or the right arrow \n"+
+		textDisplay.text = "To move: \n"+
+						" Forwards: 'W' or the up arrow \n" +
+						" Backwards: 'S' or the down arrow \n" +
+						" Left: 'A' or the left arrow \n" +
+						" Right: 'D' or the right arrow \n \n"+
 						//" Flip camera\t: 'F' \n \n \n"+
-						" Special Ability\t: 'Space' or 'T' depending on case" ;
+						" Special Ability \n 'Space' or 'T' depending on case" ;
 
 	}
 
