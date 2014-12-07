@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: LeafOutline
-  m_Shader: {fileID: 4800000, guid: 9ce107479d11178d11005b9844295342, type: 3}
+  m_Name: lidtrashCanOultine
+  m_Shader: {fileID: 4800000, guid: 9e7e530089812a046865452a27334425, type: 3}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -15,21 +15,21 @@ Material:
     m_TexEnvs:
       data:
         first:
-          name: _MainTex
+          name: _DiffMap2
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Ramp
+          name: _DiffMap3
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _ToonShade
+          name: _DiffMap4
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -37,17 +37,34 @@ Material:
     m_Floats:
       data:
         first:
-          name: _Outline
-        second: .00499999989
+          name: _Threshold1
+        second: .600000024
+      data:
+        first:
+          name: _Threshold2
+        second: .200000003
+      data:
+        first:
+          name: _Threshold3
+        second: -.300000012
+      data:
+        first:
+          name: _Overlap1
+        second: .100000001
+      data:
+        first:
+          name: _Overlap2
+        second: .100000001
+      data:
+        first:
+          name: _Overlap3
+        second: .100000001
+      data:
+        first:
+          name: _EdgeSize
+        second: .330000013
     m_Colors:
       data:
         first:
-          name: _Color
-        second: {r: .79411763, g: .79411763, b: .79411763, a: 1}
-      data:
-        first:
-          name: _OutlineColor
-        second: {r: 0, g: 0, b: 0, a: 1}
---- !u!1002 &2100001
-EditorExtensionImpl:
-  serializedVersion: 6
+          name: _DiffColor
+        second: {r: .360294104, g: .360294104, b: .360294104, a: 1}
