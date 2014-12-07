@@ -25,12 +25,12 @@ public class playCutscene : MonoBehaviour {
 	{
 		updateScreenSize();
 		if (movie.isPlaying & Input.GetKeyDown (KeyCode.Escape)) {
-						Debug.Log("pressed escape");
+					//	Debug.Log("pressed escape");
 						movie.Stop();	
 						Application.LoadLevel (nextScene);
 				}
 	 	if (!movie.isPlaying) 
-		{		Debug.Log("no playing anymore");
+		{		//Debug.Log("no playing anymore");
 						Application.LoadLevel (nextScene);
 				}
 	}

@@ -20,7 +20,8 @@ public class optionsScript : MonoBehaviour {
 			textDisplay.text = " You have to help Milo get home from school.  \n" +
 						" You have to make sure he is not caught by shadows and reach the end of his journey. \n" +
 						" If he does...you'll see how darkness attempts to prevail. \n \n" +
-						" Do your best ! ";
+						" Do your best ! \n \n" +
+						" Tips: Milo can jump over things and can stay in the light for as long as he needs";
 	}
 
 	public void controls ()
@@ -30,7 +31,7 @@ public class optionsScript : MonoBehaviour {
 						" Backwards\t: 'S' or the down arrow \n" +
 						" Left\t: 'A' or the left arrow \n" +
 						" Right\t: 'D' or the right arrow \n"+
-						" Flip camera\t: 'F' \n \n \n"+
+						//" Flip camera\t: 'F' \n \n \n"+
 						" Special Ability\t: 'Space' or 'T' depending on case" ;
 
 	}
