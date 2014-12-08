@@ -22,8 +22,7 @@ public class KOSThrowAxe : MonoBehaviour
     float MaxAngel = 500;
     float MinAngel = 100;
     Vector2 vMeasures = new Vector2(1.3f, 0.6f);//DON'T MESS WITH THESE NUMBERS!
-    //Vector2 vMeasures = new Vector2(0.6f, 0.3f);//DON'T MESS WITH THESE NUMBERS!
-
+  
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -39,7 +38,6 @@ public class KOSThrowAxe : MonoBehaviour
         maxZ = curRot.z + maxAim;
         minZ = curRot.z - maxAim;
         aimingArm.SetActive(false);
-        // aimingArm.renderer.enabled = false;
     }
 
     // Update is called once per frame
@@ -47,30 +45,33 @@ public class KOSThrowAxe : MonoBehaviour
     {
         if (StateController.INSTANCE.HasDialoguesBeenStarted)//Ensures we can't attack before both dialogues are done.
         {
-            // Checking for scene as well because otherwise, Milo will shoot when Kos shoots.
-            if (Input.GetKeyDown(KeyCode.Space) && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
+            if (!Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
             {
-                if (cooldown == false)
+                // Checking for scene as well because otherwise, Milo will shoot when Kos shoots.
+                if (Input.GetKeyDown(KeyCode.Space) && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
                 {
-                    cooldown = true;
-                    StartCoroutine("ShootingCooldown");
-                    StartCoroutine("SpawnAxe");
-                    aimingArm.renderer.enabled = false;
+                    if (cooldown == false)
+                    {
+                        cooldown = true;
+                        StartCoroutine("ShootingCooldown");
+                        StartCoroutine("SpawnAxe");
+                        aimingArm.renderer.enabled = false;
+                    }
                 }
-            }
-            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) && !isShooting && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
-            {
-                aimingArm.SetActive(true);
-                increaseAngel();
-                increaseAimAngel();
-            } else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) && !isShooting && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
-            {        
-                aimingArm.SetActive(true);
-                decreaseAngel();
-                decreaseAimAngel();
-            } else if (!Input.GetKey(KeyCode.W) || !Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow))
-            {
-                aimingArm.SetActive(false);
+                if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) && !isShooting && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
+                {
+                    aimingArm.SetActive(true);
+                    increaseAngel();
+                    increaseAimAngel();
+                } else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) && !isShooting && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
+                {        
+                    aimingArm.SetActive(true);
+                    decreaseAngel();
+                    decreaseAimAngel();
+                } else if (!Input.GetKey(KeyCode.W) || !Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow))
+                {
+                    aimingArm.SetActive(false);
+                }
             }
         }
     }
@@ -79,14 +80,17 @@ public class KOSThrowAxe : MonoBehaviour
     {
         if (col.gameObject.name == "CannonBall01")
         {
-            if (Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
+            if (StateController.ConsecutiveHitsValue != 3)
             {
-                StateController.ConsecutiveHitsValue = 0;
-                StateController.KOSHitsTakenValue += 1;
-            } else if (Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
-            {
-                StateController.ConsecutiveHitsValue += 1;
-                StateController.MiloHitsTakenValue = 0;
+                if (Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
+                {
+                    StateController.ConsecutiveHitsValue = 0;
+                    StateController.KOSHitsTakenValue += 1;
+                } else if (Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
+                {
+                    StateController.ConsecutiveHitsValue += 1;
+                    StateController.MiloHitsTakenValue = 0;
+                }
             }
             Destroy(col.gameObject);
         }

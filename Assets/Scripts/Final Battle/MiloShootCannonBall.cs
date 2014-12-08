@@ -20,7 +20,6 @@ public class MiloShootCannonBall : MonoBehaviour
     float MaxAngel = 500;
     float MinAngel = 100;
     Vector2 vMeasures = new Vector2(2.71f, 0.0f);//DON'T MESS WITH THESE NUMBERS!
-    //Vector2 vMeasures = new Vector2(1.4f, 0.0f);//DON'T MESS WITH THESE NUMBERS!
 
     void Awake()
     {
@@ -44,30 +43,33 @@ public class MiloShootCannonBall : MonoBehaviour
     {
         if (StateController.INSTANCE.HasDialoguesBeenStarted)//Ensures we can't attack before both dialogues are done.
         {
-            // Checking for scene as well because otherwise, KOS will shoot when Milo shoots.
-            if (Input.GetKeyDown(KeyCode.Space) && Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
+            if (!Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
             {
-                if (cooldown == false)
+                // Checking for scene as well because otherwise, KOS will shoot when Milo shoots.
+                if (Input.GetKeyDown(KeyCode.Space) && Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
                 {
-                    cooldown = true;
-                    StartCoroutine("ShootingCooldown");
-                    StartCoroutine("SpawnCannonball");
-                    aimingArrow.renderer.enabled = false;
+                    if (cooldown == false)
+                    {
+                        cooldown = true;
+                        StartCoroutine("ShootingCooldown");
+                        StartCoroutine("SpawnCannonball");
+                        aimingArrow.renderer.enabled = false;
+                    }
                 }
-            }
-            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) && !isShooting && Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
-            {
-                aimingArrow.SetActive(true);
-                increaseAngel();
-                increaseAimAngel();
-            } else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) && !isShooting && Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
-            {    
-                aimingArrow.SetActive(true);
-                decreaseAngel();
-                decreaseAimAngel();
-            } else if (!Input.GetKey(KeyCode.W) || !Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow))
-            {
-                aimingArrow.SetActive(false);
+                if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) && !isShooting && Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
+                {
+                    aimingArrow.SetActive(true);
+                    increaseAngel();
+                    increaseAimAngel();
+                } else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) && !isShooting && Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
+                {    
+                    aimingArrow.SetActive(true);
+                    decreaseAngel();
+                    decreaseAimAngel();
+                } else if (!Input.GetKey(KeyCode.W) || !Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow))
+                {
+                    aimingArrow.SetActive(false);
+                }
             }
         }
     }
@@ -76,16 +78,19 @@ public class MiloShootCannonBall : MonoBehaviour
     {
         if (col.gameObject.name == "RotatingAxe01")
         {
-            if (Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
+            if (StateController.ConsecutiveHitsValue != 3)
             {
-                StateController.ConsecutiveHitsValue += 1;
-                StateController.KOSHitsTakenValue = 0;
-            } else if (Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
-            {
-                StateController.ConsecutiveHitsValue = 0;
-                StateController.MiloHitsTakenValue += 1;
+                if (Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
+                {
+                    StateController.ConsecutiveHitsValue += 1;
+                    StateController.KOSHitsTakenValue = 0;
+                } else if (Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
+                {
+                    StateController.ConsecutiveHitsValue = 0;
+                    StateController.MiloHitsTakenValue += 1;
+                }
+                Destroy(col.gameObject);
             }
-            Destroy(col.gameObject);
         }
     }
 

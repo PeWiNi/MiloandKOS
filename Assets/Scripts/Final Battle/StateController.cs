@@ -12,8 +12,8 @@ public class StateController : MonoBehaviour
     bool kosShooting;
     GameObject milo;
     GameObject kos;
-    Text consecutiveHitsText;
-    string actualText;
+    Image consecutiveMiloHitsImage; 
+    Image consecutiveKOSHitsImage;  
     static int kosHitsTakenMax = 10;
     static int kosHitsTakenValue = 0;
     static int miloHitsTakenMax = 10;
@@ -22,7 +22,20 @@ public class StateController : MonoBehaviour
     static int consecutiveHitsValue = 0;
     const float speed = 2.0f;
     bool hasDialoguesBeenStarted = false;
+    [SerializeField]
+    Sprite
+        MBIimage01;
+    [SerializeField]
+    Sprite
+        MBIimage02;
+    [SerializeField]
+    Sprite
+        MBIimage03;
+    [SerializeField]
+    Sprite
+        MBIimage04;
 
+    Sprite[] sprites;
     void Awake()
     {
         _INSTANCE = this;
@@ -33,8 +46,14 @@ public class StateController : MonoBehaviour
     {
         milo = GameObject.Find("MiloCannon01");
         kos = GameObject.Find("KOSDoubleAxe01");
-        consecutiveHitsText = GameObject.Find("NoConsecutiveHits").GetComponent<Text>();
-        actualText = consecutiveHitsText.text;
+        sprites = Resources.LoadAll<Sprite>("BattleIndicatorBY"); 
+        if (!Application.loadedLevelName.Equals(nextSceneAsKOS))
+        {
+            consecutiveMiloHitsImage = GameObject.Find("MiloBattleIndicator").GetComponent<Image>();
+        } else if (!Application.loadedLevelName.Equals(nextSceneAsMilo))
+        {
+            consecutiveMiloHitsImage = GameObject.Find("KosBattleIndicator").GetComponent<Image>();
+        }
     }
 	
     // Update is called once per frame
@@ -42,6 +61,14 @@ public class StateController : MonoBehaviour
     {
         if (hasDialoguesBeenStarted)//Ensures we need to hear the whole conversation before the AI starts shooting.
         {
+            if (!Application.loadedLevelName.Equals(nextSceneAsKOS))
+            {
+                UpdateMiloScore();
+            }
+            if (!Application.loadedLevelName.Equals(nextSceneAsMilo))
+            {
+                UpdateKosScore();
+            }
             if (Application.loadedLevelName.Equals(nextSceneAsKOS) && !miloShooting && consecutiveHitsValue < consecutiveHitsMax)
             {
                 miloShooting = !miloShooting;
@@ -51,8 +78,7 @@ public class StateController : MonoBehaviour
                 kosShooting = !kosShooting;
                 StartCoroutine("KOSShootAtMilo");
             }
-            consecutiveHitsText.text = actualText + consecutiveHitsValue + "/" + consecutiveHitsMax;
-            ChangeToEndingScene();
+            ChangeToEndingScene();  
         }
     }
     
@@ -228,4 +254,47 @@ public class StateController : MonoBehaviour
         }
     }
    
+    /// <summary>
+    /// Updates the milo score.
+    /// </summary>
+    void UpdateMiloScore()
+    {
+        if (consecutiveHitsValue == 0)
+        {
+            consecutiveMiloHitsImage.sprite = sprites [0];
+        }
+        if (consecutiveHitsValue == 1)
+        {
+            consecutiveMiloHitsImage.sprite = sprites [1];
+        } else if (consecutiveHitsValue == 2)
+        {
+            consecutiveMiloHitsImage.sprite = sprites [2];
+            
+        } else if (consecutiveHitsValue == 3)
+        {
+            consecutiveMiloHitsImage.sprite = sprites [3];
+        }
+    }
+
+    /// <summary>
+    /// Updates the kos score.
+    /// </summary>
+    void UpdateKosScore()
+    {
+        if (consecutiveHitsValue == 0)
+        {
+            consecutiveMiloHitsImage.sprite = sprites [0];
+        }
+        if (consecutiveHitsValue == 1)
+        {
+            consecutiveMiloHitsImage.sprite = sprites [4];
+        } else if (consecutiveHitsValue == 2)
+        {
+            consecutiveMiloHitsImage.sprite = sprites [5];
+            
+        } else if (consecutiveHitsValue == 3)
+        {
+            consecutiveMiloHitsImage.sprite = sprites [6];
+        }
+    }
 }
