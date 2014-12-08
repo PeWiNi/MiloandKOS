@@ -167,12 +167,12 @@ public class LevelInstantiator : MonoBehaviour {
 				position.z = (float)j * 2.5f;
 				rotation.y = 0.0f;
 				switch (levelMap [i, j]) {
-				case "-":
+			/*	case "-":
 					position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 1.0f));
 					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 2.0f));
 					maze[(int)i-countMazeI,(int)j-countMazeJ]= Instantiate (treePrefab, position, Quaternion.identity) as Transform;	
 					maze[(int)i-countMazeI,(int)j-countMazeJ].name = "htree " + ToString (i, j);
-					break;			
+					break;		*/	
 				case "2":
 					maze[(int)i-countMazeI,(int)j-countMazeJ] = Instantiate (lampPrefab, position, Quaternion.identity) as Transform;	
 					maze[(int)i-countMazeI,(int)j-countMazeJ].name = "lamp " + ToString (i, j);
@@ -181,7 +181,7 @@ public class LevelInstantiator : MonoBehaviour {
 					maze[(int)i-countMazeI,(int)j-countMazeJ] = Instantiate (canPrefab, position, Quaternion.identity) as Transform;	
 					maze[(int)i-countMazeI,(int)j-countMazeJ].name = "can " + ToString (i, j);
 					break;
-				case "|":
+				/*case "|":
 					position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 1.0f));
 					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 2.0f));
 					rotation.y = 90.0f;
@@ -223,7 +223,7 @@ public class LevelInstantiator : MonoBehaviour {
 					rotation.y = 0.0f;
 					maze[(int)i-countMazeI,(int)j-countMazeJ]= Instantiate (cornerTreePrefab, position, Quaternion.Euler (rotation)) as Transform;	
 					maze[(int)i-countMazeI,(int)j-countMazeJ].name = "tree ¯| " + ToString (i, j);
-					break;
+					break;*/
 				}
 				if (maze[(int)i-countMazeI,(int)j-countMazeJ]) 
 				{maze[(int)i-countMazeI,(int)j-countMazeJ].transform.parent = parentMaze.transform;
