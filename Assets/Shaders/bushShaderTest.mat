@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: LampfromTrashCanOutlineWorks
-  m_Shader: {fileID: 4800000, guid: 9e7e530089812a046865452a27334425, type: 3}
+  m_Name: bushShaderTest
+  m_Shader: {fileID: 4800000, guid: 5ffe7db43ef006948bff0db940014c03, type: 3}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -17,7 +17,7 @@ Material:
         first:
           name: _DiffMap2
         second:
-          m_Texture: {fileID: 2800000, guid: 72280eb4e6e85ea42bdb17ad3fb3420f, type: 3}
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -32,6 +32,13 @@ Material:
           name: _DiffMap4
         second:
           m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DiffMap1
+        second:
+          m_Texture: {fileID: 2800000, guid: 5ae78c8e212e8924784d1d29357d15e4, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -58,13 +65,9 @@ Material:
       data:
         first:
           name: _Overlap3
-        second: .100000001
+        second: .0642857179
       data:
         first:
           name: _EdgeSize
         second: .330000013
-    m_Colors:
-      data:
-        first:
-          name: _DiffColor
-        second: {r: .727941155, g: .727941155, b: .727941155, a: 1}
+    m_Colors: {}
