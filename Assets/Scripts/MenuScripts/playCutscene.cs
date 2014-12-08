@@ -38,7 +38,7 @@ public class playCutscene : MonoBehaviour {
 			txt.text = (((int)(async.progress * 100)).ToString()) + " %";
 			if (async.progress >= 0.9f && !async.allowSceneActivation)
 				async.allowSceneActivation = true;
-			Debug.Log("I'm yielding at progress: " + async.progress);
+			//Debug.Log("I'm yielding at progress: " + async.progress);
 			yield return null;
 		}
 		

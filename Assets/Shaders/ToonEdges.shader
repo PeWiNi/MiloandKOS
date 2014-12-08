@@ -18,7 +18,8 @@
 	}
 	SubShader {
 		Pass{
-			Cull Front
+			Cull Back
+			Fog {Mode OFF}
 
 			CGPROGRAM
 			#pragma vertex vert

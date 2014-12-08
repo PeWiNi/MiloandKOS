@@ -18,6 +18,8 @@
 	SubShader {
 		Pass {
 			Cull Back
+			tags{"LightMode" = "ForwardBase"}
+			Fog {Mode OFF}
 
 			CGPROGRAM
 

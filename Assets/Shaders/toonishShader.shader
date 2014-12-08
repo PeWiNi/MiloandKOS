@@ -10,6 +10,7 @@
 		Cull Back
 		Pass{
 		tags{"LightMode" = "ForwardBase"}
+		Fog {Mode Off}
 		
 		CGPROGRAM
 		#pragma vertex vert

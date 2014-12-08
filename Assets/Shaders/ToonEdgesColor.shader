@@ -19,8 +19,10 @@
 	}
 	SubShader {
 		Pass{
-			Cull Front
-
+			Cull Back
+			tags{"LightMode" = "ForwardBase"}
+			Fog {Mode OFF}
+			
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
