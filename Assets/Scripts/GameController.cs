@@ -362,7 +362,8 @@ public class GameController : MonoBehaviour
             milo.GetComponent<ShadowEffect>().enabled = false;
             miloAnim.enabled = false;
             Destroy(milo.GetComponent<Rigidbody>());
-            milo.GetComponent<CapsuleCollider>().isTrigger = true;
+//            milo.GetComponent<CapsuleCollider>().isTrigger = true;
+            StartCoroutine(StartMiloColliderIsTriggerCountdown());
             mainCameraSounds [4].Play();
             GameObject[] exits = GameObject.FindGameObjectsWithTag("Exit");
             foreach (GameObject mazeExit in exits)
@@ -397,7 +398,14 @@ public class GameController : MonoBehaviour
             {
                 mazeExit.transform.FindChild("MazeExitGatePortalParticle").gameObject.SetActive(true);//Enable maze exit particles.
             }
+            GameController.INSTANCE.Milo.transform.FindChild("MiloGatePortalParticle").gameObject.SetActive(false);//Disable the particles.
             SwitchToMilo();
         }
+    }
+
+    IEnumerator StartMiloColliderIsTriggerCountdown()
+    {
+        yield return new WaitForSeconds(3f);
+        milo.GetComponent<CapsuleCollider>().isTrigger = true;
     }
 }
