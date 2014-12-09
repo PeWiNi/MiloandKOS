@@ -7,7 +7,7 @@ public class StateController : MonoBehaviour
     static StateController _INSTANCE;
     public const string nextSceneAsMilo = "FinalBattleAsMilo";
     public const string nextSceneAsKOS = "FinalBattleAsKOS";
-    public const string endingCutSecene = "EndingSceneVsMom";
+    public const string endingCutScene = "EndingSceneVsMom";
     bool miloShooting;
     bool kosShooting;
     GameObject milo;
@@ -22,6 +22,7 @@ public class StateController : MonoBehaviour
     static int consecutiveHitsValue = 0;
     const float speed = 2.0f;
     bool hasDialoguesBeenStarted = false;
+    static GameObject instructionImages;
     [SerializeField]
     Sprite
         MBIimage01;
@@ -44,6 +45,8 @@ public class StateController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        instructionImages = GameObject.Find("Instruction");
+        instructionImages.SetActive(true);
         milo = GameObject.Find("MiloCannon01");
         kos = GameObject.Find("KOSDoubleAxe01");
         sprites = Resources.LoadAll<Sprite>("BattleIndicatorBY"); 
@@ -239,18 +242,18 @@ public class StateController : MonoBehaviour
     {
         if (Application.loadedLevelName.Equals(nextSceneAsKOS) && !miloShooting && consecutiveHitsValue >= consecutiveHitsMax)
         {
-            Application.LoadLevel(endingCutSecene);
+            Application.LoadLevel(endingCutScene);
         } else if (Application.loadedLevelName.Equals(nextSceneAsMilo) && !kosShooting && consecutiveHitsValue >= consecutiveHitsMax)
         {
-            Application.LoadLevel(endingCutSecene);
+            Application.LoadLevel(endingCutScene);
         } 
         if (kosHitsTakenValue >= kosHitsTakenMax)
         {
-            Application.LoadLevel(endingCutSecene);
+            Application.LoadLevel(endingCutScene);
         }
         if (miloHitsTakenValue >= miloHitsTakenMax)
         {
-            Application.LoadLevel(endingCutSecene);
+            Application.LoadLevel(endingCutScene);
         }
     }
    
@@ -295,6 +298,14 @@ public class StateController : MonoBehaviour
         } else if (consecutiveHitsValue == 3)
         {
             consecutiveMiloHitsImage.sprite = sprites [6];
+        }
+    }
+
+    public static GameObject Instruction
+    {
+        get
+        {
+            return instructionImages; 
         }
     }
 }

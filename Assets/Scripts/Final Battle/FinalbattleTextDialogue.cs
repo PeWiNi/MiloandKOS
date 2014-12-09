@@ -4,7 +4,7 @@ using System.Collections;
 
 public class FinalbattleTextDialogue : MonoBehaviour
 {
-
+   
     [SerializeField]
     Text
         kosPreBattleIfMilo;
@@ -99,6 +99,7 @@ public class FinalbattleTextDialogue : MonoBehaviour
         if (!dialoguesInProgress)
         {
             StateController.INSTANCE.HasDialoguesBeenStarted = true;
+            StateController.Instruction.SetActive(false);
         }
     }
 }
