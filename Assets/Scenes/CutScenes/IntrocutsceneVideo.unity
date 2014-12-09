@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .588235319, g: .588235319, b: .588235319, a: 1}
+  m_Color: {r: 0, g: 0, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6b8c658814afbb94897e1c82d3738cc7, type: 3}
     m_FontSize: 14
@@ -123,6 +123,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 210038587}
+  m_HideIfInvisible: 0
 --- !u!224 &210038590
 RectTransform:
   m_ObjectHideFlags: 0
@@ -316,7 +317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .588235319, g: .588235319, b: .588235319, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6b8c658814afbb94897e1c82d3738cc7, type: 3}
     m_FontSize: 14
@@ -340,6 +341,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 736039578}
+  m_HideIfInvisible: 0
 --- !u!224 &736039581
 RectTransform:
   m_ObjectHideFlags: 0
@@ -386,7 +388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .588235319, g: .588235319, b: .588235319, a: 1}
+  m_Color: {r: 0, g: 0, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6b8c658814afbb94897e1c82d3738cc7, type: 3}
     m_FontSize: 14
@@ -409,6 +411,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 770910143}
+  m_HideIfInvisible: 0
 --- !u!224 &770910146
 RectTransform:
   m_ObjectHideFlags: 0
@@ -472,7 +475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .588235319, g: .588235319, b: .588235319, a: 1}
+  m_Color: {r: 1, g: .964705884, b: 0, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6b8c658814afbb94897e1c82d3738cc7, type: 3}
     m_FontSize: 14
@@ -492,6 +495,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1016106121}
+  m_HideIfInvisible: 0
 --- !u!1 &1024596559
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,7 +563,6 @@ Canvas:
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!1 &1065694005
@@ -663,7 +666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .588235319, g: .588235319, b: .588235319, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6b8c658814afbb94897e1c82d3738cc7, type: 3}
     m_FontSize: 14
@@ -684,6 +687,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1076671326}
+  m_HideIfInvisible: 0
 --- !u!1 &1136826013
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,6 +939,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1429033838}
+  m_HideIfInvisible: 0
 --- !u!1 &2105798085
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,7 +1000,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
-  m_DragThreshold: 5
 --- !u!4 &2105798089
 Transform:
   m_ObjectHideFlags: 0

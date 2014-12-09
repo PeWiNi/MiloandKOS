@@ -355,8 +355,15 @@ public class GameController : MonoBehaviour
         if (isPlayingAsMilo)
         {
             SwitchToKOS();
-            milo.transform.rotation = Quaternion.Euler(280.0f, 0.0f, 0.0f);
-            milo.transform.position = new Vector3(milo.transform.position.x, 0.02f, milo.transform.position.z);
+            if (Milo.GetComponent<DetectCollisionWithSchoolBenches>().IsCollidingWithBench)
+            {
+                milo.transform.rotation = Quaternion.Euler(270.0f, 0.0f, 0.0f);
+                milo.transform.position = new Vector3(milo.transform.position.x, milo.transform.position.y, milo.transform.position.z);//Stay put Milo!
+            } else
+            {
+                milo.transform.rotation = Quaternion.Euler(280.0f, 0.0f, 0.0f);
+                milo.transform.position = new Vector3(milo.transform.position.x, 0.02f, milo.transform.position.z);//Touch the ground.
+            }
             milo.GetComponent<Move>().enabled = false;
             milo.GetComponent<Jump>().enabled = false;
             milo.GetComponent<ShadowEffect>().enabled = false;
