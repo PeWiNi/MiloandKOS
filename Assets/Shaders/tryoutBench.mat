@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: SchoolBenchMaterialFromTrashCan
-  m_Shader: {fileID: 4800000, guid: 9e7e530089812a046865452a27334425, type: 3}
+  m_Name: tryoutBench
+  m_Shader: {fileID: 4800000, guid: 77b5025702b8aaf4db39141cf8b817e8, type: 3}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -24,7 +24,7 @@ Material:
         first:
           name: _DiffMap3
         second:
-          m_Texture: {fileID: 2800000, guid: 41d4e88cad9039d40b90cf00fa13e626, type: 3}
+          m_Texture: {fileID: 2800000, guid: efb3536d1c0a8d94aa8e420ad57b2de7, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -38,31 +38,31 @@ Material:
       data:
         first:
           name: _Threshold1
-        second: .600000024
+        second: .921428621
       data:
         first:
           name: _Threshold2
-        second: .200000003
+        second: .664285719
       data:
         first:
           name: _Threshold3
-        second: -.300000012
+        second: .164285704
       data:
         first:
           name: _Overlap1
-        second: .100000001
+        second: .0732142851
       data:
         first:
           name: _Overlap2
-        second: .100000001
+        second: .153571427
       data:
         first:
           name: _Overlap3
-        second: .100000001
+        second: .18928571
       data:
         first:
           name: _EdgeSize
-        second: .330000013
+        second: .200000003
     m_Colors:
       data:
         first:
