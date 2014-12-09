@@ -14,6 +14,7 @@ GameObject:
   - 136: {fileID: 13600000}
   - 65: {fileID: 6500000}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: TrashCan
   m_TagString: TrashCan
@@ -218,6 +219,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bfd5a7745d31ca49b4263fd37191eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1cd6fc2081dd534daf7bb6966311049, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoPic: {fileID: 2800000, guid: 05920837d6efb434e9d4393d68b7260c, type: 3}
+  message: teleport
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -34,7 +34,7 @@ public class Jump : MonoBehaviour
             jumped = false;
 //            anim.SetTrigger(jumpingTrigger);
 //            anim.SetBool(groundedBool, false);
-            rigidbody.velocity = new Vector3(0.0f, 3.5f, 0.0f);
+            rigidbody.velocity = new Vector3(0.0f, 3.55f, 0.0f);
         }
     }
 
