@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: SchoolBenchToonApplied
+  m_Shader: {fileID: 4800000, guid: 77b5025702b8aaf4db39141cf8b817e8, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _DiffMap2
+        second:
+          m_Texture: {fileID: 2800000, guid: efb3536d1c0a8d94aa8e420ad57b2de7, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DiffMap3
+        second:
+          m_Texture: {fileID: 2800000, guid: efb3536d1c0a8d94aa8e420ad57b2de7, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DiffMap4
+        second:
+          m_Texture: {fileID: 2800000, guid: efb3536d1c0a8d94aa8e420ad57b2de7, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Threshold1
+        second: .921428621
+      data:
+        first:
+          name: _Threshold2
+        second: .664285719
+      data:
+        first:
+          name: _Threshold3
+        second: .164285704
+      data:
+        first:
+          name: _Overlap1
+        second: .0732142851
+      data:
+        first:
+          name: _Overlap2
+        second: .153571427
+      data:
+        first:
+          name: _Overlap3
+        second: .18928571
+      data:
+        first:
+          name: _EdgeSize
+        second: .200000003
+    m_Colors:
+      data:
+        first:
+          name: _DiffColor
+        second: {r: 1, g: 1, b: 1, a: 1}

@@ -167,12 +167,12 @@ public class LevelInstantiator : MonoBehaviour {
 				position.z = (float)j * 2.5f;
 				rotation.y = 0.0f;
 				switch (levelMap [i, j]) {
-			/*	case "-":
+				/*case "-":
 					position.x = i * 1.5f - (1.0f - Random.Range (0.5f, 1.0f));
 					position.z = j * 2.5f - (2.0f - Random.Range (1.5f, 2.0f));
 					maze[(int)i-countMazeI,(int)j-countMazeJ]= Instantiate (treePrefab, position, Quaternion.identity) as Transform;	
 					maze[(int)i-countMazeI,(int)j-countMazeJ].name = "htree " + ToString (i, j);
-					break;		*/	
+					break;	*/		
 				case "2":
 					maze[(int)i-countMazeI,(int)j-countMazeJ] = Instantiate (lampPrefab, position, Quaternion.identity) as Transform;	
 					maze[(int)i-countMazeI,(int)j-countMazeJ].name = "lamp " + ToString (i, j);
