@@ -35,6 +35,9 @@ public class IntroCutsceneDialogues : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Checks the sequence.
+    /// </summary>
     void CheckSequence()
     {
         if (!teacherHasSpoken)
@@ -70,30 +73,24 @@ public class IntroCutsceneDialogues : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Begins the dialogue sequence countdown.
+    /// </summary>
+    /// <returns>The dialogue sequence.</returns>
     IEnumerator BeginDialogueSequence()
     {
         yield return new WaitForSeconds(10f);
         hasBeenInitiated = true;
     }
 
+    /// <summary>
+    /// Fades the text.
+    /// </summary>
+    /// <returns>The text.</returns>
+    /// <param name="text">Text.</param>
     IEnumerator FadeText(Text text)
     {
         yield return new WaitForSeconds(3f);
-//        Color color;
-//        while (text.color.a > 0.0f)
-//        {
-//            color.a = text.color.a - 0.01f;
-//            color.r = text.color.r;
-//            color.g = text.color.g;
-//            color.b = text.color.b;
-//            text.color = color;
-//            yield return new WaitForSeconds(0.1f);
-//        }
-//        color.a = 1.0f;
-//        color.r = text.color.r;
-//        color.g = text.color.g;
-//        color.b = text.color.b;
-//        text.color = color;
         text.enabled = false;
         isPlaying = false;
     }
