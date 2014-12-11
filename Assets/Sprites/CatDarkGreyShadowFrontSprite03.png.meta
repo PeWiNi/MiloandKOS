@@ -1,0 +1,135 @@
+fileFormatVersion: 2
+guid: c8bb929081d58f44f87e4d93d78a23e6
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: CatDarkGreyShadowFrontSprite03_0
+    21300002: CatDarkGreyShadowFrontSprite03_1
+    21300004: CatDarkGreyShadowFrontSprite03_2
+    21300006: CatDarkGreyShadowFrontSprite03_3
+    21300008: CatDarkGreyShadowFrontSprite03_4
+    21300010: CatDarkGreyShadowFrontSprite03_5
+    21300012: CatDarkGreyShadowFrontSprite03_6
+    21300014: CatDarkGreyShadowFrontSprite03_7
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 425
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: CatDarkGreyShadowFrontSprite03_0
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1894
+        width: 440
+        height: 363
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatDarkGreyShadowFrontSprite03_1
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 1435
+        width: 153
+        height: 384
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatDarkGreyShadowFrontSprite03_2
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1077
+        width: 144
+        height: 331
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatDarkGreyShadowFrontSprite03_3
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 691
+        width: 146
+        height: 351
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatDarkGreyShadowFrontSprite03_4
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 289
+        width: 144
+        height: 383
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatDarkGreyShadowFrontSprite03_5
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 1453
+        width: 142
+        height: 400
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatDarkGreyShadowFrontSprite03_6
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 1042
+        width: 144
+        height: 391
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CatDarkGreyShadowFrontSprite03_7
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 643
+        width: 142
+        height: 383
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

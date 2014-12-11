@@ -1,0 +1,256 @@
+fileFormatVersion: 2
+guid: aa7f62401633c9d4b9c8f16a8f5c73f4
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: HumanDarkGreyShadowSprite03_0
+    21300002: HumanDarkGreyShadowSprite03_1
+    21300004: HumanDarkGreyShadowSprite03_2
+    21300006: HumanDarkGreyShadowSprite03_3
+    21300008: HumanDarkGreyShadowSprite03_4
+    21300010: HumanDarkGreyShadowSprite03_5
+    21300012: HumanDarkGreyShadowSprite03_6
+    21300014: HumanDarkGreyShadowSprite03_7
+    21300016: HumanDarkGreyShadowSprite03_8
+    21300018: HumanDarkGreyShadowSprite03_9
+    21300020: HumanDarkGreyShadowSprite03_10
+    21300022: HumanDarkGreyShadowSprite03_11
+    21300024: HumanDarkGreyShadowSprite03_12
+    21300026: HumanDarkGreyShadowSprite03_13
+    21300028: HumanDarkGreyShadowSprite03_14
+    21300030: HumanDarkGreyShadowSprite03_15
+    21300032: HumanDarkGreyShadowSprite03_16
+    21300034: HumanDarkGreyShadowSprite03_17
+    21300036: HumanDarkGreyShadowSprite03_18
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 355
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: HumanDarkGreyShadowSprite03_0
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 4335
+        width: 262
+        height: 587
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanDarkGreyShadowSprite03_1
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 4282
+        width: 281
+        height: 640
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanDarkGreyShadowSprite03_2
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 4272
+        width: 276
+        height: 645
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanDarkGreyShadowSprite03_3
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 3617
+        width: 262
+        height: 587
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanDarkGreyShadowSprite03_4
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 3602
+        width: 257
+        height: 597
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanDarkGreyShadowSprite03_5
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 3597
+        width: 262
+        height: 602
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanDarkGreyShadowSprite03_6
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 2904
+        width: 201
+        height: 623
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanDarkGreyShadowSprite03_7
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 2894
+        width: 315
+        height: 597
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanDarkGreyShadowSprite03_8
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 2899
+        width: 310
+        height: 597
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanDarkGreyShadowSprite03_9
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 2186
+        width: 267
+        height: 582
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanDarkGreyShadowSprite03_10
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 2181
+        width: 247
+        height: 582
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanDarkGreyShadowSprite03_11
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 2186
+        width: 170
+        height: 572
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanDarkGreyShadowSprite03_12
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 1492
+        width: 209
+        height: 587
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanDarkGreyShadowSprite03_13
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 1477
+        width: 321
+        height: 592
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanDarkGreyShadowSprite03_14
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 1463
+        width: 311
+        height: 596
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanDarkGreyShadowSprite03_15
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 745
+        width: 267
+        height: 582
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanDarkGreyShadowSprite03_16
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 740
+        width: 243
+        height: 587
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanDarkGreyShadowSprite03_17
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 740
+        width: 213
+        height: 567
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HumanDarkGreyShadowSprite03_18
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 66
+        width: 203
+        height: 587
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
