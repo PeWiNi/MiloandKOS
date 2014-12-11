@@ -331,7 +331,6 @@ public class GameController : MonoBehaviour
     /// <summary>
     /// Sets the state for milo dragged.
     /// </summary>
-//    public void SetStateForMiloDragged()
     public void SetStateForSwitching()
     {
         if (isPlayingAsMilo)
@@ -364,15 +363,13 @@ public class GameController : MonoBehaviour
             milo.GetComponent<DelayOnSwitch>().DisableCountDown();
             milo.GetComponent<DelayOnSwitch>().enabled = false;
             kos.GetComponent<DelayOnSwitch>().enabled = true;
-//            milo.AddComponent<SpringJoint>();
-//            milo.GetComponent<SpringJoint>().connectedBody = kos.rigidbody;
-//            milo.GetComponent<SpringJoint>().anchor = new Vector3(0.0f, 0.0f, 0.0f);
-//            milo.GetComponent<SpringJoint>().spring = 1000.0f;
-//            milo.rigidbody.constraints = RigidbodyConstraints.None;
+            GameObject[] lamps = GameObject.FindGameObjectsWithTag("Lamp");
+            foreach (GameObject lamp in lamps)
+            {
+                lamp.GetComponent<AudioSource>().enabled = false;
+            }
         } else
         {
-//            milo.transform.position = kos.transform.position;
-//            milo.transform.rotation = kos.transform.rotation;
             milo.GetComponent<Move>().enabled = true;
             milo.GetComponent<Jump>().enabled = true;
             milo.GetComponent<ShadowEffect>().enabled = true;
@@ -381,8 +378,6 @@ public class GameController : MonoBehaviour
             milo.GetComponent<CapsuleCollider>().isTrigger = false;
             milo.AddComponent<Rigidbody>();
             milo.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
-//            Destroy(milo.GetComponent<SpringJoint>());
-//            milo.rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
             mainCameraSounds [3].Play();
             GameObject[] exits = GameObject.FindGameObjectsWithTag("Exit");
             foreach (GameObject mazeExit in exits)
@@ -393,6 +388,11 @@ public class GameController : MonoBehaviour
             kos.GetComponent<DelayOnSwitch>().DisableCountDown();
             kos.GetComponent<DelayOnSwitch>().enabled = false;
             milo.GetComponent<DelayOnSwitch>().enabled = true;
+            GameObject[] lamps = GameObject.FindGameObjectsWithTag("Lamp");
+            foreach (GameObject lamp in lamps)
+            {
+                lamp.GetComponent<AudioSource>().enabled = true;
+            }
             SwitchToMilo();
         }
     }
