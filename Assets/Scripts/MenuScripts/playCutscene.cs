@@ -64,7 +64,7 @@ public class playCutscene : MonoBehaviour {
 						screenSizeOldWidth= Screen.width;
 						screenSizeOldHeight= Screen.height;
 						movieRatio = (float)movie.width / (float)movie.height;
-						Debug.Log(movie.width+" "+movie.height); 
+						//Debug.Log(movie.width+" "+movie.height); 
 						updateScreenSize();
 				}
 
@@ -92,12 +92,12 @@ public class playCutscene : MonoBehaviour {
 		Debug.Log ("height:" + ratioh + " width:" + ratiow);*/
 
 		//Debug.Log ("screenRAtio:" + (float)Screen.width/ (float)Screen.height);
-		Debug.Log (movieRatio);
+		//Debug.Log (movieRatio);
 		float newHeight = movie.height * Screen.height/Screen.width;
 		newHeight=newHeight* (v3BottomLeft.y - v3TopRight.y)/newHeight;
-		Debug.Log (newHeight);
+	//	Debug.Log (newHeight);
 		float newWidth = newHeight*movieRatio; //*(v3BottomLeft.x - v3TopRight.x)/(v3BottomLeft.y - v3TopRight.y);
-		Debug.Log (newWidth);
+		//Debug.Log (newWidth);
 		planeCut.transform.localScale = new Vector3(newWidth,  1, newHeight);
 	//	planeCut.transform.localScale = new Vector3(ratiow, 1, ratioh - 0.5f);
 	}

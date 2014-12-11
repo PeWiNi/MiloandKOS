@@ -6901,6 +6901,7 @@ GameObject:
   - 114: {fileID: 474574076}
   - 114: {fileID: 474574085}
   - 114: {fileID: 474574082}
+  - 114: {fileID: 474574086}
   - 82: {fileID: 474574084}
   - 65: {fileID: 474574083}
   m_Layer: 0
@@ -7100,6 +7101,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 690c69949630c6c4f8abcf44040f726d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &474574086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400014, guid: fafa22ba4cf734c498019ccd4c9c389d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1755128617}
+  m_GameObject: {fileID: 474574074}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48b9dec60df152b45ae2b945fc077f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &485577418
@@ -26433,6 +26446,10 @@ Prefab:
     - target: {fileID: 13600000, guid: fafa22ba4cf734c498019ccd4c9c389d, type: 2}
       propertyPath: m_Center.y
       value: .550000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400014, guid: fafa22ba4cf734c498019ccd4c9c389d, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400012, guid: fafa22ba4cf734c498019ccd4c9c389d, type: 2}
