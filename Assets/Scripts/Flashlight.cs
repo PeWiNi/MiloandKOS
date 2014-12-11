@@ -18,16 +18,6 @@ public class Flashlight : MonoBehaviour
     void Start()
     {
         batteryIndicatorHUD = GameObject.FindGameObjectWithTag("BatteryIndicatorHUD");
-//        background = new Texture2D(1, 1, TextureFormat.RGB24, false);
-//        foreground = new Texture2D(1, 1, TextureFormat.RGB24, false);
-//        
-//        background.SetPixel(0, 0, Color.blue);
-//        foreground.SetPixel(0, 0, Color.yellow);
-//        
-//        background.Apply();
-//        foreground.Apply();
-
-        InvokeRepeating("CapacityCounter", 1f, 1f);//Invokes the method every second.
     }
 	
     // Update is called once per frame
@@ -114,17 +104,25 @@ public class Flashlight : MonoBehaviour
     /// <summary>
     /// Increases the counterLinear and subtract that amount from the capacity of the flashlight.
     /// </summary>
-    void CapacityCounter()
+    public IEnumerator CapacityCounter()
     {
-        if (!pauseCapacity)
+        while (capacity > 0f)
         {
-            capacity -= 1.0f;
-            if (capacity <= 0)
+            if (!pauseCapacity)
             {
-                light.intensity = 0f;
+                yield return new WaitForSeconds(1f);
+
+                capacity -= 1.0f;
+                if (capacity <= 0)
+                {
+                    light.intensity = 0f;
+                } else
+                {
+                    light.intensity -= 0.27f;
+                }
             } else
             {
-                light.intensity -= 0.27f;
+                break;
             }
         }
     }

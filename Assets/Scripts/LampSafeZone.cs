@@ -24,6 +24,7 @@ public class LampSafeZone : MonoBehaviour
         if (col.gameObject.name == "Milo")
         {
             miloFlashLight.PauseCapacity = true;
+            miloFlashLight.StopCoroutine(miloFlashLight.CapacityCounter());
         }
         if (col.gameObject.tag == "EnemyShadow")
         {
@@ -36,23 +37,9 @@ public class LampSafeZone : MonoBehaviour
         if (col.gameObject.name == "Milo")
         {
             miloFlashLight.PauseCapacity = false;
+            miloFlashLight.StartCoroutine(miloFlashLight.CapacityCounter());
         } 
     }
-
-//    void OnTriggerStay(Collider col)
-//    {        
-//        if (col.gameObject.name == "Milo" && Application.loadedLevelName.Equals("MazeLevel"))
-//        {
-//            if (!Input.anyKey && !Input.anyKeyDown && !GameController.INSTANCE.Milo.GetComponent<DesiredDirectionMilo>().HasBeenStarted)
-//            {
-//                GameController.INSTANCE.Milo.GetComponent<DesiredDirectionMilo>().HasBeenStarted = true;
-//                GameController.INSTANCE.Milo.GetComponent<DesiredDirectionMilo>().StartAwayState();
-//            } else if (Input.anyKey || Input.anyKeyDown)
-//            {
-//                GameController.INSTANCE.Milo.GetComponent<DesiredDirectionMilo>().CancelAwayState();
-//            }
-//        }
-//    }
 
     /// <summary>
     /// Prevents KOS from entering safe zones.

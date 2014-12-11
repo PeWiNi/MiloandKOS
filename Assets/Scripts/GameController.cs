@@ -82,23 +82,6 @@ public class GameController : MonoBehaviour
         }
     }
 
-//    void OnGUI()
-//    {
-//        if (!isPlayingAsMilo)
-//        {
-//            if (miloFlashlightComponent.Capacity <= 0.0f && miloAwakeTimer > 0.0f)
-//            {
-//                GUI.BeginGroup(box);
-//                {
-//                    GUI.DrawTexture(new Rect(0, 0, box.width, box.height), backgroundKOS, ScaleMode.StretchToFill);
-//                    GUI.DrawTexture(new Rect(0, 0, box.width * miloAwakeTimer / miloAwakeTimerMax, box.height), foregroundKOS, ScaleMode.StretchToFill);
-//                }
-//                GUI.EndGroup();
-//            }
-//            string totalCollectedLotusFlowers = currentCollectedLotusFlowers + "/" + maxNeededLotusFlowers + " Lotus' Collected";
-//        }
-//    }
-
     /// <summary>
     /// Gets a value indicating whether this instance is playing as milo.
     /// </summary>
@@ -250,7 +233,6 @@ public class GameController : MonoBehaviour
         ResetMiloAwakeTimer();
         SwitchTurnCounter++;
         SwitchActiveValuesForCollectables();
-        StartCoroutine(MiloAwakeCountdown());
         CameraPan.AttachedTo = kos;
         miloEyes.SetActive(true);
     }
@@ -275,7 +257,7 @@ public class GameController : MonoBehaviour
     /// Start the countdown for when milo will awake.
     /// </summary>
     /// <returns>The awake countdown.</returns>
-    IEnumerator MiloAwakeCountdown()
+    public IEnumerator MiloAwakeCountdown()
     {
         while (miloAwakeTimer < miloAwakeTimerMax)
         {
@@ -369,8 +351,7 @@ public class GameController : MonoBehaviour
             milo.GetComponent<ShadowEffect>().enabled = false;
             miloAnim.enabled = false;
             Destroy(milo.GetComponent<Rigidbody>());
-//            milo.GetComponent<CapsuleCollider>().isTrigger = true;
-            StartCoroutine(StartMiloColliderIsTriggerCountdown());
+            milo.GetComponent<CapsuleCollider>().isTrigger = true;
             mainCameraSounds [4].Play();
             GameObject[] exits = GameObject.FindGameObjectsWithTag("Exit");
             foreach (GameObject mazeExit in exits)
@@ -380,6 +361,7 @@ public class GameController : MonoBehaviour
                     mazeExit.transform.FindChild("MazeExitGatePortalParticle").gameObject.SetActive(false);//Disable maze exit particles.
                 }
             }
+            milo.GetComponent<DelayOnSwitch>().DisableCountDown();
 //            milo.AddComponent<SpringJoint>();
 //            milo.GetComponent<SpringJoint>().connectedBody = kos.rigidbody;
 //            milo.GetComponent<SpringJoint>().anchor = new Vector3(0.0f, 0.0f, 0.0f);
@@ -406,13 +388,8 @@ public class GameController : MonoBehaviour
                 mazeExit.transform.FindChild("MazeExitGatePortalParticle").gameObject.SetActive(true);//Enable maze exit particles.
             }
             GameController.INSTANCE.Milo.transform.FindChild("MiloGatePortalParticle").gameObject.SetActive(false);//Disable the particles.
+            kos.GetComponent<DelayOnSwitch>().DisableCountDown();
             SwitchToMilo();
         }
-    }
-
-    IEnumerator StartMiloColliderIsTriggerCountdown()
-    {
-        yield return new WaitForSeconds(3f);
-        milo.GetComponent<CapsuleCollider>().isTrigger = true;
     }
 }
