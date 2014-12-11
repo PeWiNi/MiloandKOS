@@ -22,7 +22,11 @@ public class KOSThrowAxe : MonoBehaviour
     float MaxAngel = 500;
     float MinAngel = 100;
     Vector2 vMeasures = new Vector2(1.3f, 0.6f);//DON'T MESS WITH THESE NUMBERS!
-  
+    Vector2 widthLimitLowest = new Vector2(-7.5f, -1.4357f);
+    Vector2 widthLimitLow = new Vector2(-8f, -1.4357f);
+    Vector2 widthLimitMedium = new Vector2(-9f, -1.4357f);
+    Vector2 widthLimitHigh = new Vector2(-10.5f, -1.4357f);
+
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -37,17 +41,43 @@ public class KOSThrowAxe : MonoBehaviour
         curRot = aimingArm.transform.eulerAngles;
         maxZ = curRot.z + maxAim;
         minZ = curRot.z - maxAim;
-        aimingArm.SetActive(false);
-        // KosCannotMoveOutOfBounds();
+        aimingArm.SetActive(false);    
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Camera.main.aspect >= 1.7) // 16:9
+        {
+            if (transform.position.x <= -10.5)
+            {
+                transform.position = widthLimitHigh; 
+            }
+        } else if (Camera.main.aspect >= 1.5) // 3:2 & 16:10
+        {
+            if (transform.position.x <= -9)
+            {
+                transform.position = widthLimitMedium; 
+            }
+        } else if (Camera.main.aspect >= 1.3) // 4:3
+        {
+            if (transform.position.x <= -8)
+            {
+                transform.position = widthLimitLow; 
+            }  
+        } else // 5:4
+        {
+            //Debug.Log("something");
+            if (transform.position.x <= -7.5)
+            {
+                transform.position = widthLimitLowest; 
+            }
+        }
         if (StateController.INSTANCE.HasDialoguesBeenStarted)//Ensures we can't attack before both dialogues are done.
         {
             if (!Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
             {
+
                 // Checking for scene as well because otherwise, Milo will shoot when Kos shoots.
                 if (Input.GetKeyDown(KeyCode.Space) && Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
                 {
@@ -162,11 +192,4 @@ public class KOSThrowAxe : MonoBehaviour
         cooldown = false;
     }
 
-    //void KosCannotMoveOutOfBounds()
-    //{
-    //    if (kos.transform.position.x > Screen.width)
-    //   { 
-    //      kos.transform.position.x = Screen.width;
-    //  }
-    //}
 }
