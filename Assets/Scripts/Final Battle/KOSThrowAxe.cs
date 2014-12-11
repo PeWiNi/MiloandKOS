@@ -38,7 +38,7 @@ public class KOSThrowAxe : MonoBehaviour
         maxZ = curRot.z + maxAim;
         minZ = curRot.z - maxAim;
         aimingArm.SetActive(false);
-        //  if(kos.transform.position.x > Screen.width, kos.transform.position.x=Screen.width)
+        // KosCannotMoveOutOfBounds();
     }
 
     // Update is called once per frame
@@ -161,4 +161,12 @@ public class KOSThrowAxe : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         cooldown = false;
     }
+
+    //void KosCannotMoveOutOfBounds()
+    //{
+    //    if (kos.transform.position.x > Screen.width)
+    //   { 
+    //      kos.transform.position.x = Screen.width;
+    //  }
+    //}
 }
