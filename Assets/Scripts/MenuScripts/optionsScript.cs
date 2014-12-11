@@ -21,7 +21,10 @@ public class optionsScript : MonoBehaviour {
 						" You have to make sure he is not caught by shadows and reach the end of his journey. \n" +
 						" If he does...you'll see how darkness attempts to prevail. \n \n" +
 						" Do your best ! \n \n" +
-						" Tips: Milo can jump over things and can stay in the light for as long as he needs";
+						" Tips: \n" +
+						"1. Milo can jump over things and can stay in the light for as long as he need" +
+						"\n2. Should you become a servant of darkness, your goal will be to keep Milo \n" +
+						"under your control using the flowers you can find inside the park.";
 	}
 
 	public void controls ()

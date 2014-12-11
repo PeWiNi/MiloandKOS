@@ -12,6 +12,9 @@ public class playCutscene : MonoBehaviour {
 	Vector3 v3ViewPort;
 	Vector3 v3BottomLeft;
 	Vector3 v3TopRight;
+	float movieRatio; 
+	float screenSizeOldHeight;
+	float screenSizeOldWidth;
 
 	public Text txt;
 	private AsyncOperation async = null;
@@ -20,9 +23,13 @@ public class playCutscene : MonoBehaviour {
 	void Start () {
 
 		planeCut = GameObject.Find ("Plane");
-		updateScreenSize();
+		screenSizeOldHeight = Screen.height;
+		screenSizeOldWidth = Screen.width;
+
 		renderer.material.mainTexture = movie;
 		movie.Play ();
+		movieRatio = (float)movie.width / (float)movie.height;
+		updateScreenSize();
 
 		GameObject temp = GameObject.Find ("Text");
 		txt = temp.GetComponent<Text> ();
@@ -50,7 +57,17 @@ public class playCutscene : MonoBehaviour {
 
 	void Update ()
 	{
-		updateScreenSize();
+
+		if (movie.isPlaying) 
+			if (screenSizeOldWidth!= Screen.width || screenSizeOldHeight!= Screen.height) 
+				{ 
+						screenSizeOldWidth= Screen.width;
+						screenSizeOldHeight= Screen.height;
+						movieRatio = (float)movie.width / (float)movie.height;
+						Debug.Log(movie.width+" "+movie.height); 
+						updateScreenSize();
+				}
+
 		if (movie.isPlaying & Input.GetKeyDown (KeyCode.Escape)) {
 					//	Debug.Log("pressed escape");
 						movie.Stop();	
@@ -70,8 +87,18 @@ public class playCutscene : MonoBehaviour {
 		v3TopRight = Camera.main.ViewportToWorldPoint(v3ViewPort);
 		// float ratiow = 360 * (v3BottomLeft.x - v3TopRight.x) / 540;
 		//  float ratioh = 540 * (v3BottomLeft.y - v3TopRight.y) / 360;
-		float ratiow = 786 * (v3BottomLeft.x - v3TopRight.x) / 1024;
+		/*float ratiow = 786 * (v3BottomLeft.x - v3TopRight.x) / 1024;
 		float ratioh = 1024 * (v3BottomLeft.y - v3TopRight.y) / 786;
-		planeCut.transform.localScale = new Vector3(ratiow, 1, ratioh - 0.5f);
+		Debug.Log ("height:" + ratioh + " width:" + ratiow);*/
+
+		//Debug.Log ("screenRAtio:" + (float)Screen.width/ (float)Screen.height);
+		Debug.Log (movieRatio);
+		float newHeight = movie.height * Screen.height/Screen.width;
+		newHeight=newHeight* (v3BottomLeft.y - v3TopRight.y)/newHeight;
+		Debug.Log (newHeight);
+		float newWidth = newHeight*movieRatio; //*(v3BottomLeft.x - v3TopRight.x)/(v3BottomLeft.y - v3TopRight.y);
+		Debug.Log (newWidth);
+		planeCut.transform.localScale = new Vector3(newWidth,  1, newHeight);
+	//	planeCut.transform.localScale = new Vector3(ratiow, 1, ratioh - 0.5f);
 	}
 }
