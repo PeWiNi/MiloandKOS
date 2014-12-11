@@ -269,7 +269,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Options
+  m_Text: Help
 --- !u!222 &311508572
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1095,11 +1095,11 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 26
+    m_FontSize: 20
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 14
+    m_MaxSize: 20
     m_Alignment: 0
     m_RichText: 1
     m_HorizontalOverflow: 0

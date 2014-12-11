@@ -786,7 +786,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 14
+    m_MaxSize: 20
     m_Alignment: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
@@ -798,8 +798,8 @@ MonoBehaviour:
     - Cristina Alexandra Niculescu;\r\nProgrammer, 2D Animator, Voice-Overs -> Henrik
     Otto Pedersen;\r\n3d Modeling/Animation, Rigging, non-interactable UI implementation,
     QA- Jesper Pedersen;\n\n\n\nSpecial thanks to:\n\nSara Tarby Christensen - our
-    assigned TA for great feedback and guidance; \n\n& \n\nTroels Nygaard - for helping
-    with the Sound Design and advice regarding audio matters;"
+    TA - for awesomely great feedback and guidance; \n\n& \n\nTroels Nygaard - for
+    helping with the Sound Design and advice regarding audio matters;"
 --- !u!222 &2014187829
 CanvasRenderer:
   m_ObjectHideFlags: 0

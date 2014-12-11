@@ -1041,6 +1041,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: d7fb7b28a6d9ea245b073d90ea209d94, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: d7fb7b28a6d9ea245b073d90ea209d94, type: 2}
+      propertyPath: m_Center.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: d7fb7b28a6d9ea245b073d90ea209d94, type: 2}
+      propertyPath: m_Center.y
+      value: -.150000006
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7fb7b28a6d9ea245b073d90ea209d94, type: 2}
   m_RootGameObject: {fileID: 1720229563}
@@ -1767,7 +1779,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Size: {x: .100000001, y: 5}
-  m_Center: {x: 2.5, y: 0}
+  m_Center: {x: 2.5, y: -.150000006}
 --- !u!61 &1720229571
 BoxCollider2D:
   m_ObjectHideFlags: 0

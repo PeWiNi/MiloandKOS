@@ -443,7 +443,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: .300000012, y: .5}
   m_AnchorMax: {x: .600000024, y: .5}
-  m_AnchoredPosition: {x: 14.5, y: 18}
+  m_AnchoredPosition: {x: 14.5, y: 15}
   m_SizeDelta: {x: 20, y: 40}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &467277470
@@ -555,7 +555,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Options
+  m_Text: Help
 --- !u!1 &612797708
 GameObject:
   m_ObjectHideFlags: 0

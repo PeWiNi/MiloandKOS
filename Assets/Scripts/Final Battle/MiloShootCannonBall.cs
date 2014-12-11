@@ -20,6 +20,10 @@ public class MiloShootCannonBall : MonoBehaviour
     float MaxAngel = 500;
     float MinAngel = 100;
     Vector2 vMeasures = new Vector2(2.71f, 0.0f);//DON'T MESS WITH THESE NUMBERS!
+    Vector2 widthLimitLowest = new Vector2(6f, -1.68f);
+    Vector2 widthLimitLow = new Vector2(6.5f, -1.68f);
+    Vector2 widthLimitMedium = new Vector2(7f, -1.68f);
+    Vector2 widthLimitHigh = new Vector2(9f, -1.68f);
 
     void Awake()
     {
@@ -41,6 +45,31 @@ public class MiloShootCannonBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Camera.main.aspect >= 1.7) // 16:9
+        {
+            if (transform.position.x >= 9)
+            {
+                transform.position = widthLimitHigh; 
+            }
+        } else if (Camera.main.aspect >= 1.5) // 3:2 & 16:10
+        {
+            if (transform.position.x >= 7)
+            {
+                transform.position = widthLimitMedium; 
+            }
+        } else if (Camera.main.aspect >= 1.3) // 4:3
+        {
+            if (transform.position.x >= 6.5)
+            {
+                transform.position = widthLimitLow; 
+            }  
+        } else // 5:4
+        {
+            if (transform.position.x >= 6)
+            {
+                transform.position = widthLimitLowest; 
+            }
+        }
         if (StateController.INSTANCE.HasDialoguesBeenStarted)//Ensures we can't attack before both dialogues are done.
         {
             if (!Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
