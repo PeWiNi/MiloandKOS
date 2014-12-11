@@ -4,18 +4,22 @@ using System.Collections;
 public class DetectCollisionWithSchoolBenches : MonoBehaviour
 {
     bool isCollidingWithBench;
-    bool hasMovedOut;
+
+    void Update()
+    {
+
+    }
 
     void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.tag.Equals("SchoolBench"))
         {
             isCollidingWithBench = true;
-        }
-        if (GameController.INSTANCE.Kos.activeSelf && !hasMovedOut)
-        {
-            hasMovedOut = true;
-            GameController.INSTANCE.Kos.GetComponent<Rigidbody>().constraints &= ~RigidbodyConstraints.FreezePositionY;
+            if (GameController.INSTANCE.Kos.activeSelf)
+            {
+                GameController.INSTANCE.Kos.GetComponent<Rigidbody>().constraints &= ~RigidbodyConstraints.FreezePositionY;
+                GameController.INSTANCE.Kos.GetComponent<CapsuleCollider>().isTrigger = true;
+            }
         }
     }
     
@@ -24,11 +28,12 @@ public class DetectCollisionWithSchoolBenches : MonoBehaviour
         if (col.gameObject.tag.Equals("SchoolBench"))
         {
             isCollidingWithBench = false;
-        }
-        if (GameController.INSTANCE.Kos.activeSelf)
-        {
-            transform.position = new Vector3(transform.position.x, 0.2f, transform.position.z);
-            GameController.INSTANCE.Kos.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY;
+            if (GameController.INSTANCE.Kos.activeSelf)
+            {
+                transform.position = new Vector3(transform.position.x, 0.2f, transform.position.z);
+                GameController.INSTANCE.Kos.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY;
+                GameController.INSTANCE.Kos.GetComponent<CapsuleCollider>().isTrigger = false;
+            }
         }
     }
 
