@@ -48,23 +48,8 @@ public class TrashCanDetectKOSTeleport : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.T) && hasEntered)
         {
-            float distance = Mathf.Infinity;
-            Vector3 position = transform.position;
-            foreach (GameObject trashCan in trashCans)
-            {
-                if (gameObject != trashCan)//we only want to check the distance of all the other Trashcans!.
-                {
-                    Vector3 diff = (trashCan.transform.position - position);
-                    float curDistance = diff.sqrMagnitude;
-                    if (curDistance < distance)
-                    {
-                        closest = trashCan;
-                        distance = curDistance;
-                        //   hasEntered = true;
-                    }
-                }
-            }
-            kos.rigidbody.MovePosition(closest.transform.position);//This is the actual teleportation.
+            int rand = Random.Range(0, trashCans.Length);
+            kos.rigidbody.MovePosition(trashCans [rand].transform.position);//This is the actual teleportation.
         }
     }
 }

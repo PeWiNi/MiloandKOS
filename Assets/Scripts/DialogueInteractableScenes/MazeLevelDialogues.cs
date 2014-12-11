@@ -8,15 +8,17 @@ public class MazeLevelDialogues : MonoBehaviour
     [SerializeField]
     Text[]
         dialogues;
-
     bool hasPlayedMomMiloPicksUpBattery;
     bool kosNotSpokenAfterTransition;
+    bool miloNotSpokenAfterTransition;
     static bool miloHasBeenStruckedByShadow;
     static int firstTimeKOSPicksUpLotusFlower = 0;
+    AudioSource[] voiceOvers;
+
     // Use this for initialization
     void Start()
     {
-	
+        voiceOvers = GameObject.Find("InGameVoiceOvers").GetComponents<AudioSource>();
     }
 	
     // Update is called once per frame
@@ -61,6 +63,16 @@ public class MazeLevelDialogues : MonoBehaviour
     {
         if (GameController.INSTANCE.SwitchTurnCounter % 2 == 0)// SwitchTurnCounter is Odd, active Character is KOS.
         {
+            if (GameController.INSTANCE.Kos.activeSelf && !kosNotSpokenAfterTransition)
+            {
+                kosNotSpokenAfterTransition = true;
+                KOS_TransitionFromMiloToKOS();
+            }
+            if (!GameController.INSTANCE.IsPlayingAsMilo && firstTimeKOSPicksUpLotusFlower == 1)
+            {
+                firstTimeKOSPicksUpLotusFlower++;
+                Teacher_StoryTellingStuff();
+            }
         } else// SwitchTurnCounter is Even, active Character is Milo.
         {
             if (GameController.INSTANCE.IsPlayingAsMilo && GameController.INSTANCE.Milo.activeSelf && !hasPlayedMomMiloPicksUpBattery)
@@ -73,62 +85,47 @@ public class MazeLevelDialogues : MonoBehaviour
                 KOS_ShadowSpawnCollision();
                 miloHasBeenStruckedByShadow = false;
             }
-            if (GameController.INSTANCE.Kos.activeSelf && !kosNotSpokenAfterTransition)
+            if (kosNotSpokenAfterTransition && !miloNotSpokenAfterTransition)
             {
-                kosNotSpokenAfterTransition = true;
-                KOS_TransitionFromMiloToKOS();
-            } else if (GameController.INSTANCE.IsPlayingAsMilo && kosNotSpokenAfterTransition)
-            {
-                kosNotSpokenAfterTransition = false;
-            }
-            if (!GameController.INSTANCE.IsPlayingAsMilo && firstTimeKOSPicksUpLotusFlower == 1)
-            {
-                firstTimeKOSPicksUpLotusFlower++;
-                Teacher_StoryTellingStuff();
+                miloNotSpokenAfterTransition = true;
+                Milo_AwakeBarAlmostFull();
             }
         }
     }
 
     void Mom_MiloPicksUpBattery()
     {
-        dialogues [5].enabled = true;
-        StartCoroutine(FadeText(dialogues [5]));
+        dialogues [2].enabled = true;
+        StartCoroutine(FadeText(dialogues [2]));
+        voiceOvers [0].Play();
     }
 
     void Teacher_StoryTellingStuff()
     {
         dialogues [3].enabled = true;
         StartCoroutine(FadeText(dialogues [3]));
-    }
-
-    void Milo_MazeEntrance()
-    {
-        dialogues [2].enabled = true;
-        StartCoroutine(FadeText(dialogues [2]));
+        voiceOvers [3].Play();
     }
 
     void Milo_AwakeBarAlmostFull()
     {
         dialogues [4].enabled = true;
         StartCoroutine(FadeText(dialogues [4]));
+        voiceOvers [1].Play();
     }
 
     void KOS_ShadowSpawnCollision()
     {
-        dialogues [6].enabled = true;
-        StartCoroutine(FadeText(dialogues [6]));
-    }
-
-    void KOS_NotEnoughLotusFlowers()
-    {
         dialogues [0].enabled = true;
         StartCoroutine(FadeText(dialogues [0]));
+        voiceOvers [2].Play();
     }
 
     void KOS_TransitionFromMiloToKOS()
     {
         dialogues [1].enabled = true;
         StartCoroutine(FadeText(dialogues [1]));
+        voiceOvers [4].Play();
     }
 
     /// <summary>

@@ -141,16 +141,6 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
 --- !u!223 &42596554
 Canvas:
   m_ObjectHideFlags: 0
@@ -165,7 +155,6 @@ Canvas:
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!114 &42596555
@@ -211,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6b8c658814afbb94897e1c82d3738cc7, type: 3}
     m_FontSize: 14
@@ -232,6 +221,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 413093506}
+  m_HideIfInvisible: 0
 --- !u!224 &413093509
 RectTransform:
   m_ObjectHideFlags: 0
@@ -295,7 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: .964705884, b: 0, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6b8c658814afbb94897e1c82d3738cc7, type: 3}
     m_FontSize: 14
@@ -315,6 +305,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 419298976}
+  m_HideIfInvisible: 0
 --- !u!1 &923092398
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,6 +562,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1496512621}
+  m_HideIfInvisible: 0
 --- !u!224 &1496512624
 RectTransform:
   m_ObjectHideFlags: 0
@@ -648,7 +640,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
-  m_DragThreshold: 5
 --- !u!4 &1857638866
 Transform:
   m_ObjectHideFlags: 0

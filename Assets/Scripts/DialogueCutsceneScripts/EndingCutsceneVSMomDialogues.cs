@@ -9,6 +9,7 @@ public class EndingCutsceneVSMomDialogues : MonoBehaviour
         dialogues;
     bool momFirstWarning;
     bool momSecondWarning;
+    bool momThirdWarningEvil;
     bool narrator;
 
     bool hasBeenInitiated;
@@ -49,13 +50,13 @@ public class EndingCutsceneVSMomDialogues : MonoBehaviour
             momSecondWarning = true;
             dialogues [1].enabled = true;
             StartCoroutine(DisplayTextDialogue(dialogues [1], 6f));
-        } else if (momSecondWarning && !narrator && !isPlaying)
+        } else if (momFirstWarning && momSecondWarning && !momThirdWarningEvil && !isPlaying)
         {
             isPlaying = true;
-            narrator = true;
-            dialogues [2].enabled = true;
-            StartCoroutine(DisplayTextDialogue(dialogues [2], 12f));
-        }
+            momThirdWarningEvil = true;
+            dialogues [3].enabled = true;
+            StartCoroutine(DisplayTextDialogue(dialogues [3], 1f));
+        } 
     }
 
     /// <summary>
@@ -78,16 +79,19 @@ public class EndingCutsceneVSMomDialogues : MonoBehaviour
     {
         yield return new WaitForSeconds(seconds);
         text.enabled = false;
-        if (momFirstWarning && !momSecondWarning && !narrator)
+        if (momFirstWarning && !momSecondWarning && !momThirdWarningEvil && !narrator)
         {
             StartCoroutine(Wait(8f));
-        } else if (momSecondWarning && momSecondWarning && !narrator)
+        } else if (momFirstWarning && momSecondWarning && !momThirdWarningEvil)
         {
-            StartCoroutine(Wait(20f));
+            StartCoroutine(Wait(4f));
+        } else if (momSecondWarning && momSecondWarning && momThirdWarningEvil && !narrator)
+        {
+            StartCoroutine(Wait(14f));
         } else if (narrator)
         {
             isPlaying = false;
-        }
+        } 
     }
 
     /// <summary>

@@ -46,7 +46,7 @@ public class ExitMazeEnterShipAsMiloDialogues : MonoBehaviour
             isPlaying = true;
             hasMiloSpoken = true;
             dialogues [0].enabled = true;
-            StartCoroutine(DisplayTextDialogue(dialogues [0], 5f));
+            StartCoroutine(DisplayTextDialogue(dialogues [0], 1f));
         }
     }
     

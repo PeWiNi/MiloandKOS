@@ -93,7 +93,6 @@ public class IntroCutsceneDialogues : MonoBehaviour
             StartCoroutine(Wait(3f));
         } else if (unkownHasSpoken && !miloHasSpoken)
         {
-            Debug.Log("Milo has spoken");
             isPlaying = false;// No coroutine, becuase immediate reaction from Milo.
         } else if (miloHasSpoken && !kosHasSpoken)
         {

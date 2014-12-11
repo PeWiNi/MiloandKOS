@@ -28,6 +28,7 @@ public class TriggerMomDialogeTutorialLevel : MonoBehaviour
             hasBeenTriggered = true;
             momDialogueTutorialLevel.enabled = true;
             StartCoroutine(FadeText(momDialogueTutorialLevel));
+            Camera.main.audio.Play();
         }
     }
 

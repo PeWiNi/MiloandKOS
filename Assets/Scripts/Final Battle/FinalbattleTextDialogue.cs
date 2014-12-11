@@ -22,11 +22,11 @@ public class FinalbattleTextDialogue : MonoBehaviour
     bool hasPlayedMiloIfKOS = false;
     bool hasPlayedMiloIfMilo = false;
     bool isPlaying = false;
-
+    AudioSource[] voiceOvers;
     // Use this for initialization
     void Start()
     {
-	
+        voiceOvers = Camera.main.GetComponents<AudioSource>();
     }
 	
     // Update is called once per frame
@@ -48,11 +48,13 @@ public class FinalbattleTextDialogue : MonoBehaviour
                 hasPlayedKOSIfMilo = true;
                 kosPreBattleIfMilo.enabled = true;
                 StartCoroutine(FadeText(kosPreBattleIfMilo, true));
+                voiceOvers [1].Play();
             } else if (hasPlayedKOSIfMilo && !hasPlayedMiloIfMilo && !isPlaying)
             {
                 hasPlayedMiloIfMilo = true;
                 miloPreBattleIfMilo.enabled = true;
                 StartCoroutine(FadeText(miloPreBattleIfMilo, false));
+                voiceOvers [0].Play();
             }
         } else if (Application.loadedLevel == 8)//As KOS.
         {
@@ -62,11 +64,13 @@ public class FinalbattleTextDialogue : MonoBehaviour
                 hasPlayedMiloIfKOS = true;
                 miloPreBattleIfKOS.enabled = true;
                 StartCoroutine(FadeText(miloPreBattleIfKOS, true));
+                voiceOvers [0].Play();
             } else if (hasPlayedMiloIfKOS && !hasPlayedKOSIfKOS && !isPlaying)
             {
                 hasPlayedKOSIfKOS = true;
                 kosPreBattleIfKOS.enabled = true;
                 StartCoroutine(FadeText(kosPreBattleIfKOS, false));
+                voiceOvers [1].Play();
             }
         }
     }

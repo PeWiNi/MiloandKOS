@@ -2234,6 +2234,7 @@ GameObject:
   - 92: {fileID: 128484792}
   - 81: {fileID: 128484791}
   - 114: {fileID: 128484790}
+  - 82: {fileID: 128484796}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2326,6 +2327,64 @@ Transform:
   m_Children: []
   m_Father: {fileID: 474574075}
   m_RootOrder: 1
+--- !u!82 &128484796
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 128484789}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 7e203ad6588fe9e4ebc4e397877818da, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &131657956
 GameObject:
   m_ObjectHideFlags: 0
@@ -7115,6 +7174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b9dec60df152b45ae2b945fc077f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkedPlayerMovement: 0
 --- !u!1 &485577418
 GameObject:
   m_ObjectHideFlags: 0
@@ -15976,7 +16036,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
-  m_DragThreshold: 5
 --- !u!4 &1103572189
 Transform:
   m_ObjectHideFlags: 0
@@ -26598,7 +26657,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1757700267}
   m_LocalRotation: {x: 0, y: -.173648193, z: 0, w: .984807789}
-  m_LocalPosition: {x: -5.66279984, y: 0, z: 8.30990028}
+  m_LocalPosition: {x: .25207001, y: 0, z: .742349982}
   m_LocalScale: {x: 15.5500002, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 1234382949}
@@ -27597,6 +27656,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1817121015}
+  m_HideIfInvisible: 0
 --- !u!1 &1817202882
 GameObject:
   m_ObjectHideFlags: 0
@@ -29198,7 +29258,6 @@ Canvas:
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!1 &1934826080

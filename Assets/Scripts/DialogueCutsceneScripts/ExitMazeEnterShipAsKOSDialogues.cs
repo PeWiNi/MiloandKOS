@@ -21,32 +21,15 @@ public class ExitMazeEnterShipAsKOSDialogues : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!hasBeenInitiated)
-        {
-            StartCoroutine(BeginDialogueSequence());
-        } else
-        {
-            CheckSequence();
-        }
-    }
-
-    /// <summary>
-    /// Checks the sequence.
-    /// </summary>
-    void CheckSequence()
-    {
         if (!hasKOSSpoken)
         {
-            isPlaying = true;
             hasKOSSpoken = true;
-            dialogues [0].enabled = true;
-            StartCoroutine(DisplayTextDialogue(dialogues [0], 6f));
-        } else if (hasKOSSpoken && !isPlaying)
+            StartCoroutine(BeginDialogueSequenceForKOS());
+        } 
+        if (!hasMiloSpoken)
         {
-            isPlaying = true;
             hasMiloSpoken = true;
-            dialogues [1].enabled = true;
-            StartCoroutine(DisplayTextDialogue(dialogues [1], 6f));
+            StartCoroutine(BeginDialogueSequenceForMilo());
         }
     }
     
@@ -54,10 +37,18 @@ public class ExitMazeEnterShipAsKOSDialogues : MonoBehaviour
     /// Begins the dialogue sequence countdown.
     /// </summary>
     /// <returns>The dialogue sequence.</returns>
-    IEnumerator BeginDialogueSequence()
+    IEnumerator BeginDialogueSequenceForKOS()
     {
-        yield return new WaitForSeconds(3f);
-        hasBeenInitiated = true;
+        yield return new WaitForSeconds(8.6f);
+        dialogues [0].enabled = true;
+        StartCoroutine(DisplayTextDialogue(dialogues [0], 3.5f));
+    }
+
+    IEnumerator BeginDialogueSequenceForMilo()
+    {
+        yield return new WaitForSeconds(12.5f);
+        dialogues [1].enabled = true;
+        StartCoroutine(DisplayTextDialogue(dialogues [1], 1f));
     }
 
     /// <summary>
@@ -70,19 +61,5 @@ public class ExitMazeEnterShipAsKOSDialogues : MonoBehaviour
     {
         yield return new WaitForSeconds(seconds);
         text.enabled = false;
-        if (hasKOSSpoken && !hasMiloSpoken)
-        {
-            StartCoroutine(Wait(6f));
-        }
-    }
-    
-    /// <summary>
-    /// Wait the specified amountBetweenDialogues.
-    /// </summary>
-    /// <param name="amountBetweenDialogues">Amount between dialogues.</param>
-    IEnumerator Wait(float amountBetweenDialogues)
-    {
-        yield return new WaitForSeconds(amountBetweenDialogues);
-        isPlaying = false;
     }
 }
