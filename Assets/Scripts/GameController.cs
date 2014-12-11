@@ -362,6 +362,8 @@ public class GameController : MonoBehaviour
                 }
             }
             milo.GetComponent<DelayOnSwitch>().DisableCountDown();
+            milo.GetComponent<DelayOnSwitch>().enabled = false;
+            kos.GetComponent<DelayOnSwitch>().enabled = true;
 //            milo.AddComponent<SpringJoint>();
 //            milo.GetComponent<SpringJoint>().connectedBody = kos.rigidbody;
 //            milo.GetComponent<SpringJoint>().anchor = new Vector3(0.0f, 0.0f, 0.0f);
@@ -389,6 +391,8 @@ public class GameController : MonoBehaviour
             }
             GameController.INSTANCE.Milo.transform.FindChild("MiloGatePortalParticle").gameObject.SetActive(false);//Disable the particles.
             kos.GetComponent<DelayOnSwitch>().DisableCountDown();
+            kos.GetComponent<DelayOnSwitch>().enabled = false;
+            milo.GetComponent<DelayOnSwitch>().enabled = true;
             SwitchToMilo();
         }
     }

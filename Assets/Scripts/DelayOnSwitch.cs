@@ -3,13 +3,12 @@ using System.Collections;
 
 public class DelayOnSwitch : MonoBehaviour
 {
-    bool checkedPlayerMovement;
+    public bool checkedPlayerMovement;
     GameObject flashLight;
 
     // Use this for initialization
     void Start()
     {
-        GameObject player = GameObject.FindWithTag("Player");
         flashLight = GameObject.Find("Flashlight");
     }
 	
@@ -25,14 +24,8 @@ public class DelayOnSwitch : MonoBehaviour
     /// </summary>
     public void DisableCountDown()
     {
-        if (GameController.INSTANCE.IsPlayingAsMilo)
-        {
-            Debug.Log("LOLOLA");
-            StopCoroutine(flashLight.GetComponent<Flashlight>().CapacityCounter());
-        } else if (!GameController.INSTANCE.IsPlayingAsMilo)
-        {
-            GameController.INSTANCE.ResetMiloAwakeTimer();
-        }
+        checkedPlayerMovement = false;
+        StopCoroutine(flashLight.GetComponent<Flashlight>().CapacityCounter());
     }
 
     /// <summary>
@@ -42,12 +35,10 @@ public class DelayOnSwitch : MonoBehaviour
     {
         if (GameController.INSTANCE.IsPlayingAsMilo && GameController.INSTANCE.Milo.GetComponent<Animator>().GetFloat("Movement") != 0 && !checkedPlayerMovement)
         {
-            Debug.Log("Was here");
             checkedPlayerMovement = true;
             StartCoroutine(flashLight.GetComponent<Flashlight>().CapacityCounter());
-        } else if (!GameController.INSTANCE.IsPlayingAsMilo && GameController.INSTANCE.Kos.GetComponent<Animator>().GetFloat("Movement") != 0 && !checkedPlayerMovement)
+        } else if (GameController.INSTANCE.Kos.activeSelf && GameController.INSTANCE.Kos.GetComponent<Animator>().GetFloat("Movement") != 0 && !checkedPlayerMovement)
         {
-            Debug.Log("Nah wasn't here");
             checkedPlayerMovement = true;
             StartCoroutine(GameController.INSTANCE.MiloAwakeCountdown());
         }
