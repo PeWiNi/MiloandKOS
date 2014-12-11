@@ -13,7 +13,9 @@ public class StateController : MonoBehaviour
     GameObject milo;
     GameObject kos;
     Image consecutiveMiloHitsImage; 
-    Image consecutiveKOSHitsImage;  
+    Image consecutiveKOSHitsImage; 
+    Image losingKOSImageIndicator;
+    Image losingMiloImageIndicator;
     static int kosHitsTakenMax = 10;
     static int kosHitsTakenValue = 0;
     static int miloHitsTakenMax = 10;
@@ -35,7 +37,8 @@ public class StateController : MonoBehaviour
     [SerializeField]
     Sprite
         MBIimage04;
-
+    Sprite[] kosLosingSprites;
+    Sprite[] miloLosingSprites;
     Sprite[] sprites;
     void Awake()
     {
@@ -50,12 +53,16 @@ public class StateController : MonoBehaviour
         milo = GameObject.Find("MiloCannon01");
         kos = GameObject.Find("KOSDoubleAxe01");
         sprites = Resources.LoadAll<Sprite>("BattleIndicatorBY"); 
+        kosLosingSprites = Resources.LoadAll<Sprite>("KosLosingIndicator01");
+        miloLosingSprites = Resources.LoadAll<Sprite>("MiloLosingIndicator01");
         if (!Application.loadedLevelName.Equals(nextSceneAsKOS))
         {
             consecutiveMiloHitsImage = GameObject.Find("MiloBattleIndicator").GetComponent<Image>();
+            losingMiloImageIndicator = GameObject.Find("MiloLosingIndicator").GetComponent<Image>();
         } else if (!Application.loadedLevelName.Equals(nextSceneAsMilo))
         {
             consecutiveMiloHitsImage = GameObject.Find("KosBattleIndicator").GetComponent<Image>();
+            losingKOSImageIndicator = GameObject.Find("KosLosingIndicator").GetComponent<Image>();
         }
     }
 	
@@ -67,10 +74,12 @@ public class StateController : MonoBehaviour
             if (!Application.loadedLevelName.Equals(nextSceneAsKOS))
             {
                 UpdateMiloScore();
+                UpdateMiloLosing();
             }
             if (!Application.loadedLevelName.Equals(nextSceneAsMilo))
             {
                 UpdateKosScore();
+                UpdateKosLosing();
             }
             if (Application.loadedLevelName.Equals(nextSceneAsKOS) && !miloShooting && consecutiveHitsValue < consecutiveHitsMax)
             {
@@ -297,6 +306,87 @@ public class StateController : MonoBehaviour
             
         } else if (consecutiveHitsValue == 3)
         {
+            consecutiveMiloHitsImage.sprite = sprites [6];
+        }
+    }
+
+    void UpdateKosLosing()
+    {
+        if (kosHitsTakenValue == 0)
+        {
+            losingKOSImageIndicator.sprite = kosLosingSprites [0];
+        }
+        if (kosHitsTakenValue == 1)
+        {
+            losingKOSImageIndicator.sprite = kosLosingSprites [1];
+        } else if (kosHitsTakenValue == 2)
+        {
+            losingKOSImageIndicator.sprite = kosLosingSprites [2];
+        } else if (kosHitsTakenValue == 3)
+        {
+            losingKOSImageIndicator.sprite = kosLosingSprites [3];
+        } else if (kosHitsTakenValue == 4)
+        {
+            losingKOSImageIndicator.sprite = kosLosingSprites [4];
+        } else if (kosHitsTakenValue == 5)
+        {
+            losingKOSImageIndicator.sprite = kosLosingSprites [5];
+        } else if (kosHitsTakenValue == 6)
+        {
+            losingKOSImageIndicator.sprite = kosLosingSprites [6];
+        } else if (kosHitsTakenValue == 7)
+        {
+            losingKOSImageIndicator.sprite = kosLosingSprites [7];
+        } else if (kosHitsTakenValue == 8)
+        {
+            losingKOSImageIndicator.sprite = kosLosingSprites [8];
+        } else if (kosHitsTakenValue == 9)
+        {
+            losingKOSImageIndicator.sprite = kosLosingSprites [9];
+        } else if (kosHitsTakenValue == 10)
+        {
+            losingKOSImageIndicator.sprite = kosLosingSprites [10];
+            consecutiveMiloHitsImage.sprite = sprites [3];
+        }
+    }
+
+
+    void UpdateMiloLosing()
+    {
+        if (miloHitsTakenValue == 0)
+        {
+            losingMiloImageIndicator.sprite = miloLosingSprites [0];
+        }
+        if (miloHitsTakenValue == 1)
+        {
+            losingMiloImageIndicator.sprite = miloLosingSprites [1];
+        } else if (miloHitsTakenValue == 2)
+        {
+            losingMiloImageIndicator.sprite = miloLosingSprites [2];
+        } else if (miloHitsTakenValue == 3)
+        {
+            losingMiloImageIndicator.sprite = miloLosingSprites [3];
+        } else if (miloHitsTakenValue == 4)
+        {
+            losingMiloImageIndicator.sprite = miloLosingSprites [4];
+        } else if (miloHitsTakenValue == 5)
+        {
+            losingMiloImageIndicator.sprite = miloLosingSprites [5];
+        } else if (miloHitsTakenValue == 6)
+        {
+            losingMiloImageIndicator.sprite = miloLosingSprites [6];
+        } else if (miloHitsTakenValue == 7)
+        {
+            losingMiloImageIndicator.sprite = miloLosingSprites [7];
+        } else if (miloHitsTakenValue == 8)
+        {
+            losingMiloImageIndicator.sprite = miloLosingSprites [8];
+        } else if (miloHitsTakenValue == 9)
+        {
+            losingMiloImageIndicator.sprite = miloLosingSprites [9];
+        } else if (miloHitsTakenValue == 10)
+        {
+            losingMiloImageIndicator.sprite = miloLosingSprites [10];
             consecutiveMiloHitsImage.sprite = sprites [6];
         }
     }
