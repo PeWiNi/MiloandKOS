@@ -83,7 +83,6 @@ public class MiloShootCannonBall : MonoBehaviour
                 if (Application.loadedLevelName.Equals(StateController.nextSceneAsKOS))
                 {
                     StateController.ConsecutiveHitsValue += 1;
-                    StateController.KOSHitsTakenValue = 0;
                 } else if (Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
                 {
                     StateController.ConsecutiveHitsValue = 0;

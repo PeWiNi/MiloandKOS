@@ -89,7 +89,6 @@ public class KOSThrowAxe : MonoBehaviour
                 } else if (Application.loadedLevelName.Equals(StateController.nextSceneAsMilo))
                 {
                     StateController.ConsecutiveHitsValue += 1;
-                    StateController.MiloHitsTakenValue = 0;
                 }
             }
             Destroy(col.gameObject);
