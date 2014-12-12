@@ -59,11 +59,9 @@ public class GameController : MonoBehaviour
                 {
                     isPlayingAsMilo = true;//Reverse this variable to set the appropriate state in the SetStateForSwitching Method.
                     SetStateForSwitching();
-                    Debug.Log("SetStateForSwitching, isPlayingAsMilo = " + isPlayingAsMilo);
                 } else
                 {
                     SwitchToMilo();
-                    Debug.Log("SwitchToMilo, isPlayingAsMilo = " + isPlayingAsMilo);
                 }
                 SwitchActiveValuesForCollectables();
             } else

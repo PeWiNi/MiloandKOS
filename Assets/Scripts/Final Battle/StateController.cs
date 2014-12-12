@@ -251,17 +251,21 @@ public class StateController : MonoBehaviour
     {
         if (Application.loadedLevelName.Equals(nextSceneAsKOS) && !miloShooting && consecutiveHitsValue >= consecutiveHitsMax)
         {
+            ResetValues();
             Application.LoadLevel(endingCutScene);
         } else if (Application.loadedLevelName.Equals(nextSceneAsMilo) && !kosShooting && consecutiveHitsValue >= consecutiveHitsMax)
         {
+            ResetValues();
             Application.LoadLevel(endingCutScene);
         } 
         if (kosHitsTakenValue >= kosHitsTakenMax)
         {
+            ResetValues();
             Application.LoadLevel(endingCutScene);
         }
         if (miloHitsTakenValue >= miloHitsTakenMax)
         {
+            ResetValues();
             Application.LoadLevel(endingCutScene);
         }
     }
@@ -391,11 +395,25 @@ public class StateController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Gets the instruction.
+    /// </summary>
+    /// <value>The instruction.</value>
     public static GameObject Instruction
     {
         get
         {
             return instructionImages; 
         }
+    }
+
+    /// <summary>
+    /// Resets the values.
+    /// </summary>
+    void ResetValues()
+    {
+        consecutiveHitsValue = 0;
+        miloHitsTakenValue = 0;
+        kosHitsTakenValue = 0;
     }
 }
